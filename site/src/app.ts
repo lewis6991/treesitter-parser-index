@@ -18,6 +18,7 @@ const LANGUAGE_ALIASES: Record<string, string> = {
   'php-only': 'php_only',
   protobuf: 'proto',
 };
+const ACTIVE_PARSER_AGE_MS = 365 * 24 * 60 * 60 * 1000;
 const STALE_PARSER_AGE_MS = 730 * 24 * 60 * 60 * 1000;
 const parserCompactDateFormatter = new Intl.DateTimeFormat('en', {
   month: 'short',
@@ -490,7 +491,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
   explorerTree.innerHTML = parsers
     .map((parser) => {
       const isSelected = parser.id === state.selectedParserId;
-      const isStale = isStaleParser(parser);
+      const freshness = parserFreshnessState(parser);
       const chipFilters = {
         ...getActiveFilters(),
         editor: 'all' as const,
@@ -510,10 +511,11 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
           : []),
       ].join('');
       const signalChips = renderParserSignalChips(parser).join('');
+      const freshnessClass = freshness === 'neutral' ? '' : `is-${freshness}`;
 
       return `
         <section class="tree-node">
-          <article class="tree-item tree-item-parser ${isSelected ? 'is-selected' : ''} ${isStale ? 'is-stale' : ''}" data-parser-id="${escapeHtml(parser.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`Select parser release ${parser.name}`)}">
+          <article class="tree-item tree-item-parser ${isSelected ? 'is-selected' : ''} ${freshnessClass}" data-parser-id="${escapeHtml(parser.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`Select parser release ${parser.name}`)}">
             <div class="tree-item-head">
               <div class="tree-item-title-row">
                 <h4>${escapeHtml(parser.name)}</h4>
@@ -523,7 +525,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
             </div>
             <div class="tree-item-meta">
               <span class="tree-item-summary-inline">${renderPackageLink(parser.package)}</span>
-              <span class="tree-item-meta-freshness ${isStale ? 'is-stale' : ''}">${escapeHtml(renderParserLastUpdated(parser, 'compact'))}</span>
+              <span class="tree-item-meta-freshness ${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'compact'))}</span>
               <span>${escapeHtml(shortCommit(parser.sourceCommit))}</span>
               <span>${matchingPacks.length} matching sources</span>
             </div>
@@ -755,7 +757,8 @@ function renderCoverage(): void {
 }
 
 function renderParserDetail(parser: ParserRelease): string {
-  const isStale = isStaleParser(parser);
+  const freshness = parserFreshnessState(parser);
+  const freshnessClass = freshness === 'neutral' ? '' : `metric-value-${freshness}`;
 
   return `
     <div class="detail-hero">
@@ -779,7 +782,7 @@ function renderParserDetail(parser: ParserRelease): string {
       </article>
       <article class="metric-card">
         <span>Last Updated</span>
-        <strong class="${isStale ? 'metric-value-stale' : ''}">${escapeHtml(renderParserLastUpdated(parser, 'full'))}${isStale ? ' · stale' : ''}</strong>
+        <strong class="${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'full'))}</strong>
       </article>
       <article class="metric-card">
         <span>ABI</span>
@@ -1193,6 +1196,8 @@ function matchesSearch(text: string, search: string = state.search): boolean {
 }
 
 function getParserSearchText(parser: ParserRelease): string {
+  const freshness = parserFreshnessState(parser);
+
   return [
     parser.name,
     parser.language,
@@ -1202,7 +1207,8 @@ function getParserSearchText(parser: ParserRelease): string {
     parser.summary,
     parser.owners.join(' '),
     parser.bundledQueryKinds.join(' '),
-    isStaleParser(parser) ? 'stale inactive abandoned' : '',
+    freshness === 'stale' ? 'stale inactive abandoned' : '',
+    freshness === 'active' ? 'active maintained current' : '',
     parser.capabilities.wasm ? 'wasm' : '',
     parser.capabilities.sourceArchive ? 'source archive release artifact' : '',
     parser.capabilities.buildFromSource ? 'build from source' : '',
@@ -1702,13 +1708,27 @@ function parserLastUpdatedDate(parser: ParserRelease): Date | null {
 }
 
 function isStaleParser(parser: ParserRelease): boolean {
+  return parserFreshnessState(parser) === 'stale';
+}
+
+function parserFreshnessState(parser: ParserRelease): 'active' | 'neutral' | 'stale' {
   const lastUpdatedDate = parserLastUpdatedDate(parser);
 
   if (!lastUpdatedDate) {
-    return false;
+    return 'neutral';
   }
 
-  return Date.now() - lastUpdatedDate.getTime() >= STALE_PARSER_AGE_MS;
+  const ageMs = Date.now() - lastUpdatedDate.getTime();
+
+  if (ageMs >= STALE_PARSER_AGE_MS) {
+    return 'stale';
+  }
+
+  if (ageMs <= ACTIVE_PARSER_AGE_MS) {
+    return 'active';
+  }
+
+  return 'neutral';
 }
 
 function renderParserLastUpdated(
@@ -1731,10 +1751,6 @@ function renderParserLastUpdated(
 
 function renderParserSignalChips(parser: ParserRelease): string[] {
   const chips: string[] = [];
-
-  if (isStaleParser(parser)) {
-    chips.push('<span class="chip chip-stale">stale</span>');
-  }
 
   if (parser.capabilities.wasm) {
     chips.push(

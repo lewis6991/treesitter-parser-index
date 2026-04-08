@@ -44,6 +44,7 @@
   --mono-font: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace;
   --success: #0b7a4b;
   --success-soft: #e7f5ee;
+  --freshness-active: #5d7f6c;
   --editor-helix: #7844c2;
   --editor-helix-soft: #f1ebff;
   --editor-helix-border: #d3c2f1;
@@ -56,6 +57,7 @@
   --editor-zed-border: #bad6eb;
   --warning: #c97900;
   --warning-soft: #fff3e0;
+  --freshness-stale: #a07a43;
   --danger: #92333c;
   --danger-soft: #f9e9eb;
   --selection-bg: var(--search-mark-bg);
@@ -116,6 +118,7 @@
     --accent-soft: var(--searchresults-li-bg);
     --success: #7fd9a3;
     --success-soft: #213629;
+    --freshness-active: #8eb89a;
     --editor-helix: #caabff;
     --editor-helix-soft: #302742;
     --editor-helix-border: #625382;
@@ -128,6 +131,7 @@
     --editor-zed-border: #4d6f86;
     --warning: #f0b45a;
     --warning-soft: #3f3019;
+    --freshness-stale: #c8a56f;
     --danger: #f2a0aa;
     --danger-soft: #402229;
     --selection-bg: var(--search-mark-bg);
@@ -547,12 +551,6 @@ select {
   color: var(--accent);
 }
 
-.chip-stale {
-  background: var(--warning-soft);
-  border-color: var(--warning-border);
-  color: var(--warning);
-}
-
 .chip-editor-neovim {
   background: var(--success-soft);
   border-color: var(--editor-neovim-border);
@@ -832,14 +830,14 @@ select {
   color: var(--danger);
 }
 
-.tree-item-parser.is-stale h4,
-.tree-item-meta-freshness.is-stale,
-.metric-value-stale {
-  color: var(--warning);
+.tree-item-meta-freshness.is-active,
+.metric-value-active {
+  color: var(--freshness-active);
 }
 
-.tree-item-parser.is-stale:not(.is-selected) {
-  border-left-color: var(--warning-border);
+.tree-item-meta-freshness.is-stale,
+.metric-value-stale {
+  color: var(--freshness-stale);
 }
 
 .tree-item-meta {
