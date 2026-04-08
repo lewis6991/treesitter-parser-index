@@ -142,7 +142,7 @@ const state: FilterState = {
   editor: 'all',
   queryKind: 'all',
   install: 'all',
-  selectedParserId: data.parsers[0]?.id ?? null,
+  selectedParserId: null,
   selectedQueryId: null,
   selectedCoverage: null,
 };
@@ -457,7 +457,7 @@ function prepareExplorerRenderState(filters: ActiveFilters): ExplorerRenderState
   const parsers = getFilteredParsers(filters);
 
   if (state.selectedParserId !== null && !parsers.some((parser) => parser.id === state.selectedParserId)) {
-    state.selectedParserId = parsers[0]?.id ?? null;
+    state.selectedParserId = null;
     state.selectedQueryId = null;
   }
 
