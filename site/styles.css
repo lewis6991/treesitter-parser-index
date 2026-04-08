@@ -239,9 +239,10 @@ select {
   background: var(--bg);
   border-bottom: 1px solid var(--bg);
   color: var(--icons);
-  display: flex;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   height: var(--menu-bar-height);
-  justify-content: center;
   margin: 0 calc(-1 * var(--page-padding));
   padding: 0 var(--page-padding);
   position: sticky;
@@ -251,7 +252,7 @@ select {
 
 .menu-title {
   color: inherit;
-  flex: 1;
+  grid-column: 2;
   font-size: 1.45rem;
   font-weight: 400;
   line-height: 1;
@@ -259,6 +260,27 @@ select {
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.menu-link {
+  align-items: center;
+  color: var(--text-soft);
+  display: inline-flex;
+  gap: 0.38rem;
+  grid-column: 3;
+  justify-self: end;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.menu-link-icon {
+  flex: none;
+  height: 0.88rem;
+  width: 0.88rem;
+}
+
+.menu-link:hover {
+  color: var(--icons-hover);
 }
 
 .site-sidebar {
