@@ -1,0 +1,73 @@
+{
+  "parserLanguageSources": {
+    "helix-runtime": {
+      "kind": "languages-toml-support",
+      "repo": "helix-editor/helix",
+      "path": "languages.toml"
+    },
+    "zed-core": {
+      "kind": "toml-config-map",
+      "repo": "zed-industries/zed",
+      "pathPattern": "^crates/grammars/src/([^/]+)/config\\.toml$",
+      "valueKey": "grammar"
+    }
+  },
+  "testedParserRefsSources": {
+    "nvim-treesitter-main": {
+      "kind": "lua-parser-registry",
+      "repo": "nvim-treesitter/nvim-treesitter",
+      "registryPath": "lua/nvim-treesitter/parsers.lua",
+      "lockfilePath": "lockfile.json",
+      "refCandidates": [
+        "main",
+        "master"
+      ]
+    },
+    "helix-runtime": {
+      "kind": "languages-toml-support",
+      "repo": "helix-editor/helix",
+      "path": "languages.toml"
+    }
+  },
+  "queryPacks": [
+    {
+      "repo": "nvim-treesitter/nvim-treesitter",
+      "pathPattern": "^runtime/queries/([^/]+)/([^/]+)\\.scm$",
+      "outputName": "nvim-treesitter-data.ts",
+      "testedParserRefsSource": "nvim-treesitter-main"
+    },
+    {
+      "repo": "nvim-treesitter/nvim-treesitter-context",
+      "pathPattern": "^queries/([^/]+)/([^/]+)\\.scm$",
+      "outputName": "nvim-context-data.ts"
+    },
+    {
+      "repo": "stevearc/aerial.nvim",
+      "pathPattern": "^queries/([^/]+)/(aerial)\\.scm$",
+      "outputName": "nvim-aerial-data.ts"
+    },
+    {
+      "repo": "andymass/vim-matchup",
+      "pathPattern": "^after/queries/([^/]+)/(matchup)\\.scm$",
+      "outputName": "nvim-matchup-data.ts"
+    },
+    {
+      "repo": "helix-editor/helix",
+      "pathPattern": "^runtime/queries/([^/]+)/([^/]+)\\.scm$",
+      "outputName": "helix-runtime-data.ts",
+      "parserLanguageSource": "helix-runtime",
+      "testedParserRefsSource": "helix-runtime"
+    },
+    {
+      "repo": "nvim-treesitter/nvim-treesitter-textobjects",
+      "pathPattern": "^queries/([^/]+)/([^/]+)\\.scm$",
+      "outputName": "nvim-textobjects-data.ts"
+    },
+    {
+      "repo": "zed-industries/zed",
+      "pathPattern": "^crates/grammars/src/([^/]+)/([^/]+)\\.scm$",
+      "outputName": "zed-core-data.ts",
+      "parserLanguageSource": "zed-core"
+    }
+  ]
+}

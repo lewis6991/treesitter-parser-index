@@ -1,0 +1,583 @@
+{
+  "generatedAt": "2026-04-08",
+  "kind": "prototype-targets",
+  "count": 31,
+  "items": [
+    {
+      "id": "neovim@>=0.11/core:highlights",
+      "editor": "neovim",
+      "module": "core",
+      "feature": "highlights",
+      "versionRange": ">=0.11",
+      "targetSchema": "tsindex/target/neovim/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "highlights",
+          "injections",
+          "locals",
+          "tags"
+        ],
+        "requiredQueryKinds": [
+          "highlights"
+        ],
+        "queryFiles": [
+          "highlights.scm",
+          "injections.scm",
+          "locals.scm",
+          "tags.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim@>=0.11/core:folds",
+      "editor": "neovim",
+      "module": "core",
+      "feature": "folds",
+      "versionRange": ">=0.11",
+      "targetSchema": "tsindex/target/neovim/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "folds"
+        ],
+        "requiredQueryKinds": [
+          "folds"
+        ],
+        "queryFiles": [
+          "folds.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim@>=0.11/core:indents",
+      "editor": "neovim",
+      "module": "core",
+      "feature": "indents",
+      "versionRange": ">=0.11",
+      "targetSchema": "tsindex/target/neovim/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "indents"
+        ],
+        "requiredQueryKinds": [
+          "indents"
+        ],
+        "queryFiles": [
+          "indents.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim-textobjects@>=0.10/textobjects:select",
+      "editor": "neovim",
+      "module": "textobjects",
+      "feature": "select",
+      "versionRange": ">=0.10",
+      "targetSchema": "tsindex/target/neovim-textobjects/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "textobjects"
+        ],
+        "requiredQueryKinds": [
+          "textobjects"
+        ],
+        "queryFiles": [
+          "textobjects.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim-context@>=0.9/context:context",
+      "editor": "neovim",
+      "module": "context",
+      "feature": "context",
+      "versionRange": ">=0.9",
+      "targetSchema": "tsindex/target/neovim-context/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "context"
+        ],
+        "requiredQueryKinds": [
+          "context"
+        ],
+        "queryFiles": [
+          "context.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim-aerial@>=3.0/aerial:outline",
+      "editor": "neovim",
+      "module": "aerial",
+      "feature": "outline",
+      "versionRange": ">=3.0",
+      "targetSchema": "tsindex/target/neovim-aerial/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "outline"
+        ],
+        "requiredQueryKinds": [
+          "outline"
+        ],
+        "queryFiles": [
+          "aerial.scm"
+        ]
+      }
+    },
+    {
+      "id": "neovim-matchup@>=0.8/matchup:matchup",
+      "editor": "neovim",
+      "module": "matchup",
+      "feature": "matchup",
+      "versionRange": ">=0.8",
+      "targetSchema": "tsindex/target/neovim-matchup/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "matchup"
+        ],
+        "requiredQueryKinds": [
+          "matchup"
+        ],
+        "queryFiles": [
+          "matchup.scm"
+        ]
+      }
+    },
+    {
+      "id": "pulsar@>=1.131/core:folds",
+      "editor": "pulsar",
+      "module": "core",
+      "feature": "folds",
+      "versionRange": ">=1.131",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "folds"
+        ],
+        "installPath": "packages/language-*/grammars/*",
+        "note": "Declared per grammar via treeSitter.foldsQuery in Pulsar language packages."
+      }
+    },
+    {
+      "id": "pulsar@>=1.131/core:highlights",
+      "editor": "pulsar",
+      "module": "core",
+      "feature": "highlights",
+      "versionRange": ">=1.131",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "highlights"
+        ],
+        "installPath": "packages/language-*/grammars/*",
+        "note": "Declared per grammar via treeSitter.highlightsQuery in Pulsar language packages."
+      }
+    },
+    {
+      "id": "pulsar@>=1.131/core:indents",
+      "editor": "pulsar",
+      "module": "core",
+      "feature": "indents",
+      "versionRange": ">=1.131",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "indents"
+        ],
+        "installPath": "packages/language-*/grammars/*",
+        "note": "Declared per grammar via treeSitter.indentsQuery in Pulsar language packages."
+      }
+    },
+    {
+      "id": "pulsar@>=1.131/core:locals",
+      "editor": "pulsar",
+      "module": "core",
+      "feature": "locals",
+      "versionRange": ">=1.131",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "locals"
+        ],
+        "installPath": "packages/language-*/grammars/*",
+        "note": "Declared per grammar via treeSitter.localsQuery in Pulsar language packages."
+      }
+    },
+    {
+      "id": "pulsar@>=1.131/core:tags",
+      "editor": "pulsar",
+      "module": "core",
+      "feature": "tags",
+      "versionRange": ">=1.131",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "tags"
+        ],
+        "installPath": "packages/language-*/grammars/*",
+        "note": "Declared per grammar via treeSitter.tagsQuery in Pulsar language packages."
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:highlights",
+      "editor": "helix",
+      "module": "core",
+      "feature": "highlights",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "highlights",
+          "injections",
+          "locals"
+        ],
+        "requiredQueryKinds": [
+          "highlights"
+        ],
+        "queryFiles": [
+          "highlights.scm",
+          "injections.scm",
+          "locals.scm"
+        ]
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:folds",
+      "editor": "helix",
+      "module": "core",
+      "feature": "folds",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "folds"
+        ],
+        "requiredQueryKinds": [
+          "folds"
+        ],
+        "queryFiles": [
+          "folds.scm"
+        ]
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:indents",
+      "editor": "helix",
+      "module": "core",
+      "feature": "indents",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "indents"
+        ],
+        "requiredQueryKinds": [
+          "indents"
+        ],
+        "queryFiles": [
+          "indents.scm"
+        ]
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:rainbows",
+      "editor": "helix",
+      "module": "core",
+      "feature": "rainbows",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "rainbows"
+        ],
+        "requiredQueryKinds": [
+          "rainbows"
+        ],
+        "queryFiles": [
+          "rainbows.scm"
+        ]
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:tags",
+      "editor": "helix",
+      "module": "core",
+      "feature": "tags",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "tags"
+        ],
+        "requiredQueryKinds": [
+          "tags"
+        ],
+        "queryFiles": [
+          "tags.scm"
+        ]
+      }
+    },
+    {
+      "id": "helix@>=25.01/core:textobjects",
+      "editor": "helix",
+      "module": "core",
+      "feature": "textobjects",
+      "versionRange": ">=25.01",
+      "targetSchema": "tsindex/target/helix/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "textobjects"
+        ],
+        "requiredQueryKinds": [
+          "textobjects"
+        ],
+        "queryFiles": [
+          "textobjects.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:highlights",
+      "editor": "zed",
+      "module": "core",
+      "feature": "highlights",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "highlights"
+        ],
+        "requiredQueryKinds": [
+          "highlights"
+        ],
+        "queryFiles": [
+          "highlights.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:brackets",
+      "editor": "zed",
+      "module": "core",
+      "feature": "brackets",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "brackets"
+        ],
+        "requiredQueryKinds": [
+          "brackets"
+        ],
+        "queryFiles": [
+          "brackets.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:debugger",
+      "editor": "zed",
+      "module": "core",
+      "feature": "debugger",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "debugger"
+        ],
+        "requiredQueryKinds": [
+          "debugger"
+        ],
+        "queryFiles": [
+          "debugger.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:folds",
+      "editor": "zed",
+      "module": "core",
+      "feature": "folds",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "folds"
+        ],
+        "requiredQueryKinds": [
+          "folds"
+        ],
+        "queryFiles": [
+          "folds.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:indents",
+      "editor": "zed",
+      "module": "core",
+      "feature": "indents",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "indents"
+        ],
+        "requiredQueryKinds": [
+          "indents"
+        ],
+        "queryFiles": [
+          "indents.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:injections",
+      "editor": "zed",
+      "module": "core",
+      "feature": "injections",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "injections"
+        ],
+        "requiredQueryKinds": [
+          "injections"
+        ],
+        "queryFiles": [
+          "injections.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:outline",
+      "editor": "zed",
+      "module": "core",
+      "feature": "outline",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "outline"
+        ],
+        "requiredQueryKinds": [
+          "outline"
+        ],
+        "queryFiles": [
+          "outline.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:overrides",
+      "editor": "zed",
+      "module": "core",
+      "feature": "overrides",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "overrides"
+        ],
+        "requiredQueryKinds": [
+          "overrides"
+        ],
+        "queryFiles": [
+          "overrides.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:redactions",
+      "editor": "zed",
+      "module": "core",
+      "feature": "redactions",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "redactions"
+        ],
+        "requiredQueryKinds": [
+          "redactions"
+        ],
+        "queryFiles": [
+          "redactions.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:runnables",
+      "editor": "zed",
+      "module": "core",
+      "feature": "runnables",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "runnables"
+        ],
+        "requiredQueryKinds": [
+          "runnables"
+        ],
+        "queryFiles": [
+          "runnables.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:structure",
+      "editor": "zed",
+      "module": "core",
+      "feature": "structure",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "structure"
+        ],
+        "requiredQueryKinds": [
+          "structure"
+        ],
+        "queryFiles": [
+          "structure.scm"
+        ]
+      }
+    },
+    {
+      "id": "zed@>=0.180/core:textobjects",
+      "editor": "zed",
+      "module": "core",
+      "feature": "textobjects",
+      "versionRange": ">=0.180",
+      "targetSchema": "tsindex/target/zed/v1",
+      "typed": {
+        "supportedQueryKinds": [
+          "textobjects"
+        ],
+        "requiredQueryKinds": [
+          "textobjects"
+        ],
+        "queryFiles": [
+          "textobjects.scm"
+        ]
+      }
+    },
+    {
+      "id": "lapce@>=0.4/core:highlights",
+      "editor": "lapce",
+      "module": "core",
+      "feature": "highlights",
+      "versionRange": ">=0.4",
+      "targetSchema": "raw",
+      "raw": {
+        "supportedQueryKinds": [
+          "highlights",
+          "injections"
+        ],
+        "installPath": "queries/{language}/{highlights,injections}.scm",
+        "note": "Lapce downloads Helix runtime queries and currently loads highlights.scm plus injections.scm."
+      }
+    }
+  ]
+}

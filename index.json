@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-04-08",
+  "kind": "prototype-index",
+  "counts": {
+    "parsers": 515,
+    "queryPacks": 231,
+    "targets": 31,
+    "languages": 509,
+    "editors": 5,
+    "owners": 334,
+    "queryKinds": 18
+  },
+  "files": {
+    "parsers": "parsers.json",
+    "queryPacks": "query-packs.json",
+    "targets": "targets.json",
+    "languages": "languages.json"
+  }
+}

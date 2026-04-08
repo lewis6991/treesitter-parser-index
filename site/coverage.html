@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverage - Tree-sitter Index</title>
+    <meta
+      name="description"
+      content="Coverage view for exploring Tree-sitter query-kind support by editor and language."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop-blob backdrop-blob-a"></div>
+      <div class="backdrop-blob backdrop-blob-b"></div>
+      <div class="backdrop-blob backdrop-blob-c"></div>
+    </div>
+
+    <div class="page-layout">
+      <aside class="site-sidebar card">
+        <div class="sidebar-head">
+          <h2>Tree-sitter Index</h2>
+        </div>
+        <nav class="sidebar-nav" aria-label="Section navigation">
+          <a class="sidebar-link" href="index.html#explorer">
+            <span class="sidebar-link-label">Explorer</span>
+          </a>
+          <a class="sidebar-link is-active" href="#coverage" data-nav-target="coverage" aria-current="location">
+            <span class="sidebar-link-label">Coverage</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="page-shell">
+        <header class="menu-bar">
+          <div class="menu-title">Tree-sitter Parser Index</div>
+        </header>
+
+        <section class="section" id="coverage">
+          <div class="section-heading">
+            <h2>Coverage</h2>
+            <p>
+              Covered languages by editor and query kind.
+            </p>
+          </div>
+
+          <div class="toolbar card">
+            <label class="field field-search">
+              <span>Search</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="ruby, zed, textobjects, wasm"
+              />
+            </label>
+            <label class="field">
+              <span>Language</span>
+              <select id="language-filter"></select>
+            </label>
+            <label class="field">
+              <span>Editor</span>
+              <select id="editor-filter"></select>
+            </label>
+            <label class="field">
+              <span>Query Kind</span>
+              <select id="query-kind-filter"></select>
+            </label>
+            <label class="field">
+              <span>Install Route</span>
+              <select id="install-filter">
+                <option value="all">All routes</option>
+                <option value="wasm">Wasm</option>
+                <option value="source-archive">Source archive</option>
+                <option value="build-from-source">Build from source</option>
+              </select>
+            </label>
+          </div>
+
+          <section class="card coverage-panel">
+            <div class="column-heading">
+              <div>
+                <p class="eyebrow eyebrow-inline">Matrix</p>
+                <h3>Coverage Matrix</h3>
+              </div>
+              <span class="badge">languages</span>
+            </div>
+            <div class="matrix" id="coverage-matrix"></div>
+            <div class="coverage-detail" id="coverage-detail"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="dist/app.js"></script>
+  </body>
+</html>
