@@ -593,21 +593,21 @@ select {
 }
 
 .pill-exact {
+  background: var(--danger-soft);
+  border-color: var(--danger-border);
+  color: var(--danger);
+}
+
+.pill-range {
   background: var(--success-soft);
   border-color: var(--success-border);
   color: var(--success);
 }
 
-.pill-range {
-  background: var(--warning-soft);
-  border-color: var(--warning-border);
-  color: var(--warning);
-}
-
 .pill-unknown {
-  background: var(--danger-soft);
-  border-color: var(--danger-border);
-  color: var(--danger);
+  background: var(--panel-muted);
+  border-color: var(--border-strong);
+  color: var(--text-soft);
 }
 
 .toolbar {
@@ -818,16 +818,24 @@ select {
   white-space: nowrap;
 }
 
-.tree-item-token-exact {
+.tree-item-token-semver {
   color: var(--success);
 }
 
+.tree-item-token-commit-only {
+  color: var(--danger);
+}
+
+.tree-item-token-exact {
+  color: var(--danger);
+}
+
 .tree-item-token-range {
-  color: var(--warning);
+  color: var(--success);
 }
 
 .tree-item-token-unknown {
-  color: var(--danger);
+  color: var(--text-soft);
 }
 
 .tree-item-meta-freshness.is-active,

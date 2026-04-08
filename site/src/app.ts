@@ -939,7 +939,7 @@ function renderQueryDetail(
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Exact tested parsers</strong>
-                <span class="pill">exact</span>
+                <span class="pill pill-exact">exact</span>
               </div>
               <p>${escapeHtml(exactTestedParserRefs.join(' · '))}</p>
             </div>
@@ -965,7 +965,7 @@ function renderQueryDetail(
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Semver range</strong>
-                <span class="pill">range</span>
+                <span class="pill pill-range">range</span>
               </div>
               <p>${escapeHtml(compatibility.semver)}</p>
             </div>
@@ -1634,12 +1634,15 @@ function renderEditorFilterChip(editor: string): string {
 function renderParserVersionToken(parser: ParserRelease): string {
   const label = parser.upstreamSemver ?? 'commit-only';
   const releasesHref = packageReleasesHref(parser.package);
+  const versionClass = parser.upstreamSemver
+    ? 'tree-item-token-semver'
+    : 'tree-item-token-commit-only';
 
   if (!parser.upstreamSemver || !releasesHref) {
-    return `<span class="tree-item-token">${escapeHtml(label)}</span>`;
+    return `<span class="tree-item-token ${versionClass}">${escapeHtml(label)}</span>`;
   }
 
-  return `<a class="inline-link tree-item-token tree-item-token-release" href="${escapeHtml(releasesHref)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
+  return `<a class="inline-link tree-item-token tree-item-token-release ${versionClass}" href="${escapeHtml(releasesHref)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
 }
 
 function renderParserVersionValue(parser: ParserRelease): string {
