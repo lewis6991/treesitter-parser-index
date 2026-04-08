@@ -117,7 +117,7 @@ const NVIM_AERIAL_OUTLINE_DETAILS = remapQueryKinds(
 const queryPacks: QueryPack[] = [
   {
     id: 'pack-neovim-treesitter-runtime',
-    name: 'nvim-treesitter Runtime',
+    name: 'nvim-treesitter',
     package: 'github.com/nvim-treesitter/nvim-treesitter',
     version: NVIM_TREESITTER_VERSION,
     languages: NVIM_TREESITTER_LANGUAGES,
@@ -230,7 +230,7 @@ const queryPacks: QueryPack[] = [
     .sort((left, right) => left.name.localeCompare(right.name)),
   {
     id: 'pack-helix-runtime',
-    name: 'Helix Runtime',
+    name: 'Helix',
     package: 'github.com/helix-editor/helix',
     version: HELIX_RUNTIME_VERSION,
     languages: HELIX_RUNTIME_LANGUAGES,

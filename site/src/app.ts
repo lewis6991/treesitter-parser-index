@@ -163,8 +163,10 @@ const elements = {
 init();
 
 function init(): void {
+  restoreStateFromUrl();
   wireEvents();
   wireSectionNav();
+  syncPreservedPageLinks(window.location.search);
   renderFull();
 }
 
@@ -336,6 +338,7 @@ function wireEvents(): void {
 
       state.selectedCoverage = selection;
       renderCoverage();
+      syncUrlState();
     });
 
     coverageMatrix.addEventListener('keydown', (event) => {
@@ -347,8 +350,10 @@ function wireEvents(): void {
 
       state.selectedCoverage = selection;
       renderCoverage();
+      syncUrlState();
     });
   }
+
 }
 
 function wireSectionNav(): void {
@@ -427,6 +432,8 @@ function renderFull(): void {
   if (hasCoveragePanel()) {
     renderCoverage();
   }
+
+  syncUrlState();
 }
 
 function renderExplorerSelection(): void {
@@ -437,6 +444,7 @@ function renderExplorerSelection(): void {
   const filters = getActiveFilters();
   syncRenderCaches(filters);
   renderExplorerPanels(prepareExplorerRenderState(filters));
+  syncUrlState();
 }
 
 function renderExplorerPanels(explorerState: ExplorerRenderState): void {
@@ -573,7 +581,7 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
           <div>
             <h4>${escapeHtml(pack.name)}</h4>
           </div>
-          <span class="tree-item-token tree-item-token-${compatibilityLabel(rank)}">${escapeHtml(compatibilityLabel(rank))}</span>
+          ${renderCompatibilityBadge(rank, 'tree-item-token')}
         </div>
         <div class="tree-item-meta">
           <span class="tree-item-summary-inline">${renderPackageLink(pack.package)}</span>
@@ -869,7 +877,7 @@ function renderQueryDetail(
       </article>
       <article class="metric-card">
         <span>Compatibility</span>
-        <strong>${escapeHtml(compatibilityLabel(rank))}</strong>
+        <strong title="${escapeHtml(compatibilityExplanation(rank))}">${escapeHtml(compatibilityLabel(rank))}</strong>
       </article>
       <article class="metric-card">
         <span>Languages</span>
@@ -939,10 +947,11 @@ function renderQueryDetail(
 
     <section class="detail-block">
       <h4>Compatibility Notes</h4>
+      ${renderCompatibilityGuide()}
       <div class="mini-card">
         <div class="mini-card-top">
           <strong>Selected parser</strong>
-          <span class="pill pill-${compatibilityLabel(rank)}">${escapeHtml(compatibilityLabel(rank))}</span>
+          ${renderCompatibilityBadge(rank, 'pill')}
         </div>
         <p>${parser ? renderPackageLink(parser.package) : 'No parser selected'}</p>
       </div>
@@ -952,7 +961,7 @@ function renderQueryDetail(
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Exact tested parsers</strong>
-                <span class="pill pill-exact">exact</span>
+                ${renderCompatibilityBadge(3, 'pill')}
               </div>
               <p>${escapeHtml(exactTestedParserRefs.join(' · '))}</p>
             </div>
@@ -978,7 +987,7 @@ function renderQueryDetail(
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Semver range</strong>
-                <span class="pill pill-range">range</span>
+                ${renderCompatibilityBadge(2, 'pill')}
               </div>
               <p>${escapeHtml(compatibility.semver)}</p>
             </div>
@@ -1564,6 +1573,142 @@ function getActiveFilters(): ActiveFilters {
   };
 }
 
+function restoreStateFromUrl(): void {
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+  const search = params.get('q');
+
+  if (search) {
+    state.search = search.trim().toLowerCase();
+  }
+
+  const language = params.get('lang');
+
+  if (language) {
+    const normalizedLanguage = normalizeLanguageId(language);
+
+    if (allLanguages.includes(normalizedLanguage)) {
+      state.language = normalizedLanguage;
+    }
+  }
+
+  const editor = params.get('editor');
+
+  if (editor && allEditors.includes(editor)) {
+    state.editor = editor;
+  }
+
+  const queryKind = params.get('kind');
+
+  if (queryKind && allQueryKinds.includes(queryKind)) {
+    state.queryKind = queryKind;
+  }
+
+  const install = params.get('install');
+
+  if (install === 'wasm' || install === 'source-archive' || install === 'build-from-source') {
+    state.install = install;
+  }
+
+  const parserId = params.get('parser');
+
+  if (parserId && parserById(parserId)) {
+    state.selectedParserId = parserId;
+  }
+
+  const queryId = params.get('source');
+
+  if (queryId && queryPackById(queryId)) {
+    state.selectedQueryId = queryId;
+  }
+
+  const coverageEditor = params.get('coverageEditor');
+  const coverageKind = params.get('coverageKind');
+
+  if (
+    coverageEditor &&
+    coverageKind &&
+    (coverageEditor === 'unknown' || allEditors.includes(coverageEditor)) &&
+    allQueryKinds.includes(coverageKind)
+  ) {
+    state.selectedCoverage = {
+      editor: coverageEditor,
+      queryKind: coverageKind,
+    };
+  }
+}
+
+function syncUrlState(): void {
+  const url = new URL(window.location.href);
+  const params = searchParamsFromState(state);
+  const nextSearch = params.toString();
+  const nextHref = `${url.pathname}${nextSearch ? `?${nextSearch}` : ''}${url.hash}`;
+  const currentHref = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  if (nextHref !== currentHref) {
+    window.history.replaceState(null, '', nextHref);
+  }
+
+  syncPreservedPageLinks(nextSearch ? `?${nextSearch}` : '');
+}
+
+function syncPreservedPageLinks(search: string): void {
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-preserve-search]'));
+
+  for (const link of links) {
+    const baseHref = link.dataset['preserveSearchHref'] ?? link.getAttribute('href') ?? '';
+
+    if (!baseHref) {
+      continue;
+    }
+
+    link.dataset['preserveSearchHref'] = baseHref;
+
+    const href = new URL(baseHref, window.location.href);
+    href.search = search;
+    link.setAttribute('href', `${href.pathname}${href.search}${href.hash}`);
+  }
+}
+
+function searchParamsFromState(snapshot: FilterState): URLSearchParams {
+  const params = new URLSearchParams();
+
+  if (snapshot.search) {
+    params.set('q', snapshot.search);
+  }
+
+  if (snapshot.language !== 'all') {
+    params.set('lang', snapshot.language);
+  }
+
+  if (snapshot.editor !== 'all') {
+    params.set('editor', snapshot.editor);
+  }
+
+  if (snapshot.queryKind !== 'all') {
+    params.set('kind', snapshot.queryKind);
+  }
+
+  if (snapshot.install !== 'all') {
+    params.set('install', snapshot.install);
+  }
+
+  if (snapshot.selectedParserId) {
+    params.set('parser', snapshot.selectedParserId);
+  }
+
+  if (snapshot.selectedQueryId) {
+    params.set('source', snapshot.selectedQueryId);
+  }
+
+  if (snapshot.selectedCoverage) {
+    params.set('coverageEditor', snapshot.selectedCoverage.editor);
+    params.set('coverageKind', snapshot.selectedCoverage.queryKind);
+  }
+
+  return params;
+}
+
 function filterCacheKey(filters: ActiveFilters): string {
   return [
     filters.search,
@@ -1986,14 +2131,6 @@ function hasBundledQueryPack(parser: ParserRelease): boolean {
   return Object.keys(parser.bundledQueries).length > 0;
 }
 
-function compactList(items: readonly string[], maxItems: number): string {
-  if (items.length <= maxItems) {
-    return items.join(', ');
-  }
-
-  return `${items.slice(0, maxItems).join(', ')} +${items.length - maxItems}`;
-}
-
 function setCountedOptions(
   select: HTMLSelectElement,
   allLabel: string,
@@ -2030,6 +2167,38 @@ function compatibilityLabel(rank: CompatibilityRank): 'exact' | 'range' | 'unkno
   return 'unknown';
 }
 
+function compatibilityExplanation(rank: CompatibilityRank): string {
+  if (rank === 3) {
+    return 'Matches an exact tested parser ref.';
+  }
+
+  if (rank === 2) {
+    return 'Matches the declared semver support range.';
+  }
+
+  return 'Matches the language, but no exact parser pin or semver range is published for this selection.';
+}
+
+function renderCompatibilityBadge(
+  rank: CompatibilityRank,
+  baseClass: 'pill' | 'tree-item-token',
+): string {
+  const label = compatibilityLabel(rank);
+  const explanation = compatibilityExplanation(rank);
+
+  return `<span class="${baseClass} ${baseClass}-${label}" title="${escapeHtml(explanation)}" aria-label="${escapeHtml(`${label}: ${explanation}`)}">${escapeHtml(label)}</span>`;
+}
+
+function renderCompatibilityGuide(): string {
+  return `
+    <div class="mini-card compatibility-guide">
+      <p><strong>${renderCompatibilityBadge(3, 'pill')}</strong> exact tested parser ref.</p>
+      <p><strong>${renderCompatibilityBadge(2, 'pill')}</strong> declared semver support.</p>
+      <p><strong>${renderCompatibilityBadge(1, 'pill')}</strong> language match without an exact parser pin or semver range.</p>
+    </div>
+  `;
+}
+
 function compareRankedPacks(left: RankedPack, right: RankedPack): number {
   if (right.rank !== left.rank) {
     return right.rank - left.rank;
@@ -2055,6 +2224,22 @@ function shortCommit(commit: string): string {
 
 function unique<T>(values: readonly T[]): T[] {
   return [...new Set(values)];
+}
+
+function parserById(parserId: string | null): ParserRelease | null {
+  if (!parserId) {
+    return null;
+  }
+
+  return data.parsers.find((parser) => parser.id === parserId) ?? null;
+}
+
+function queryPackById(queryId: string | null): QueryPack | null {
+  if (!queryId) {
+    return null;
+  }
+
+  return data.queryPacks.find((pack) => pack.id === queryId) ?? null;
 }
 
 function emptyState(title: string, copy: string): string {

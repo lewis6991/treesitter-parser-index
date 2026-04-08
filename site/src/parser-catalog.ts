@@ -52,12 +52,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -190,12 +194,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -361,12 +369,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -646,12 +658,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -675,12 +691,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -733,12 +753,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -1067,12 +1091,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -1298,12 +1326,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -1542,12 +1574,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -1581,12 +1617,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -2146,12 +2186,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -2636,12 +2680,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -2675,12 +2723,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -2749,12 +2801,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -2784,12 +2840,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -3069,12 +3129,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -3191,12 +3255,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -3385,12 +3453,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -3618,12 +3690,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -4217,12 +4293,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -4260,12 +4340,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -4332,12 +4416,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -4375,12 +4463,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -5650,12 +5742,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -5963,12 +6059,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -6457,12 +6557,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -6647,12 +6751,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -6806,12 +6914,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -7513,12 +7625,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -7767,12 +7883,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -7808,12 +7928,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -8377,12 +8501,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -8549,12 +8677,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -8724,12 +8856,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -8782,12 +8918,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -8821,12 +8961,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -8897,12 +9041,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -9653,12 +9801,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -9866,12 +10018,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -9905,12 +10061,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -10230,12 +10390,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -10614,12 +10778,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -10649,12 +10817,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -10777,12 +10949,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -10958,12 +11134,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -11200,12 +11380,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -11258,12 +11442,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -11470,12 +11658,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -11540,12 +11732,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -11862,12 +12058,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -12027,12 +12227,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -13174,12 +13378,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -13448,12 +13656,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -13602,12 +13814,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -13916,12 +14132,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -14017,12 +14237,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -14279,12 +14503,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -14411,12 +14639,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [],
@@ -14440,12 +14672,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -14566,12 +14802,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -14692,12 +14932,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -15265,12 +15509,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -15445,12 +15693,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -15581,12 +15833,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -15645,12 +15901,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16110,12 +16370,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16235,12 +16499,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16357,12 +16625,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16392,12 +16664,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16489,12 +16765,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -16669,12 +16949,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "wasm",
+        "format": "wasm"
       }
     ],
     "bundledQueryKinds": [

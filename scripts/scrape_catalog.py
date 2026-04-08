@@ -124,9 +124,14 @@ class QueryPackResult(TypedDict):
     version: str
 
 
+class LatestReleaseInfo(TypedDict):
+    tag_name: str | None
+    asset_names: list[str]
+
+
 REPO_CACHE: dict[str, RepoSnapshot] = {}
 COMMIT_INFO_CACHE: dict[tuple[str, str], CommitInfo] = {}
-LATEST_RELEASE_CACHE: dict[str, str | None] = {}
+LATEST_RELEASE_CACHE: dict[str, LatestReleaseInfo | None] = {}
 PULSAR_QUERY_KEY_TO_KIND = {
     "foldsQuery": "folds",
     "highlightsQuery": "highlights",
@@ -2108,17 +2113,50 @@ def write_zed_extension_data() -> CountVersionResult:
     }
 
 
-def latest_release_tag(repo: str) -> str | None:
+def latest_release_info_from_json(value: object) -> LatestReleaseInfo | None:
+    if not isinstance(value, dict):
+        return None
+
+    release = cast(JsonObject, value)
+    tag_name = release.get("tag_name")
+    assets_value = release.get("assets")
+    asset_names: list[str] = []
+
+    if isinstance(assets_value, list):
+        for asset_value in cast(JsonArray, assets_value):
+            if not isinstance(asset_value, dict):
+                continue
+
+            asset = cast(JsonObject, asset_value)
+            name = asset.get("name")
+
+            if isinstance(name, str) and name:
+                asset_names.append(name)
+
+    return {
+        "tag_name": tag_name if isinstance(tag_name, str) else None,
+        "asset_names": asset_names,
+    }
+
+
+def latest_release_info(repo: str) -> LatestReleaseInfo | None:
     if repo in LATEST_RELEASE_CACHE:
         return LATEST_RELEASE_CACHE[repo]
 
     try:
-        tag = gh_api(f"repos/{repo}/releases/latest", ".tag_name")
+        info = latest_release_info_from_json(gh_api_json(f"repos/{repo}/releases/latest"))
     except RuntimeError:
-        tag = None
+        info = None
 
-    LATEST_RELEASE_CACHE[repo] = tag
-    return tag
+    LATEST_RELEASE_CACHE[repo] = info
+    return info
+
+
+def latest_release_has_wasm_asset(release_info: LatestReleaseInfo | None) -> bool:
+    if release_info is None:
+        return False
+
+    return any(asset_name.lower().endswith(".wasm") for asset_name in release_info["asset_names"])
 
 
 def normalize_semver(tag: str | None) -> str | None:
@@ -2268,19 +2306,28 @@ def write_parser_catalog() -> CountResult:
 
         # nvim-treesitter adds a large long tail of parser repos. Avoid live release
         # lookups for those entries or catalog generation turns into hundreds of API
-        # requests for metadata we do not currently need.
+        # requests. For real parser repos we use releases/latest for both upstream
+        # semver and artifact metadata.
         metadata_version = descriptor.get("metadata_version")
-        upstream_semver = (
-            normalize_semver(latest_release_tag(github_repo))
+        release_info = (
+            latest_release_info(github_repo)
             if (
                 isinstance(github_repo, str)
                 and github_repo
                 and descriptor.get("discovery_source") == "tree-sitter-json"
             )
             else None
-        ) or (metadata_version if isinstance(metadata_version, str) else None)
+        )
+        upstream_semver = (
+            normalize_semver(release_info["tag_name"] if release_info is not None else None)
+            or (metadata_version if isinstance(metadata_version, str) else None)
+        )
         package = descriptor_package(descriptor)
-        wasm = package.startswith("github.com/tree-sitter/tree-sitter-")
+        wasm = (
+            latest_release_has_wasm_asset(release_info)
+            if release_info is not None
+            else package.startswith("github.com/tree-sitter/tree-sitter-")
+        )
         source_archive = package.startswith(("github.com/", "gitlab.com/"))
 
         releases.append(
