@@ -2,6 +2,7 @@ import { INDEX_DATA } from './index-data.js';
 import type {
   EditorTarget,
   IndexData,
+  ParserArtifact,
   ParserRelease,
   QueryPack,
   QueryPackLanguage,
@@ -804,18 +805,12 @@ function renderParserDetail(parser: ParserRelease): string {
       </article>
     </div>
 
-    ${
-      parser.capabilities.wasm
-        ? `
-          <section class="detail-block">
-            <h4>Wasm</h4>
-            <div class="chip-row">
-              <span class="chip chip-accent">published</span>
-            </div>
-          </section>
-        `
-        : ''
-    }
+    <section class="detail-block">
+      <h4>Artifacts</h4>
+      <div class="chip-row">
+        ${renderParserArtifacts(parser)}
+      </div>
+    </section>
 
     <section class="detail-block">
       <h4>Bundled Query Kinds</h4>
@@ -827,7 +822,7 @@ function renderParserDetail(parser: ParserRelease): string {
     <section class="detail-block">
       <h4>Owners</h4>
       <div class="chip-row">
-        ${chipList(parser.owners, 'chip')}
+        ${renderOwnerChips(parser.owners, parser.package)}
       </div>
     </section>
   `;
@@ -1227,6 +1222,7 @@ function getParserSearchText(parser: ParserRelease): string {
     parser.capabilities.wasm ? 'wasm' : '',
     parser.capabilities.sourceArchive ? 'source archive release artifact' : '',
     parser.capabilities.buildFromSource ? 'build from source' : '',
+    parser.artifacts.map(parserArtifactLabel).join(' '),
   ].join(' ');
 }
 
@@ -1920,6 +1916,52 @@ function renderParserSignalChips(parser: ParserRelease): string[] {
   return chips;
 }
 
+function renderParserArtifacts(parser: ParserRelease): string {
+  if (!parser.artifacts.length) {
+    return '<span class="chip chip-outline">none listed</span>';
+  }
+
+  return parser.artifacts
+    .map((artifact) => renderParserArtifact(parser, artifact))
+    .join('');
+}
+
+function renderParserArtifact(parser: ParserRelease, artifact: ParserArtifact): string {
+  const label = escapeHtml(parserArtifactLabel(artifact));
+  const className = `chip ${parserArtifactChipClass(artifact)}`;
+  const href = parserArtifactHref(parser, artifact);
+
+  if (!href) {
+    return `<span class="${className}">${label}</span>`;
+  }
+
+  return `<a class="${className} chip-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
+}
+
+function parserArtifactLabel(artifact: ParserArtifact): string {
+  if (artifact.kind === 'source-archive') {
+    return `source archive (.${artifact.format})`;
+  }
+
+  return artifact.name ?? `release asset (.${artifact.format})`;
+}
+
+function parserArtifactChipClass(artifact: ParserArtifact): string {
+  return artifact.format === 'wasm' ? 'chip-accent' : 'chip-outline';
+}
+
+function parserArtifactHref(parser: ParserRelease, artifact: ParserArtifact): string | null {
+  if (artifact.kind === 'source-archive') {
+    return packageSourceArchiveHref(parser.package, parser.sourceCommit);
+  }
+
+  if (!artifact.name) {
+    return packageReleasesHref(parser.package);
+  }
+
+  return packageReleaseAssetHref(parser.package, artifact.name) ?? packageReleasesHref(parser.package);
+}
+
 function renderFilterChip(
   label: string,
   className: string,
@@ -1945,6 +1987,26 @@ function chipList(items: readonly string[], className: string): string {
   return items
     .map((item) => `<span class="${className}">${escapeHtml(item)}</span>`)
     .join('');
+}
+
+function renderOwnerChips(
+  owners: readonly string[],
+  packageId: string,
+): string {
+  return owners
+    .map((owner) => renderOwnerChip(owner, packageId))
+    .join('');
+}
+
+function renderOwnerChip(owner: string, packageId: string): string {
+  const href = ownerHref(packageId, owner);
+  const label = escapeHtml(owner);
+
+  if (!href) {
+    return `<span class="chip">${label}</span>`;
+  }
+
+  return `<a class="chip chip-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
 }
 
 function renderCoverageDetail(
@@ -2442,6 +2504,34 @@ function packageReleasesHref(packageId: string): string | null {
   }
 
   return null;
+}
+
+function ownerHref(packageId: string, owner: string): string | null {
+  if (packageId.startsWith('github.com/')) {
+    return `https://github.com/${encodeURIComponent(owner)}`;
+  }
+
+  if (packageId.startsWith('gitlab.com/')) {
+    return `https://gitlab.com/${encodeURIComponent(owner)}`;
+  }
+
+  return null;
+}
+
+function packageReleaseAssetHref(packageId: string, assetName: string): string | null {
+  if (packageId.startsWith('github.com/')) {
+    return `https://${packageId}/releases/latest/download/${encodeURIComponent(assetName)}`;
+  }
+
+  return null;
+}
+
+function packageSourceArchiveHref(packageId: string, sourceCommit: string): string {
+  if (packageId.startsWith('github.com/')) {
+    return `https://${packageId}/archive/${encodeURIComponent(sourceCommit)}.tar.gz`;
+  }
+
+  return packageHref(packageId);
 }
 
 function packageFileHref(packageId: string, version: string, path: string): string | null {

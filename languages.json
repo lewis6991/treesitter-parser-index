@@ -91,7 +91,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -171,7 +171,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -276,7 +276,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -457,7 +457,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -502,7 +502,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -693,7 +693,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -840,7 +840,7 @@
       "editors": [],
       "queryKinds": [],
       "queryRoots": [],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -945,7 +945,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -960,7 +960,7 @@
       "queryRoots": [
         "extensions/chatl/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1265,7 +1265,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1334,7 +1334,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1585,7 +1585,7 @@
         "queries/desktop",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1609,7 +1609,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1655,7 +1655,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1720,7 +1720,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1741,7 +1741,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1860,7 +1860,7 @@
         "dtd/queries/dtd",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -1983,7 +1983,7 @@
         "queries/editorconfig",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2125,7 +2125,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2257,7 +2257,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2647,7 +2647,7 @@
         "fsharp/queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2663,7 +2663,7 @@
       "queryRoots": [
         "fsharp_signature/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2701,7 +2701,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2720,7 +2720,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -2877,7 +2877,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -3036,7 +3036,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -3076,7 +3076,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -3591,7 +3591,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -3780,7 +3780,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4150,7 +4150,7 @@
         "queries/hyprlang",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4272,7 +4272,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4383,7 +4383,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4490,7 +4490,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4850,7 +4850,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -4976,7 +4976,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5372,7 +5372,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5447,7 +5447,7 @@
         "helix-queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5537,7 +5537,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5589,7 +5589,7 @@
         "tree-sitter-markdown",
         "tree-sitter-markdown/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5615,7 +5615,7 @@
         "tree-sitter-markdown-inline",
         "tree-sitter-markdown-inline/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5634,7 +5634,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5674,7 +5674,7 @@
       "queryRoots": [
         "queries/mcfunction"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5754,7 +5754,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5831,7 +5831,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -5909,7 +5909,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6168,7 +6168,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6277,7 +6277,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6302,7 +6302,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6485,7 +6485,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6653,7 +6653,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6737,7 +6737,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6757,7 +6757,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6839,7 +6839,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -6942,7 +6942,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7082,7 +7082,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7121,7 +7121,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7269,7 +7269,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7292,7 +7292,7 @@
         "queries/query",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7352,7 +7352,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7555,7 +7555,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7638,7 +7638,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -7678,7 +7678,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -8405,7 +8405,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -8562,7 +8562,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -8857,7 +8857,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -8937,7 +8937,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9075,7 +9075,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9144,7 +9144,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9159,7 +9159,7 @@
       "queryRoots": [
         "queries/test"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9202,7 +9202,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9288,7 +9288,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9369,7 +9369,7 @@
         "runtime/queries",
         "tree-sitter-toml"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9442,7 +9442,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9727,7 +9727,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9832,7 +9832,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9905,7 +9905,7 @@
         "queries/Neovim",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -9952,7 +9952,7 @@
         "queries/vim",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10215,7 +10215,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10238,7 +10238,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10297,7 +10297,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10342,7 +10342,7 @@
         "runtime/queries",
         "xml/queries/xml"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10362,7 +10362,7 @@
         "queries/xresources",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10414,7 +10414,7 @@
         "runtime/queries",
         "tree-sitter"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -10540,7 +10540,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {

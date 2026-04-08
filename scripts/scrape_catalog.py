@@ -12,6 +12,7 @@ import sys
 import time
 import tomllib
 import urllib.request
+from copy import deepcopy
 from datetime import date, datetime
 from functools import lru_cache
 from pathlib import Path
@@ -21,6 +22,7 @@ from typing import Literal, NotRequired, Protocol, TypeAlias, TypeGuard, TypedDi
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SRC_DIR = REPO_ROOT / "site" / "src"
 CACHE_DIR = REPO_ROOT / ".cache" / "gh-api"
+SCRAPE_STATE_PATH = CACHE_DIR / "scrape-state.json"
 # Cache GitHub API responses between runs. Freshness is still controllable with
 # SCRAPER_REFRESH=1 or SCRAPER_CACHE_HOURS=0 when we want a cold scrape.
 CACHE_HOURS = float(os.environ.get("SCRAPER_CACHE_HOURS", "24"))
@@ -124,11 +126,45 @@ class QueryPackResult(TypedDict):
     version: str
 
 
+class CliArgs(TypedDict):
+    config_path: Path
+    incremental: bool
+
+
 class LatestReleaseInfo(TypedDict):
     tag_name: str | None
     asset_names: list[str]
 
 
+class CachedOutputState(TypedDict):
+    sourceCommit: str
+    count: int
+    version: str
+
+
+class RepoDescriptorState(TypedDict):
+    sourceCommit: str
+    descriptors: list[JsonObject]
+
+
+class CachedParserReleaseState(TypedDict):
+    fingerprint: str
+    release: JsonObject
+
+
+class ParserCatalogState(TypedDict):
+    releasesByKey: dict[str, CachedParserReleaseState]
+
+
+class ScrapeState(TypedDict):
+    queryPacks: dict[str, CachedOutputState]
+    repoParsers: dict[str, RepoDescriptorState]
+    parserCatalog: ParserCatalogState
+    pulsar: NotRequired[CachedOutputState]
+    zedExtensions: NotRequired[CachedOutputState]
+
+
+REPO_INFO_CACHE: dict[str, JsonObject] = {}
 REPO_CACHE: dict[str, RepoSnapshot] = {}
 COMMIT_INFO_CACHE: dict[tuple[str, str], CommitInfo] = {}
 LATEST_RELEASE_CACHE: dict[str, LatestReleaseInfo | None] = {}
@@ -176,6 +212,127 @@ def query_file_map(value: object) -> dict[str, list[str]] | None:
         result[key] = query_files
 
     return result
+
+
+def default_scrape_state() -> ScrapeState:
+    return {
+        "queryPacks": {},
+        "repoParsers": {},
+        "parserCatalog": {
+            "releasesByKey": {},
+        },
+    }
+
+
+def load_scrape_state(path: Path) -> ScrapeState:
+    if not path.exists():
+        return default_scrape_state()
+
+    try:
+        raw = load_json_object(path.read_text(encoding="utf8"))
+    except (OSError, json.JSONDecodeError, RuntimeError):
+        return default_scrape_state()
+
+    state = default_scrape_state()
+    query_packs = raw.get("queryPacks")
+
+    if isinstance(query_packs, dict):
+        for key, value in cast(JsonObject, query_packs).items():
+            if not isinstance(value, dict):
+                continue
+
+            entry = cast(JsonObject, value)
+            source_commit = entry.get("sourceCommit")
+            count = entry.get("count")
+            version = entry.get("version")
+
+            if isinstance(source_commit, str) and isinstance(count, int) and isinstance(version, str):
+                state["queryPacks"][key] = {
+                    "sourceCommit": source_commit,
+                    "count": count,
+                    "version": version,
+                }
+
+    repo_parsers = raw.get("repoParsers")
+
+    if isinstance(repo_parsers, dict):
+        for key, value in cast(JsonObject, repo_parsers).items():
+            if not isinstance(value, dict):
+                continue
+
+            entry = cast(JsonObject, value)
+            source_commit = entry.get("sourceCommit")
+            descriptors = entry.get("descriptors")
+            descriptor_list = cast(list[object], descriptors) if isinstance(descriptors, list) else None
+
+            if not isinstance(source_commit, str) or descriptor_list is None:
+                continue
+
+            json_descriptors = [
+                cast(JsonObject, descriptor)
+                for descriptor in descriptor_list
+                if isinstance(descriptor, dict)
+            ]
+
+            if len(json_descriptors) != len(descriptor_list):
+                continue
+
+            state["repoParsers"][key] = {
+                "sourceCommit": source_commit,
+                "descriptors": json_descriptors,
+            }
+
+    parser_catalog = raw.get("parserCatalog")
+
+    if isinstance(parser_catalog, dict):
+        releases_by_key = cast(JsonObject, parser_catalog).get("releasesByKey")
+
+        if isinstance(releases_by_key, dict):
+            for key, value in cast(JsonObject, releases_by_key).items():
+                if not isinstance(value, dict):
+                    continue
+
+                entry = cast(JsonObject, value)
+                fingerprint = entry.get("fingerprint")
+                release = entry.get("release")
+
+                if not isinstance(fingerprint, str) or not isinstance(release, dict):
+                    continue
+
+                state["parserCatalog"]["releasesByKey"][key] = {
+                    "fingerprint": fingerprint,
+                    "release": cast(JsonObject, release),
+                }
+
+    for key in ["pulsar", "zedExtensions"]:
+        value = raw.get(key)
+
+        if not isinstance(value, dict):
+            continue
+
+        entry = cast(JsonObject, value)
+        source_commit = entry.get("sourceCommit")
+        count = entry.get("count")
+        version = entry.get("version")
+
+        if isinstance(source_commit, str) and isinstance(count, int) and isinstance(version, str):
+            cached_output: CachedOutputState = {
+                "sourceCommit": source_commit,
+                "count": count,
+                "version": version,
+            }
+
+            if key == "pulsar":
+                state["pulsar"] = cached_output
+            else:
+                state["zedExtensions"] = cached_output
+
+    return state
+
+
+def save_scrape_state(path: Path, state: ScrapeState) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    _ = path.write_text(json.dumps(state, indent=2, sort_keys=True), encoding="utf8")
 
 
 def load_json_value(text: str) -> object:
@@ -445,12 +602,25 @@ def load_query_pack_scrape_config(config_path: Path) -> QueryPackScrapeConfig:
     }
 
 
-def config_path_from_argv(argv: list[str]) -> Path:
-    if len(argv) != 1:
-        script_name = Path(sys.argv[0]).name
-        raise SystemExit(f"usage: {script_name} <query-pack-config.json>")
+def parse_cli_args(argv: list[str]) -> CliArgs:
+    positional: list[str] = []
+    incremental = False
 
-    return Path(argv[0])
+    for arg in argv:
+        if arg == "--incremental":
+            incremental = True
+            continue
+
+        positional.append(arg)
+
+    if len(positional) != 1:
+        script_name = Path(sys.argv[0]).name
+        raise SystemExit(f"usage: {script_name} [--incremental] <query-pack-config.json>")
+
+    return {
+        "config_path": Path(positional[0]),
+        "incremental": incremental,
+    }
 
 
 def load_toml_object(text: str) -> JsonObject:
@@ -470,6 +640,27 @@ def repo_owner_login(repo_info: JsonObject) -> str | None:
 
     login = cast(JsonObject, owner).get("login")
     return login if isinstance(login, str) else None
+
+
+def repo_info(repo: str) -> JsonObject:
+    cached = REPO_INFO_CACHE.get(repo)
+
+    if cached is not None:
+        return cached
+
+    info = load_json_object(gh_api(f"repos/{repo}"))
+    REPO_INFO_CACHE[repo] = info
+    return info
+
+
+def repo_default_branch(repo: str) -> str:
+    default_branch_value = repo_info(repo).get("default_branch")
+    default_branch = default_branch_value if isinstance(default_branch_value, str) else None
+
+    if default_branch is None or not default_branch:
+        raise RuntimeError(f"Missing default_branch for {repo}")
+
+    return default_branch
 
 
 def gh_cache_path(path: str, jq: str | None) -> Path:
@@ -567,13 +758,7 @@ def repo_snapshot(repo: str) -> RepoSnapshot:
     if cached is not None:
         return cached
 
-    repo_info = load_json_object(gh_api(f"repos/{repo}"))
-    default_branch_value = repo_info.get("default_branch")
-    default_branch = default_branch_value if isinstance(default_branch_value, str) else None
-
-    if default_branch is None or not default_branch:
-        raise RuntimeError(f"Missing default_branch for {repo}")
-
+    default_branch = repo_default_branch(repo)
     source_commit = repo_head_commit(repo, default_branch)
     raw_paths = gh_api(
         f"repos/{repo}/git/trees/{default_branch}?recursive=1",
@@ -643,6 +828,43 @@ def repo_commit_info(repo: str, ref: str) -> CommitInfo:
 
 def short_commit(commit: str) -> str:
     return commit[:7]
+
+
+def cached_output_is_current(
+    cached: CachedOutputState | None,
+    source_commit: str,
+    output_path: Path,
+) -> bool:
+    return cached is not None and cached["sourceCommit"] == source_commit and output_path.exists()
+
+
+def copy_cached_output_result(cached: CachedOutputState) -> CountVersionResult:
+    return {
+        "count": cached["count"],
+        "version": cached["version"],
+    }
+
+
+def descriptor_incremental_key(descriptor: ParserDescriptor) -> str:
+    package, language = descriptor_merge_key(descriptor)
+    return f"{package}|{language}"
+
+
+def descriptor_fingerprint(
+    descriptor: ParserDescriptor,
+    release_info: LatestReleaseInfo | None,
+) -> str:
+    payload = {
+        "descriptor": {
+            key: value
+            for key, value in descriptor.items()
+            if key != "id"
+        },
+        "releaseInfo": release_info,
+    }
+    return hashlib.sha256(
+        json.dumps(payload, sort_keys=True).encode("utf8"),
+    ).hexdigest()
 
 
 def normalize_id(value: str) -> str:
@@ -1047,7 +1269,12 @@ def bundled_queries_from_grammar(
     return bundled_queries
 
 
-def discover_repo_parser_descriptors(repo: str, default_branch: str, owner: str) -> list[ParserDescriptor]:
+def discover_repo_parser_descriptors(
+    repo: str,
+    default_branch: str,
+    owner: str,
+    source_commit: str | None = None,
+) -> list[ParserDescriptor]:
     tree_sitter_json = load_tree_sitter_json(repo, default_branch)
 
     if tree_sitter_json is None:
@@ -1066,7 +1293,7 @@ def discover_repo_parser_descriptors(repo: str, default_branch: str, owner: str)
     if grammars is None:
         return []
 
-    source_commit = repo_head_commit(repo, default_branch)
+    resolved_source_commit = source_commit or repo_head_commit(repo, default_branch)
     descriptors: list[ParserDescriptor] = []
 
     for grammar in grammars:
@@ -1095,7 +1322,7 @@ def discover_repo_parser_descriptors(repo: str, default_branch: str, owner: str)
                 "github_repo": repo,
                 "owners": [owner],
                 "default_branch": default_branch,
-                "source_commit": source_commit,
+                "source_commit": resolved_source_commit,
                 "bundled_query_kinds": sorted(bundled_queries),
                 "bundled_queries": bundled_queries,
                 "metadata_version": metadata_version,
@@ -1109,6 +1336,39 @@ def discover_repo_parser_descriptors(repo: str, default_branch: str, owner: str)
                 ),
             }
         )
+
+    return descriptors
+
+
+def discover_repo_parser_descriptors_cached(
+    repo: str,
+    default_branch: str,
+    owner: str,
+    incremental_state: ScrapeState | None,
+) -> list[ParserDescriptor]:
+    source_commit = repo_head_commit(repo, default_branch)
+
+    if incremental_state is not None:
+        cached = incremental_state["repoParsers"].get(repo)
+
+        if cached is not None and cached["sourceCommit"] == source_commit:
+            log_progress(
+                f"{repo}: unchanged at {short_commit(source_commit)}, reusing {len(cached['descriptors'])} parser descriptors",
+            )
+            return deepcopy(cached["descriptors"])
+
+    descriptors = discover_repo_parser_descriptors(
+        repo,
+        default_branch,
+        owner,
+        source_commit,
+    )
+
+    if incremental_state is not None:
+        incremental_state["repoParsers"][repo] = {
+            "sourceCommit": source_commit,
+            "descriptors": deepcopy(descriptors),
+        }
 
     return descriptors
 
@@ -1220,7 +1480,10 @@ def bundled_query_editors(
     return []
 
 
-def discover_org_parser_descriptors(org: str) -> list[ParserDescriptor]:
+def discover_org_parser_descriptors(
+    org: str,
+    incremental_state: ScrapeState | None,
+) -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
     repos = list_org_repos(org)
     total = len(repos)
@@ -1238,10 +1501,11 @@ def discover_org_parser_descriptors(org: str) -> list[ParserDescriptor]:
             continue
 
         descriptors.extend(
-            discover_repo_parser_descriptors(
+            discover_repo_parser_descriptors_cached(
                 full_name,
                 default_branch,
                 owner,
+                incremental_state,
             ),
         )
 
@@ -1251,31 +1515,28 @@ def discover_org_parser_descriptors(org: str) -> list[ParserDescriptor]:
     return descriptors
 
 
-def discover_extra_parser_descriptors() -> list[ParserDescriptor]:
+def discover_extra_parser_descriptors(
+    incremental_state: ScrapeState | None,
+) -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
     total = len(EXTRA_PARSER_REPOS)
 
     for index, repo in enumerate(EXTRA_PARSER_REPOS, start=1):
         log_progress(f"extra repos: scanning {repo} ({index}/{total})")
-        repo_info_raw = gh_api_json(f"repos/{repo}")
-
-        if not isinstance(repo_info_raw, dict):
-            continue
-
-        repo_info = cast(JsonObject, repo_info_raw)
-
-        default_branch_value = repo_info.get("default_branch")
+        repo_info_object = repo_info(repo)
+        default_branch_value = repo_info_object.get("default_branch")
         default_branch = default_branch_value if isinstance(default_branch_value, str) else None
-        owner = repo_owner_login(repo_info)
+        owner = repo_owner_login(repo_info_object)
 
         if not isinstance(default_branch, str) or not isinstance(owner, str):
             continue
 
         descriptors.extend(
-            discover_repo_parser_descriptors(
+            discover_repo_parser_descriptors_cached(
                 repo,
                 default_branch,
                 owner,
+                incremental_state,
             ),
         )
 
@@ -1283,7 +1544,9 @@ def discover_extra_parser_descriptors() -> list[ParserDescriptor]:
     return descriptors
 
 
-def discover_wiki_parser_descriptors() -> list[ParserDescriptor]:
+def discover_wiki_parser_descriptors(
+    incremental_state: ScrapeState | None,
+) -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
     repos = load_tree_sitter_wiki_parser_repos()
     total = len(repos)
@@ -1292,29 +1555,25 @@ def discover_wiki_parser_descriptors() -> list[ParserDescriptor]:
 
     for index, repo in enumerate(repos, start=1):
         try:
-            repo_info_raw = gh_api_json(f"repos/{repo}")
+            repo_info_object = repo_info(repo)
         except RuntimeError:
             if should_log_step(index, total, 10):
                 log_progress(f"wiki repos: scanned {index}/{total} repos ({len(descriptors)} descriptors)")
             continue
 
-        if not isinstance(repo_info_raw, dict):
-            continue
-
-        repo_info = cast(JsonObject, repo_info_raw)
-
-        default_branch_value = repo_info.get("default_branch")
+        default_branch_value = repo_info_object.get("default_branch")
         default_branch = default_branch_value if isinstance(default_branch_value, str) else None
-        owner = repo_owner_login(repo_info)
+        owner = repo_owner_login(repo_info_object)
 
         if not isinstance(default_branch, str) or not isinstance(owner, str):
             continue
 
         descriptors.extend(
-            discover_repo_parser_descriptors(
+            discover_repo_parser_descriptors_cached(
                 repo,
                 default_branch,
                 owner,
+                incremental_state,
             ),
         )
 
@@ -1803,17 +2062,19 @@ def assign_parser_ids(descriptors: list[dict[str, object]]) -> list[dict[str, ob
     return descriptors
 
 
-def discover_parser_descriptors() -> list[dict[str, object]]:
+def discover_parser_descriptors(
+    incremental_state: ScrapeState | None,
+) -> list[dict[str, object]]:
     base_descriptors: list[dict[str, object]] = []
 
     for org in ORG_PARSER_SOURCES:
         log_progress(f"Discovering parser descriptors from {org}")
-        base_descriptors.extend(discover_org_parser_descriptors(org))
+        base_descriptors.extend(discover_org_parser_descriptors(org, incremental_state))
 
     log_progress("Discovering parser descriptors from extra parser repos")
-    base_descriptors.extend(discover_extra_parser_descriptors())
+    base_descriptors.extend(discover_extra_parser_descriptors(incremental_state))
     log_progress("Discovering parser descriptors from the tree-sitter parser wiki")
-    base_descriptors.extend(discover_wiki_parser_descriptors())
+    base_descriptors.extend(discover_wiki_parser_descriptors(incremental_state))
     log_progress("Discovering parser descriptors from nvim-treesitter")
     nvim_descriptors = discover_nvim_parser_descriptors()
     log_progress("Discovering parser descriptors from Helix")
@@ -1843,7 +2104,21 @@ def write_query_pack_data(
     output_name: str,
     parser_language_by_language: dict[str, str] | None = None,
     tested_parser_refs_by_language: dict[str, list[str]] | None = None,
+    incremental_state: ScrapeState | None = None,
 ) -> CountVersionResult:
+    output_path = SRC_DIR / output_name
+
+    if incremental_state is not None:
+        default_branch = repo_default_branch(repo)
+        source_commit = repo_head_commit(repo, default_branch)
+        cached = incremental_state["queryPacks"].get(output_name)
+
+        if cached is not None and cached_output_is_current(cached, source_commit, output_path):
+            log_progress(
+                f"{output_name}: unchanged at {short_commit(source_commit)}, keeping existing output",
+            )
+            return copy_cached_output_result(cached)
+
     snapshot = repo_snapshot(repo)
     const_prefix = query_pack_const_prefix(output_name)
     detail_const = f"{const_prefix}_LANGUAGE_DETAILS"
@@ -1908,15 +2183,25 @@ def write_query_pack_data(
         ],
     )
 
-    _ = (SRC_DIR / output_name).write_text(content, encoding="utf8")
-    return {
+    _ = output_path.write_text(content, encoding="utf8")
+    result: CountVersionResult = {
         "count": len(rows),
         "version": f"git-{short_commit(snapshot['source_commit'])}",
     }
 
+    if incremental_state is not None:
+        incremental_state["queryPacks"][output_name] = {
+            "sourceCommit": snapshot["source_commit"],
+            "count": result["count"],
+            "version": result["version"],
+        }
+
+    return result
+
 
 def write_configured_query_pack_data(
     scrape_config: QueryPackScrapeConfig,
+    incremental_state: ScrapeState | None = None,
 ) -> list[QueryPackResult]:
     parser_language_cache: dict[str, dict[str, str]] = {}
     tested_parser_refs_cache: dict[str, dict[str, list[str]]] = {}
@@ -1957,6 +2242,7 @@ def write_configured_query_pack_data(
             output_name=config["outputName"],
             parser_language_by_language=parser_language_by_language,
             tested_parser_refs_by_language=tested_parser_refs_by_language,
+            incremental_state=incremental_state,
         )
         results.append(
             {
@@ -1973,9 +2259,23 @@ def write_configured_query_pack_data(
     return results
 
 
-def write_pulsar_pack_data() -> CountVersionResult:
+def write_pulsar_pack_data(
+    incremental_state: ScrapeState | None = None,
+) -> CountVersionResult:
     log_progress("Writing Pulsar grammar pack data")
     repo = "pulsar-edit/pulsar"
+    output_path = SRC_DIR / "pulsar-data.ts"
+
+    if incremental_state is not None:
+        source_commit = repo_head_commit(repo, repo_default_branch(repo))
+        cached = incremental_state.get("pulsar")
+
+        if cached is not None and cached_output_is_current(cached, source_commit, output_path):
+            log_progress(
+                f"pulsar-data.ts: unchanged at {short_commit(source_commit)}, keeping existing output",
+            )
+            return copy_cached_output_result(cached)
+
     snapshot = repo_snapshot(repo)
     default_branch = snapshot["default_branch"]
     rows: list[JsonObject] = []
@@ -2042,17 +2342,41 @@ def write_pulsar_pack_data() -> CountVersionResult:
         ],
     )
 
-    _ = (SRC_DIR / "pulsar-data.ts").write_text(content, encoding="utf8")
+    _ = output_path.write_text(content, encoding="utf8")
     log_progress(f"Wrote pulsar-data.ts ({len(rows)} grammars)")
-    return {
+    result: CountVersionResult = {
         "count": len(rows),
         "version": f"git-{short_commit(snapshot['source_commit'])}",
     }
 
+    if incremental_state is not None:
+        incremental_state["pulsar"] = {
+            "sourceCommit": snapshot["source_commit"],
+            "count": result["count"],
+            "version": result["version"],
+        }
 
-def write_zed_extension_data() -> CountVersionResult:
+    return result
+
+
+def write_zed_extension_data(
+    incremental_state: ScrapeState | None = None,
+) -> CountVersionResult:
     log_progress("Writing Zed extension data")
-    snapshot = repo_snapshot("zed-industries/zed")
+    repo = "zed-industries/zed"
+    output_path = SRC_DIR / "zed-extension-data.ts"
+
+    if incremental_state is not None:
+        source_commit = repo_head_commit(repo, repo_default_branch(repo))
+        cached = incremental_state.get("zedExtensions")
+
+        if cached is not None and cached_output_is_current(cached, source_commit, output_path):
+            log_progress(
+                f"zed-extension-data.ts: unchanged at {short_commit(source_commit)}, keeping existing output",
+            )
+            return copy_cached_output_result(cached)
+
+    snapshot = repo_snapshot(repo)
     parser_language_by_extension = load_zed_parser_language_map(
         re.compile(r"^extensions/([^/]+)/languages/([^/]+)/config\.toml$"),
     )
@@ -2105,12 +2429,21 @@ def write_zed_extension_data() -> CountVersionResult:
         ],
     )
 
-    _ = (SRC_DIR / "zed-extension-data.ts").write_text(content, encoding="utf8")
+    _ = output_path.write_text(content, encoding="utf8")
     log_progress(f"Wrote zed-extension-data.ts ({len(rows)} extension packs)")
-    return {
+    result: CountVersionResult = {
         "count": len(rows),
         "version": f"git-{short_commit(snapshot['source_commit'])}",
     }
+
+    if incremental_state is not None:
+        incremental_state["zedExtensions"] = {
+            "sourceCommit": snapshot["source_commit"],
+            "count": result["count"],
+            "version": result["version"],
+        }
+
+    return result
 
 
 def latest_release_info_from_json(value: object) -> LatestReleaseInfo | None:
@@ -2157,6 +2490,49 @@ def latest_release_has_wasm_asset(release_info: LatestReleaseInfo | None) -> boo
         return False
 
     return any(asset_name.lower().endswith(".wasm") for asset_name in release_info["asset_names"])
+
+
+def release_asset_format(asset_name: str) -> str | None:
+    normalized = asset_name.lower()
+
+    for suffix, format_name in [
+        (".wasm", "wasm"),
+        (".so", "so"),
+        (".dylib", "dylib"),
+        (".dll", "dll"),
+    ]:
+        if normalized.endswith(suffix):
+            return format_name
+
+    return None
+
+
+def release_asset_artifacts(release_info: LatestReleaseInfo | None) -> list[JsonObject]:
+    if release_info is None:
+        return []
+
+    artifacts: list[JsonObject] = []
+    seen_names: set[str] = set()
+
+    for asset_name in release_info["asset_names"]:
+        if asset_name in seen_names:
+            continue
+
+        format_name = release_asset_format(asset_name)
+
+        if format_name is None:
+            continue
+
+        seen_names.add(asset_name)
+        artifacts.append(
+            {
+                "kind": "release-asset",
+                "format": format_name,
+                "name": asset_name,
+            },
+        )
+
+    return artifacts
 
 
 def normalize_semver(tag: str | None) -> str | None:
@@ -2270,11 +2646,15 @@ def backfill_parser_catalog_bundled_queries() -> UpdateResult:
     return {"updated": updated}
 
 
-def write_parser_catalog() -> CountResult:
-    parser_descriptors = discover_parser_descriptors()
+def write_parser_catalog(
+    incremental_state: ScrapeState | None = None,
+) -> CountResult:
+    parser_descriptors = discover_parser_descriptors(incremental_state)
     total = len(parser_descriptors)
     log_progress(f"Writing parser catalog for {total} parser descriptors")
     releases: list[JsonObject] = []
+    cached_release_count = 0
+    cached_releases_by_key: dict[str, CachedParserReleaseState] = {}
 
     for index, descriptor in enumerate(parser_descriptors, start=1):
         if should_log_step(index, total, 10):
@@ -2323,48 +2703,70 @@ def write_parser_catalog() -> CountResult:
             or (metadata_version if isinstance(metadata_version, str) else None)
         )
         package = descriptor_package(descriptor)
-        wasm = (
-            latest_release_has_wasm_asset(release_info)
-            if release_info is not None
-            else package.startswith("github.com/tree-sitter/tree-sitter-")
+        release_artifacts = release_asset_artifacts(release_info)
+        wasm = any(artifact["format"] == "wasm" for artifact in release_artifacts) or (
+            release_info is None and package.startswith("github.com/tree-sitter/tree-sitter-")
         )
         source_archive = package.startswith(("github.com/", "gitlab.com/"))
-
-        releases.append(
-            {
-                "id": descriptor["id"],
-                "name": descriptor["name"],
-                "language": descriptor["language"],
-                "package": package,
-                "version": f"git-{short_commit(str(source_commit))}",
-                "sourceCommit": source_commit,
-                "lastUpdated": last_updated,
-                "upstreamSemver": upstream_semver,
-                "abi": 15,
-                "owners": descriptor["owners"],
-                "capabilities": {
-                    "buildFromSource": True,
-                    "sourceArchive": source_archive,
-                    "wasm": wasm,
-                },
-                "artifacts": [
-                    *([{"kind": "source-archive", "format": "tar.gz"}] if source_archive else []),
-                    *([{"kind": "wasm", "format": "wasm"}] if wasm else []),
-                ],
-                "bundledQueryKinds": bundled_query_kinds,
-                "bundledQueries": bundled_queries,
-                "bundledQueryEditors": bundled_query_editors(
-                    descriptor,
-                    bundled_queries,
-                    str(source_commit),
-                ),
-                "summary": parser_summary(
-                    descriptor,
-                    bundled_query_kinds,
-                    upstream_semver,
-                ),
-            }
+        release_key = descriptor_incremental_key(descriptor)
+        fingerprint = descriptor_fingerprint(
+            descriptor,
+            release_info,
         )
+
+        if incremental_state is not None:
+            cached_release = incremental_state["parserCatalog"]["releasesByKey"].get(release_key)
+
+            if cached_release is not None and cached_release["fingerprint"] == fingerprint:
+                release_object = deepcopy(cached_release["release"])
+                release_object["id"] = descriptor["id"]
+                releases.append(release_object)
+                cached_releases_by_key[release_key] = {
+                    "fingerprint": fingerprint,
+                    "release": deepcopy(release_object),
+                }
+                cached_release_count += 1
+                continue
+
+        release_object: JsonObject = {
+            "id": descriptor["id"],
+            "name": descriptor["name"],
+            "language": descriptor["language"],
+            "package": package,
+            "version": f"git-{short_commit(str(source_commit))}",
+            "sourceCommit": source_commit,
+            "lastUpdated": last_updated,
+            "upstreamSemver": upstream_semver,
+            "abi": 15,
+            "owners": descriptor["owners"],
+            "capabilities": {
+                "buildFromSource": True,
+                "sourceArchive": source_archive,
+                "wasm": wasm,
+            },
+            "artifacts": [
+                *([{"kind": "source-archive", "format": "tar.gz"}] if source_archive else []),
+                *release_artifacts,
+            ],
+            "bundledQueryKinds": bundled_query_kinds,
+            "bundledQueries": bundled_queries,
+            "bundledQueryEditors": bundled_query_editors(
+                descriptor,
+                bundled_queries,
+                str(source_commit),
+            ),
+            "summary": parser_summary(
+                descriptor,
+                bundled_query_kinds,
+                upstream_semver,
+            ),
+        }
+
+        releases.append(release_object)
+        cached_releases_by_key[release_key] = {
+            "fingerprint": fingerprint,
+            "release": deepcopy(release_object),
+        }
 
     content = "".join(
         [
@@ -2374,6 +2776,15 @@ def write_parser_catalog() -> CountResult:
     )
 
     _ = (SRC_DIR / "parser-catalog.ts").write_text(content, encoding="utf8")
+
+    if incremental_state is not None:
+        incremental_state["parserCatalog"] = {
+            "releasesByKey": cached_releases_by_key,
+        }
+
+        if cached_release_count:
+            log_progress(f"Reused {cached_release_count} cached parser releases")
+
     log_progress(f"Wrote parser-catalog.ts ({len(releases)} parsers)")
     return {"count": len(releases)}
 
@@ -2424,14 +2835,23 @@ def scrape_summary(
 
 
 def main(argv: list[str]) -> None:
-    config_path = config_path_from_argv(argv)
+    cli_args = parse_cli_args(argv)
+    config_path = cli_args["config_path"]
+    incremental_state = load_scrape_state(SCRAPE_STATE_PATH) if cli_args["incremental"] else None
     log_progress(f"Using query-pack config {config_path}")
+    if cli_args["incremental"]:
+        log_progress(f"Incremental mode enabled with state {SCRAPE_STATE_PATH}")
     query_pack_results = write_configured_query_pack_data(
         load_query_pack_scrape_config(config_path),
+        incremental_state=incremental_state,
     )
-    pulsar = write_pulsar_pack_data()
-    zed_extensions = write_zed_extension_data()
-    parser_catalog = write_parser_catalog()
+    pulsar = write_pulsar_pack_data(incremental_state=incremental_state)
+    zed_extensions = write_zed_extension_data(incremental_state=incremental_state)
+    parser_catalog = write_parser_catalog(incremental_state=incremental_state)
+
+    if incremental_state is not None:
+        save_scrape_state(SCRAPE_STATE_PATH, incremental_state)
+
     write_catalog_meta(
         query_pack_results=query_pack_results,
         pulsar_version=pulsar["version"],

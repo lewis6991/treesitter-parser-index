@@ -1,4 +1,4 @@
-export const CATALOG_GENERATED_AT = '2026-04-08';
+export const CATALOG_GENERATED_AT = '2026-04-09';
 export const NVIM_TREESITTER_VERSION = 'git-4916d65';
 export const NVIM_CONTEXT_VERSION = 'git-b0c45ce';
 export const NVIM_AERIAL_VERSION = 'git-645d108';

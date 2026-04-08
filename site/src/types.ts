@@ -5,8 +5,9 @@ export interface ParserCapabilities {
 }
 
 export interface ParserArtifact {
-  kind: 'source-archive' | 'wasm';
+  kind: 'source-archive' | 'release-asset';
   format: string;
+  name?: string;
 }
 
 export type QueryFiles = string | string[];

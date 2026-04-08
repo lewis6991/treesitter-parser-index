@@ -5,7 +5,7 @@ SCRAPER_CACHE_HOURS ?= 6
 SCRAPER_REFRESH ?= 0
 QUERY_PACK_CONFIG ?= query-pack-config.json
 
-.PHONY: help install build check serve prototype-index site-build scrape-catalog sync-nvim
+.PHONY: help install build check serve prototype-index site-build scrape-catalog scrape-catalog-incremental sync-nvim
 
 help:
 	@printf '%s\n' \
@@ -13,6 +13,7 @@ help:
 		'make build            Compile strict TypeScript into site/dist/' \
 		'make check            Run the site TypeScript type check' \
 		'make scrape-catalog   Refresh parser and query-pack data from GitHub' \
+		'make scrape-catalog-incremental  Refresh scraper outputs and reuse unchanged repos' \
 		'make sync-nvim        Alias for make scrape-catalog' \
 		'make prototype-index  Refresh top-level prototype index JSON files' \
 		'make serve            Build and serve the site locally' \
@@ -39,6 +40,9 @@ prototype-index: site-build
 
 scrape-catalog:
 	SCRAPER_CACHE_HOURS="$(SCRAPER_CACHE_HOURS)" SCRAPER_REFRESH="$(SCRAPER_REFRESH)" python3 "scripts/scrape_catalog.py" "$(QUERY_PACK_CONFIG)"
+
+scrape-catalog-incremental:
+	SCRAPER_CACHE_HOURS="$(SCRAPER_CACHE_HOURS)" SCRAPER_REFRESH="$(SCRAPER_REFRESH)" python3 "scripts/scrape_catalog.py" --incremental "$(QUERY_PACK_CONFIG)"
 
 sync-nvim:
 	$(MAKE) scrape-catalog

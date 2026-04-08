@@ -543,6 +543,20 @@ select {
   color: var(--text);
 }
 
+.chip-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.chip-link:hover {
+  border-color: var(--accent-border);
+}
+
+.chip-link:focus-visible {
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  outline: none;
+}
+
 .chip-button {
   appearance: none;
   cursor: pointer;
