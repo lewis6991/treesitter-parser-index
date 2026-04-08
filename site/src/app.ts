@@ -291,7 +291,7 @@ function wireEvents(): void {
       const queryId = clickDataset(event, 'queryId');
 
       if (queryId) {
-        state.selectedQueryId = queryId;
+        toggleSelectedQuery(queryId);
         renderExplorerSelection();
         return;
       }
@@ -302,8 +302,7 @@ function wireEvents(): void {
         return;
       }
 
-      state.selectedParserId = parserId;
-      state.selectedQueryId = null;
+      toggleSelectedParser(parserId);
       renderExplorerSelection();
     });
 
@@ -311,7 +310,7 @@ function wireEvents(): void {
       const queryId = keyDataset(event, 'queryId');
 
       if (queryId) {
-        state.selectedQueryId = queryId;
+        toggleSelectedQuery(queryId);
         renderExplorerSelection();
         return;
       }
@@ -322,8 +321,7 @@ function wireEvents(): void {
         return;
       }
 
-      state.selectedParserId = parserId;
-      state.selectedQueryId = null;
+      toggleSelectedParser(parserId);
       renderExplorerSelection();
     });
   }
@@ -449,13 +447,13 @@ function renderExplorerPanels(explorerState: ExplorerRenderState): void {
 function prepareExplorerRenderState(filters: ActiveFilters): ExplorerRenderState {
   const parsers = getFilteredParsers(filters);
 
-  if (!parsers.some((parser) => parser.id === state.selectedParserId)) {
+  if (state.selectedParserId !== null && !parsers.some((parser) => parser.id === state.selectedParserId)) {
     state.selectedParserId = parsers[0]?.id ?? null;
     state.selectedQueryId = null;
   }
 
   const selectedParser = parsers.find((parser) => parser.id === state.selectedParserId) ?? null;
-  const rankedPacks = getRankedPacks(selectedParser, filters);
+  const rankedPacks = selectedParser ? getRankedPacks(selectedParser, filters) : [];
 
   if (!rankedPacks.some((entry) => entry.pack.id === state.selectedQueryId)) {
     state.selectedQueryId = null;
@@ -466,6 +464,21 @@ function prepareExplorerRenderState(filters: ActiveFilters): ExplorerRenderState
     selectedParser,
     rankedPacks,
   };
+}
+
+function toggleSelectedParser(parserId: string): void {
+  if (state.selectedParserId === parserId) {
+    state.selectedParserId = null;
+    state.selectedQueryId = null;
+    return;
+  }
+
+  state.selectedParserId = parserId;
+  state.selectedQueryId = null;
+}
+
+function toggleSelectedQuery(queryId: string): void {
+  state.selectedQueryId = state.selectedQueryId === queryId ? null : queryId;
 }
 
 function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[]): void {
