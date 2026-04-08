@@ -28,6 +28,16 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Restore gh api cache
+        id: gh-api-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/gh-api
+          key: ${{ runner.os }}-gh-api-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gh-api-${{ github.ref_name }}-
+            ${{ runner.os }}-gh-api-
+
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
@@ -47,6 +57,13 @@ jobs:
         run: make scrape-catalog build
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Save gh api cache
+        if: success() && hashFiles('.cache/gh-api/**') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/gh-api
+          key: ${{ steps.gh-api-cache.outputs.cache-primary-key }}
 
       - name: Assemble GitHub Pages artifact
         run: |

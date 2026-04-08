@@ -12,7 +12,7 @@ import sys
 import time
 import tomllib
 import urllib.request
-from datetime import date
+from datetime import date, datetime
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal, NotRequired, Protocol, TypeAlias, TypeGuard, TypedDict, cast
@@ -135,6 +135,15 @@ PULSAR_QUERY_KEY_TO_KIND = {
     "tagsQuery": "tags",
 }
 NEOVIM_ONLY_QUERY_PREDICATE_RE = re.compile(r"#(?:any-)?(?:lua|vim)-match\?")
+
+
+def log_progress(message: str) -> None:
+    timestamp = datetime.now().strftime("%H:%M:%S")
+    print(f"[{timestamp}] {message}", flush=True)
+
+
+def should_log_step(index: int, total: int, interval: int) -> bool:
+    return index == 1 or index == total or index % interval == 0
 
 
 def string_list(value: object) -> list[str] | None:
@@ -856,6 +865,7 @@ def list_org_repos(org: str) -> list[JsonObject]:
             break
 
         page_items = cast(list[object], raw_page_items)
+        log_progress(f"{org}: fetched repo page {page} ({len(page_items)} repos)")
 
         for item in page_items:
             if isinstance(item, dict):
@@ -866,6 +876,7 @@ def list_org_repos(org: str) -> list[JsonObject]:
 
         page += 1
 
+    log_progress(f"{org}: loaded {len(repos)} repos")
     return repos
 
 
@@ -945,6 +956,7 @@ def load_tree_sitter_wiki_parser_repos() -> list[str]:
         covered_repos.add(github_repo)
         wiki_repos.append(github_repo)
 
+    log_progress(f"tree-sitter wiki: loaded {len(wiki_repos)} extra parser repos")
     return wiki_repos
 
 
@@ -1205,8 +1217,12 @@ def bundled_query_editors(
 
 def discover_org_parser_descriptors(org: str) -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
+    repos = list_org_repos(org)
+    total = len(repos)
 
-    for repo_info in list_org_repos(org):
+    log_progress(f"{org}: scanning {total} repos for parser descriptors")
+
+    for index, repo_info in enumerate(repos, start=1):
         full_name_value = repo_info.get("full_name")
         default_branch_value = repo_info.get("default_branch")
         full_name = full_name_value if isinstance(full_name_value, str) else None
@@ -1224,13 +1240,18 @@ def discover_org_parser_descriptors(org: str) -> list[ParserDescriptor]:
             ),
         )
 
+        if should_log_step(index, total, 10):
+            log_progress(f"{org}: scanned {index}/{total} repos ({len(descriptors)} descriptors)")
+
     return descriptors
 
 
 def discover_extra_parser_descriptors() -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
+    total = len(EXTRA_PARSER_REPOS)
 
-    for repo in EXTRA_PARSER_REPOS:
+    for index, repo in enumerate(EXTRA_PARSER_REPOS, start=1):
+        log_progress(f"extra repos: scanning {repo} ({index}/{total})")
         repo_info_raw = gh_api_json(f"repos/{repo}")
 
         if not isinstance(repo_info_raw, dict):
@@ -1253,16 +1274,23 @@ def discover_extra_parser_descriptors() -> list[ParserDescriptor]:
             ),
         )
 
+    log_progress(f"extra repos: discovered {len(descriptors)} descriptors")
     return descriptors
 
 
 def discover_wiki_parser_descriptors() -> list[ParserDescriptor]:
     descriptors: list[ParserDescriptor] = []
+    repos = load_tree_sitter_wiki_parser_repos()
+    total = len(repos)
 
-    for repo in load_tree_sitter_wiki_parser_repos():
+    log_progress(f"wiki repos: scanning {total} repos for parser descriptors")
+
+    for index, repo in enumerate(repos, start=1):
         try:
             repo_info_raw = gh_api_json(f"repos/{repo}")
         except RuntimeError:
+            if should_log_step(index, total, 10):
+                log_progress(f"wiki repos: scanned {index}/{total} repos ({len(descriptors)} descriptors)")
             continue
 
         if not isinstance(repo_info_raw, dict):
@@ -1284,6 +1312,9 @@ def discover_wiki_parser_descriptors() -> list[ParserDescriptor]:
                 owner,
             ),
         )
+
+        if should_log_step(index, total, 10):
+            log_progress(f"wiki repos: scanned {index}/{total} repos ({len(descriptors)} descriptors)")
 
     return descriptors
 
@@ -1470,6 +1501,7 @@ def discover_nvim_parser_descriptors() -> list[ParserDescriptor]:
     lockfile = load_nvim_lockfile(repo, ref)
     registry = load_nvim_parser_registry(repo, ref)
     descriptors: list[ParserDescriptor] = []
+    log_progress(f"nvim-treesitter: building descriptors for {len(registry)} parser entries")
 
     for language, install_info in sorted(registry.items()):
         url = install_info.get("url")
@@ -1522,6 +1554,7 @@ def discover_helix_parser_descriptors() -> list[ParserDescriptor]:
         return []
 
     descriptors: list[ParserDescriptor] = []
+    log_progress(f"Helix: building descriptors for {len(grammars)} grammar entries")
 
     for grammar in grammars:
         if not isinstance(grammar, dict):
@@ -1769,11 +1802,16 @@ def discover_parser_descriptors() -> list[dict[str, object]]:
     base_descriptors: list[dict[str, object]] = []
 
     for org in ORG_PARSER_SOURCES:
+        log_progress(f"Discovering parser descriptors from {org}")
         base_descriptors.extend(discover_org_parser_descriptors(org))
 
+    log_progress("Discovering parser descriptors from extra parser repos")
     base_descriptors.extend(discover_extra_parser_descriptors())
+    log_progress("Discovering parser descriptors from the tree-sitter parser wiki")
     base_descriptors.extend(discover_wiki_parser_descriptors())
+    log_progress("Discovering parser descriptors from nvim-treesitter")
     nvim_descriptors = discover_nvim_parser_descriptors()
+    log_progress("Discovering parser descriptors from Helix")
     helix_descriptors = discover_helix_parser_descriptors()
     merged: dict[tuple[str, str], dict[str, object]] = {}
 
@@ -1787,6 +1825,9 @@ def discover_parser_descriptors() -> list[dict[str, object]]:
         merged[descriptor_merge_key(descriptor)] = descriptor
 
     descriptors = sorted(merged.values(), key=parser_descriptor_sort_key)
+    log_progress(
+        f"Discovered {len(base_descriptors) + len(nvim_descriptors) + len(helix_descriptors)} parser descriptors before dedupe, {len(descriptors)} after dedupe",
+    )
     return assign_parser_ids(descriptors)
 
 
@@ -1815,6 +1856,8 @@ def write_query_pack_data(
 
         if query_kind not in kinds:
             kinds.append(query_kind)
+
+    log_progress(f"{output_name}: matched {len(languages)} languages from {len(snapshot['paths'])} paths")
 
     rows: list[JsonObject] = []
 
@@ -1873,8 +1916,12 @@ def write_configured_query_pack_data(
     parser_language_cache: dict[str, dict[str, str]] = {}
     tested_parser_refs_cache: dict[str, dict[str, list[str]]] = {}
     results: list[QueryPackResult] = []
+    total = len(scrape_config["queryPacks"])
 
-    for config in scrape_config["queryPacks"]:
+    log_progress(f"Writing {total} query-pack datasets")
+
+    for index, config in enumerate(scrape_config["queryPacks"], start=1):
+        log_progress(f"[query-pack {index}/{total}] {config['outputName']} from {config['repo']}")
         parser_language_by_language = None
         parser_language_source = config.get("parserLanguageSource")
 
@@ -1914,11 +1961,15 @@ def write_configured_query_pack_data(
                 "version": result["version"],
             },
         )
+        log_progress(
+            f"[query-pack {index}/{total}] wrote {config['outputName']} ({result['count']} languages)",
+        )
 
     return results
 
 
 def write_pulsar_pack_data() -> CountVersionResult:
+    log_progress("Writing Pulsar grammar pack data")
     repo = "pulsar-edit/pulsar"
     snapshot = repo_snapshot(repo)
     default_branch = snapshot["default_branch"]
@@ -1965,6 +2016,9 @@ def write_pulsar_pack_data() -> CountVersionResult:
             }
         )
 
+        if should_log_step(len(rows), 1000, 10):
+            log_progress(f"pulsar-data.ts: collected {len(rows)} grammar packs so far")
+
     rows.sort(key=lambda row: (str(row["name"]), str(row["id"])))
     content = "".join(
         [
@@ -1984,6 +2038,7 @@ def write_pulsar_pack_data() -> CountVersionResult:
     )
 
     _ = (SRC_DIR / "pulsar-data.ts").write_text(content, encoding="utf8")
+    log_progress(f"Wrote pulsar-data.ts ({len(rows)} grammars)")
     return {
         "count": len(rows),
         "version": f"git-{short_commit(snapshot['source_commit'])}",
@@ -1991,6 +2046,7 @@ def write_pulsar_pack_data() -> CountVersionResult:
 
 
 def write_zed_extension_data() -> CountVersionResult:
+    log_progress("Writing Zed extension data")
     snapshot = repo_snapshot("zed-industries/zed")
     parser_language_by_extension = load_zed_parser_language_map(
         re.compile(r"^extensions/([^/]+)/languages/([^/]+)/config\.toml$"),
@@ -2030,6 +2086,8 @@ def write_zed_extension_data() -> CountVersionResult:
         for (extension, language), query_kinds in sorted(packs.items())
     ]
 
+    log_progress(f"zed-extension-data.ts: collected {len(rows)} extension language packs")
+
     content = "".join(
         [
             "export interface ZedExtensionPackData {\n",
@@ -2043,6 +2101,7 @@ def write_zed_extension_data() -> CountVersionResult:
     )
 
     _ = (SRC_DIR / "zed-extension-data.ts").write_text(content, encoding="utf8")
+    log_progress(f"Wrote zed-extension-data.ts ({len(rows)} extension packs)")
     return {
         "count": len(rows),
         "version": f"git-{short_commit(snapshot['source_commit'])}",
@@ -2175,9 +2234,15 @@ def backfill_parser_catalog_bundled_queries() -> UpdateResult:
 
 def write_parser_catalog() -> CountResult:
     parser_descriptors = discover_parser_descriptors()
+    total = len(parser_descriptors)
+    log_progress(f"Writing parser catalog for {total} parser descriptors")
     releases: list[JsonObject] = []
 
-    for descriptor in parser_descriptors:
+    for index, descriptor in enumerate(parser_descriptors, start=1):
+        if should_log_step(index, total, 10):
+            log_progress(
+                f"[parser {index}/{total}] {descriptor['name']} ({descriptor['language']})",
+            )
         github_repo = descriptor.get("github_repo")
         source_commit = descriptor.get("source_commit")
         last_updated = None
@@ -2262,6 +2327,7 @@ def write_parser_catalog() -> CountResult:
     )
 
     _ = (SRC_DIR / "parser-catalog.ts").write_text(content, encoding="utf8")
+    log_progress(f"Wrote parser-catalog.ts ({len(releases)} parsers)")
     return {"count": len(releases)}
 
 
@@ -2271,6 +2337,7 @@ def write_catalog_meta(
     pulsar_version: str,
     zed_version: str,
 ) -> None:
+    log_progress("Writing catalog metadata")
     generated_at = date.today().isoformat()
     content = "".join(
         [
@@ -2285,6 +2352,7 @@ def write_catalog_meta(
     )
 
     _ = (SRC_DIR / "catalog-meta.ts").write_text(content, encoding="utf8")
+    log_progress("Wrote catalog-meta.ts")
 
 
 def scrape_summary(
@@ -2309,8 +2377,10 @@ def scrape_summary(
 
 
 def main(argv: list[str]) -> None:
+    config_path = config_path_from_argv(argv)
+    log_progress(f"Using query-pack config {config_path}")
     query_pack_results = write_configured_query_pack_data(
-        load_query_pack_scrape_config(config_path_from_argv(argv)),
+        load_query_pack_scrape_config(config_path),
     )
     pulsar = write_pulsar_pack_data()
     zed_extensions = write_zed_extension_data()
