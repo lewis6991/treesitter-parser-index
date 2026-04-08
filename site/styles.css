@@ -872,10 +872,6 @@ select {
   padding: 0.22rem 0.34rem;
 }
 
-.tree-item-overflow-chip {
-  color: var(--text-soft);
-}
-
 .tree-leaf {
   align-items: center;
   background: transparent;

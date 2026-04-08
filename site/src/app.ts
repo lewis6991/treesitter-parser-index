@@ -502,14 +502,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
       const matchingEditors = unique(
         chipPacks.flatMap(({ pack }) => packEditors(pack)),
       );
-      const visibleEditors = matchingEditors.slice(0, 3);
-      const hiddenEditorCount = matchingEditors.length - visibleEditors.length;
-      const inlineEditorChips = [
-        ...visibleEditors.map(renderEditorFilterChip),
-        ...(hiddenEditorCount > 0
-          ? [`<span class="chip chip-outline tree-item-overflow-chip">+${escapeHtml(String(hiddenEditorCount))}</span>`]
-          : []),
-      ].join('');
+      const inlineEditorChips = matchingEditors.map(renderEditorFilterChip).join('');
       const signalChips = renderParserSignalChips(parser).join('');
       const freshnessClass = freshness === 'neutral' ? '' : `is-${freshness}`;
 
