@@ -22,6 +22,8 @@ const LANGUAGE_ALIASES: Record<string, string> = {
 };
 const ACTIVE_PARSER_AGE_MS = 365 * 24 * 60 * 60 * 1000;
 const STALE_PARSER_AGE_MS = 730 * 24 * 60 * 60 * 1000;
+const SEARCH_INPUT_DEBOUNCE_MS = 80;
+const SEARCH_FILTER_STRIP_DEBOUNCE_MS = 180;
 const parserCompactDateFormatter = new Intl.DateTimeFormat('en', {
   month: 'short',
   year: 'numeric',
@@ -242,10 +244,14 @@ const allRankedPacks = data.queryPacks
 const compatiblePacksByParserId = new Map(
   sortedParsers.map((parser) => [parser.id, buildCompatiblePacks(parser)]),
 );
+const packSearchTextByParserId = new Map<string, string>();
+const packSearchMatchByParserId = new Map<string, boolean>();
 // Explorer clicks keep the filters stable, so reuse the expensive filtered lists until a filter changes.
 const filteredParserCache = new Map<string, ParserRelease[]>();
 const rankedPackCache = new Map<string, RankedPack[]>();
 let cachedBaseFilterKey = '';
+let pendingSearchRenderTimer: number | null = null;
+let pendingFilterStripRenderTimer: number | null = null;
 
 const state: FilterState = {
   search: '',
@@ -341,7 +347,7 @@ function wireEvents(): void {
   if (searchInput) {
     searchInput.addEventListener('input', () => {
       state.search = searchInput.value.trim().toLowerCase();
-      renderFull();
+      scheduleSearchRender();
     });
   }
 
@@ -490,10 +496,16 @@ function wireSectionNav(): void {
   }
 }
 
-function renderFull(): void {
+function renderFull(options: { deferFilterStrip?: boolean } = {}): void {
+  cancelScheduledSearchRender();
+  cancelScheduledFilterStripRender();
   const filters = getActiveFilters();
   syncFilterInputs();
-  renderActiveFilterStrip();
+  if (options.deferFilterStrip) {
+    scheduleFilterStripRender();
+  } else {
+    renderActiveFilterStrip();
+  }
 
   if (hasExplorerPanel()) {
     syncRenderCaches(filters);
@@ -508,6 +520,7 @@ function renderFull(): void {
 }
 
 function renderExplorerSelection(): void {
+  cancelScheduledSearchRender();
   if (!hasExplorerPanel()) {
     return;
   }
@@ -516,6 +529,42 @@ function renderExplorerSelection(): void {
   syncRenderCaches(filters);
   renderExplorerPanels(prepareExplorerRenderState(filters));
   syncUrlState();
+}
+
+// Search is the only control that can fire on every keystroke, so batch it slightly.
+function scheduleSearchRender(): void {
+  cancelScheduledSearchRender();
+  cancelScheduledFilterStripRender();
+  pendingSearchRenderTimer = window.setTimeout(() => {
+    pendingSearchRenderTimer = null;
+    renderFull({ deferFilterStrip: true });
+  }, SEARCH_INPUT_DEBOUNCE_MS);
+}
+
+function cancelScheduledSearchRender(): void {
+  if (pendingSearchRenderTimer === null) {
+    return;
+  }
+
+  window.clearTimeout(pendingSearchRenderTimer);
+  pendingSearchRenderTimer = null;
+}
+
+function scheduleFilterStripRender(): void {
+  cancelScheduledFilterStripRender();
+  pendingFilterStripRenderTimer = window.setTimeout(() => {
+    pendingFilterStripRenderTimer = null;
+    renderActiveFilterStrip();
+  }, SEARCH_FILTER_STRIP_DEBOUNCE_MS);
+}
+
+function cancelScheduledFilterStripRender(): void {
+  if (pendingFilterStripRenderTimer === null) {
+    return;
+  }
+
+  window.clearTimeout(pendingFilterStripRenderTimer);
+  pendingFilterStripRenderTimer = null;
 }
 
 function renderExplorerPanels(explorerState: ExplorerRenderState): void {
@@ -585,6 +634,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
       const freshness = parserFreshnessState(parser);
       const chipFilters = {
         ...getActiveFilters(),
+        search: '',
         editor: 'all' as const,
       };
       const matchingPacks = isSelected ? rankedPacks : getRankedPacks(parser);
@@ -1280,7 +1330,20 @@ function packMatchesSearchForParser(
   parser: ParserRelease,
   search: string,
 ): boolean {
-  return matchesSearch(getPackSearchTextForParser(pack, parser).toLowerCase(), search);
+  if (!search) {
+    return true;
+  }
+
+  const cacheKey = `${search}\u0000${pack.id}\u0000${parser.id}`;
+  const cached = packSearchMatchByParserId.get(cacheKey);
+
+  if (cached !== undefined) {
+    return cached;
+  }
+
+  const matches = matchesSearch(getPackSearchTextForParserCached(pack, parser), search);
+  packSearchMatchByParserId.set(cacheKey, matches);
+  return matches;
 }
 
 function getPackSearchTextForParser(pack: QueryPack, parser: ParserRelease): string {
@@ -1302,6 +1365,19 @@ function getPackSearchTextForParser(pack: QueryPack, parser: ParserRelease): str
     languageDetails.flatMap((detail) => detail.testedParserRefs ?? []).join(' '),
     queryFileSearchText(pack),
   ].join(' ');
+}
+
+function getPackSearchTextForParserCached(pack: QueryPack, parser: ParserRelease): string {
+  const cacheKey = `${pack.id}\u0000${parser.id}`;
+  const cached = packSearchTextByParserId.get(cacheKey);
+
+  if (cached) {
+    return cached;
+  }
+
+  const searchText = getPackSearchTextForParser(pack, parser).toLowerCase();
+  packSearchTextByParserId.set(cacheKey, searchText);
+  return searchText;
 }
 
 function parserRef(parser: ParserRelease): string {
@@ -1828,6 +1904,7 @@ function syncRenderCaches(filters: ActiveFilters): void {
 
   filteredParserCache.clear();
   rankedPackCache.clear();
+  packSearchMatchByParserId.clear();
   cachedBaseFilterKey = baseFilterKey;
 }
 
