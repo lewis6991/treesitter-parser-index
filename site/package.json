@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc --pretty false",
+    "build": "node ../scripts/write_site_build_meta.mjs dist/build-meta.json && tsc --pretty false",
     "check": "tsc --pretty false --noEmit"
   },
   "devDependencies": {

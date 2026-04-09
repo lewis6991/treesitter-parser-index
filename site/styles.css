@@ -262,13 +262,35 @@ select {
   white-space: nowrap;
 }
 
+.menu-meta {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.6rem;
+  grid-column: 3;
+  justify-self: end;
+  min-width: 0;
+}
+
+.menu-revision {
+  border-left: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--mono-font);
+  font-size: 0.74rem;
+  line-height: 1;
+  padding-left: 0.6rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu-revision:hover {
+  color: var(--icons-hover);
+}
+
 .menu-link {
   align-items: center;
   color: var(--text-soft);
   display: inline-flex;
   gap: 0.38rem;
-  grid-column: 3;
-  justify-self: end;
   line-height: 1;
   white-space: nowrap;
 }

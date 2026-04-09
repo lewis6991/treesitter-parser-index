@@ -73,6 +73,11 @@ interface FilterOption {
   label: string;
 }
 
+interface BuildMeta {
+  label?: string;
+  commitUrl?: string | null;
+}
+
 interface ExplorerRenderState {
   parsers: ParserRelease[];
   selectedParser: ParserRelease | null;
@@ -159,6 +164,7 @@ const state: FilterState = {
 const elements = {
   searchInput: queryOptionalElement<HTMLInputElement>('#search-input'),
   activeFilters: queryOptionalElement<HTMLDivElement>('#active-filters'),
+  siteRevision: queryOptionalElement<HTMLAnchorElement>('#site-revision'),
   explorerTree: queryOptionalElement<HTMLDivElement>('#explorer-tree'),
   parserCountBadge: queryOptionalElement<HTMLSpanElement>('#parser-count-badge'),
   queryCountBadge: queryOptionalElement<HTMLSpanElement>('#query-count-badge'),
@@ -173,6 +179,7 @@ function init(): void {
   wireEvents();
   wireSectionNav();
   syncPreservedPageLinks(window.location.search);
+  void renderSiteRevision();
   renderFull();
 }
 
@@ -184,6 +191,45 @@ function syncFilterInputs(): void {
   }
 
   searchInput.value = state.search;
+}
+
+async function renderSiteRevision(): Promise<void> {
+  const siteRevision = elements.siteRevision;
+
+  if (!siteRevision) {
+    return;
+  }
+
+  try {
+    const response = await fetch('dist/build-meta.json', { cache: 'no-store' });
+
+    if (!response.ok) {
+      return;
+    }
+
+    const buildMeta = await response.json() as BuildMeta;
+
+    if (!buildMeta.label) {
+      return;
+    }
+
+    siteRevision.textContent = buildMeta.label;
+    siteRevision.title = `Site revision ${buildMeta.label}`;
+
+    if (buildMeta.commitUrl) {
+      siteRevision.href = buildMeta.commitUrl;
+      siteRevision.target = '_blank';
+      siteRevision.rel = 'noreferrer noopener';
+    } else {
+      siteRevision.removeAttribute('href');
+      siteRevision.removeAttribute('target');
+      siteRevision.removeAttribute('rel');
+    }
+
+    siteRevision.hidden = false;
+  } catch {
+    // Keep the revision hidden when build metadata is unavailable.
+  }
 }
 
 function wireEvents(): void {
