@@ -9,7 +9,7 @@ import type {
 } from './types.js';
 
 type CompatibilityRank = 0 | 1 | 2 | 3;
-type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'release'>;
+type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release'>;
 
 const LANGUAGE_ALIASES: Record<string, string> = {
   'c-sharp': 'c_sharp',
@@ -37,6 +37,7 @@ interface FilterState {
   editor: string;
   queryKind: string;
   install: 'all' | 'wasm' | 'source-archive' | 'build-from-source';
+  scanner: 'all' | 'custom' | 'none';
   release: 'all' | 'semver' | 'none';
   selectedParserId: string | null;
   selectedQueryId: string | null;
@@ -146,6 +147,7 @@ const state: FilterState = {
   editor: 'all',
   queryKind: 'all',
   install: 'all',
+  scanner: 'all',
   release: 'all',
   selectedParserId: null,
   selectedQueryId: null,
@@ -158,11 +160,11 @@ const elements = {
   editorFilter: queryOptionalElement<HTMLSelectElement>('#editor-filter'),
   queryKindFilter: queryOptionalElement<HTMLSelectElement>('#query-kind-filter'),
   installFilter: queryOptionalElement<HTMLSelectElement>('#install-filter'),
+  scannerFilter: queryOptionalElement<HTMLSelectElement>('#scanner-filter'),
   releaseFilter: queryOptionalElement<HTMLSelectElement>('#release-filter'),
   explorerTree: queryOptionalElement<HTMLDivElement>('#explorer-tree'),
   parserCountBadge: queryOptionalElement<HTMLSpanElement>('#parser-count-badge'),
   queryCountBadge: queryOptionalElement<HTMLSpanElement>('#query-count-badge'),
-  detailPanel: queryOptionalElement<HTMLDivElement>('#detail-panel'),
   coverageMatrix: queryOptionalElement<HTMLDivElement>('#coverage-matrix'),
   coverageDetail: queryOptionalElement<HTMLDivElement>('#coverage-detail'),
 };
@@ -182,9 +184,10 @@ function renderFilterOptions(filters: ActiveFilters): void {
   const editorFilter = elements.editorFilter;
   const queryKindFilter = elements.queryKindFilter;
   const installFilter = elements.installFilter;
+  const scannerFilter = elements.scannerFilter;
   const releaseFilter = elements.releaseFilter;
 
-  if (!languageFilter || !editorFilter || !queryKindFilter || !installFilter || !releaseFilter) {
+  if (!languageFilter || !editorFilter || !queryKindFilter || !installFilter || !scannerFilter || !releaseFilter) {
     return;
   }
 
@@ -215,6 +218,18 @@ function renderFilterOptions(filters: ActiveFilters): void {
       value: 'none',
       label: 'No Semver Release',
       count: countFilteredParsers({ ...filters, release: 'none' }),
+    },
+  ];
+  const scannerStates: CountedOption[] = [
+    {
+      value: 'custom',
+      label: 'Custom Scanner',
+      count: countFilteredParsers({ ...filters, scanner: 'custom' }),
+    },
+    {
+      value: 'none',
+      label: 'No Custom Scanner',
+      count: countFilteredParsers({ ...filters, scanner: 'none' }),
     },
   ];
 
@@ -259,6 +274,13 @@ function renderFilterOptions(filters: ActiveFilters): void {
     state.install,
   );
   setCountedOptions(
+    scannerFilter,
+    'All scanner states',
+    countFilteredParsers({ ...filters, scanner: 'all' }),
+    scannerStates,
+    state.scanner,
+  );
+  setCountedOptions(
     releaseFilter,
     'All release states',
     countFilteredParsers({ ...filters, release: 'all' }),
@@ -273,6 +295,7 @@ function wireEvents(): void {
   const editorFilter = elements.editorFilter;
   const queryKindFilter = elements.queryKindFilter;
   const installFilter = elements.installFilter;
+  const scannerFilter = elements.scannerFilter;
   const releaseFilter = elements.releaseFilter;
   const explorerTree = elements.explorerTree;
   const coverageMatrix = elements.coverageMatrix;
@@ -308,6 +331,13 @@ function wireEvents(): void {
   if (installFilter) {
     installFilter.addEventListener('change', () => {
       state.install = installFilter.value as FilterState['install'];
+      renderFull();
+    });
+  }
+
+  if (scannerFilter) {
+    scannerFilter.addEventListener('change', () => {
+      state.scanner = scannerFilter.value as FilterState['scanner'];
       renderFull();
     });
   }
@@ -484,7 +514,6 @@ function renderExplorerSelection(): void {
 
 function renderExplorerPanels(explorerState: ExplorerRenderState): void {
   renderExplorerTree(explorerState.parsers, explorerState.rankedPacks);
-  renderDetail(explorerState.selectedParser, explorerState.rankedPacks);
 }
 
 function prepareExplorerRenderState(filters: ActiveFilters): ExplorerRenderState {
@@ -560,29 +589,45 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
       );
       const inlineEditorChips = matchingEditors.map(renderEditorFilterChip).join('');
       const signalChips = renderParserSignalChips(parser).join('');
+      const inlineChipGroups = [
+        inlineEditorChips
+          ? `<div class="tree-item-inline-chips chip-row">${inlineEditorChips}</div>`
+          : '',
+        signalChips
+          ? `<div class="tree-item-inline-signals chip-row">${signalChips}</div>`
+          : '',
+      ]
+        .filter(Boolean)
+        .join('');
       const freshnessClass = freshness === 'neutral' ? '' : `is-${freshness}`;
 
       return `
         <section class="tree-node">
           <article class="tree-item tree-item-parser ${isSelected ? 'is-selected' : ''} ${freshnessClass}" data-parser-id="${escapeHtml(parser.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`Select parser release ${parser.name}`)}">
-            <div class="tree-item-head">
-              <div class="tree-item-title-row">
-                <h4>${escapeHtml(parser.name)}</h4>
-                ${inlineEditorChips ? `<div class="tree-item-inline-chips chip-row">${inlineEditorChips}</div>` : ''}
+            <div class="tree-item-head tree-item-head-parser">
+              <div class="tree-item-main">
+                <div class="tree-item-title-row">
+                  <h4>${escapeHtml(parser.name)}</h4>
+                  ${inlineChipGroups ? `<div class="tree-item-chip-groups">${inlineChipGroups}</div>` : ''}
+                </div>
+                <div class="tree-item-title-package">${renderPackageLink(parser.package)}</div>
               </div>
-              ${renderParserVersionToken(parser)}
+              <div class="tree-item-side">
+                ${renderParserVersionToken(parser)}
+                <span>commit ${escapeHtml(renderParserSourceCommit(parser))}</span>
+                <span class="tree-item-meta-freshness ${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'compact'))}</span>
+              </div>
             </div>
-            <div class="tree-item-meta">
-              <span class="tree-item-summary-inline">${renderPackageLink(parser.package)}</span>
-              <span class="tree-item-meta-freshness ${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'compact'))}</span>
-              <span>${escapeHtml(renderParserSourceCommit(parser))}</span>
-              <span>${matchingPacks.length} matching sources</span>
-            </div>
-            ${signalChips ? `<div class="tree-item-targets chip-row">${signalChips}</div>` : ''}
           </article>
           ${
             isSelected
               ? `
+                <div class="tree-selection-detail tree-selection-detail-parser">
+                  ${renderParserDetail(parser)}
+                </div>
+                <div class="tree-subsection-heading">
+                  <h4>Query Sources</h4>
+                </div>
                 <div class="tree-children">
                   ${
                     compatiblePacks.length
@@ -603,19 +648,18 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
   const isSelected = pack.id === state.selectedQueryId;
   const resolvedLanguage = resolvePackLanguage(pack, parser);
   const visibleQueryKinds = visibleQueryKindsForPack(pack, resolvedLanguage);
-  const visibleTargets = filterTargetsForQueryKinds(pack.targets, visibleQueryKinds);
   const compatibilityToken = compatibilityTokenLabel(pack, parser, rank);
-  const filterChips = [
-    ...visibleQueryKinds.map(renderQueryKindFilterChip),
-    ...visibleTargets.map(renderInteractiveTargetTag),
-  ].join('');
+  const filterChips = renderTreePackSupportChips(visibleQueryKinds, pack.targets);
 
   return `
     <section class="tree-node tree-node-pack">
       <article class="tree-item tree-item-pack ${isSelected ? 'is-selected' : ''}" data-query-id="${escapeHtml(pack.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`Select query source ${pack.name}`)}">
         <div class="tree-item-head">
           <div>
-            <h4>${escapeHtml(pack.name)}</h4>
+            <div class="tree-item-title-row">
+              <h4>${escapeHtml(pack.name)}</h4>
+              ${filterChips ? `<div class="tree-item-chip-groups">${filterChips}</div>` : ''}
+            </div>
           </div>
           ${renderCompatibilityBadge(rank, 'tree-item-token', compatibilityToken)}
         </div>
@@ -624,26 +668,12 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
           <span>${escapeHtml(packScopeLabel(pack))}</span>
           <span>${escapeHtml(pack.layout.queryRoot)}</span>
         </div>
-        ${filterChips ? `<div class="tree-item-targets chip-row">${filterChips}</div>` : ''}
       </article>
       ${
         isSelected
           ? `
-            <div class="tree-leaves">
-              ${
-                visibleTargets.length
-                  ? visibleTargets
-                      .map(
-                        (targetId) => `
-                          <div class="tree-leaf">
-                            ${renderInteractiveTargetTag(targetId)}
-                            <span class="tree-leaf-id">${escapeHtml(targetId)}</span>
-                          </div>
-                        `,
-                      )
-                      .join('')
-                  : '<div class="tree-empty subtle">No explicit editor support metadata for this language. Queries may ship with the package itself.</div>'
-              }
+            <div class="tree-selection-detail tree-selection-detail-pack">
+              ${renderQueryDetail({ pack, rank }, parser)}
             </div>
           `
           : ''
@@ -652,29 +682,30 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
   `;
 }
 
-function renderDetail(selectedParser: ParserRelease | null, rankedPacks: RankedPack[]): void {
-  const detailPanel = elements.detailPanel;
+function renderTreePackSupportChips(
+  queryKinds: readonly string[],
+  targetIds: readonly string[],
+): string {
+  return queryKinds
+    .map((queryKind) => {
+      const matchingTargets = filterTargetsForQueryKinds(targetIds, [queryKind]);
+      const seenEditors = new Set<string>();
+      const editorChips = matchingTargets
+        .map((targetId) => {
+          const target = targetIndex.get(targetId);
 
-  if (!detailPanel) {
-    return;
-  }
+          if (!target || seenEditors.has(target.editor)) {
+            return '';
+          }
 
-  const activeQuery = rankedPacks.find((entry) => entry.pack.id === state.selectedQueryId);
+          seenEditors.add(target.editor);
+          return renderInteractiveTargetTag(targetId, queryKind);
+        })
+        .join('');
 
-  if (activeQuery) {
-    detailPanel.innerHTML = renderQueryDetail(activeQuery, selectedParser);
-    return;
-  }
-
-  if (!selectedParser) {
-    detailPanel.innerHTML = emptyState(
-      'Nothing is selected.',
-      'Select a parser release to review its artifacts and matching query sources.',
-    );
-    return;
-  }
-
-  detailPanel.innerHTML = renderParserDetail(selectedParser);
+      return editorChips || renderQueryKindFilterChip(queryKind);
+    })
+    .join('');
 }
 
 function renderCoverage(): void {
@@ -809,57 +840,28 @@ function renderCoverage(): void {
 function renderParserDetail(parser: ParserRelease): string {
   const freshness = parserFreshnessState(parser);
   const freshnessClass = freshness === 'neutral' ? '' : `metric-value-${freshness}`;
+  const updatedClass = freshnessClass ? ` class="${freshnessClass}"` : '';
+  const parserFacts = [
+    `Version ${renderParserVersionValue(parser)}`,
+    `Updated <span${updatedClass}>${escapeHtml(renderParserLastUpdated(parser, 'full'))}</span>`,
+    parser.abi === null ? '' : `ABI ${escapeHtml(renderParserAbi(parser))}`,
+  ]
+    .filter(Boolean)
+    .join(' · ');
 
   return `
-    <div class="detail-hero">
-      <p class="eyebrow eyebrow-inline">Parser Release</p>
-      <h3>${escapeHtml(parser.name)}</h3>
-      <p>${escapeHtml(parser.summary)}</p>
+    <div class="parser-detail">
+      <div class="detail-header">
+        <p class="subtle detail-note">${parserFacts}</p>
+      </div>
+
+      <section class="detail-block detail-block-primary parser-artifacts">
+        <h4>Artifacts</h4>
+        <div class="parser-artifact-links">
+          ${renderParserArtifacts(parser)}
+        </div>
+      </section>
     </div>
-
-    <div class="detail-metrics">
-      <article class="metric-card">
-        <span>Package</span>
-        <strong>${renderPackageLink(parser.package)}</strong>
-      </article>
-      <article class="metric-card">
-        <span>Version</span>
-        <strong>${renderParserVersionValue(parser)}</strong>
-      </article>
-      <article class="metric-card">
-        <span>Source Commit</span>
-        <strong>${escapeHtml(renderParserSourceCommit(parser))}</strong>
-      </article>
-      <article class="metric-card">
-        <span>Last Updated</span>
-        <strong class="${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'full'))}</strong>
-      </article>
-      <article class="metric-card">
-        <span>ABI</span>
-        <strong>${escapeHtml(renderParserAbi(parser))}</strong>
-      </article>
-    </div>
-
-    <section class="detail-block">
-      <h4>Artifacts</h4>
-      <div class="chip-row">
-        ${renderParserArtifacts(parser)}
-      </div>
-    </section>
-
-    <section class="detail-block">
-      <h4>Bundled Query Kinds</h4>
-      <div class="chip-row">
-        ${parser.bundledQueryKinds.length ? chipList(parser.bundledQueryKinds, 'chip chip-outline') : '<span class="chip chip-outline">none listed</span>'}
-      </div>
-    </section>
-
-    <section class="detail-block">
-      <h4>Owners</h4>
-      <div class="chip-row">
-        ${parser.owners.length ? renderOwnerChips(parser.owners, parser.package) : '<span class="chip chip-outline">none listed</span>'}
-      </div>
-    </section>
   `;
 }
 
@@ -870,16 +872,14 @@ function renderQueryDetail(
   const { pack, rank } = entry;
   const compatibility = pack.parserCompatibility;
   const resolvedLanguage = resolvePackLanguage(pack, parser);
-  const resolvedLanguageDetail = resolvedLanguage
-    ? packLanguageDetails(pack).find(
-        (entry) => normalizeLanguageId(entry.language) === normalizeLanguageId(resolvedLanguage),
-      ) ?? null
-    : null;
   const exactTestedParserRefs = unique([
-    ...(resolvedLanguageDetail?.testedParserRefs ?? []),
+    ...(resolvedLanguage
+      ? packLanguageDetails(pack).find(
+          (detail) => normalizeLanguageId(detail.language) === normalizeLanguageId(resolvedLanguage),
+        )?.testedParserRefs ?? []
+      : []),
     ...(compatibility.tested ?? []),
   ]);
-  const compatibilityToken = compatibilityTokenLabel(pack, parser, rank);
   const exactTestedParserToken = summarizeVersionLabels(
     parser
       ? parserVersionsFromRefs(exactTestedParserRefs, parser.package)
@@ -888,190 +888,79 @@ function renderQueryDetail(
   const sharesTestedParserSource = Boolean(
     parser && exactTestedParserRefs.some((testedParserRef) => parserPackageFromRef(testedParserRef) === parser.package),
   );
-  const languageQueryKinds =
-    resolvedLanguage && pack.languageDetails?.length
-      ? queryKindsForResolvedLanguage(pack, resolvedLanguage)
-      : [];
   const visibleQueryKinds = visibleQueryKindsForPack(pack, resolvedLanguage);
-  const packageOnlyQueryKinds =
-    resolvedLanguage && languageQueryKinds.length
-      ? pack.queryKinds.filter((queryKind) => !languageQueryKinds.includes(queryKind))
-      : [];
-  const visibleTargets = filterTargetsForQueryKinds(pack.targets, visibleQueryKinds);
+  const visibleQueryRows = visibleQueryKinds.flatMap((kind) => {
+    const resolvedPaths = resolvedQueryFiles(pack, kind, resolvedLanguage);
+
+    if (!resolvedPaths.length) {
+      return [];
+    }
+
+    return [{
+      queryKind: kind,
+      resolvedPaths,
+      targetIds: filterTargetsForQueryKinds(pack.targets, [kind]),
+    }];
+  });
+  const compatibilityNote = exactTestedParserRefs.length
+    ? [
+        exactTestedParserRefs.length === 1
+          ? `Targets parser ${exactTestedParserToken}.`
+          : `Publishes ${exactTestedParserRefs.length} exact parser pins for this language.`,
+        parser && sharesTestedParserSource && rank !== 3
+          ? 'The selected parser is from the same repository but a different revision.'
+          : '',
+      ]
+        .filter(Boolean)
+        .join(' ')
+    : compatibility.semver
+      ? `Declares parser support ${compatibility.semver}.`
+      : '';
 
   return `
-    <div class="detail-hero">
-      <p class="eyebrow eyebrow-inline">Query Source</p>
-      <h3>${escapeHtml(pack.name)}</h3>
-      <p>${escapeHtml(pack.summary)}</p>
-    </div>
-
-    <div class="detail-metrics">
-      <article class="metric-card">
-        <span>Package</span>
-        <strong>${renderPackageLink(pack.package)}</strong>
-      </article>
-      <article class="metric-card">
-        <span>Compatibility</span>
-        <strong title="${escapeHtml(compatibilityExplanation(rank))}">${escapeHtml(compatibilityToken)}</strong>
-      </article>
-      <article class="metric-card">
-        <span>Languages</span>
-        <strong>${escapeHtml(packScopeLabel(pack))}</strong>
-      </article>
-    </div>
-
-    <section class="detail-block">
-      <h4>Query Kinds${resolvedLanguage ? ` for ${escapeHtml(labelize(resolvedLanguage))}` : ''}</h4>
-      <div class="chip-row">
-        ${chipList(visibleQueryKinds, 'chip')}
+    <div class="query-detail">
+      <div class="detail-header">
+        ${
+          compatibilityNote
+            ? `<p class="subtle detail-note">${escapeHtml(compatibilityNote)}</p>`
+            : ''
+        }
       </div>
-      ${
-        packageOnlyQueryKinds.length
-          ? `<p class="subtle">This package also ships ${escapeHtml(packageOnlyQueryKinds.map(labelize).join(', '))} for other languages.</p>`
-          : ''
-      }
-    </section>
 
-    <section class="detail-block">
-      <h4>Package Layout</h4>
-      <div class="mini-card">
-        <div class="mini-card-top">
-          <strong>${escapeHtml(pack.layout.queryRoot)}</strong>
-          <span class="pill pill-soft">${escapeHtml(pack.layout.installRoot)}</span>
-        </div>
-        <p>Queries resolve from the package install root shown above.</p>
-      </div>
-    </section>
-
-    <section class="detail-block">
-      <h4>Language Coverage</h4>
-      <div class="mini-card">
-        <p>${escapeHtml(packCoverageSummary(pack))}</p>
-      </div>
-      <div class="mini-card">
-        <p>${escapeHtml(packCoverageDetail(pack))}</p>
-      </div>
-      ${
-        resolvedLanguageDetail?.parserLanguage &&
-        normalizeLanguageId(resolvedLanguageDetail.parserLanguage) !== normalizeLanguageId(resolvedLanguageDetail.language)
-          ? `
-            <div class="mini-card">
-              <div class="mini-card-top">
-                <strong>Shared Grammar</strong>
-                <span class="pill pill-soft">${escapeHtml(labelize(resolvedLanguageDetail.parserLanguage))}</span>
-              </div>
-              <p>${escapeHtml(`${labelize(resolvedLanguageDetail.language)} resolves through the ${labelize(resolvedLanguageDetail.parserLanguage)} parser.`)}</p>
-            </div>
-          `
-          : ''
-      }
-    </section>
-
-    <section class="detail-block">
-      <h4>Editor Support${resolvedLanguage ? ` for ${escapeHtml(labelize(resolvedLanguage))}` : ''}</h4>
-      ${
-        visibleTargets.length
-          ? `
-            <div class="chip-row">
-              ${visibleTargets.map(renderTargetTag).join('')}
-            </div>
-          `
-          : '<p class="subtle">No explicit editor support metadata for this language. These queries may ship with the package itself.</p>'
-      }
-    </section>
-
-    <section class="detail-block">
-      <h4>Compatibility Notes</h4>
-      ${renderCompatibilityGuide()}
-        <div class="mini-card">
-          <div class="mini-card-top">
-            <strong>Selected parser</strong>
-            ${renderCompatibilityBadge(rank, 'pill', compatibilityToken)}
-          </div>
-          <p>${parser ? renderPackageLink(parser.package) : 'No parser selected'}</p>
-        </div>
-      ${
-        exactTestedParserRefs.length
-          ? `
-            <div class="mini-card">
-              <div class="mini-card-top">
-                <strong>Exact tested parsers</strong>
-                ${renderCompatibilityBadge(3, 'pill', exactTestedParserToken)}
-              </div>
-              <p>${escapeHtml(exactTestedParserRefs.join(' · '))}</p>
-            </div>
-          `
-          : ''
-      }
-      ${
-        parser && sharesTestedParserSource && rank !== 3
-          ? `
-            <div class="mini-card">
-              <div class="mini-card-top">
-                <strong>Same parser source</strong>
-                <span class="pill pill-unknown">repo match</span>
-              </div>
-              <p>The selected parser comes from the same repository, but not the exact pinned revision listed above.</p>
-            </div>
-          `
-          : ''
-      }
-      ${
-        compatibility.semver
-          ? `
-            <div class="mini-card">
-              <div class="mini-card-top">
-                <strong>Semver range</strong>
-                ${renderCompatibilityBadge(2, 'pill', compatibility.semver)}
-              </div>
-              <p>${escapeHtml(compatibility.semver)}</p>
-            </div>
-          `
-          : !exactTestedParserRefs.length
+      <section class="detail-block detail-block-primary">
+        <h4>Files${resolvedLanguage ? ` for ${escapeHtml(labelize(resolvedLanguage))}` : ''}</h4>
+        ${
+          visibleQueryRows.length
             ? `
-              <div class="mini-card">
-                <div class="mini-card-top">
-                  <strong>Declared support</strong>
-                  <span class="pill pill-unknown">unknown</span>
+              <div class="query-file-table">
+                <div class="query-file-table-head" aria-hidden="true">
+                  <span>Support</span>
+                  <span>Files</span>
                 </div>
-                <p>No parser compatibility metadata has been published yet.</p>
+                <div class="query-file-table-files">
+                  ${visibleQueryRows
+                    .map(
+                      ({ queryKind, resolvedPaths, targetIds }) => `
+                        <div class="query-file-row">
+                          <div class="query-file-meta">
+                            ${renderQueryFileSupportTags(queryKind, targetIds)}
+                          </div>
+                          <div class="query-file-paths">
+                            ${resolvedPaths
+                              .map((resolvedPath) => `<div class="query-file-path">${renderQueryFileReference(pack, resolvedPath)}</div>`)
+                              .join('')}
+                          </div>
+                        </div>
+                      `,
+                    )
+                    .join('')}
+                </div>
               </div>
             `
-            : ''
-      }
-    </section>
-
-    <section class="detail-block">
-      <h4>Files${resolvedLanguage ? ` for ${escapeHtml(labelize(resolvedLanguage))}` : ''}</h4>
-      ${
-        visibleQueryKinds.length
-          ? visibleQueryKinds
-              .map(
-                (kind) => {
-                  const resolvedPaths = resolvedQueryFiles(pack, kind, resolvedLanguage);
-
-                  if (!resolvedPaths.length) {
-                    return '';
-                  }
-
-                  return `
-                  <div class="mini-card">
-                    <div class="mini-card-top">
-                      <strong>${escapeHtml(kind)}</strong>
-                      <span class="pill pill-soft">.scm</span>
-                    </div>
-                    ${resolvedPaths
-                      .map((resolvedPath) => `<p>${renderQueryFileReference(pack, resolvedPath)}</p>`)
-                      .join('')}
-                  </div>
-                `;
-                },
-              )
-              .join('')
-          : '<p class="subtle">No query files are published for the current language selection.</p>'
-      }
-    </section>
+            : '<p class="subtle detail-note">No query files are published for the current language selection.</p>'
+        }
+      </section>
+    </div>
   `;
 }
 
@@ -1098,6 +987,10 @@ function parserMatchesFilters(parser: ParserRelease, filters: ActiveFilters): bo
   }
 
   if (!matchesInstall(parser, filters.install)) {
+    return false;
+  }
+
+  if (!matchesCustomScanner(parser, filters.scanner)) {
     return false;
   }
 
@@ -1268,6 +1161,21 @@ function matchesRelease(
   return !parser.upstreamSemver;
 }
 
+function matchesCustomScanner(
+  parser: ParserRelease,
+  scanner: ActiveFilters['scanner'] = state.scanner,
+): boolean {
+  if (scanner === 'all') {
+    return true;
+  }
+
+  if (scanner === 'custom') {
+    return parser.capabilities.customScanner;
+  }
+
+  return !parser.capabilities.customScanner;
+}
+
 function matchesSearch(text: string, search: string = state.search): boolean {
   if (!search) {
     return true;
@@ -1290,6 +1198,7 @@ function getParserSearchText(parser: ParserRelease): string {
     parser.bundledQueryKinds.join(' '),
     freshness === 'stale' ? 'stale inactive abandoned' : '',
     freshness === 'active' ? 'active maintained current' : '',
+    parser.capabilities.customScanner ? 'scanner custom scanner external scanner' : '',
     parser.capabilities.wasm ? 'wasm' : '',
     parser.capabilities.sourceArchive ? 'source archive release artifact' : '',
     parser.capabilities.buildFromSource ? 'build from source' : '',
@@ -1457,36 +1366,8 @@ function packScopeLabel(pack: QueryPack): string {
   return `${total} languages`;
 }
 
-function packCoverageDetail(pack: QueryPack): string {
-  const languages = packLanguageList(pack);
-  const preview = languages.slice(0, 10).map(labelize).join(', ');
-  const total = packLanguageCount(pack);
-
-  if (total > 10) {
-    return `${preview}, plus ${total - 10} more.`;
-  }
-
-  return preview;
-}
-
-function packCoverageSummary(pack: QueryPack): string {
-  if (!pack.languageDetails?.length) {
-    return `${packScopeLabel(pack)} with ${pack.queryKinds.length} query kinds.`;
-  }
-
-  const coverage = pack.queryKinds
-    .map((queryKind) => `${queryKind} ${countLanguagesForKind(pack, queryKind)}`)
-    .join(' · ');
-
-  return `${packLanguageCount(pack)} languages. ${coverage}.`;
-}
-
 function packLanguageList(pack: QueryPack): string[] {
   return packLanguageDetails(pack).map(({ language }) => language);
-}
-
-function countLanguagesForKind(pack: QueryPack, queryKind: string): number {
-  return packLanguageDetails(pack).filter((entry) => entry.queryKinds.includes(queryKind)).length;
 }
 
 function countCoverageLanguages(
@@ -1706,6 +1587,7 @@ function getActiveFilters(): ActiveFilters {
     editor: state.editor,
     queryKind: state.queryKind,
     install: state.install,
+    scanner: state.scanner,
     release: state.release,
   };
 }
@@ -1745,6 +1627,12 @@ function restoreStateFromUrl(): void {
 
   if (install === 'wasm' || install === 'source-archive' || install === 'build-from-source') {
     state.install = install;
+  }
+
+  const scanner = params.get('scanner');
+
+  if (scanner === 'custom' || scanner === 'none') {
+    state.scanner = scanner;
   }
 
   const release = params.get('release');
@@ -1836,6 +1724,10 @@ function searchParamsFromState(snapshot: FilterState): URLSearchParams {
     params.set('install', snapshot.install);
   }
 
+  if (snapshot.scanner !== 'all') {
+    params.set('scanner', snapshot.scanner);
+  }
+
   if (snapshot.release !== 'all') {
     params.set('release', snapshot.release);
   }
@@ -1863,6 +1755,7 @@ function filterCacheKey(filters: ActiveFilters): string {
     filters.editor,
     filters.queryKind,
     filters.install,
+    filters.scanner,
     filters.release,
   ].join('\u0000');
 }
@@ -1982,25 +1875,54 @@ function parserVersionHref(parser: ParserRelease): string | null {
   return packageReleasesHref(parser.package);
 }
 
-function renderTargetTag(targetId: string): string {
-  const target = targetIndex.get(targetId);
+function renderQueryFileSupportTags(
+  queryKind: string,
+  targetIds: readonly string[],
+): string {
+  const seenEditors = new Set<string>();
+  const editorTags = targetIds
+    .map((targetId) => {
+      const target = targetIndex.get(targetId);
 
-  if (!target) {
-    return `<span class="chip chip-outline">${escapeHtml(targetId)}</span>`;
-  }
+      if (!target || seenEditors.has(target.editor)) {
+        return '';
+      }
 
-  return `<span class="chip chip-outline chip-editor chip-editor-${editorClassSuffix(target.editor)}">${escapeHtml(targetLabel(targetId))}</span>`;
+      seenEditors.add(target.editor);
+      return renderTargetEditorTag(targetId, queryKind);
+    })
+    .join('');
+
+  return editorTags || renderQueryKindTag(queryKind);
 }
 
-function renderInteractiveTargetTag(targetId: string): string {
+function renderTargetEditorTag(targetId: string, queryKind?: string): string {
   const target = targetIndex.get(targetId);
 
   if (!target) {
     return `<span class="chip chip-outline">${escapeHtml(targetId)}</span>`;
   }
 
+  const label = queryKind
+    ? `${labelize(target.editor)} / ${labelize(queryKind)}`
+    : labelize(target.editor);
+
+  return `<span class="chip chip-outline chip-editor chip-editor-${editorClassSuffix(target.editor)}">${escapeHtml(label)}</span>`;
+}
+
+function renderInteractiveTargetTag(targetId: string, queryKind?: string): string {
+  const target = targetIndex.get(targetId);
+
+  if (!target) {
+    return `<span class="chip chip-outline">${escapeHtml(targetId)}</span>`;
+  }
+
+  const label = queryKind
+    ? `${labelize(target.editor)} / ${labelize(queryKind)}`
+    : `${labelize(target.editor)} / ${labelize(target.feature)}`;
+
   return renderFilterChip(
-    targetLabel(targetId),
+    label,
     `chip chip-outline chip-editor chip-editor-${editorClassSuffix(target.editor)}`,
     { 'data-filter-editor': target.editor },
     state.editor === target.editor,
@@ -2018,6 +1940,10 @@ function renderQueryKindFilterChip(queryKind: string): string {
     { 'data-filter-query-kind': queryKind },
     state.queryKind === queryKind,
   );
+}
+
+function renderQueryKindTag(queryKind: string): string {
+  return `<span class="chip chip-outline">${escapeHtml(labelize(queryKind))}</span>`;
 }
 
 function parserLastUpdatedDate(parser: ParserRelease): Date | null {
@@ -2074,6 +2000,17 @@ function renderParserLastUpdated(
 function renderParserSignalChips(parser: ParserRelease): string[] {
   const chips: string[] = [];
 
+  if (parser.capabilities.customScanner) {
+    chips.push(
+      renderFilterChip(
+        'scanner',
+        'chip chip-danger',
+        { 'data-filter-scanner': 'custom' },
+        state.scanner === 'custom',
+      ),
+    );
+  }
+
   if (parser.capabilities.wasm) {
     chips.push(
       renderFilterChip(
@@ -2090,7 +2027,7 @@ function renderParserSignalChips(parser: ParserRelease): string[] {
 
 function renderParserArtifacts(parser: ParserRelease): string {
   if (!parser.artifacts.length) {
-    return '<span class="chip chip-outline">none listed</span>';
+    return '<span class="parser-artifact-empty subtle">none listed</span>';
   }
 
   return parser.artifacts
@@ -2100,14 +2037,14 @@ function renderParserArtifacts(parser: ParserRelease): string {
 
 function renderParserArtifact(parser: ParserRelease, artifact: ParserArtifact): string {
   const label = escapeHtml(parserArtifactLabel(artifact));
-  const className = `chip ${parserArtifactChipClass(artifact)}`;
+  const className = `artifact-link ${parserArtifactLinkClass(artifact)}`;
   const href = parserArtifactHref(parser, artifact);
 
   if (!href) {
-    return `<span class="${className}">${label}</span>`;
+    return `<span class="${className} artifact-link-static">${label}</span>`;
   }
 
-  return `<a class="${className} chip-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
+  return `<a class="${className}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
 }
 
 function renderParserAbi(parser: ParserRelease): string {
@@ -2126,8 +2063,8 @@ function parserArtifactLabel(artifact: ParserArtifact): string {
   return artifact.name ?? `release asset (.${artifact.format})`;
 }
 
-function parserArtifactChipClass(artifact: ParserArtifact): string {
-  return artifact.format === 'wasm' ? 'chip-accent' : 'chip-outline';
+function parserArtifactLinkClass(artifact: ParserArtifact): string {
+  return artifact.format === 'wasm' ? 'artifact-link-accent' : 'artifact-link-default';
 }
 
 function parserArtifactHref(parser: ParserRelease, artifact: ParserArtifact): string | null {
@@ -2167,26 +2104,6 @@ function chipList(items: readonly string[], className: string): string {
   return items
     .map((item) => `<span class="${className}">${escapeHtml(item)}</span>`)
     .join('');
-}
-
-function renderOwnerChips(
-  owners: readonly string[],
-  packageId: string,
-): string {
-  return owners
-    .map((owner) => renderOwnerChip(owner, packageId))
-    .join('');
-}
-
-function renderOwnerChip(owner: string, packageId: string): string {
-  const href = ownerHref(packageId, owner);
-  const label = escapeHtml(owner);
-
-  if (!href) {
-    return `<span class="chip">${label}</span>`;
-  }
-
-  return `<a class="chip chip-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
 }
 
 function renderCoverageDetail(
@@ -2492,16 +2409,6 @@ function renderCompatibilityBadge(
   return `<span class="${baseClass} ${baseClass}-${variant}" title="${escapeHtml(explanation)}" aria-label="${escapeHtml(`${label}: ${explanation}`)}">${escapeHtml(label)}</span>`;
 }
 
-function renderCompatibilityGuide(): string {
-  return `
-    <div class="mini-card compatibility-guide">
-      <p><strong>Pinned version</strong> means the query source publishes an exact parser ref.</p>
-      <p><strong>Semver range</strong> means it declares a supported release range instead of a single pin.</p>
-      <p><strong>Unknown</strong> means only the language match is known.</p>
-    </div>
-  `;
-}
-
 function compareRankedPacks(left: RankedPack, right: RankedPack): number {
   if (right.rank !== left.rank) {
     return right.rank - left.rank;
@@ -2571,8 +2478,7 @@ function hasExplorerPanel(): boolean {
   return Boolean(
     elements.explorerTree &&
       elements.parserCountBadge &&
-      elements.queryCountBadge &&
-      elements.detailPanel,
+      elements.queryCountBadge,
   );
 }
 
@@ -2611,7 +2517,7 @@ function clickTreeFilterAction(event: Event): boolean {
   }
 
   const control = target.closest<HTMLElement>(
-    '[data-filter-editor], [data-filter-query-kind], [data-filter-install]',
+    '[data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner]',
   );
 
   if (!control) {
@@ -2630,6 +2536,14 @@ function clickTreeFilterAction(event: Event): boolean {
 
   if (queryKind) {
     state.queryKind = state.queryKind === queryKind ? 'all' : queryKind;
+    renderFull();
+    return true;
+  }
+
+  const scanner = control.dataset['filterScanner'];
+
+  if (scanner) {
+    state.scanner = state.scanner === scanner ? 'all' : scanner as FilterState['scanner'];
     renderFull();
     return true;
   }
@@ -2750,18 +2664,6 @@ function packageReleasesHref(packageId: string): string | null {
 
   if (packageId.startsWith('gitlab.com/')) {
     return `https://${packageId}/-/releases`;
-  }
-
-  return null;
-}
-
-function ownerHref(packageId: string, owner: string): string | null {
-  if (packageId.startsWith('github.com/')) {
-    return `https://github.com/${encodeURIComponent(owner)}`;
-  }
-
-  if (packageId.startsWith('gitlab.com/')) {
-    return `https://gitlab.com/${encodeURIComponent(owner)}`;
   }
 
   return null;

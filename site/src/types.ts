@@ -1,5 +1,6 @@
 export interface ParserCapabilities {
   buildFromSource: boolean;
+  customScanner: boolean;
   sourceArchive: boolean;
   wasm: boolean;
 }

@@ -778,6 +778,7 @@ function buildUnknownParsers(
       owners: [],
       capabilities: {
         buildFromSource: false,
+        customScanner: false,
         sourceArchive: false,
         wasm: false,
       },

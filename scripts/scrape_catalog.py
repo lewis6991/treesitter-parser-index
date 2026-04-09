@@ -179,7 +179,7 @@ PULSAR_QUERY_KEY_TO_KIND = {
 NEOVIM_ONLY_QUERY_PREDICATE_RE = re.compile(r"#(?:any-)?(?:lua|vim)-match\?")
 LANGUAGE_VERSION_RE = re.compile(r"#define\s+LANGUAGE_VERSION\s+(\d+)|LANGUAGE_VERSION\s*=\s*(\d+)")
 ABI_SCAN_MAX_LINES = 100
-PARSER_RELEASE_FINGERPRINT_VERSION = 3
+PARSER_RELEASE_FINGERPRINT_VERSION = 4
 
 
 def log_progress(message: str) -> None:
@@ -943,6 +943,15 @@ def descriptor_parser_c_path(descriptor: ParserDescriptor) -> str:
     return "src/parser.c"
 
 
+def descriptor_scanner_paths(descriptor: ParserDescriptor) -> list[str]:
+    location = descriptor.get("location")
+    prefix = f"{location.rstrip('/')}/" if isinstance(location, str) and location and location != "." else ""
+    return [
+        f"{prefix}src/scanner.c",
+        f"{prefix}src/scanner.cc",
+    ]
+
+
 @lru_cache(maxsize=None)
 def parser_abi_version(repo: str, parser_c_path: str, source_commit: str) -> int | None:
     try:
@@ -960,6 +969,31 @@ def parser_abi_version(repo: str, parser_c_path: str, source_commit: str) -> int
 
     version = match.group(1) or match.group(2)
     return int(version) if version is not None else None
+
+
+@lru_cache(maxsize=None)
+def repo_path_exists(repo: str, path: str, ref: str) -> bool:
+    try:
+        _ = gh_api_json(f"repos/{repo}/contents/{path}?ref={ref}")
+    except RuntimeError:
+        return False
+
+    return True
+
+
+def descriptor_has_custom_scanner(
+    descriptor: ParserDescriptor,
+    repo: str,
+    source_commit: str,
+) -> bool:
+    scanner_paths = descriptor_scanner_paths(descriptor)
+    snapshot = repo_snapshot(repo)
+
+    if snapshot["source_commit"] == source_commit:
+        snapshot_paths = set(snapshot["paths"])
+        return any(scanner_path in snapshot_paths for scanner_path in scanner_paths)
+
+    return any(repo_path_exists(repo, scanner_path, source_commit) for scanner_path in scanner_paths)
 
 
 def normalize_id(value: str) -> str:
@@ -2851,6 +2885,15 @@ def write_parser_catalog(
             if isinstance(github_repo, str) and github_repo
             else None
         )
+        custom_scanner = (
+            descriptor_has_custom_scanner(
+                descriptor,
+                github_repo,
+                str(source_commit),
+            )
+            if isinstance(github_repo, str) and github_repo
+            else False
+        )
         source_archive = package.startswith(("github.com/", "gitlab.com/"))
         release_key = descriptor_incremental_key(descriptor)
         fingerprint = descriptor_fingerprint(
@@ -2885,6 +2928,7 @@ def write_parser_catalog(
             "owners": descriptor["owners"],
             "capabilities": {
                 "buildFromSource": True,
+                "customScanner": custom_scanner,
                 "sourceArchive": source_archive,
                 "wasm": wasm,
             },
