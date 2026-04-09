@@ -30,13 +30,14 @@ const parserFullDateFormatter = new Intl.DateTimeFormat('en', {
   month: 'short',
   year: 'numeric',
 });
+const SHARED_LIBRARY_ARTIFACT_FORMATS = ['so', 'dylib', 'dll'] as const;
 
 interface FilterState {
   search: string;
   language: string;
   editor: string;
   queryKind: string;
-  install: 'all' | 'wasm' | 'source-archive' | 'build-from-source';
+  install: 'all' | 'wasm' | 'shared-library' | 'source-archive' | 'build-from-source';
   scanner: 'all' | 'custom' | 'none';
   release: 'all' | 'semver' | 'none';
   selectedParserId: string | null;
@@ -1022,6 +1023,10 @@ function matchesInstall(
     return parser.capabilities.wasm;
   }
 
+  if (install === 'shared-library') {
+    return sharedLibraryArtifactFormats(parser).length > 0;
+  }
+
   if (install === 'source-archive') {
     return parser.capabilities.sourceArchive;
   }
@@ -1083,6 +1088,7 @@ function getParserSearchText(parser: ParserRelease): string {
     freshness === 'active' ? 'active maintained current' : '',
     parser.capabilities.customScanner ? 'scanner custom scanner external scanner' : '',
     parser.capabilities.wasm ? 'wasm' : '',
+    sharedLibraryArtifactFormats(parser).length ? 'shared library native shared object dylib dll so' : '',
     parser.capabilities.sourceArchive ? 'source archive release artifact' : '',
     parser.capabilities.buildFromSource ? 'build from source' : '',
     parser.artifacts.map(parserArtifactLabel).join(' '),
@@ -1506,7 +1512,7 @@ function restoreStateFromUrl(): void {
 
   const install = params.get('install');
 
-  if (install === 'wasm' || install === 'source-archive' || install === 'build-from-source') {
+  if (install === 'wasm' || install === 'shared-library' || install === 'source-archive' || install === 'build-from-source') {
     state.install = install;
   }
 
@@ -1899,6 +1905,17 @@ function renderParserSignalChips(parser: ParserRelease): string[] {
     );
   }
 
+  for (const format of sharedLibraryArtifactFormats(parser)) {
+    chips.push(
+      renderFilterChip(
+        `.${format}`,
+        'chip chip-accent',
+        { 'data-filter-install': 'shared-library' },
+        state.install === 'shared-library',
+      ),
+    );
+  }
+
   return chips;
 }
 
@@ -1941,7 +1958,13 @@ function parserArtifactLabel(artifact: ParserArtifact): string {
 }
 
 function parserArtifactLinkClass(artifact: ParserArtifact): string {
-  return artifact.format === 'wasm' ? 'artifact-link-accent' : 'artifact-link-default';
+  return 'artifact-link-default';
+}
+
+function sharedLibraryArtifactFormats(parser: ParserRelease): string[] {
+  return SHARED_LIBRARY_ARTIFACT_FORMATS.filter((format) =>
+    parser.artifacts.some((artifact) => artifact.kind === 'release-asset' && artifact.format === format),
+  );
 }
 
 function parserArtifactHref(parser: ParserRelease, artifact: ParserArtifact): string | null {
@@ -2291,6 +2314,7 @@ function renderActiveFilterStrip(): void {
   };
   const installOptions = [
     { value: 'wasm', label: 'Wasm' },
+    { value: 'shared-library', label: 'Shared Library' },
     { value: 'source-archive', label: 'Source Archive' },
     { value: 'build-from-source', label: 'Build From Source' },
   ];
@@ -2384,7 +2408,7 @@ function renderActiveFilterStrip(): void {
       state.install,
       [allInstallOption, ...countedInstallOptions],
       'install',
-      state.install === 'wasm'
+      state.install === 'wasm' || state.install === 'shared-library'
         ? 'chip chip-active-filter chip-accent'
         : 'chip chip-active-filter chip-outline',
     ),
