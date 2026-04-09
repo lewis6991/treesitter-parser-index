@@ -10,6 +10,7 @@ import type {
 
 type CompatibilityRank = 0 | 1 | 2 | 3;
 type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release' | 'abi'>;
+type FilterControlKey = Exclude<keyof ActiveFilters, 'search' | 'language'>;
 
 const LANGUAGE_ALIASES: Record<string, string> = {
   'c-sharp': 'c_sharp',
@@ -73,6 +74,19 @@ interface FilterOption {
   label: string;
 }
 
+interface ChipAction {
+  dataset: Record<string, string>;
+  isActive?: boolean;
+  dismissible?: boolean;
+}
+
+interface FilterControlSpec {
+  key: FilterControlKey;
+  label: string;
+  choices: () => FilterOption[];
+  className: (value: string) => string;
+}
+
 interface BuildMeta {
   label?: string;
   commitUrl?: string | null;
@@ -130,6 +144,92 @@ const allQueryKinds = unique([
   ...data.parsers.flatMap((parser) => parser.bundledQueryKinds),
   ...data.queryPacks.flatMap((pack) => pack.queryKinds),
 ]).sort();
+const abiFilterChoices = unique(
+  data.parsers
+    .map((parser) => parser.abi)
+    .filter((abi): abi is number => abi !== null)
+    .sort((left, right) => left - right)
+    .map(String),
+);
+const FILTER_CONTROL_SPECS: readonly FilterControlSpec[] = [
+  {
+    key: 'editor',
+    label: 'Editor',
+    choices: () => allEditors.map((value) => ({
+      value,
+      label: labelize(value),
+    })),
+    className: (value) => value === 'all'
+      ? 'chip chip-active-filter chip-outline'
+      : `chip chip-active-filter chip-outline chip-editor chip-editor-${editorClassSuffix(value)}`,
+  },
+  {
+    key: 'queryKind',
+    label: 'Kind',
+    choices: () => allQueryKinds.map((value) => ({
+      value,
+      label: labelize(value),
+    })),
+    className: () => 'chip chip-active-filter chip-outline',
+  },
+  {
+    key: 'install',
+    label: 'Install',
+    choices: () => [
+      { value: 'wasm', label: 'Wasm' },
+      { value: 'shared-library', label: 'Shared Library' },
+      { value: 'source-archive', label: 'Source Archive' },
+      { value: 'build-from-source', label: 'Build From Source' },
+    ],
+    className: (value) => value === 'wasm' || value === 'shared-library'
+      ? 'chip chip-active-filter chip-accent'
+      : 'chip chip-active-filter chip-outline',
+  },
+  {
+    key: 'scanner',
+    label: 'Scanner',
+    choices: () => [
+      { value: 'custom', label: 'Custom Scanner' },
+      { value: 'none', label: 'No Custom Scanner' },
+    ],
+    className: (value) => value === 'custom'
+      ? 'chip chip-active-filter chip-danger'
+      : 'chip chip-active-filter chip-outline',
+  },
+  {
+    key: 'release',
+    label: 'Release',
+    choices: () => [
+      { value: 'semver', label: 'Semver Release' },
+      { value: 'none', label: 'No Semver Release' },
+    ],
+    className: (value) => value === 'semver'
+      ? 'chip chip-active-filter chip-success'
+      : value === 'none'
+        ? 'chip chip-active-filter chip-danger'
+        : 'chip chip-active-filter chip-outline',
+  },
+  {
+    key: 'abi',
+    label: 'ABI',
+    choices: () => [
+      { value: 'none', label: 'No ABI' },
+      ...abiFilterChoices.map((value) => ({
+        value,
+        label: `ABI ${value}`,
+      })),
+    ],
+    className: () => 'chip chip-active-filter chip-outline',
+  },
+];
+const FILTER_CONTROL_SPEC_BY_KEY = new Map(
+  FILTER_CONTROL_SPECS.map((spec) => [spec.key, spec] as const),
+);
+const FILTER_CLICK_SELECTOR = [
+  '[data-filter-search]',
+  ...FILTER_CONTROL_SPECS.map((spec) => `[data-filter-${filterDataSuffix(spec.key)}]`),
+  '[data-clear-all-filters]',
+].join(', ');
 const parserSearchIndex = new Map(
   sortedParsers.map((parser) => [parser.id, getParserSearchText(parser).toLowerCase()]),
 );
@@ -597,24 +697,12 @@ function renderTreePackSupportChips(
   targetIds: readonly string[],
 ): string {
   return queryKinds
-    .map((queryKind) => {
-      const matchingTargets = filterTargetsForQueryKinds(targetIds, [queryKind]);
-      const seenEditors = new Set<string>();
-      const editorChips = matchingTargets
-        .map((targetId) => {
-          const target = targetIndex.get(targetId);
-
-          if (!target || seenEditors.has(target.editor)) {
-            return '';
-          }
-
-          seenEditors.add(target.editor);
-          return renderInteractiveTargetTag(targetId, queryKind);
-        })
-        .join('');
-
-      return editorChips || renderQueryKindFilterChip(queryKind);
-    })
+    .map((queryKind) =>
+      renderSupportChipsForQueryKind(
+        queryKind,
+        filterTargetsForQueryKinds(targetIds, [queryKind]),
+        { interactive: true },
+      ))
     .join('');
 }
 
@@ -1793,11 +1881,13 @@ function targetLabel(targetId: string): string {
 }
 
 function renderEditorFilterChip(editor: string): string {
-  return renderFilterChip(
+  return renderChip(
     labelize(editor),
     `chip chip-outline chip-editor chip-editor-${editorClassSuffix(editor)}`,
-    { 'data-filter-editor': editor },
-    state.editor === editor,
+    {
+      dataset: { 'data-filter-editor': editor },
+      isActive: state.editor === editor,
+    },
   );
 }
 
@@ -1850,6 +1940,16 @@ function renderQueryFileSupportTags(
   queryKind: string,
   targetIds: readonly string[],
 ): string {
+  return renderSupportChipsForQueryKind(queryKind, targetIds);
+}
+
+function renderSupportChipsForQueryKind(
+  queryKind: string,
+  targetIds: readonly string[],
+  options: {
+    interactive?: boolean;
+  } = {},
+): string {
   const seenEditors = new Set<string>();
   const editorTags = targetIds
     .map((targetId) => {
@@ -1860,43 +1960,51 @@ function renderQueryFileSupportTags(
       }
 
       seenEditors.add(target.editor);
-      return renderTargetEditorTag(targetId, queryKind);
+      return renderTargetEditorChip(targetId, {
+        queryKind,
+        interactive: options.interactive ?? false,
+      });
     })
     .join('');
 
-  return editorTags || renderQueryKindTag(queryKind);
+  return editorTags || renderQueryKindChip(queryKind, options.interactive);
 }
 
-function renderTargetEditorTag(targetId: string, queryKind?: string): string {
+function renderTargetEditorChip(
+  targetId: string,
+  options: {
+    queryKind?: string;
+    interactive?: boolean;
+  } = {},
+): string {
   const target = targetIndex.get(targetId);
 
   if (!target) {
-    return `<span class="chip chip-outline">${escapeHtml(targetId)}</span>`;
+    return renderChip(targetId, 'chip chip-outline');
   }
 
+  const { interactive = false, queryKind } = options;
   const label = queryKind
     ? `${labelize(target.editor)} / ${labelize(queryKind)}`
     : labelize(target.editor);
+  const filterDataset = queryKind
+    ? {
+        'data-filter-editor': target.editor,
+        'data-filter-query-kind': queryKind,
+      }
+    : {
+        'data-filter-editor': target.editor,
+      };
 
-  return `<span class="chip chip-outline chip-editor chip-editor-${editorClassSuffix(target.editor)}">${escapeHtml(label)}</span>`;
-}
-
-function renderInteractiveTargetTag(targetId: string, queryKind?: string): string {
-  const target = targetIndex.get(targetId);
-
-  if (!target) {
-    return `<span class="chip chip-outline">${escapeHtml(targetId)}</span>`;
-  }
-
-  const label = queryKind
-    ? `${labelize(target.editor)} / ${labelize(queryKind)}`
-    : `${labelize(target.editor)} / ${labelize(target.feature)}`;
-
-  return renderFilterChip(
+  return renderChip(
     label,
     `chip chip-outline chip-editor chip-editor-${editorClassSuffix(target.editor)}`,
-    { 'data-filter-editor': target.editor },
-    state.editor === target.editor,
+    interactive
+      ? {
+          dataset: filterDataset,
+          isActive: state.editor === target.editor && (!queryKind || state.queryKind === queryKind),
+        }
+      : undefined,
   );
 }
 
@@ -1904,17 +2012,17 @@ function editorClassSuffix(editor: string): string {
   return editor.toLowerCase().replace(/[^a-z0-9-]/g, '-');
 }
 
-function renderQueryKindFilterChip(queryKind: string): string {
-  return renderFilterChip(
+function renderQueryKindChip(queryKind: string, interactive: boolean = false): string {
+  return renderChip(
     labelize(queryKind),
     'chip chip-outline',
-    { 'data-filter-query-kind': queryKind },
-    state.queryKind === queryKind,
+    interactive
+      ? {
+          dataset: { 'data-filter-query-kind': queryKind },
+          isActive: state.queryKind === queryKind,
+        }
+      : undefined,
   );
-}
-
-function renderQueryKindTag(queryKind: string): string {
-  return `<span class="chip chip-outline">${escapeHtml(labelize(queryKind))}</span>`;
 }
 
 function parserLastUpdatedDate(parser: ParserRelease): Date | null {
@@ -1973,44 +2081,52 @@ function renderParserSignalChips(parser: ParserRelease): string[] {
 
   if (parser.abi !== null) {
     chips.push(
-      renderFilterChip(
+      renderChip(
         `abi ${renderParserAbi(parser)}`,
         'chip chip-outline',
-        { 'data-filter-abi': renderParserAbi(parser) },
-        state.abi === renderParserAbi(parser),
+        {
+          dataset: { 'data-filter-abi': renderParserAbi(parser) },
+          isActive: state.abi === renderParserAbi(parser),
+        },
       ),
     );
   }
 
   if (parser.capabilities.customScanner) {
     chips.push(
-      renderFilterChip(
+      renderChip(
         'scanner',
         'chip chip-danger',
-        { 'data-filter-scanner': 'custom' },
-        state.scanner === 'custom',
+        {
+          dataset: { 'data-filter-scanner': 'custom' },
+          isActive: state.scanner === 'custom',
+        },
       ),
     );
   }
 
   if (parser.capabilities.wasm) {
     chips.push(
-      renderFilterChip(
+      renderChip(
         'wasm',
         'chip chip-accent',
-        { 'data-filter-install': 'wasm' },
-        state.install === 'wasm',
+        {
+          dataset: { 'data-filter-install': 'wasm' },
+          isActive: state.install === 'wasm',
+        },
       ),
     );
   }
 
   for (const format of sharedLibraryArtifactFormats(parser)) {
     chips.push(
-      renderFilterChip(
+      renderChip(
         `.${format}`,
         'chip chip-accent',
-        { 'data-filter-install': 'shared-library' },
-        state.install === 'shared-library',
+        {
+          dataset: { 'data-filter-install': 'shared-library' },
+          isActive: state.install === 'shared-library',
+        },
       ),
     );
   }
@@ -2078,41 +2194,30 @@ function parserArtifactHref(parser: ParserRelease, artifact: ParserArtifact): st
   return packageReleaseAssetHref(parser.package, artifact.name) ?? packageReleasesHref(parser.package);
 }
 
-function renderFilterChip(
+function renderChip(
   label: string,
   className: string,
-  dataset: Record<string, string>,
-  isActive: boolean,
+  action?: ChipAction,
 ): string {
-  const attributes = Object.entries(dataset)
+  if (!action) {
+    return `<span class="${className}">${escapeHtml(label)}</span>`;
+  }
+
+  const attributes = Object.entries(action.dataset)
     .map(([name, value]) => `${name}="${escapeHtml(value)}"`)
     .join(' ');
+  const content = action.dismissible
+    ? `<span>${escapeHtml(label)}</span><span class="chip-dismiss" aria-hidden="true">×</span>`
+    : escapeHtml(label);
 
-  return `<button type="button" class="${className} chip-button ${isActive ? 'is-active' : ''}" ${attributes}>${escapeHtml(label)}</button>`;
-}
-
-function renderActiveFilterButton(
-  label: string,
-  dataset: Record<string, string>,
-  className: string = 'chip chip-button chip-active-filter',
-): string {
-  const attributes = Object.entries(dataset)
-    .map(([name, value]) => `${name}="${escapeHtml(value)}"`)
-    .join(' ');
-
-  return `
-    <button type="button" class="${className}" ${attributes}>
-      <span>${escapeHtml(label)}</span>
-      <span class="chip-dismiss" aria-hidden="true">×</span>
-    </button>
-  `;
+  return `<button type="button" class="${className} chip-button ${action.isActive ? 'is-active' : ''}" ${attributes}>${content}</button>`;
 }
 
 function renderActiveFilterSelectControl(
   label: string,
   value: string,
   options: readonly FilterOption[],
-  filter: 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release' | 'abi',
+  filter: FilterControlKey,
   className: string,
 ): string {
   const isActive = value !== 'all';
@@ -2138,7 +2243,7 @@ function renderActiveFilterSelectControl(
             <button
               type="button"
               class="active-filter-clear"
-              data-filter-${filter === 'queryKind' ? 'query-kind' : filter}="${escapeHtml(value)}"
+              data-filter-${filterDataSuffix(filter)}="${escapeHtml(value)}"
               aria-label="${escapeHtml(`Clear ${label} filter`)}"
             >
               ×
@@ -2150,18 +2255,85 @@ function renderActiveFilterSelectControl(
   `;
 }
 
+function countFilterValue(
+  filters: ActiveFilters,
+  filter: FilterControlKey,
+  value: string,
+): number {
+  return countFilteredParsers({
+    ...filters,
+    [filter]: value,
+  } as ActiveFilters);
+}
+
+function buildCountedFilterOptions(
+  filters: ActiveFilters,
+  filter: FilterControlKey,
+  currentValue: string,
+  choices: readonly FilterOption[],
+): FilterOption[] {
+  const allOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilterValue(filters, filter, 'all')})`,
+  };
+
+  const countedOptions = choices
+    .map((choice) => ({
+      ...choice,
+      count: countFilterValue(filters, filter, choice.value),
+    }))
+    .filter((choice) => choice.count > 0 || choice.value === currentValue)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+
+  return [allOption, ...countedOptions];
+}
+
+function filterDataSuffix(filter: FilterControlKey): string {
+  return filter === 'queryKind' ? 'query-kind' : filter;
+}
+
+function filterDatasetKey(filter: FilterControlKey): string {
+  return filter === 'queryKind'
+    ? 'filterQueryKind'
+    : `filter${filter.charAt(0).toUpperCase()}${filter.slice(1)}`;
+}
+
+function filterControlValue(filter: FilterControlKey): string {
+  return state[filter];
+}
+
+function setFilterControlValue(filter: FilterControlKey, value: string): void {
+  switch (filter) {
+    case 'editor':
+      state.editor = value;
+      break;
+    case 'queryKind':
+      state.queryKind = value;
+      break;
+    case 'install':
+      state.install = value as FilterState['install'];
+      break;
+    case 'scanner':
+      state.scanner = value as FilterState['scanner'];
+      break;
+    case 'release':
+      state.release = value as FilterState['release'];
+      break;
+    case 'abi':
+      state.abi = value as FilterState['abi'];
+      break;
+  }
+}
+
 function packEditors(pack: QueryPack): string[] {
   return unique(
     pack.targets
       .map((targetId) => targetIndex.get(targetId)?.editor ?? '')
       .filter((editor): editor is string => Boolean(editor)),
   );
-}
-
-function chipList(items: readonly string[], className: string): string {
-  return items
-    .map((item) => `<span class="${className}">${escapeHtml(item)}</span>`)
-    .join('');
 }
 
 function renderCoverageDetail(
@@ -2378,201 +2550,34 @@ function renderActiveFilterStrip(): void {
     state.release !== 'all' ||
     state.abi !== 'all',
   );
-  const allEditorOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, editor: 'all' })})`,
-  };
-  const editorOptions = allEditors
-    .map((value) => ({
-      value,
-      count: countFilteredParsers({ ...filters, editor: value }),
-      label: labelize(value),
-    }))
-    .filter((option) => option.count > 0 || option.value === state.editor)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
-  const allQueryKindOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, queryKind: 'all' })})`,
-  };
-  const queryKindOptions = allQueryKinds
-    .map((value) => ({
-      value,
-      count: countFilteredParsers({ ...filters, queryKind: value }),
-      label: labelize(value),
-    }))
-    .filter((option) => option.count > 0 || option.value === state.queryKind)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
-  const allInstallOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, install: 'all' })})`,
-  };
-  const installOptions = [
-    { value: 'wasm', label: 'Wasm' },
-    { value: 'shared-library', label: 'Shared Library' },
-    { value: 'source-archive', label: 'Source Archive' },
-    { value: 'build-from-source', label: 'Build From Source' },
-  ];
-  const countedInstallOptions = installOptions
-    .map((option) => ({
-      ...option,
-      count: countFilteredParsers({
-        ...filters,
-        install: option.value as FilterState['install'],
-      }),
-    }))
-    .filter((option) => option.count > 0 || option.value === state.install)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
-  const allScannerOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, scanner: 'all' })})`,
-  };
-  const scannerOptions = [
-    { value: 'custom', label: 'Custom Scanner' },
-    { value: 'none', label: 'No Custom Scanner' },
-  ];
-  const countedScannerOptions = scannerOptions
-    .map((option) => ({
-      ...option,
-      count: countFilteredParsers({
-        ...filters,
-        scanner: option.value as FilterState['scanner'],
-      }),
-    }))
-    .filter((option) => option.count > 0 || option.value === state.scanner)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
-  const allReleaseOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, release: 'all' })})`,
-  };
-  const releaseOptions = [
-    { value: 'semver', label: 'Semver Release' },
-    { value: 'none', label: 'No Semver Release' },
-  ];
-  const countedReleaseOptions = releaseOptions
-    .map((option) => ({
-      ...option,
-      count: countFilteredParsers({
-        ...filters,
-        release: option.value as FilterState['release'],
-      }),
-    }))
-    .filter((option) => option.count > 0 || option.value === state.release)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
-  const allAbiOption: FilterOption = {
-    value: 'all',
-    label: `All (${countFilteredParsers({ ...filters, abi: 'all' })})`,
-  };
-  const abiOptions = unique(
-    data.parsers
-      .map((parser) => parser.abi)
-      .filter((abi): abi is number => abi !== null)
-      .sort((left, right) => left - right)
-      .map(String),
-  );
-  const countedAbiOptions = [
-    {
-      value: 'none',
-      count: countFilteredParsers({ ...filters, abi: 'none' }),
-      label: 'No ABI',
-    },
-    ...abiOptions.map((value) => ({
-      value,
-      count: countFilteredParsers({ ...filters, abi: value as FilterState['abi'] }),
-      label: `ABI ${value}`,
-    })),
-  ]
-    .filter((option) => option.count > 0 || option.value === state.abi)
-    .map(({ value, label, count }) => ({
-      value,
-      label: `${label} (${count})`,
-    }));
 
   if (state.search) {
     chips.push(
-      renderActiveFilterButton(`Search: ${state.search}`, {
-        'data-filter-search': state.search,
-      }, 'chip chip-button chip-active-filter chip-accent'),
+      renderChip(
+        `Search: ${state.search}`,
+        'chip chip-active-filter chip-accent',
+        {
+          dataset: { 'data-filter-search': state.search },
+          dismissible: true,
+        },
+      ),
     );
   }
 
   chips.push(
-    renderActiveFilterSelectControl(
-      'Editor',
-      state.editor,
-      [allEditorOption, ...editorOptions],
-      'editor',
-      state.editor === 'all'
-        ? 'chip chip-active-filter chip-outline'
-        : `chip chip-active-filter chip-outline chip-editor chip-editor-${editorClassSuffix(state.editor)}`,
-    ),
-  );
-  chips.push(
-    renderActiveFilterSelectControl(
-      'Kind',
-      state.queryKind,
-      [allQueryKindOption, ...queryKindOptions],
-      'queryKind',
-      'chip chip-active-filter chip-outline',
-    ),
-  );
-  chips.push(
-    renderActiveFilterSelectControl(
-      'Install',
-      state.install,
-      [allInstallOption, ...countedInstallOptions],
-      'install',
-      state.install === 'wasm' || state.install === 'shared-library'
-        ? 'chip chip-active-filter chip-accent'
-        : 'chip chip-active-filter chip-outline',
-    ),
-  );
-  chips.push(
-    renderActiveFilterSelectControl(
-      'Scanner',
-      state.scanner,
-      [allScannerOption, ...countedScannerOptions],
-      'scanner',
-      state.scanner === 'custom'
-        ? 'chip chip-active-filter chip-danger'
-        : 'chip chip-active-filter chip-outline',
-    ),
-  );
-  chips.push(
-    renderActiveFilterSelectControl(
-      'Release',
-      state.release,
-      [allReleaseOption, ...countedReleaseOptions],
-      'release',
-      state.release === 'semver'
-        ? 'chip chip-active-filter chip-success'
-        : state.release === 'none'
-          ? 'chip chip-active-filter chip-danger'
-          : 'chip chip-active-filter chip-outline',
-    ),
-  );
-  chips.push(
-    renderActiveFilterSelectControl(
-      'ABI',
-      state.abi,
-      [allAbiOption, ...countedAbiOptions],
-      'abi',
-      'chip chip-active-filter chip-outline',
-    ),
+    ...FILTER_CONTROL_SPECS.map((spec) =>
+      renderActiveFilterSelectControl(
+        spec.label,
+        filterControlValue(spec.key),
+        buildCountedFilterOptions(
+          filters,
+          spec.key,
+          filterControlValue(spec.key),
+          spec.choices(),
+        ),
+        spec.key,
+        spec.className(filterControlValue(spec.key)),
+      )),
   );
 
   activeFilters.hidden = false;
@@ -2772,12 +2777,23 @@ function clickCoverageSelection(event: Event): CoverageSelection | null {
 
 function resetActiveFilters(): void {
   state.search = '';
-  state.editor = 'all';
-  state.queryKind = 'all';
-  state.install = 'all';
-  state.scanner = 'all';
-  state.release = 'all';
-  state.abi = 'all';
+  for (const spec of FILTER_CONTROL_SPECS) {
+    setFilterControlValue(spec.key, 'all');
+  }
+}
+
+function controlFilterSelections(control: HTMLElement): Partial<Record<FilterControlKey, string>> {
+  const selections: Partial<Record<FilterControlKey, string>> = {};
+
+  for (const spec of FILTER_CONTROL_SPECS) {
+    const value = control.dataset[filterDatasetKey(spec.key)];
+
+    if (value) {
+      selections[spec.key] = value;
+    }
+  }
+
+  return selections;
 }
 
 function clickFilterAction(event: Event): boolean {
@@ -2787,9 +2803,7 @@ function clickFilterAction(event: Event): boolean {
     return false;
   }
 
-  const control = target.closest<HTMLElement>(
-    '[data-filter-search], [data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner], [data-filter-release], [data-filter-abi], [data-clear-all-filters]',
-  );
+  const control = target.closest<HTMLElement>(FILTER_CLICK_SELECTOR);
 
   if (!control) {
     return false;
@@ -2809,53 +2823,19 @@ function clickFilterAction(event: Event): boolean {
     return true;
   }
 
-  const editor = control.dataset['filterEditor'];
+  const selections = controlFilterSelections(control);
+  const selectedFilters = Object.entries(selections) as [FilterControlKey, string][];
 
-  if (editor) {
-    state.editor = state.editor === editor ? 'all' : editor;
-    renderFull();
-    return true;
-  }
-
-  const queryKind = control.dataset['filterQueryKind'];
-
-  if (queryKind) {
-    state.queryKind = state.queryKind === queryKind ? 'all' : queryKind;
-    renderFull();
-    return true;
-  }
-
-  const scanner = control.dataset['filterScanner'];
-
-  if (scanner) {
-    state.scanner = state.scanner === scanner ? 'all' : scanner as FilterState['scanner'];
-    renderFull();
-    return true;
-  }
-
-  const release = control.dataset['filterRelease'];
-
-  if (release) {
-    state.release = state.release === release ? 'all' : release as FilterState['release'];
-    renderFull();
-    return true;
-  }
-
-  const abi = control.dataset['filterAbi'];
-
-  if (abi) {
-    state.abi = state.abi === abi ? 'all' : abi as FilterState['abi'];
-    renderFull();
-    return true;
-  }
-
-  const install = control.dataset['filterInstall'] as FilterState['install'] | undefined;
-
-  if (!install) {
+  if (!selectedFilters.length) {
     return false;
   }
 
-  state.install = state.install === install ? 'all' : install;
+  const isExactMatch = selectedFilters.every(([filter, value]) => filterControlValue(filter) === value);
+
+  for (const [filter, value] of selectedFilters) {
+    setFilterControlValue(filter, isExactMatch ? 'all' : value);
+  }
+
   renderFull();
   return true;
 }
@@ -2873,28 +2853,11 @@ function changeActiveFilterControl(event: Event): boolean {
     return false;
   }
 
-  switch (filter) {
-    case 'editor':
-      state.editor = target.value;
-      break;
-    case 'queryKind':
-      state.queryKind = target.value;
-      break;
-    case 'install':
-      state.install = target.value as FilterState['install'];
-      break;
-    case 'scanner':
-      state.scanner = target.value as FilterState['scanner'];
-      break;
-    case 'release':
-      state.release = target.value as FilterState['release'];
-      break;
-    case 'abi':
-      state.abi = target.value as FilterState['abi'];
-      break;
-    default:
-      return false;
+  if (!FILTER_CONTROL_SPEC_BY_KEY.has(filter as FilterControlKey)) {
+    return false;
   }
+
+  setFilterControlValue(filter as FilterControlKey, target.value);
 
   renderFull();
   return true;
