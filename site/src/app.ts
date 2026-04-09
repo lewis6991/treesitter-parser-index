@@ -1060,7 +1060,11 @@ function parserMatchesFilters(parser: ParserRelease, filters: ActiveFilters): bo
     return false;
   }
 
-  const relatedMatches = getRankedPacks(parser, filters);
+  const packFiltersWithoutSearch = {
+    ...filters,
+    search: '',
+  };
+  const relatedMatches = getRankedPacks(parser, packFiltersWithoutSearch);
 
   if (filters.editor !== 'all' && !relatedMatches.length) {
     return false;
@@ -1078,7 +1082,10 @@ function parserMatchesFilters(parser: ParserRelease, filters: ActiveFilters): bo
     return true;
   }
 
-  return matchesSearch(parserSearchIndex.get(parser.id) ?? '', filters.search) || relatedMatches.length > 0;
+  return (
+    matchesSearch(parserSearchIndex.get(parser.id) ?? '', filters.search) ||
+    relatedMatches.some(({ pack }) => packMatchesSearchForParser(pack, parser, filters.search))
+  );
 }
 
 function getRankedPacks(
@@ -1242,6 +1249,35 @@ function getPackSearchText(pack: QueryPack): string {
     pack.targets.join(' '),
     pack.targets.map(targetLabel).join(' '),
     pack.owners.join(' '),
+    queryFileSearchText(pack),
+  ].join(' ');
+}
+
+function packMatchesSearchForParser(
+  pack: QueryPack,
+  parser: ParserRelease,
+  search: string,
+): boolean {
+  return matchesSearch(getPackSearchTextForParser(pack, parser).toLowerCase(), search);
+}
+
+function getPackSearchTextForParser(pack: QueryPack, parser: ParserRelease): string {
+  const languageDetails = matchingPackLanguageDetails(pack, parser.language);
+
+  return [
+    pack.name,
+    pack.package,
+    pack.summary,
+    pack.layout.installRoot,
+    pack.layout.queryRoot,
+    pack.queryKinds.join(' '),
+    pack.targets.join(' '),
+    pack.targets.map(targetLabel).join(' '),
+    pack.owners.join(' '),
+    languageDetails.map((detail) => detail.language).join(' '),
+    languageDetails.map((detail) => detail.parserLanguage ?? '').join(' '),
+    languageDetails.flatMap((detail) => detail.queryKinds).join(' '),
+    languageDetails.flatMap((detail) => detail.testedParserRefs ?? []).join(' '),
     queryFileSearchText(pack),
   ].join(' ');
 }
