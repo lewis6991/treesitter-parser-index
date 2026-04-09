@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08",
+  "generatedAt": "2026-04-09",
   "kind": "prototype-query-packs",
   "count": 231,
   "items": [
@@ -12354,11 +12354,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -12776,11 +12776,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfhtml/queries/injections.scm"
-        ],
         "indents": [
           "cfhtml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfhtml/queries/injections.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -12834,11 +12834,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13683,14 +13683,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
+        "indents": [
+          "queries/indents.scm"
+        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
-        ],
-        "indents": [
-          "queries/indents.scm"
         ],
         "textobjects": [
           "queries/textobjects.scm"
@@ -15004,20 +15004,20 @@
         "locals"
       ],
       "queries": {
+        "folds": [
+          "queries/glimmer/folds.scm"
+        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
-        ],
-        "folds": [
-          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
@@ -16384,11 +16384,11 @@
         "highlights": [
           "helix-queries/highlights.scm"
         ],
-        "locals": [
-          "helix-queries/locals.scm"
-        ],
         "injections": [
           "helix-queries/injections.scm"
+        ],
+        "locals": [
+          "helix-queries/locals.scm"
         ]
       },
       "parserCompatibility": {
@@ -19098,11 +19098,11 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "tags": [
-          "grammars/stan/queries/tags.scm"
-        ],
         "locals": [
           "grammars/stan/queries/locals.scm"
+        ],
+        "tags": [
+          "grammars/stan/queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19148,11 +19148,11 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "tags": [
-          "grammars/stanfunctions/queries/sf-tags.scm"
-        ],
         "locals": [
           "grammars/stanfunctions/queries/sf-locals.scm"
+        ],
+        "tags": [
+          "grammars/stanfunctions/queries/sf-tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19200,14 +19200,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
+        "injections": [
+          "queries/injections.scm"
         ],
         "locals": [
           "queries/locals.scm"
         ],
-        "injections": [
-          "queries/injections.scm"
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19385,14 +19385,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
+        "injections": [
+          "queries/injections.scm"
+        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
-        ],
-        "injections": [
-          "queries/injections.scm"
         ]
       },
       "parserCompatibility": {
@@ -20300,14 +20300,14 @@
         "injections"
       ],
       "queries": {
+        "folds": [
+          "queries/folds.scm"
+        ],
         "highlights": [
           "queries/highlights.scm"
         ],
         "injections": [
           "queries/injections.scm"
-        ],
-        "folds": [
-          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
