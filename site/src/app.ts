@@ -66,10 +66,9 @@ type CoverageContributor =
       languages: string[];
     };
 
-interface CountedOption {
+interface FilterOption {
   value: string;
   label: string;
-  count: number;
 }
 
 interface ExplorerRenderState {
@@ -156,12 +155,7 @@ const state: FilterState = {
 
 const elements = {
   searchInput: queryOptionalElement<HTMLInputElement>('#search-input'),
-  languageFilter: queryOptionalElement<HTMLSelectElement>('#language-filter'),
-  editorFilter: queryOptionalElement<HTMLSelectElement>('#editor-filter'),
-  queryKindFilter: queryOptionalElement<HTMLSelectElement>('#query-kind-filter'),
-  installFilter: queryOptionalElement<HTMLSelectElement>('#install-filter'),
-  scannerFilter: queryOptionalElement<HTMLSelectElement>('#scanner-filter'),
-  releaseFilter: queryOptionalElement<HTMLSelectElement>('#release-filter'),
+  activeFilters: queryOptionalElement<HTMLDivElement>('#active-filters'),
   explorerTree: queryOptionalElement<HTMLDivElement>('#explorer-tree'),
   parserCountBadge: queryOptionalElement<HTMLSpanElement>('#parser-count-badge'),
   queryCountBadge: queryOptionalElement<HTMLSpanElement>('#query-count-badge'),
@@ -179,124 +173,19 @@ function init(): void {
   renderFull();
 }
 
-function renderFilterOptions(filters: ActiveFilters): void {
-  const languageFilter = elements.languageFilter;
-  const editorFilter = elements.editorFilter;
-  const queryKindFilter = elements.queryKindFilter;
-  const installFilter = elements.installFilter;
-  const scannerFilter = elements.scannerFilter;
-  const releaseFilter = elements.releaseFilter;
+function syncFilterInputs(): void {
+  const searchInput = elements.searchInput;
 
-  if (!languageFilter || !editorFilter || !queryKindFilter || !installFilter || !scannerFilter || !releaseFilter) {
+  if (!searchInput) {
     return;
   }
 
-  const installRoutes: CountedOption[] = [
-    {
-      value: 'wasm',
-      label: 'Wasm',
-      count: countFilteredParsers({ ...filters, install: 'wasm' }),
-    },
-    {
-      value: 'source-archive',
-      label: 'Source Archive',
-      count: countFilteredParsers({ ...filters, install: 'source-archive' }),
-    },
-    {
-      value: 'build-from-source',
-      label: 'Build From Source',
-      count: countFilteredParsers({ ...filters, install: 'build-from-source' }),
-    },
-  ];
-  const releaseStates: CountedOption[] = [
-    {
-      value: 'semver',
-      label: 'Semver Release',
-      count: countFilteredParsers({ ...filters, release: 'semver' }),
-    },
-    {
-      value: 'none',
-      label: 'No Semver Release',
-      count: countFilteredParsers({ ...filters, release: 'none' }),
-    },
-  ];
-  const scannerStates: CountedOption[] = [
-    {
-      value: 'custom',
-      label: 'Custom Scanner',
-      count: countFilteredParsers({ ...filters, scanner: 'custom' }),
-    },
-    {
-      value: 'none',
-      label: 'No Custom Scanner',
-      count: countFilteredParsers({ ...filters, scanner: 'none' }),
-    },
-  ];
-
-  setCountedOptions(
-    languageFilter,
-    'All languages',
-    countFilteredParsers({ ...filters, language: 'all' }),
-    allLanguages.map((value) => ({
-      value,
-      label: labelize(value),
-      count: countFilteredParsers({ ...filters, language: value }),
-    })),
-    state.language,
-  );
-  setCountedOptions(
-    editorFilter,
-    'All editors',
-    countFilteredParsers({ ...filters, editor: 'all' }),
-    allEditors.map((value) => ({
-      value,
-      label: labelize(value),
-      count: countFilteredParsers({ ...filters, editor: value }),
-    })),
-    state.editor,
-  );
-  setCountedOptions(
-    queryKindFilter,
-    'All query kinds',
-    countFilteredParsers({ ...filters, queryKind: 'all' }),
-    allQueryKinds.map((value) => ({
-      value,
-      label: labelize(value),
-      count: countFilteredParsers({ ...filters, queryKind: value }),
-    })),
-    state.queryKind,
-  );
-  setCountedOptions(
-    installFilter,
-    'All routes',
-    countFilteredParsers({ ...filters, install: 'all' }),
-    installRoutes,
-    state.install,
-  );
-  setCountedOptions(
-    scannerFilter,
-    'All scanner states',
-    countFilteredParsers({ ...filters, scanner: 'all' }),
-    scannerStates,
-    state.scanner,
-  );
-  setCountedOptions(
-    releaseFilter,
-    'All release states',
-    countFilteredParsers({ ...filters, release: 'all' }),
-    releaseStates,
-    state.release,
-  );
+  searchInput.value = state.search;
 }
 
 function wireEvents(): void {
   const searchInput = elements.searchInput;
-  const languageFilter = elements.languageFilter;
-  const editorFilter = elements.editorFilter;
-  const queryKindFilter = elements.queryKindFilter;
-  const installFilter = elements.installFilter;
-  const scannerFilter = elements.scannerFilter;
-  const releaseFilter = elements.releaseFilter;
+  const activeFilters = elements.activeFilters;
   const explorerTree = elements.explorerTree;
   const coverageMatrix = elements.coverageMatrix;
 
@@ -307,51 +196,18 @@ function wireEvents(): void {
     });
   }
 
-  if (languageFilter) {
-    languageFilter.addEventListener('change', () => {
-      state.language = languageFilter.value;
-      renderFull();
+  if (activeFilters) {
+    activeFilters.addEventListener('click', (event) => {
+      clickFilterAction(event);
     });
-  }
-
-  if (editorFilter) {
-    editorFilter.addEventListener('change', () => {
-      state.editor = editorFilter.value;
-      renderFull();
-    });
-  }
-
-  if (queryKindFilter) {
-    queryKindFilter.addEventListener('change', () => {
-      state.queryKind = queryKindFilter.value;
-      renderFull();
-    });
-  }
-
-  if (installFilter) {
-    installFilter.addEventListener('change', () => {
-      state.install = installFilter.value as FilterState['install'];
-      renderFull();
-    });
-  }
-
-  if (scannerFilter) {
-    scannerFilter.addEventListener('change', () => {
-      state.scanner = scannerFilter.value as FilterState['scanner'];
-      renderFull();
-    });
-  }
-
-  if (releaseFilter) {
-    releaseFilter.addEventListener('change', () => {
-      state.release = releaseFilter.value as FilterState['release'];
-      renderFull();
+    activeFilters.addEventListener('change', (event) => {
+      changeActiveFilterControl(event);
     });
   }
 
   if (explorerTree) {
     explorerTree.addEventListener('click', (event) => {
-      if (clickTreeFilterAction(event)) {
+      if (clickFilterAction(event)) {
         return;
       }
 
@@ -487,7 +343,8 @@ function wireSectionNav(): void {
 
 function renderFull(): void {
   const filters = getActiveFilters();
-  renderFilterOptions(filters);
+  syncFilterInputs();
+  renderActiveFilterStrip();
 
   if (hasExplorerPanel()) {
     syncRenderCaches(filters);
@@ -1040,7 +897,7 @@ function getRankedPacks(
   const candidates = parser
     ? compatiblePacksByParserId.get(parser.id) ?? []
     : allRankedPacks;
-  const rankedPacks = candidates.filter(({ pack }) => matchesPackFilters(pack, filters));
+  const rankedPacks = candidates.filter(({ pack }) => matchesPackFilters(pack, filters, parser));
 
   rankedPackCache.set(cacheKey, rankedPacks);
   return rankedPacks;
@@ -1108,7 +965,33 @@ function buildCompatiblePacks(parser: ParserRelease): RankedPack[] {
 function matchesPackFilters(
   pack: QueryPack,
   filters: ActiveFilters = getActiveFilters(),
+  parser: ParserRelease | null = null,
 ): boolean {
+  if (parser) {
+    const parserQueryKinds = packQueryKindsForParser(pack, parser);
+
+    if (!parserQueryKinds.length) {
+      return false;
+    }
+
+    if (filters.editor !== 'all') {
+      const filterQueryKinds = filters.queryKind === 'all'
+        ? parserQueryKinds
+        : [filters.queryKind];
+      const filteredTargets = filterTargetsForQueryKinds(pack.targets, filterQueryKinds);
+
+      if (!filteredTargets.some((targetId) => (targetIndex.get(targetId)?.editor ?? '') === filters.editor)) {
+        return false;
+      }
+    }
+
+    if (filters.queryKind !== 'all' && !parserQueryKinds.includes(filters.queryKind)) {
+      return false;
+    }
+
+    return packMatchesSearchForParser(pack, parser, filters.search);
+  }
+
   if (filters.language !== 'all' && !packSupportsLanguage(pack, filters.language)) {
     return false;
   }
@@ -1340,6 +1223,12 @@ function packSupportsParserLanguage(pack: QueryPack, parserLanguage: string): bo
   return matchingPackLanguageDetails(pack, parserLanguage).length > 0;
 }
 
+function packQueryKindsForParser(pack: QueryPack, parser: ParserRelease): string[] {
+  return unique(
+    matchingPackLanguageDetails(pack, parser.language).flatMap((entry) => entry.queryKinds),
+  );
+}
+
 function packParserLanguageList(pack: QueryPack): string[] {
   return unique(
     packLanguageDetails(pack).map((entry) => normalizeLanguageId(entry.parserLanguage ?? entry.language)),
@@ -1390,10 +1279,7 @@ function countCoverageLanguages(
     for (const language of packLanguagesForKind(pack, queryKind)) {
       const normalizedLanguage = normalizeLanguageId(language);
 
-      if (
-        state.language !== 'all' &&
-        normalizedLanguage !== normalizeLanguageId(state.language)
-      ) {
+      if (!matchesLanguage(language, state.language)) {
         continue;
       }
 
@@ -1409,10 +1295,7 @@ function countCoverageLanguages(
 
       const normalizedLanguage = normalizeLanguageId(parser.language);
 
-      if (
-        state.language !== 'all' &&
-        normalizedLanguage !== normalizeLanguageId(state.language)
-      ) {
+      if (!matchesLanguage(parser.language, state.language)) {
         continue;
       }
 
@@ -1518,9 +1401,11 @@ function packHasExplicitSupport(pack: QueryPack, queryKind: string): boolean {
 }
 
 function packLanguagesForKind(pack: QueryPack, queryKind: string): string[] {
+  // Coverage is parser-centric, so collapse editor-specific aliases like
+  // docker-compose -> yaml or jsx -> javascript where the pack provides it.
   return packLanguageDetails(pack)
     .filter((entry) => entry.queryKinds.includes(queryKind))
-    .map((entry) => entry.language);
+    .map((entry) => entry.parserLanguage ?? entry.language);
 }
 
 function firstCoverageSelection(
@@ -1576,10 +1461,6 @@ function getCoverageParsers(): ParserRelease[] {
   });
 }
 
-function getAllLanguages(): string[] {
-  return allLanguages;
-}
-
 function getActiveFilters(): ActiveFilters {
   return {
     search: state.search,
@@ -1603,11 +1484,11 @@ function restoreStateFromUrl(): void {
 
   const language = params.get('lang');
 
-  if (language) {
+  if (!search && language) {
     const normalizedLanguage = normalizeLanguageId(language);
 
     if (allLanguages.includes(normalizedLanguage)) {
-      state.language = normalizedLanguage;
+      state.search = labelize(normalizedLanguage).toLowerCase();
     }
   }
 
@@ -1706,10 +1587,6 @@ function searchParamsFromState(snapshot: FilterState): URLSearchParams {
 
   if (snapshot.search) {
     params.set('q', snapshot.search);
-  }
-
-  if (snapshot.language !== 'all') {
-    params.set('lang', snapshot.language);
   }
 
   if (snapshot.editor !== 'all') {
@@ -2092,6 +1969,65 @@ function renderFilterChip(
   return `<button type="button" class="${className} chip-button ${isActive ? 'is-active' : ''}" ${attributes}>${escapeHtml(label)}</button>`;
 }
 
+function renderActiveFilterButton(
+  label: string,
+  dataset: Record<string, string>,
+  className: string = 'chip chip-button chip-active-filter',
+): string {
+  const attributes = Object.entries(dataset)
+    .map(([name, value]) => `${name}="${escapeHtml(value)}"`)
+    .join(' ');
+
+  return `
+    <button type="button" class="${className}" ${attributes}>
+      <span>${escapeHtml(label)}</span>
+      <span class="chip-dismiss" aria-hidden="true">×</span>
+    </button>
+  `;
+}
+
+function renderActiveFilterSelectControl(
+  label: string,
+  value: string,
+  options: readonly FilterOption[],
+  filter: 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release',
+  className: string,
+): string {
+  const isActive = value !== 'all';
+  const optionMarkup = options
+    .map(
+      (option) => `
+        <option value="${escapeHtml(option.value)}" ${option.value === value ? 'selected' : ''}>
+          ${escapeHtml(option.label)}
+        </option>
+      `,
+    )
+    .join('');
+
+  return `
+    <div class="${className} active-filter-control">
+      <span class="active-filter-control-label">${escapeHtml(label)}</span>
+      <select class="active-filter-select" data-active-filter="${escapeHtml(filter)}" aria-label="${escapeHtml(label)} filter">
+        ${optionMarkup}
+      </select>
+      ${
+        isActive
+          ? `
+            <button
+              type="button"
+              class="active-filter-clear"
+              data-filter-${filter === 'queryKind' ? 'query-kind' : filter}="${escapeHtml(value)}"
+              aria-label="${escapeHtml(`Clear ${label} filter`)}"
+            >
+              ×
+            </button>
+          `
+          : ''
+      }
+    </div>
+  `;
+}
+
 function packEditors(pack: QueryPack): string[] {
   return unique(
     pack.targets
@@ -2302,28 +2238,192 @@ function hasBundledQueryPack(parser: ParserRelease): boolean {
   return Object.keys(parser.bundledQueries).length > 0;
 }
 
-function setCountedOptions(
-  select: HTMLSelectElement,
-  allLabel: string,
-  allCount: number,
-  options: readonly CountedOption[],
-  selectedValue: string,
-): void {
-  const visibleOptions = options.filter(
-    (option) => option.count > 0 || option.value === selectedValue,
+function renderActiveFilterStrip(): void {
+  const activeFilters = elements.activeFilters;
+
+  if (!activeFilters) {
+    return;
+  }
+
+  const filters = getActiveFilters();
+  const chips: string[] = [];
+  const hasActiveFilters = Boolean(
+    state.search ||
+    state.editor !== 'all' ||
+    state.queryKind !== 'all' ||
+    state.install !== 'all' ||
+    state.scanner !== 'all' ||
+    state.release !== 'all',
+  );
+  const allEditorOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, editor: 'all' })})`,
+  };
+  const editorOptions = allEditors
+    .map((value) => ({
+      value,
+      count: countFilteredParsers({ ...filters, editor: value }),
+      label: labelize(value),
+    }))
+    .filter((option) => option.count > 0 || option.value === state.editor)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+  const allQueryKindOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, queryKind: 'all' })})`,
+  };
+  const queryKindOptions = allQueryKinds
+    .map((value) => ({
+      value,
+      count: countFilteredParsers({ ...filters, queryKind: value }),
+      label: labelize(value),
+    }))
+    .filter((option) => option.count > 0 || option.value === state.queryKind)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+  const allInstallOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, install: 'all' })})`,
+  };
+  const installOptions = [
+    { value: 'wasm', label: 'Wasm' },
+    { value: 'source-archive', label: 'Source Archive' },
+    { value: 'build-from-source', label: 'Build From Source' },
+  ];
+  const countedInstallOptions = installOptions
+    .map((option) => ({
+      ...option,
+      count: countFilteredParsers({
+        ...filters,
+        install: option.value as FilterState['install'],
+      }),
+    }))
+    .filter((option) => option.count > 0 || option.value === state.install)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+  const allScannerOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, scanner: 'all' })})`,
+  };
+  const scannerOptions = [
+    { value: 'custom', label: 'Custom Scanner' },
+    { value: 'none', label: 'No Custom Scanner' },
+  ];
+  const countedScannerOptions = scannerOptions
+    .map((option) => ({
+      ...option,
+      count: countFilteredParsers({
+        ...filters,
+        scanner: option.value as FilterState['scanner'],
+      }),
+    }))
+    .filter((option) => option.count > 0 || option.value === state.scanner)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+  const allReleaseOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, release: 'all' })})`,
+  };
+  const releaseOptions = [
+    { value: 'semver', label: 'Semver Release' },
+    { value: 'none', label: 'No Semver Release' },
+  ];
+  const countedReleaseOptions = releaseOptions
+    .map((option) => ({
+      ...option,
+      count: countFilteredParsers({
+        ...filters,
+        release: option.value as FilterState['release'],
+      }),
+    }))
+    .filter((option) => option.count > 0 || option.value === state.release)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
+
+  if (state.search) {
+    chips.push(
+      renderActiveFilterButton(`Search: ${state.search}`, {
+        'data-filter-search': state.search,
+      }, 'chip chip-button chip-active-filter chip-accent'),
+    );
+  }
+
+  chips.push(
+    renderActiveFilterSelectControl(
+      'Editor',
+      state.editor,
+      [allEditorOption, ...editorOptions],
+      'editor',
+      state.editor === 'all'
+        ? 'chip chip-active-filter chip-outline'
+        : `chip chip-active-filter chip-outline chip-editor chip-editor-${editorClassSuffix(state.editor)}`,
+    ),
+  );
+  chips.push(
+    renderActiveFilterSelectControl(
+      'Kind',
+      state.queryKind,
+      [allQueryKindOption, ...queryKindOptions],
+      'queryKind',
+      'chip chip-active-filter chip-outline',
+    ),
+  );
+  chips.push(
+    renderActiveFilterSelectControl(
+      'Install',
+      state.install,
+      [allInstallOption, ...countedInstallOptions],
+      'install',
+      state.install === 'wasm'
+        ? 'chip chip-active-filter chip-accent'
+        : 'chip chip-active-filter chip-outline',
+    ),
+  );
+  chips.push(
+    renderActiveFilterSelectControl(
+      'Scanner',
+      state.scanner,
+      [allScannerOption, ...countedScannerOptions],
+      'scanner',
+      state.scanner === 'custom'
+        ? 'chip chip-active-filter chip-danger'
+        : 'chip chip-active-filter chip-outline',
+    ),
+  );
+  chips.push(
+    renderActiveFilterSelectControl(
+      'Release',
+      state.release,
+      [allReleaseOption, ...countedReleaseOptions],
+      'release',
+      state.release === 'semver'
+        ? 'chip chip-active-filter chip-success'
+        : state.release === 'none'
+          ? 'chip chip-active-filter chip-danger'
+          : 'chip chip-active-filter chip-outline',
+    ),
   );
 
-  select.innerHTML = [
-    `<option value="all">${escapeHtml(`${allLabel} (${allCount})`)}</option>`,
-    ...visibleOptions.map(
-      (option) => `
-        <option value="${escapeHtml(option.value)}">
-          ${escapeHtml(`${option.label} (${option.count})`)}
-        </option>
-      `,
-    ),
-  ].join('');
-  select.value = selectedValue;
+  activeFilters.hidden = false;
+  activeFilters.innerHTML = `
+    <span class="active-filters-label">Filters</span>
+    ${chips.join('')}
+    ${
+      hasActiveFilters
+        ? '<button type="button" class="active-filters-reset" data-clear-all-filters="true">Clear all</button>'
+        : ''
+    }
+  `;
 }
 
 function compatibilityLabel(rank: CompatibilityRank): 'exact' | 'range' | 'unknown' {
@@ -2509,7 +2609,16 @@ function clickCoverageSelection(event: Event): CoverageSelection | null {
   return { editor, queryKind };
 }
 
-function clickTreeFilterAction(event: Event): boolean {
+function resetActiveFilters(): void {
+  state.search = '';
+  state.editor = 'all';
+  state.queryKind = 'all';
+  state.install = 'all';
+  state.scanner = 'all';
+  state.release = 'all';
+}
+
+function clickFilterAction(event: Event): boolean {
   const target = event.target;
 
   if (!(target instanceof Element)) {
@@ -2517,11 +2626,25 @@ function clickTreeFilterAction(event: Event): boolean {
   }
 
   const control = target.closest<HTMLElement>(
-    '[data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner]',
+    '[data-filter-search], [data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner], [data-filter-release], [data-clear-all-filters]',
   );
 
   if (!control) {
     return false;
+  }
+
+  if (control.dataset['clearAllFilters'] !== undefined) {
+    resetActiveFilters();
+    renderFull();
+    return true;
+  }
+
+  const search = control.dataset['filterSearch'];
+
+  if (search !== undefined) {
+    state.search = state.search === search ? '' : search;
+    renderFull();
+    return true;
   }
 
   const editor = control.dataset['filterEditor'];
@@ -2548,6 +2671,14 @@ function clickTreeFilterAction(event: Event): boolean {
     return true;
   }
 
+  const release = control.dataset['filterRelease'];
+
+  if (release) {
+    state.release = state.release === release ? 'all' : release as FilterState['release'];
+    renderFull();
+    return true;
+  }
+
   const install = control.dataset['filterInstall'] as FilterState['install'] | undefined;
 
   if (!install) {
@@ -2555,6 +2686,43 @@ function clickTreeFilterAction(event: Event): boolean {
   }
 
   state.install = state.install === install ? 'all' : install;
+  renderFull();
+  return true;
+}
+
+function changeActiveFilterControl(event: Event): boolean {
+  const target = event.target;
+
+  if (!(target instanceof HTMLSelectElement)) {
+    return false;
+  }
+
+  const filter = target.dataset['activeFilter'];
+
+  if (!filter) {
+    return false;
+  }
+
+  switch (filter) {
+    case 'editor':
+      state.editor = target.value;
+      break;
+    case 'queryKind':
+      state.queryKind = target.value;
+      break;
+    case 'install':
+      state.install = target.value as FilterState['install'];
+      break;
+    case 'scanner':
+      state.scanner = target.value as FilterState['scanner'];
+      break;
+    case 'release':
+      state.release = target.value as FilterState['release'];
+      break;
+    default:
+      return false;
+  }
+
   renderFull();
   return true;
 }

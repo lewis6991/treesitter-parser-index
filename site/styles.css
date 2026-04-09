@@ -574,6 +574,12 @@ select {
   color: var(--danger);
 }
 
+.chip-success {
+  background: var(--success-soft);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
 .chip-editor-neovim {
   background: var(--success-soft);
   border-color: var(--editor-neovim-border);
@@ -638,11 +644,117 @@ select {
   border: 0;
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  grid-template-columns: minmax(0, 1.5fr) repeat(6, minmax(0, 1fr));
   margin-bottom: 1.1rem;
   padding: 0.95rem 0;
+}
+
+.field-search {
+  max-width: 28rem;
+  width: min(100%, 28rem);
+}
+
+.active-filters {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: -0.4rem 0 1rem;
+  padding-bottom: 0.9rem;
+}
+
+.active-filters[hidden] {
+  display: none;
+}
+
+.active-filters-label {
+  color: var(--text-soft);
+  font-size: 0.78rem;
+}
+
+.chip-active-filter {
+  background: var(--panel-muted);
+  border-color: var(--border-strong);
+}
+
+.active-filter-control {
+  gap: 0.18rem;
+  padding: 0.18rem 0.22rem 0.18rem 0.4rem;
+}
+
+.active-filter-control-label {
+  font-size: 0.62rem;
+  opacity: 0.8;
+}
+
+.active-filter-select {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  min-width: 0;
+  padding: 0;
+}
+
+.active-filter-select:focus {
+  outline: none;
+}
+
+.active-filter-control:focus-within {
+  box-shadow:
+    0 0 0 3px var(--focus-ring),
+    inset 0 0 0 1px currentColor;
+}
+
+.chip-dismiss {
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+.active-filter-clear {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  line-height: 1;
+  opacity: 0.8;
+  padding: 0;
+}
+
+.active-filter-clear:hover {
+  opacity: 1;
+}
+
+.active-filter-clear:focus-visible {
+  outline: none;
+}
+
+.active-filters-reset {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.1rem;
+}
+
+.active-filters-reset:hover {
+  color: var(--accent-strong);
+}
+
+.active-filters-reset:focus-visible {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  outline: none;
 }
 
 .field {
@@ -1504,8 +1616,9 @@ select {
     padding: 0 1rem 2.5rem;
   }
 
-  .toolbar {
-    grid-template-columns: 1fr;
+  .field-search {
+    max-width: none;
+    width: 100%;
   }
 
   .list-card-bottom {
