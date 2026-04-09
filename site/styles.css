@@ -1276,13 +1276,6 @@ select {
   color: var(--accent);
 }
 
-.artifact-link-accent {
-  background: var(--accent-soft);
-  border-color: var(--accent-border);
-  color: var(--accent-strong);
-  font-weight: 600;
-}
-
 .artifact-link-static {
   color: var(--text-soft);
 }
