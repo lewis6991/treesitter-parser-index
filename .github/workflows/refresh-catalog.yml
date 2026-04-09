@@ -1,0 +1,72 @@
+name: Refresh Catalog
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Restore gh api cache
+        id: gh-api-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/gh-api
+          key: ${{ runner.os }}-gh-api-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gh-api-${{ github.ref_name }}-
+            ${{ runner.os }}-gh-api-
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install site dependencies
+        run: npm ci --prefix site
+
+      - name: Refresh scraped data
+        run: make scrape-catalog-incremental build
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Save gh api cache
+        if: success() && hashFiles('.cache/gh-api/**') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/gh-api
+          key: ${{ steps.gh-api-cache.outputs.cache-primary-key }}
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No catalog changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(data): refresh scraped catalog"
+          git push
