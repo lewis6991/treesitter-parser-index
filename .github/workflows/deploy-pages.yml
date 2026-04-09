@@ -45,7 +45,7 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          cp site/index.html site/coverage.html site/styles.css _site/
+          cp site/index.html site/coverage.html site/styles.css site/favicon.svg _site/
           cp -R site/dist _site/
           cp index.json parsers.json query-packs.json targets.json languages.json _site/
           touch _site/.nojekyll
