@@ -9,7 +9,7 @@ import type {
 } from './types.js';
 
 type CompatibilityRank = 0 | 1 | 2 | 3;
-type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install'>;
+type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'release'>;
 
 const LANGUAGE_ALIASES: Record<string, string> = {
   'c-sharp': 'c_sharp',
@@ -37,6 +37,7 @@ interface FilterState {
   editor: string;
   queryKind: string;
   install: 'all' | 'wasm' | 'source-archive' | 'build-from-source';
+  release: 'all' | 'semver' | 'none';
   selectedParserId: string | null;
   selectedQueryId: string | null;
   selectedCoverage: CoverageSelection | null;
@@ -110,6 +111,9 @@ const parserLanguageIndex = (() => {
   );
 })();
 const sortedParsers = [...data.parsers].sort((left, right) => left.name.localeCompare(right.name));
+const parserByRefIndex = new Map<string, ParserRelease>(
+  data.parsers.map((parser) => [`${parser.package}@${parser.version}`, parser] as const),
+);
 const allLanguages = unique([
   ...data.parsers.map((parser) => normalizeLanguageId(parser.language)),
   ...data.queryPacks.flatMap((pack) => packLanguageList(pack).map(normalizeLanguageId)),
@@ -142,6 +146,7 @@ const state: FilterState = {
   editor: 'all',
   queryKind: 'all',
   install: 'all',
+  release: 'all',
   selectedParserId: null,
   selectedQueryId: null,
   selectedCoverage: null,
@@ -153,6 +158,7 @@ const elements = {
   editorFilter: queryOptionalElement<HTMLSelectElement>('#editor-filter'),
   queryKindFilter: queryOptionalElement<HTMLSelectElement>('#query-kind-filter'),
   installFilter: queryOptionalElement<HTMLSelectElement>('#install-filter'),
+  releaseFilter: queryOptionalElement<HTMLSelectElement>('#release-filter'),
   explorerTree: queryOptionalElement<HTMLDivElement>('#explorer-tree'),
   parserCountBadge: queryOptionalElement<HTMLSpanElement>('#parser-count-badge'),
   queryCountBadge: queryOptionalElement<HTMLSpanElement>('#query-count-badge'),
@@ -176,8 +182,9 @@ function renderFilterOptions(filters: ActiveFilters): void {
   const editorFilter = elements.editorFilter;
   const queryKindFilter = elements.queryKindFilter;
   const installFilter = elements.installFilter;
+  const releaseFilter = elements.releaseFilter;
 
-  if (!languageFilter || !editorFilter || !queryKindFilter || !installFilter) {
+  if (!languageFilter || !editorFilter || !queryKindFilter || !installFilter || !releaseFilter) {
     return;
   }
 
@@ -196,6 +203,18 @@ function renderFilterOptions(filters: ActiveFilters): void {
       value: 'build-from-source',
       label: 'Build From Source',
       count: countFilteredParsers({ ...filters, install: 'build-from-source' }),
+    },
+  ];
+  const releaseStates: CountedOption[] = [
+    {
+      value: 'semver',
+      label: 'Semver Release',
+      count: countFilteredParsers({ ...filters, release: 'semver' }),
+    },
+    {
+      value: 'none',
+      label: 'No Semver Release',
+      count: countFilteredParsers({ ...filters, release: 'none' }),
     },
   ];
 
@@ -239,6 +258,13 @@ function renderFilterOptions(filters: ActiveFilters): void {
     installRoutes,
     state.install,
   );
+  setCountedOptions(
+    releaseFilter,
+    'All release states',
+    countFilteredParsers({ ...filters, release: 'all' }),
+    releaseStates,
+    state.release,
+  );
 }
 
 function wireEvents(): void {
@@ -247,6 +273,7 @@ function wireEvents(): void {
   const editorFilter = elements.editorFilter;
   const queryKindFilter = elements.queryKindFilter;
   const installFilter = elements.installFilter;
+  const releaseFilter = elements.releaseFilter;
   const explorerTree = elements.explorerTree;
   const coverageMatrix = elements.coverageMatrix;
 
@@ -281,6 +308,13 @@ function wireEvents(): void {
   if (installFilter) {
     installFilter.addEventListener('change', () => {
       state.install = installFilter.value as FilterState['install'];
+      renderFull();
+    });
+  }
+
+  if (releaseFilter) {
+    releaseFilter.addEventListener('change', () => {
+      state.release = releaseFilter.value as FilterState['release'];
       renderFull();
     });
   }
@@ -505,7 +539,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
   if (!parsers.length) {
     explorerTree.innerHTML = emptyState(
       'No parser releases match the current filters.',
-      'Adjust the language, package, or install route filters.',
+      'Adjust the active filters to widen the parser list.',
     );
     return;
   }
@@ -541,7 +575,7 @@ function renderExplorerTree(parsers: ParserRelease[], rankedPacks: RankedPack[])
             <div class="tree-item-meta">
               <span class="tree-item-summary-inline">${renderPackageLink(parser.package)}</span>
               <span class="tree-item-meta-freshness ${freshnessClass}">${escapeHtml(renderParserLastUpdated(parser, 'compact'))}</span>
-              <span>${escapeHtml(shortCommit(parser.sourceCommit))}</span>
+              <span>${escapeHtml(renderParserSourceCommit(parser))}</span>
               <span>${matchingPacks.length} matching sources</span>
             </div>
             ${signalChips ? `<div class="tree-item-targets chip-row">${signalChips}</div>` : ''}
@@ -570,6 +604,7 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
   const resolvedLanguage = resolvePackLanguage(pack, parser);
   const visibleQueryKinds = visibleQueryKindsForPack(pack, resolvedLanguage);
   const visibleTargets = filterTargetsForQueryKinds(pack.targets, visibleQueryKinds);
+  const compatibilityToken = compatibilityTokenLabel(pack, parser, rank);
   const filterChips = [
     ...visibleQueryKinds.map(renderQueryKindFilterChip),
     ...visibleTargets.map(renderInteractiveTargetTag),
@@ -582,7 +617,7 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
           <div>
             <h4>${escapeHtml(pack.name)}</h4>
           </div>
-          ${renderCompatibilityBadge(rank, 'tree-item-token')}
+          ${renderCompatibilityBadge(rank, 'tree-item-token', compatibilityToken)}
         </div>
         <div class="tree-item-meta">
           <span class="tree-item-summary-inline">${renderPackageLink(pack.package)}</span>
@@ -793,7 +828,7 @@ function renderParserDetail(parser: ParserRelease): string {
       </article>
       <article class="metric-card">
         <span>Source Commit</span>
-        <strong>${escapeHtml(shortCommit(parser.sourceCommit))}</strong>
+        <strong>${escapeHtml(renderParserSourceCommit(parser))}</strong>
       </article>
       <article class="metric-card">
         <span>Last Updated</span>
@@ -801,7 +836,7 @@ function renderParserDetail(parser: ParserRelease): string {
       </article>
       <article class="metric-card">
         <span>ABI</span>
-        <strong>${escapeHtml(String(parser.abi))}</strong>
+        <strong>${escapeHtml(renderParserAbi(parser))}</strong>
       </article>
     </div>
 
@@ -815,14 +850,14 @@ function renderParserDetail(parser: ParserRelease): string {
     <section class="detail-block">
       <h4>Bundled Query Kinds</h4>
       <div class="chip-row">
-        ${chipList(parser.bundledQueryKinds, 'chip chip-outline')}
+        ${parser.bundledQueryKinds.length ? chipList(parser.bundledQueryKinds, 'chip chip-outline') : '<span class="chip chip-outline">none listed</span>'}
       </div>
     </section>
 
     <section class="detail-block">
       <h4>Owners</h4>
       <div class="chip-row">
-        ${renderOwnerChips(parser.owners, parser.package)}
+        ${parser.owners.length ? renderOwnerChips(parser.owners, parser.package) : '<span class="chip chip-outline">none listed</span>'}
       </div>
     </section>
   `;
@@ -844,6 +879,12 @@ function renderQueryDetail(
     ...(resolvedLanguageDetail?.testedParserRefs ?? []),
     ...(compatibility.tested ?? []),
   ]);
+  const compatibilityToken = compatibilityTokenLabel(pack, parser, rank);
+  const exactTestedParserToken = summarizeVersionLabels(
+    parser
+      ? parserVersionsFromRefs(exactTestedParserRefs, parser.package)
+      : parserVersionsFromRefs(exactTestedParserRefs),
+  );
   const sharesTestedParserSource = Boolean(
     parser && exactTestedParserRefs.some((testedParserRef) => parserPackageFromRef(testedParserRef) === parser.package),
   );
@@ -872,7 +913,7 @@ function renderQueryDetail(
       </article>
       <article class="metric-card">
         <span>Compatibility</span>
-        <strong title="${escapeHtml(compatibilityExplanation(rank))}">${escapeHtml(compatibilityLabel(rank))}</strong>
+        <strong title="${escapeHtml(compatibilityExplanation(rank))}">${escapeHtml(compatibilityToken)}</strong>
       </article>
       <article class="metric-card">
         <span>Languages</span>
@@ -943,20 +984,20 @@ function renderQueryDetail(
     <section class="detail-block">
       <h4>Compatibility Notes</h4>
       ${renderCompatibilityGuide()}
-      <div class="mini-card">
-        <div class="mini-card-top">
-          <strong>Selected parser</strong>
-          ${renderCompatibilityBadge(rank, 'pill')}
+        <div class="mini-card">
+          <div class="mini-card-top">
+            <strong>Selected parser</strong>
+            ${renderCompatibilityBadge(rank, 'pill', compatibilityToken)}
+          </div>
+          <p>${parser ? renderPackageLink(parser.package) : 'No parser selected'}</p>
         </div>
-        <p>${parser ? renderPackageLink(parser.package) : 'No parser selected'}</p>
-      </div>
       ${
         exactTestedParserRefs.length
           ? `
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Exact tested parsers</strong>
-                ${renderCompatibilityBadge(3, 'pill')}
+                ${renderCompatibilityBadge(3, 'pill', exactTestedParserToken)}
               </div>
               <p>${escapeHtml(exactTestedParserRefs.join(' · '))}</p>
             </div>
@@ -982,7 +1023,7 @@ function renderQueryDetail(
             <div class="mini-card">
               <div class="mini-card-top">
                 <strong>Semver range</strong>
-                ${renderCompatibilityBadge(2, 'pill')}
+                ${renderCompatibilityBadge(2, 'pill', compatibility.semver)}
               </div>
               <p>${escapeHtml(compatibility.semver)}</p>
             </div>
@@ -1060,6 +1101,10 @@ function parserMatchesFilters(parser: ParserRelease, filters: ActiveFilters): bo
     return false;
   }
 
+  if (!matchesRelease(parser, filters.release)) {
+    return false;
+  }
+
   const packFiltersWithoutSearch = {
     ...filters,
     search: '',
@@ -1114,6 +1159,10 @@ function compatibilityRank(
 ): CompatibilityRank {
   if (!parser || !packSupportsParserLanguage(pack, parser.language)) {
     return 0;
+  }
+
+  if (parser.synthetic === 'unknown') {
+    return parser.syntheticPackIds?.includes(pack.id) ? 1 : 0;
   }
 
   const testedParserRefs = unique(
@@ -1204,6 +1253,21 @@ function matchesInstall(
   return parser.capabilities.buildFromSource;
 }
 
+function matchesRelease(
+  parser: ParserRelease,
+  release: ActiveFilters['release'] = state.release,
+): boolean {
+  if (release === 'all') {
+    return true;
+  }
+
+  if (release === 'semver') {
+    return Boolean(parser.upstreamSemver);
+  }
+
+  return !parser.upstreamSemver;
+}
+
 function matchesSearch(text: string, search: string = state.search): boolean {
   if (!search) {
     return true;
@@ -1288,6 +1352,42 @@ function parserRef(parser: ParserRelease): string {
 
 function parserPackageFromRef(ref: string): string {
   return ref.split('@')[0] ?? ref;
+}
+
+function parserVersionFromRef(ref: string): string {
+  const parser = parserByRefIndex.get(ref);
+  return parser ? preferredParserVersionLabel(parser) : displayVersionLabel(ref.split('@')[1] ?? ref);
+}
+
+function parserVersionsFromRefs(
+  refs: readonly string[],
+  packageId?: string,
+): string[] {
+  return unique(
+    refs
+      .filter((ref) => !packageId || parserPackageFromRef(ref) === packageId)
+      .map(parserVersionFromRef),
+  );
+}
+
+function summarizeVersionLabels(versions: readonly string[]): string {
+  if (!versions.length) {
+    return 'unknown';
+  }
+
+  if (versions.length === 1) {
+    return versions[0] ?? 'unknown';
+  }
+
+  return `${versions.length} pins`;
+}
+
+function preferredParserVersionLabel(parser: ParserRelease): string {
+  if (parser.synthetic === 'unknown') {
+    return 'unknown';
+  }
+
+  return parser.upstreamSemver ?? displayVersionLabel(parser.version);
 }
 
 function packLanguageDetails(pack: QueryPack): QueryPackLanguage[] {
@@ -1580,6 +1680,10 @@ function getCoverageParsers(): ParserRelease[] {
       return false;
     }
 
+    if (!matchesRelease(parser)) {
+      return false;
+    }
+
     if (
       state.queryKind !== 'all' &&
       !parser.bundledQueryKinds.includes(state.queryKind)
@@ -1602,6 +1706,7 @@ function getActiveFilters(): ActiveFilters {
     editor: state.editor,
     queryKind: state.queryKind,
     install: state.install,
+    release: state.release,
   };
 }
 
@@ -1640,6 +1745,12 @@ function restoreStateFromUrl(): void {
 
   if (install === 'wasm' || install === 'source-archive' || install === 'build-from-source') {
     state.install = install;
+  }
+
+  const release = params.get('release');
+
+  if (release === 'semver' || release === 'none') {
+    state.release = release;
   }
 
   const parserId = params.get('parser');
@@ -1725,6 +1836,10 @@ function searchParamsFromState(snapshot: FilterState): URLSearchParams {
     params.set('install', snapshot.install);
   }
 
+  if (snapshot.release !== 'all') {
+    params.set('release', snapshot.release);
+  }
+
   if (snapshot.selectedParserId) {
     params.set('parser', snapshot.selectedParserId);
   }
@@ -1748,6 +1863,7 @@ function filterCacheKey(filters: ActiveFilters): string {
     filters.editor,
     filters.queryKind,
     filters.install,
+    filters.release,
   ].join('\u0000');
 }
 
@@ -1822,28 +1938,48 @@ function renderEditorFilterChip(editor: string): string {
 }
 
 function renderParserVersionToken(parser: ParserRelease): string {
-  const label = parser.upstreamSemver ?? 'commit-only';
-  const releasesHref = packageReleasesHref(parser.package);
+  if (parser.synthetic === 'unknown') {
+    return '<span class="tree-item-token tree-item-token-commit-only">unknown</span>';
+  }
+
+  const label = preferredParserVersionLabel(parser);
+  const href = parserVersionHref(parser);
   const versionClass = parser.upstreamSemver
     ? 'tree-item-token-semver'
     : 'tree-item-token-commit-only';
 
-  if (!parser.upstreamSemver || !releasesHref) {
+  if (!href) {
     return `<span class="tree-item-token ${versionClass}">${escapeHtml(label)}</span>`;
   }
 
-  return `<a class="inline-link tree-item-token tree-item-token-release ${versionClass}" href="${escapeHtml(releasesHref)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
+  return `<a class="inline-link tree-item-token tree-item-token-release ${versionClass}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
 }
 
 function renderParserVersionValue(parser: ParserRelease): string {
-  const label = parser.upstreamSemver ?? 'commit-only';
-  const releasesHref = packageReleasesHref(parser.package);
+  if (parser.synthetic === 'unknown') {
+    return 'unknown';
+  }
 
-  if (!parser.upstreamSemver || !releasesHref) {
+  const label = preferredParserVersionLabel(parser);
+  const href = parserVersionHref(parser);
+
+  if (!href) {
     return escapeHtml(label);
   }
 
-  return `<a class="inline-link" href="${escapeHtml(releasesHref)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
+  return `<a class="inline-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${escapeHtml(label)}</a>`;
+}
+
+function parserVersionHref(parser: ParserRelease): string | null {
+  if (parser.upstreamSemver) {
+    return packageReleasesHref(parser.package);
+  }
+
+  if (parser.version.startsWith('git-')) {
+    return packageCommitHref(parser.package, parser.sourceCommit);
+  }
+
+  return packageReleasesHref(parser.package);
 }
 
 function renderTargetTag(targetId: string): string {
@@ -1972,6 +2108,14 @@ function renderParserArtifact(parser: ParserRelease, artifact: ParserArtifact): 
   }
 
   return `<a class="${className} chip-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${label}</a>`;
+}
+
+function renderParserAbi(parser: ParserRelease): string {
+  return parser.abi === null ? 'none' : String(parser.abi);
+}
+
+function renderParserSourceCommit(parser: ParserRelease): string {
+  return parser.synthetic === 'unknown' ? 'n/a' : shortCommit(parser.sourceCommit);
 }
 
 function parserArtifactLabel(artifact: ParserArtifact): string {
@@ -2225,6 +2369,18 @@ function queryFileSearchText(pack: QueryPack): string {
     .join(' ');
 }
 
+function displayVersionLabel(version: string): string {
+  if (version.startsWith('git-')) {
+    const rawVersion = version.slice('git-'.length);
+
+    if (/^v?\d/.test(rawVersion)) {
+      return rawVersion;
+    }
+  }
+
+  return version;
+}
+
 function hasBundledQueryPack(parser: ParserRelease): boolean {
   return Object.keys(parser.bundledQueries).length > 0;
 }
@@ -2277,22 +2433,71 @@ function compatibilityExplanation(rank: CompatibilityRank): string {
   return 'Matches the language, but no exact parser pin or semver range is published for this selection.';
 }
 
+function compatibilityTokenLabel(
+  pack: QueryPack,
+  parser: ParserRelease | null,
+  rank: CompatibilityRank,
+): string {
+  if (rank === 2 && pack.parserCompatibility.semver) {
+    return pack.parserCompatibility.semver;
+  }
+
+  const exactTestedParserRefs = unique([
+    ...(parser ? matchingPackLanguageDetails(pack, parser.language).flatMap((entry) => entry.testedParserRefs ?? []) : []),
+    ...(pack.parserCompatibility.tested ?? []),
+  ]);
+  const matchingVersions = parser
+    ? parserVersionsFromRefs(exactTestedParserRefs, parser.package)
+    : [];
+
+  if (matchingVersions.length) {
+    return summarizeVersionLabels(matchingVersions);
+  }
+
+  const publishedVersions = parserVersionsFromRefs(exactTestedParserRefs);
+
+  if (publishedVersions.length) {
+    return summarizeVersionLabels(publishedVersions);
+  }
+
+  return 'unknown';
+}
+
+function compatibilityBadgeVariant(label: string): 'exact' | 'range' | 'unknown' {
+  const trimmedLabel = label.trim();
+
+  if (!trimmedLabel || trimmedLabel === 'unknown' || /\bpins?\b/i.test(trimmedLabel)) {
+    return 'unknown';
+  }
+
+  if (/^git-[0-9a-f]{7,40}$/i.test(trimmedLabel) || /^[0-9a-f]{7,40}$/i.test(trimmedLabel)) {
+    return 'exact';
+  }
+
+  if (/^[v\d]/i.test(trimmedLabel) || /^[~^<>=]/.test(trimmedLabel)) {
+    return 'range';
+  }
+
+  return 'unknown';
+}
+
 function renderCompatibilityBadge(
   rank: CompatibilityRank,
   baseClass: 'pill' | 'tree-item-token',
+  label: string = compatibilityLabel(rank),
 ): string {
-  const label = compatibilityLabel(rank);
+  const variant = compatibilityBadgeVariant(label);
   const explanation = compatibilityExplanation(rank);
 
-  return `<span class="${baseClass} ${baseClass}-${label}" title="${escapeHtml(explanation)}" aria-label="${escapeHtml(`${label}: ${explanation}`)}">${escapeHtml(label)}</span>`;
+  return `<span class="${baseClass} ${baseClass}-${variant}" title="${escapeHtml(explanation)}" aria-label="${escapeHtml(`${label}: ${explanation}`)}">${escapeHtml(label)}</span>`;
 }
 
 function renderCompatibilityGuide(): string {
   return `
     <div class="mini-card compatibility-guide">
-      <p><strong>${renderCompatibilityBadge(3, 'pill')}</strong> exact tested parser ref.</p>
-      <p><strong>${renderCompatibilityBadge(2, 'pill')}</strong> declared semver support.</p>
-      <p><strong>${renderCompatibilityBadge(1, 'pill')}</strong> language match without an exact parser pin or semver range.</p>
+      <p><strong>Pinned version</strong> means the query source publishes an exact parser ref.</p>
+      <p><strong>Semver range</strong> means it declares a supported release range instead of a single pin.</p>
+      <p><strong>Unknown</strong> means only the language match is known.</p>
     </div>
   `;
 }
@@ -2519,15 +2724,23 @@ function keyDataset(
 function renderPackageLink(packageId: string): string {
   const href = packageHref(packageId);
 
+  if (!href) {
+    return escapeHtml(packageId);
+  }
+
   return `<a class="inline-link" href="${escapeHtml(href)}" target="_blank" rel="noreferrer noopener">${escapeHtml(packageId)}</a>`;
 }
 
-function packageHref(packageId: string): string {
+function packageHref(packageId: string): string | null {
   if (packageId.includes('://')) {
     return packageId;
   }
 
-  return `https://${packageId}`;
+  if (packageId.startsWith('github.com/') || packageId.startsWith('gitlab.com/')) {
+    return `https://${packageId}`;
+  }
+
+  return null;
 }
 
 function packageReleasesHref(packageId: string): string | null {
@@ -2562,12 +2775,24 @@ function packageReleaseAssetHref(packageId: string, assetName: string): string |
   return null;
 }
 
-function packageSourceArchiveHref(packageId: string, sourceCommit: string): string {
+function packageSourceArchiveHref(packageId: string, sourceCommit: string): string | null {
   if (packageId.startsWith('github.com/')) {
     return `https://${packageId}/archive/${encodeURIComponent(sourceCommit)}.tar.gz`;
   }
 
   return packageHref(packageId);
+}
+
+function packageCommitHref(packageId: string, ref: string): string | null {
+  if (packageId.startsWith('github.com/')) {
+    return `https://${packageId}/commit/${encodeURIComponent(ref)}`;
+  }
+
+  if (packageId.startsWith('gitlab.com/')) {
+    return `https://${packageId}/-/commit/${encodeURIComponent(ref)}`;
+  }
+
+  return null;
 }
 
 function packageFileHref(packageId: string, version: string, path: string): string | null {

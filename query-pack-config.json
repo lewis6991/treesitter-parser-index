@@ -39,7 +39,8 @@
     {
       "repo": "nvim-treesitter/nvim-treesitter-context",
       "pathPattern": "^queries/([^/]+)/([^/]+)\\.scm$",
-      "outputName": "nvim-context-data.ts"
+      "outputName": "nvim-context-data.ts",
+      "testedParserRefsSource": "nvim-treesitter-main"
     },
     {
       "repo": "stevearc/aerial.nvim",
@@ -61,7 +62,8 @@
     {
       "repo": "nvim-treesitter/nvim-treesitter-textobjects",
       "pathPattern": "^queries/([^/]+)/([^/]+)\\.scm$",
-      "outputName": "nvim-textobjects-data.ts"
+      "outputName": "nvim-textobjects-data.ts",
+      "testedParserRefsSource": "nvim-treesitter-main"
     },
     {
       "repo": "zed-industries/zed",

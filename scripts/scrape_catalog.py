@@ -140,6 +140,7 @@ class CachedOutputState(TypedDict):
     sourceCommit: str
     count: int
     version: str
+    fingerprint: NotRequired[str]
 
 
 class RepoDescriptorState(TypedDict):
@@ -176,6 +177,9 @@ PULSAR_QUERY_KEY_TO_KIND = {
     "tagsQuery": "tags",
 }
 NEOVIM_ONLY_QUERY_PREDICATE_RE = re.compile(r"#(?:any-)?(?:lua|vim)-match\?")
+LANGUAGE_VERSION_RE = re.compile(r"#define\s+LANGUAGE_VERSION\s+(\d+)|LANGUAGE_VERSION\s*=\s*(\d+)")
+ABI_SCAN_MAX_LINES = 100
+PARSER_RELEASE_FINGERPRINT_VERSION = 3
 
 
 def log_progress(message: str) -> None:
@@ -245,13 +249,19 @@ def load_scrape_state(path: Path) -> ScrapeState:
             source_commit = entry.get("sourceCommit")
             count = entry.get("count")
             version = entry.get("version")
+            fingerprint = entry.get("fingerprint")
 
             if isinstance(source_commit, str) and isinstance(count, int) and isinstance(version, str):
-                state["queryPacks"][key] = {
+                cached_query_pack: CachedOutputState = {
                     "sourceCommit": source_commit,
                     "count": count,
                     "version": version,
                 }
+
+                if isinstance(fingerprint, str) and fingerprint:
+                    cached_query_pack["fingerprint"] = fingerprint
+
+                state["queryPacks"][key] = cached_query_pack
 
     repo_parsers = raw.get("repoParsers")
 
@@ -653,6 +663,15 @@ def repo_info(repo: str) -> JsonObject:
     return info
 
 
+def canonical_github_repo(repo: str) -> str:
+    try:
+        full_name_value = repo_info(repo).get("full_name")
+    except RuntimeError:
+        return repo
+
+    return full_name_value if isinstance(full_name_value, str) and full_name_value else repo
+
+
 def repo_default_branch(repo: str) -> str:
     default_branch_value = repo_info(repo).get("default_branch")
     default_branch = default_branch_value if isinstance(default_branch_value, str) else None
@@ -724,11 +743,26 @@ def gh_api_json(path: str) -> object:
 
 
 def repo_content_text(repo: str, path: str, ref: str) -> str:
-    encoded = gh_api(
-        f"repos/{repo}/contents/{path}?ref={ref}",
-        ".content",
-    )
-    return base64.b64decode(encoded).decode("utf8")
+    content_object = load_json_object(gh_api(f"repos/{repo}/contents/{path}?ref={ref}"))
+    encoded = content_object.get("content")
+    encoding = content_object.get("encoding")
+
+    if isinstance(encoded, str) and encoded and encoding == "base64":
+        return base64.b64decode(encoded).decode("utf8")
+
+    sha = content_object.get("sha")
+
+    if not isinstance(sha, str) or not sha:
+        raise RuntimeError(f"Missing content for {repo}:{path}@{ref}")
+
+    blob_object = load_json_object(gh_api(f"repos/{repo}/git/blobs/{sha}"))
+    blob_content = blob_object.get("content")
+    blob_encoding = blob_object.get("encoding")
+
+    if not isinstance(blob_content, str) or blob_encoding != "base64":
+        raise RuntimeError(f"Missing blob content for {repo}:{path}@{ref}")
+
+    return base64.b64decode(blob_content).decode("utf8")
 
 
 def repo_content_text_for_refs(repo: str, path: str, refs: list[str]) -> str:
@@ -838,6 +872,38 @@ def cached_output_is_current(
     return cached is not None and cached["sourceCommit"] == source_commit and output_path.exists()
 
 
+def cached_query_pack_output_is_current(
+    cached: CachedOutputState | None,
+    input_fingerprint: str,
+    output_path: Path,
+) -> bool:
+    return (
+        cached is not None
+        and cached.get("fingerprint") == input_fingerprint
+        and output_path.exists()
+    )
+
+
+def query_pack_input_fingerprint(
+    *,
+    repo: str,
+    source_commit: str,
+    path_pattern: re.Pattern[str],
+    output_name: str,
+    parser_language_by_language: dict[str, str] | None,
+    tested_parser_refs_by_language: dict[str, list[str]] | None,
+) -> str:
+    payload = {
+        "repo": repo,
+        "sourceCommit": source_commit,
+        "pathPattern": path_pattern.pattern,
+        "outputName": output_name,
+        "parserLanguageByLanguage": parser_language_by_language or {},
+        "testedParserRefsByLanguage": tested_parser_refs_by_language or {},
+    }
+    return hashlib.sha256(json.dumps(payload, sort_keys=True).encode("utf8")).hexdigest()
+
+
 def copy_cached_output_result(cached: CachedOutputState) -> CountVersionResult:
     return {
         "count": cached["count"],
@@ -855,6 +921,7 @@ def descriptor_fingerprint(
     release_info: LatestReleaseInfo | None,
 ) -> str:
     payload = {
+        "fingerprintVersion": PARSER_RELEASE_FINGERPRINT_VERSION,
         "descriptor": {
             key: value
             for key, value in descriptor.items()
@@ -865,6 +932,34 @@ def descriptor_fingerprint(
     return hashlib.sha256(
         json.dumps(payload, sort_keys=True).encode("utf8"),
     ).hexdigest()
+
+
+def descriptor_parser_c_path(descriptor: ParserDescriptor) -> str:
+    location = descriptor.get("location")
+
+    if isinstance(location, str) and location and location != ".":
+        return f"{location.rstrip('/')}/src/parser.c"
+
+    return "src/parser.c"
+
+
+@lru_cache(maxsize=None)
+def parser_abi_version(repo: str, parser_c_path: str, source_commit: str) -> int | None:
+    try:
+        parser_source = repo_content_text(repo, parser_c_path, source_commit)
+    except RuntimeError:
+        return None
+
+    # LANGUAGE_VERSION is emitted near the top of generated parser.c files.
+    # Keep the ABI probe cheap and avoid scanning the full file body.
+    parser_header = "\n".join(parser_source.splitlines()[:ABI_SCAN_MAX_LINES])
+    match = LANGUAGE_VERSION_RE.search(parser_header)
+
+    if match is None:
+        return None
+
+    version = match.group(1) or match.group(2)
+    return int(version) if version is not None else None
 
 
 def normalize_id(value: str) -> str:
@@ -1002,15 +1097,17 @@ def descriptor_package(descriptor: dict[str, object]) -> str:
     package = descriptor.get("package")
 
     if isinstance(package, str) and package:
-        return package
+        github_repo = github_repo_from_package(package)
+        return f"github.com/{canonical_github_repo(github_repo)}" if github_repo else package
 
     repo = descriptor.get("repo")
 
     if isinstance(repo, str) and repo:
         if repo.startswith(("github.com/", "gitlab.com/")):
-            return repo
+            github_repo = github_repo_from_package(repo)
+            return f"github.com/{canonical_github_repo(github_repo)}" if github_repo else repo
 
-        return f"github.com/{repo}"
+        return f"github.com/{canonical_github_repo(repo)}"
 
     raise ValueError(f"Descriptor has no package or repo: {descriptor}")
 
@@ -1019,11 +1116,18 @@ def descriptor_repo_identity(descriptor: dict[str, object]) -> str:
     github_repo = descriptor.get("github_repo")
 
     if isinstance(github_repo, str) and github_repo:
-        return github_repo
+        return canonical_github_repo(github_repo)
 
     repo = descriptor.get("repo")
 
     if isinstance(repo, str) and repo:
+        if repo.startswith("github.com/"):
+            github_repo = github_repo_from_package(repo)
+            return canonical_github_repo(github_repo) if github_repo else repo
+
+        if "/" in repo and not repo.startswith("gitlab.com/"):
+            return canonical_github_repo(repo)
+
         return repo
 
     return descriptor_package(descriptor)
@@ -1045,7 +1149,9 @@ def package_owner_repo(package: str) -> tuple[str, str]:
 
 def package_from_url(url: str) -> str:
     normalized = re.sub(r"^https?://", "", url).rstrip("/")
-    return normalized.removesuffix(".git")
+    package = normalized.removesuffix(".git")
+    github_repo = github_repo_from_package(package)
+    return f"github.com/{canonical_github_repo(github_repo)}" if github_repo else package
 
 
 def github_repo_from_package(package: str) -> str | None:
@@ -1524,16 +1630,18 @@ def discover_extra_parser_descriptors(
     for index, repo in enumerate(EXTRA_PARSER_REPOS, start=1):
         log_progress(f"extra repos: scanning {repo} ({index}/{total})")
         repo_info_object = repo_info(repo)
+        full_name_value = repo_info_object.get("full_name")
         default_branch_value = repo_info_object.get("default_branch")
+        full_name = full_name_value if isinstance(full_name_value, str) else None
         default_branch = default_branch_value if isinstance(default_branch_value, str) else None
         owner = repo_owner_login(repo_info_object)
 
-        if not isinstance(default_branch, str) or not isinstance(owner, str):
+        if not isinstance(full_name, str) or not isinstance(default_branch, str) or not isinstance(owner, str):
             continue
 
         descriptors.extend(
             discover_repo_parser_descriptors_cached(
-                repo,
+                full_name,
                 default_branch,
                 owner,
                 incremental_state,
@@ -1561,16 +1669,18 @@ def discover_wiki_parser_descriptors(
                 log_progress(f"wiki repos: scanned {index}/{total} repos ({len(descriptors)} descriptors)")
             continue
 
+        full_name_value = repo_info_object.get("full_name")
         default_branch_value = repo_info_object.get("default_branch")
+        full_name = full_name_value if isinstance(full_name_value, str) else None
         default_branch = default_branch_value if isinstance(default_branch_value, str) else None
         owner = repo_owner_login(repo_info_object)
 
-        if not isinstance(default_branch, str) or not isinstance(owner, str):
+        if not isinstance(full_name, str) or not isinstance(default_branch, str) or not isinstance(owner, str):
             continue
 
         descriptors.extend(
             discover_repo_parser_descriptors_cached(
-                repo,
+                full_name,
                 default_branch,
                 owner,
                 incremental_state,
@@ -2107,19 +2217,43 @@ def write_query_pack_data(
     incremental_state: ScrapeState | None = None,
 ) -> CountVersionResult:
     output_path = SRC_DIR / output_name
+    input_fingerprint: str | None = None
 
     if incremental_state is not None:
         default_branch = repo_default_branch(repo)
         source_commit = repo_head_commit(repo, default_branch)
+        input_fingerprint = query_pack_input_fingerprint(
+            repo=repo,
+            source_commit=source_commit,
+            path_pattern=path_pattern,
+            output_name=output_name,
+            parser_language_by_language=parser_language_by_language,
+            tested_parser_refs_by_language=tested_parser_refs_by_language,
+        )
         cached = incremental_state["queryPacks"].get(output_name)
 
-        if cached is not None and cached_output_is_current(cached, source_commit, output_path):
+        if cached is not None and cached_query_pack_output_is_current(
+            cached,
+            input_fingerprint,
+            output_path,
+        ):
             log_progress(
                 f"{output_name}: unchanged at {short_commit(source_commit)}, keeping existing output",
             )
             return copy_cached_output_result(cached)
 
     snapshot = repo_snapshot(repo)
+
+    if input_fingerprint is None:
+        input_fingerprint = query_pack_input_fingerprint(
+            repo=repo,
+            source_commit=snapshot["source_commit"],
+            path_pattern=path_pattern,
+            output_name=output_name,
+            parser_language_by_language=parser_language_by_language,
+            tested_parser_refs_by_language=tested_parser_refs_by_language,
+        )
+
     const_prefix = query_pack_const_prefix(output_name)
     detail_const = f"{const_prefix}_LANGUAGE_DETAILS"
     languages_const = f"{const_prefix}_LANGUAGES"
@@ -2194,6 +2328,7 @@ def write_query_pack_data(
             "sourceCommit": snapshot["source_commit"],
             "count": result["count"],
             "version": result["version"],
+            "fingerprint": input_fingerprint,
         }
 
     return result
@@ -2707,6 +2842,15 @@ def write_parser_catalog(
         wasm = any(artifact["format"] == "wasm" for artifact in release_artifacts) or (
             release_info is None and package.startswith("github.com/tree-sitter/tree-sitter-")
         )
+        abi = (
+            parser_abi_version(
+                github_repo,
+                descriptor_parser_c_path(descriptor),
+                str(source_commit),
+            )
+            if isinstance(github_repo, str) and github_repo
+            else None
+        )
         source_archive = package.startswith(("github.com/", "gitlab.com/"))
         release_key = descriptor_incremental_key(descriptor)
         fingerprint = descriptor_fingerprint(
@@ -2737,7 +2881,7 @@ def write_parser_catalog(
             "sourceCommit": source_commit,
             "lastUpdated": last_updated,
             "upstreamSemver": upstream_semver,
-            "abi": 15,
+            "abi": abi,
             "owners": descriptor["owners"],
             "capabilities": {
                 "buildFromSource": True,

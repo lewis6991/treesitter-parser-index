@@ -114,7 +114,7 @@ const NVIM_AERIAL_OUTLINE_DETAILS = remapQueryKinds(
   { aerial: 'outline' },
 );
 
-const queryPacks: QueryPack[] = [
+const coreQueryPacks: QueryPack[] = [
   {
     id: 'pack-neovim-treesitter-runtime',
     name: 'nvim-treesitter',
@@ -291,12 +291,17 @@ const queryPacks: QueryPack[] = [
       } satisfies QueryPack;
     })
     .sort((left, right) => left.name.localeCompare(right.name)),
-  ...parserQueryPacks,
 ];
+
+const queryPacks: QueryPack[] = [...coreQueryPacks, ...parserQueryPacks];
+const parsers: ParserRelease[] = [
+  ...PARSER_RELEASES,
+  ...buildUnknownParsers(queryPacks, PARSER_RELEASES),
+].sort((left, right) => left.name.localeCompare(right.name));
 
 export const INDEX_DATA = {
   generatedAt: CATALOG_GENERATED_AT,
-  parsers: PARSER_RELEASES,
+  parsers,
   queryPacks,
   targets: [
     {
@@ -705,6 +710,98 @@ export const INDEX_DATA = {
   ],
 } satisfies IndexData;
 
+function buildUnknownParsers(
+  queryPacks: readonly QueryPack[],
+  realParsers: readonly ParserRelease[],
+): ParserRelease[] {
+  const realParserLanguages = new Set(
+    realParsers.map((parser) => normalizeLanguageId(parser.language)),
+  );
+  const realParserLanguagePackages = new Set(
+    realParsers.map(
+      (parser) => `${normalizeLanguageId(parser.language)}|${parser.package}`,
+    ),
+  );
+  const unknownParsers = new Map<
+    string,
+    {
+      language: string;
+      packIds: Set<string>;
+      testedParserRefs: Set<string>;
+    }
+  >();
+
+  for (const pack of queryPacks) {
+    for (const detail of packLanguageDetails(pack)) {
+      const parserLanguage = detail.parserLanguage ?? detail.language;
+      const normalizedLanguage = normalizeLanguageId(parserLanguage);
+      const testedParserRefs = unique(detail.testedParserRefs ?? []);
+      const hasRealParserMatch = testedParserRefs.length
+        ? testedParserRefs.some((parserRef) =>
+            realParserLanguagePackages.has(
+              `${normalizedLanguage}|${parserPackageFromRef(parserRef)}`,
+            ))
+        : realParserLanguages.has(normalizedLanguage);
+
+      if (hasRealParserMatch) {
+        continue;
+      }
+
+      const entry = unknownParsers.get(normalizedLanguage) ?? {
+        language: parserLanguage,
+        packIds: new Set<string>(),
+        testedParserRefs: new Set<string>(),
+      };
+
+      for (const parserRef of testedParserRefs) {
+        entry.testedParserRefs.add(parserRef);
+      }
+
+      entry.packIds.add(pack.id);
+      unknownParsers.set(normalizedLanguage, entry);
+    }
+  }
+
+  return [...unknownParsers.entries()]
+    .map(([normalizedLanguage, entry]) => ({
+      id: `parser-unknown-${normalizedLanguage}`,
+      name: `${formatLanguageName(entry.language)} Unknown Parser`,
+      language: entry.language,
+      package: 'unknown parser',
+      synthetic: 'unknown' as const,
+      syntheticPackIds: [...entry.packIds].sort((left, right) => left.localeCompare(right)),
+      version: 'unknown',
+      sourceCommit: 'unknown',
+      lastUpdated: null,
+      upstreamSemver: null,
+      abi: null,
+      owners: [],
+      capabilities: {
+        buildFromSource: false,
+        sourceArchive: false,
+        wasm: false,
+      },
+      artifacts: [],
+      bundledQueryKinds: [],
+      bundledQueries: {},
+      bundledQueryEditors: [],
+      summary: unknownParserSummary(entry.testedParserRefs),
+    }))
+    .sort((left, right) => left.name.localeCompare(right.name));
+}
+
+function unknownParserSummary(testedParserRefs: ReadonlySet<string>): string {
+  const testedPackages = unique(
+    [...testedParserRefs].map((parserRef) => parserPackageFromRef(parserRef)),
+  );
+
+  if (!testedPackages.length) {
+    return 'Synthetic placeholder for query sources with no matching parser release in the catalog.';
+  }
+
+  return `Synthetic placeholder for query sources that target ${testedPackages.join(', ')} but have no matching parser release in the catalog.`;
+}
+
 function collectQueryKinds(languageDetails: readonly QueryPackLanguage[]): string[] {
   return unique(languageDetails.flatMap(({ queryKinds }) => queryKinds));
 }
@@ -844,6 +941,39 @@ function zedTargets(queryKinds: readonly string[]): string[] {
       return target ? [target] : [];
     }),
   );
+}
+
+function packLanguageDetails(pack: QueryPack): QueryPackLanguage[] {
+  if (pack.languageDetails?.length) {
+    return pack.languageDetails;
+  }
+
+  return pack.languages.map((language) => ({
+    language,
+    queryKinds: pack.queryKinds,
+  }));
+}
+
+function normalizeLanguageId(language: string): string {
+  const languageAliases = {
+    'c-sharp': 'c_sharp',
+    'common-lisp': 'commonlisp',
+    'markdown.inline': 'markdown_inline',
+    'ocaml-interface': 'ocaml_interface',
+    'php-only': 'php_only',
+    protobuf: 'proto',
+  } as const;
+  const normalized = language
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+
+  return languageAliases[normalized as keyof typeof languageAliases] ?? normalized;
+}
+
+function parserPackageFromRef(ref: string): string {
+  return ref.split('@')[0] ?? ref;
 }
 
 function unique(items: readonly string[]): string[] {

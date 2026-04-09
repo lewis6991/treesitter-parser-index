@@ -2,12 +2,31 @@ import type { ParserRelease } from './types.js';
 
 export const PARSER_RELEASES: ParserRelease[] = [
   {
+    "id": "parser-maebrooks-gren",
+    "name": "MaeBrooksGren",
+    "language": "MaeBrooks/gren",
+    "package": "github.com/gren-lang/tree-sitter-gren",
+    "version": "git-cecd8ce",
+    "sourceCommit": "cecd8ce9b18f1803d37682f33b6224978fd04d31",
+    "lastUpdated": "2026-03-31",
+    "upstreamSemver": "2.0.0",
     "abi": 15,
+    "owners": [
+      "gren-lang"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -15,26 +34,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-maebrooks-gren",
-    "language": "MaeBrooks/gren",
-    "lastUpdated": "2026-03-31",
-    "name": "MaeBrooksGren",
-    "owners": [
-      "gren-lang"
-    ],
-    "package": "github.com/MaeBrooks/tree-sitter-gren",
-    "sourceCommit": "cecd8ce9b18f1803d37682f33b6224978fd04d31",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.0.",
-    "upstreamSemver": "2.0.0",
-    "version": "git-cecd8ce"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.0."
   },
   {
     "abi": 15,
@@ -71,13 +71,13 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "usagi-coffee"
     ],
     "package": "github.com/usagi-coffee/tree-sitter-abl",
-    "sourceCommit": "04528ea0563aa19cb07c72dc1980866d72e80b04",
+    "sourceCommit": "28053ba2253e5a1985e76195533f75413f3fe997",
     "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.51.",
     "upstreamSemver": "0.0.51",
-    "version": "git-04528ea"
+    "version": "git-28053ba"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -112,7 +112,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6b58259"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -141,7 +141,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2787d04"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -273,7 +273,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-58d462b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -331,7 +331,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f0d0685"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -416,41 +416,32 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-11dd46c"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-asm",
+    "name": "Asm",
+    "language": "asm",
+    "package": "github.com/RubixDev/tree-sitter-asm",
+    "version": "git-839741f",
+    "sourceCommit": "839741fef4dab5128952334624905c82b40c7133",
+    "lastUpdated": "2025-11-08",
+    "upstreamSemver": "0.1.0",
+    "abi": 14,
+    "owners": [
+      "RubixDev"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-rubixdev-asm-asm",
-    "language": "asm",
-    "lastUpdated": "2025-11-08",
-    "name": "Asm",
-    "owners": [
-      "RubixDev"
-    ],
-    "package": "github.com/RubixDev/tree-sitter-asm",
-    "sourceCommit": "839741fef4dab5128952334624905c82b40c7133",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-839741f"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -461,30 +452,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-rush-rs-asm-asm",
-    "language": "asm",
-    "lastUpdated": "2025-11-08",
-    "name": "Asm",
-    "owners": [
-      "RubixDev"
-    ],
-    "package": "github.com/rush-rs/tree-sitter-asm",
-    "sourceCommit": "839741fef4dab5128952334624905c82b40c7133",
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.1.0.",
-    "upstreamSemver": "0.1.0",
-    "version": "git-839741f"
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.1.0."
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -542,7 +513,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-83e5c26"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -634,7 +605,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a98449c"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -685,16 +656,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     },
     "id": "parser-polarmutex-beancount-beancount",
     "language": "beancount",
-    "lastUpdated": "2026-03-21",
+    "lastUpdated": "2026-04-09",
     "name": "Beancount",
     "owners": [
       "polarmutex"
     ],
     "package": "github.com/polarmutex/tree-sitter-beancount",
-    "sourceCommit": "429cff869513cf9e34a2cf604fbfaaedc467e809",
+    "sourceCommit": "9db1ad0d5047e5e7f12db50741aba1c32716779a",
     "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 2.5.1.",
     "upstreamSemver": "2.5.1",
-    "version": "git-429cff8"
+    "version": "git-9db1ad0"
   },
   {
     "abi": 15,
@@ -760,7 +731,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8d04ed2"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -794,7 +765,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-bff5988"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -862,7 +833,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b9436b7"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -891,7 +862,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-355ef84"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -984,7 +955,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-774f445"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1207,7 +1178,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8951716"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1236,7 +1207,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4c6a256"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1265,7 +1236,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6238f60"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1551,7 +1522,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e9f0e9d"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1684,7 +1655,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c0ed82c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1719,7 +1690,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-68fb7bd"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1748,7 +1719,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0215052"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1777,7 +1748,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7fa5482"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1806,7 +1777,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e57c569"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1872,7 +1843,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-66272d2"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1897,46 +1868,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-thehamsta-commonlisp-commonlisp",
-    "language": "commonlisp",
-    "lastUpdated": "2025-03-16",
-    "name": "CommonLisp",
-    "owners": [
-      "tree-sitter-grammars"
-    ],
-    "package": "github.com/theHamsta/tree-sitter-commonlisp",
-    "sourceCommit": "32323509b3d9fe96607d151c2da2c9009eb13a2f",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.4.1.",
-    "upstreamSemver": "0.4.1",
-    "version": "git-3232350"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ],
-      "tags": [
-        "queries/tags.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-commonlisp-commonlisp",
+    "id": "parser-commonlisp",
     "language": "commonlisp",
     "lastUpdated": "2025-03-16",
     "name": "CommonLisp",
@@ -1950,7 +1882,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3232350"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -1979,36 +1911,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4ebe237"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-corn",
+    "name": "Corn",
+    "language": "corn",
+    "package": "github.com/corn-config/tree-sitter-corn",
+    "version": "git-4646547",
+    "sourceCommit": "464654742cbfd3a3de560aba120998f1d5dfa844",
+    "lastUpdated": "2024-06-16",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "corn-config"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-corn",
-    "language": "corn",
-    "lastUpdated": "2024-06-16",
-    "name": "Corn",
-    "owners": [
-      "jakestanger"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/jakestanger/tree-sitter-corn",
-    "sourceCommit": "464654742cbfd3a3de560aba120998f1d5dfa844",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-4646547"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in nvim-treesitter. No bundled query files detected."
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2037,7 +1969,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0d01fcd"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2143,7 +2075,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-76afc1f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2212,7 +2144,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-dda5cfc"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2252,6 +2184,35 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d58f8a6"
   },
   {
+    "id": "parser-kalmaegi-rainbow-csv-tree-sitter-csv",
+    "name": "Csv",
+    "language": "csv",
+    "package": "github.com/Kalmaegi/rainbow-csv-tree-sitter",
+    "version": "git-d3dbf91",
+    "sourceCommit": "d3dbf916446131417e4c2ea9eb8591b23b466d27",
+    "lastUpdated": "2024-06-21",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "Kalmaegi"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
+  },
+  {
     "abi": 15,
     "artifacts": [
       {
@@ -2289,35 +2250,6 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 1.2.0. Maintained in tree-sitter-grammars. Grammar path csv.",
     "upstreamSemver": "1.2.0",
     "version": "git-f6bf6e3"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-weartist-rainbow-csv-tree-sitter-csv",
-    "language": "csv",
-    "lastUpdated": "2024-06-21",
-    "name": "Csv",
-    "owners": [
-      "weartist"
-    ],
-    "package": "github.com/weartist/rainbow-csv-tree-sitter",
-    "sourceCommit": "d3dbf916446131417e4c2ea9eb8591b23b466d27",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-d3dbf91"
   },
   {
     "abi": 15,
@@ -2425,7 +2357,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8bad395"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2454,7 +2386,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-30dd40d"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2501,7 +2433,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-62f44f5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2530,7 +2462,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5566f8c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2620,7 +2552,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0fc19c3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2678,7 +2610,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1bd1d1e"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2856,47 +2788,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-the-mikedavis-diff-diff",
-    "language": "diff",
-    "lastUpdated": "2025-10-29",
-    "name": "Diff",
-    "owners": [
-      "tree-sitter-grammars"
-    ],
-    "package": "github.com/the-mikedavis/tree-sitter-diff",
-    "sourceCommit": "2520c3f934b3179bb540d23e0ef45f75304b5fed",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0.",
-    "upstreamSemver": "0.1.0",
-    "version": "git-2520c3f"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-diff.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-tree-sitter-grammars-diff-diff",
+    "id": "parser-diff",
     "language": "diff",
     "lastUpdated": "2025-10-29",
     "name": "Diff",
@@ -2910,7 +2802,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2520c3f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2939,7 +2831,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0229c02"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -2974,7 +2866,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-74fac1f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3009,7 +2901,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-971acdd"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3038,7 +2930,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9172307"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3067,7 +2959,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-18e44c6"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3131,7 +3023,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f1404d2"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3160,7 +3052,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6116bec"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3205,7 +3097,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5000ae8"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3263,7 +3155,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5baef88"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3334,7 +3226,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-bfd7439"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3363,7 +3255,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-74774af"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3392,7 +3284,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-26d529e"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3421,7 +3313,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f742f2f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3491,7 +3383,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-29b4e49"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3574,7 +3466,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6d9511c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3603,62 +3495,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0a66b2b"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-ckafi-elvish-elvish",
-    "language": "elvish",
-    "lastUpdated": "2022-03-26",
+    "id": "parser-elvish",
     "name": "Elvish",
-    "owners": [
-      "ckafi"
-    ],
-    "package": "github.com/ckafi/tree-sitter-elvish",
+    "language": "elvish",
+    "package": "github.com/elves/tree-sitter-elvish",
+    "version": "git-e50787c",
     "sourceCommit": "e50787cadd3bc54f6d9c0704493a79078bb8a4e5",
-    "summary": "Pinned in Helix. No bundled query files detected.",
+    "lastUpdated": "2022-03-26",
     "upstreamSemver": null,
-    "version": "git-e50787c"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-elves-elvish-elvish",
-    "language": "elvish",
-    "lastUpdated": "2023-07-17",
-    "name": "Elvish",
+    "abi": 13,
     "owners": [
       "elves"
     ],
-    "package": "github.com/elves/tree-sitter-elvish",
-    "sourceCommit": "5e7210d945425b77f82cbaebc5af4dd3e1ad40f5",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-5e7210d"
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -3776,7 +3639,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-eb27968"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3834,7 +3697,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d85b18e"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3863,7 +3726,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c824fe2"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -3979,7 +3842,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ce72d1c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4008,7 +3871,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-bdbb635"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4037,7 +3900,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8503d3a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4066,7 +3929,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a78aef9"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4095,7 +3958,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-95e6f9e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4204,7 +4067,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-alexanderbrevig-forth-forth",
+    "id": "parser-forth",
     "language": "forth",
     "lastUpdated": "2025-12-01",
     "name": "Forth",
@@ -4215,35 +4078,6 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "sourceCommit": "360ef13f8c609ec6d2e80782af69958b84e36cd0",
     "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.2.0.",
     "upstreamSemver": "0.2.0",
-    "version": "git-360ef13"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-alexanderbrevig-forth-forth-2",
-    "language": "forth",
-    "lastUpdated": "2025-12-01",
-    "name": "Forth",
-    "owners": [
-      "alexanderbrevig"
-    ],
-    "package": "github.com/alexanderbrevig/tree-sitter-forth",
-    "sourceCommit": "360ef13f8c609ec6d2e80782af69958b84e36cd0",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
     "version": "git-360ef13"
   },
   {
@@ -4311,7 +4145,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-dbf696a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4446,7 +4280,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-594c500"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4523,7 +4357,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ed2480d"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4567,7 +4401,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-69086d7"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4596,7 +4430,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-60f4436"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4668,7 +4502,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6826863"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -4692,7 +4526,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3cc5e4b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4721,7 +4555,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-43873ee"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4750,7 +4584,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8438a93"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4814,7 +4648,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-760ba8e"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4843,7 +4677,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3dd5080"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -4907,7 +4741,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-33fe854"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5034,84 +4868,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-88af855"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "./queries/highlights.scm"
-      ],
-      "locals": [
-        "./queries/locals.scm"
-      ],
-      "tags": [
-        "./queries/tags.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-nullvoxpopuli-glimmer-javascript-glimmer-javascript",
-    "language": "glimmer-javascript",
-    "lastUpdated": "2025-04-01",
+    "id": "parser-glimmer-javascript",
     "name": "GlimmerJavascript",
+    "language": "glimmer-javascript",
+    "package": "github.com/ember-tooling/tree-sitter-glimmer-javascript",
+    "version": "git-5cc865a",
+    "sourceCommit": "5cc865a2a0a77cbfaf5062c8fcf2a9919bd54f87",
+    "lastUpdated": "2025-04-01",
+    "upstreamSemver": "0.2.0-tree-sitter-glimmer-javascript",
+    "abi": 14,
     "owners": [
       "ember-tooling"
     ],
-    "package": "github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
-    "sourceCommit": "5cc865a2a0a77cbfaf5062c8fcf2a9919bd54f87",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.2.0-tree-sitter-glimmer-javascript. Grammar path ./.",
-    "upstreamSemver": "0.2.0-tree-sitter-glimmer-javascript",
-    "version": "git-5cc865a"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-ember-tooling-glimmer-javascript-glimmer-javascript",
-    "language": "glimmer-javascript",
-    "lastUpdated": "2025-04-01",
-    "name": "Glimmer Javascript",
-    "owners": [
-      "ember-tooling"
-    ],
-    "package": "github.com/ember-tooling/tree-sitter-glimmer-javascript",
-    "sourceCommit": "5cc865a2a0a77cbfaf5062c8fcf2a9919bd54f87",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-5cc865a"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -5125,31 +4908,53 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.2.0-tree-sitter-glimmer-javascript. Grammar path ./."
+  },
+  {
+    "id": "parser-glimmer-typescript",
+    "name": "GlimmerTypescript",
+    "language": "glimmer-typescript",
+    "package": "github.com/ember-tooling/tree-sitter-glimmer-typescript",
+    "version": "git-12d9894",
+    "sourceCommit": "12d98944c1d5077b957cbdb90d663a7c4d50118c",
+    "lastUpdated": "2025-04-01",
+    "upstreamSemver": "0.3.0-tree-sitter-glimmer-typescript",
+    "abi": 14,
+    "owners": [
+      "ember-tooling"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
     "bundledQueryKinds": [
       "highlights",
       "locals",
       "tags"
     ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
+    "bundledQueries": {
+      "highlights": [
+        "./queries/highlights.scm"
+      ],
+      "locals": [
+        "./queries/locals.scm"
+      ],
+      "tags": [
+        "./queries/tags.scm"
+      ]
     },
-    "id": "parser-nullvoxpopuli-glimmer-typescript-glimmer-typescript",
-    "language": "glimmer-typescript",
-    "lastUpdated": "2025-04-01",
-    "name": "GlimmerTypescript",
-    "owners": [
-      "ember-tooling"
-    ],
-    "package": "github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
-    "sourceCommit": "12d98944c1d5077b957cbdb90d663a7c4d50118c",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.3.0-tree-sitter-glimmer-typescript. Grammar path ./.",
-    "upstreamSemver": "0.3.0-tree-sitter-glimmer-typescript",
-    "version": "git-12d9894"
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.3.0-tree-sitter-glimmer-typescript. Grammar path ./."
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5164,65 +4969,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-ember-tooling-glimmer-typescript-glimmer-typescript",
-    "language": "glimmer-typescript",
-    "lastUpdated": "2025-04-01",
-    "name": "Glimmer Typescript",
-    "owners": [
-      "ember-tooling"
-    ],
-    "package": "github.com/ember-tooling/tree-sitter-glimmer-typescript",
-    "sourceCommit": "12d98944c1d5077b957cbdb90d663a7c4d50118c",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-12d9894"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-thehamsta-glsl-glsl",
-    "language": "glsl",
-    "lastUpdated": "2025-03-16",
-    "name": "Glsl",
-    "owners": [
-      "theHamsta"
-    ],
-    "package": "github.com/theHamsta/tree-sitter-glsl",
-    "sourceCommit": "24a6c8ef698e4480fecf8340d771fbcb5de8fbb4",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-24a6c8e"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-glsl-glsl",
+    "id": "parser-glsl",
     "language": "glsl",
     "lastUpdated": "2025-03-16",
     "name": "Glsl",
@@ -5236,7 +4983,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-24a6c8e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5265,7 +5012,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-bc06955"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5294,7 +5041,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e18d6e3"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -5318,7 +5065,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-21a3a39"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5391,7 +5138,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2346a3a"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -5473,7 +5220,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-aa71f63"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5502,7 +5249,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-49c4353"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5560,7 +5307,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2e88687"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5624,7 +5371,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ca26229"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5688,7 +5435,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4024eb2"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5717,7 +5464,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-cea857d"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5746,33 +5493,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5e66e96"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-gren",
+    "name": "Gren",
+    "language": "gren",
+    "package": "github.com/gren-lang/tree-sitter-gren",
+    "version": "git-76554f4",
+    "sourceCommit": "76554f4f2339f5a24eed19c58f2079b51c694152",
+    "lastUpdated": "2024-12-16",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "gren-lang"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-gren",
-    "language": "gren",
-    "lastUpdated": "2024-12-16",
-    "name": "Gren",
-    "owners": [
-      "MaeBrooks"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/MaeBrooks/tree-sitter-gren",
-    "sourceCommit": "76554f4f2339f5a24eed19c58f2079b51c694152",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-76554f4"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -5844,7 +5591,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1fa1ab0"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5873,7 +5620,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-549aef2"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -5902,7 +5649,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1a7ded9"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -5990,7 +5737,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7fa19f1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6030,7 +5777,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0975ef7"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6065,7 +5812,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8ad7bd1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6094,7 +5841,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-58a6ccf"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6162,7 +5909,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-64ad627"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6191,12 +5938,31 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2939023"
   },
   {
+    "id": "parser-heex",
+    "name": "Heex",
+    "language": "heex",
+    "package": "github.com/phoenixframework/tree-sitter-heex",
+    "version": "git-5842537",
+    "sourceCommit": "5842537f734d7c12685bf27d6005313e3e5a47a0",
+    "lastUpdated": "2026-03-23",
+    "upstreamSemver": "0.9.0",
     "abi": 15,
+    "owners": [
+      "phoenixframework"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -6204,55 +5970,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-connorlay-heex-heex",
-    "language": "heex",
-    "lastUpdated": "2026-03-23",
-    "name": "Heex",
-    "owners": [
-      "phoenixframework"
-    ],
-    "package": "github.com/connorlay/tree-sitter-heex",
-    "sourceCommit": "5842537f734d7c12685bf27d6005313e3e5a47a0",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.9.0.",
-    "upstreamSemver": "0.9.0",
-    "version": "git-5842537"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-phoenixframework-heex-heex",
-    "language": "heex",
-    "lastUpdated": "2024-12-24",
-    "name": "Heex",
-    "owners": [
-      "phoenixframework"
-    ],
-    "package": "github.com/phoenixframework/tree-sitter-heex",
-    "sourceCommit": "f6b83f305a755cd49cf5f6a66b2b789be93dc7b9",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-f6b83f3"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.9.0."
   },
   {
     "abi": 15,
@@ -6284,7 +6002,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-aa71f63"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6313,7 +6031,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-02fa3b7"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6342,7 +6060,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-bab9111"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6371,7 +6089,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3bfda92"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6400,7 +6118,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c390f10"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6429,7 +6147,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1d5df35"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6458,7 +6176,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-301b937"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6570,7 +6288,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-59dd878"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6599,7 +6317,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-db8b439"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6707,7 +6425,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-fb65762"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6736,7 +6454,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c56a25c"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6794,33 +6512,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e4018b5"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-ink",
+    "name": "Ink",
+    "language": "ink",
+    "package": "github.com/rhizoome/tree-sitter-ink2",
+    "version": "git-8486e9b",
+    "sourceCommit": "8486e9b1627b0bc6b2deb9ee8102277a7c1281ac",
+    "lastUpdated": "2025-02-04",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "rhizoome"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-ink",
-    "language": "ink",
-    "lastUpdated": "2025-02-04",
-    "name": "Ink",
-    "owners": [
-      "rhizoome"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/rhizoome/tree-sitter-ink",
-    "sourceCommit": "8486e9b1627b0bc6b2deb9ee8102277a7c1281ac",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-8486e9b"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -6857,7 +6575,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5c1226a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6915,7 +6633,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-64db751"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -6944,7 +6662,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3c1bdcf"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7107,7 +6825,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-413dba9"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7165,7 +6883,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-413dba9"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7281,7 +6999,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4313eda"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7379,7 +7097,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-658d18d"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7448,7 +7166,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-aa630ef"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7568,12 +7286,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e0f9dcd"
   },
   {
+    "id": "parser-casey-just-just",
+    "name": "Just",
+    "language": "just",
+    "package": "github.com/casey/tree-sitter-just",
+    "version": "git-5685543",
+    "sourceCommit": "5685543a6e64f66335e25518c9ae8ffa1dae3d01",
+    "lastUpdated": "2026-03-25",
+    "upstreamSemver": "0.2.0",
     "abi": 15,
+    "owners": [
+      "casey"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections",
+      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -7587,28 +7326,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections",
-      "locals"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-indianboy42-just-just",
-    "language": "just",
-    "lastUpdated": "2026-03-25",
-    "name": "Just",
-    "owners": [
-      "casey"
-    ],
-    "package": "github.com/IndianBoy42/tree-sitter-just",
-    "sourceCommit": "5685543a6e64f66335e25518c9ae8ffa1dae3d01",
-    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.2.0.",
-    "upstreamSemver": "0.2.0",
-    "version": "git-5685543"
+    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.2.0."
   },
   {
     "abi": 15,
@@ -7669,7 +7387,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8905e0b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7704,7 +7422,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b0b2eb3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7754,62 +7472,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9ac99fe"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-amaanq-kdl-kdl",
-    "language": "kdl",
-    "lastUpdated": "2023-05-13",
+    "id": "parser-kdl",
     "name": "Kdl",
-    "owners": [
-      "amaanq"
-    ],
-    "package": "github.com/amaanq/tree-sitter-kdl",
+    "language": "kdl",
+    "package": "github.com/tree-sitter-grammars/tree-sitter-kdl",
+    "version": "git-3ca569b",
     "sourceCommit": "3ca569b9f9af43593c24f9e7a21f02f43a13bb88",
-    "summary": "Pinned in Helix. No bundled query files detected.",
+    "lastUpdated": "2023-05-13",
     "upstreamSemver": null,
-    "version": "git-3ca569b"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-kdl-kdl",
-    "language": "kdl",
-    "lastUpdated": "2024-06-08",
-    "name": "Kdl",
+    "abi": 14,
     "owners": [
       "tree-sitter-grammars"
     ],
-    "package": "github.com/tree-sitter-grammars/tree-sitter-kdl",
-    "sourceCommit": "b37e3d58e5c5cf8d739b315d6114e02d42e66664",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected. Maintained in tree-sitter-grammars.",
-    "upstreamSemver": null,
-    "version": "git-b37e3d5"
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars."
   },
   {
     "abi": 15,
@@ -7870,7 +7559,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0b215fe"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7899,7 +7588,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-fd3b482"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -7963,7 +7652,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-03b261c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8009,7 +7698,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6032dfd"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8043,7 +7732,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3dea6df"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8078,7 +7767,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f8b3f62"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8142,7 +7831,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-27b0f7b"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8171,7 +7860,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7e0ecdc"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8200,36 +7889,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0e9695a"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-ldif",
+    "name": "Ldif",
+    "language": "ldif",
+    "package": "github.com/kkmp-dk/tree-sitter-ldif",
+    "version": "git-0a91720",
+    "sourceCommit": "0a917207f65ba3e3acfa9cda16142ee39c4c1aaa",
+    "lastUpdated": "2023-05-27",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "kkmp-dk"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-ldif",
-    "language": "ldif",
-    "lastUpdated": "2023-05-27",
-    "name": "Ldif",
-    "owners": [
-      "kepet19"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/kepet19/tree-sitter-ldif",
-    "sourceCommit": "0a917207f65ba3e3acfa9cda16142ee39c4c1aaa",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-0a91720"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8287,7 +7976,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-22a1ab8"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8316,7 +8005,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6bc5564"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8374,7 +8063,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0bb6c94"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8403,7 +8092,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f99011a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8496,7 +8185,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2914786"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8525,7 +8214,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d166ff8"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8554,7 +8243,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-62cfe30"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8635,7 +8324,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-10fe005"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -8659,7 +8348,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b667c8c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8688,7 +8377,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-873612a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8717,7 +8406,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c134aae"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8760,7 +8449,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-71b03e6"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8794,7 +8483,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a8914d6"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8858,7 +8547,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7f821c1"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -8911,7 +8600,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8d2905d"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -8974,33 +8663,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-70613f3"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-markdoc",
+    "name": "Markdoc",
+    "language": "markdoc",
+    "package": "github.com/mohitsinghs/tree-sitter-markdoc",
+    "version": "git-5ffe71b",
+    "sourceCommit": "5ffe71b29e8a3f94823913ea9cea51fcfa7e3bf8",
+    "lastUpdated": "2023-03-15",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "mohitsinghs"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-markdoc",
-    "language": "markdoc",
-    "lastUpdated": "2023-03-15",
-    "name": "Markdoc",
-    "owners": [
-      "markdoc-extra"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/markdoc-extra/tree-sitter-markdoc",
-    "sourceCommit": "5ffe71b29e8a3f94823913ea9cea51fcfa7e3bf8",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-5ffe71b"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -9178,7 +8867,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6015276"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9207,7 +8896,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-be8866a"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9236,36 +8925,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d787c66"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-decodetalkers-meson-meson",
-    "language": "meson",
-    "lastUpdated": "2026-01-22",
-    "name": "Meson",
-    "owners": [
-      "tree-sitter-grammars"
-    ],
-    "package": "github.com/Decodetalkers/tree-sitter-meson",
-    "sourceCommit": "c84f3540624b81fc44067030afce2ff78d6ede05",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 1.3.0.",
-    "upstreamSemver": "1.3.0",
-    "version": "git-c84f354"
-  },
-  {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9362,7 +9022,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-60d1fee"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9391,7 +9051,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3d7c53b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9420,7 +9080,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8bc0d16"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9449,7 +9109,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-173b0ab"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9536,7 +9196,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-47ade64"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9600,7 +9260,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b5b6cc3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9635,7 +9295,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3878440"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9664,7 +9324,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d45f750"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9693,7 +9353,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0a95cfd"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9728,7 +9388,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-eabf968"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9792,7 +9452,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-89cc4db"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9899,7 +9559,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-696d257"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -9947,7 +9607,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-181a81b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10150,17 +9810,37 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5a979b3"
   },
   {
+    "id": "parser-ocamllex",
+    "name": "OCamllex",
+    "language": "ocamllex",
+    "package": "github.com/314eter/tree-sitter-ocamllex",
+    "version": "git-33722b8",
+    "sourceCommit": "33722b8be73079946a7c6dd9598e3f57956ed36d",
+    "lastUpdated": "2025-11-02",
+    "upstreamSemver": "0.25.0",
     "abi": 15,
+    "owners": [
+      "314eter"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocamllex.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10171,30 +9851,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-ocamllex",
-    "language": "ocamllex",
-    "lastUpdated": "2025-11-02",
-    "name": "OCamllex",
-    "owners": [
-      "314eter"
-    ],
-    "package": "github.com/atom-ocaml/tree-sitter-ocamllex",
-    "sourceCommit": "33722b8be73079946a7c6dd9598e3f57956ed36d",
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.25.0.",
-    "upstreamSemver": "0.25.0",
-    "version": "git-33722b8"
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.25.0."
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10228,7 +9888,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d2ca8ef"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10257,7 +9917,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-80f14f0"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10286,7 +9946,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8e1d24a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10315,36 +9975,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-acc196e"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-org",
+    "name": "Org",
+    "language": "org",
+    "package": "github.com/emiasims/tree-sitter-org",
+    "version": "git-698bb1a",
+    "sourceCommit": "698bb1a34331e68f83fc24bdd1b6f97016bb30de",
+    "lastUpdated": "2022-08-16",
+    "upstreamSemver": null,
+    "abi": 13,
+    "owners": [
+      "emiasims"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-org",
-    "language": "org",
-    "lastUpdated": "2022-08-16",
-    "name": "Org",
-    "owners": [
-      "milisims"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/milisims/tree-sitter-org",
-    "sourceCommit": "698bb1a34331e68f83fc24bdd1b6f97016bb30de",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-698bb1a"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10373,7 +10033,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-042119e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10402,7 +10062,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2023939"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10524,7 +10184,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-973ea86"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10566,7 +10226,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8917c6e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10737,7 +10397,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3f2465c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10766,36 +10426,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-12d5030"
   },
   {
+    "id": "parser-picat",
+    "name": "Picat",
+    "language": "picat",
+    "package": "github.com/DLR-FT/tree-sitter-picat",
+    "version": "git-ecb6b07",
+    "sourceCommit": "ecb6b07d280f2cef8214bc4b999ad83ac1d9205c",
+    "lastUpdated": "2026-01-28",
+    "upstreamSemver": null,
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "owners": [
+      "DLR-FT"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-picat",
-    "language": "picat",
-    "lastUpdated": "2026-01-28",
-    "name": "Picat",
-    "owners": [
-      "dlr-ft"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/dlr-ft/tree-sitter-picat",
-    "sourceCommit": "ecb6b07d280f2cef8214bc4b999ad83ac1d9205c",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-ecb6b07"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10867,65 +10527,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f5beed1"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-erasin-po-po",
-    "language": "po",
-    "lastUpdated": "2023-02-15",
+    "id": "parser-po",
     "name": "Po",
-    "owners": [
-      "erasin"
-    ],
-    "package": "github.com/erasin/tree-sitter-po",
+    "language": "po",
+    "package": "github.com/tree-sitter-grammars/tree-sitter-po",
+    "version": "git-417cee9",
     "sourceCommit": "417cee9abb2053ed26b19e7de972398f2da9b29e",
-    "summary": "Pinned in Helix. No bundled query files detected.",
+    "lastUpdated": "2023-02-15",
     "upstreamSemver": null,
-    "version": "git-417cee9"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-po-po",
-    "language": "po",
-    "lastUpdated": "2024-04-20",
-    "name": "Po",
+    "abi": 14,
     "owners": [
       "tree-sitter-grammars"
     ],
-    "package": "github.com/tree-sitter-grammars/tree-sitter-po",
-    "sourceCommit": "bd860a0f57f697162bf28e576674be9c1500db5e",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected. Maintained in tree-sitter-grammars.",
-    "upstreamSemver": null,
-    "version": "git-bd860a0"
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars."
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -10965,7 +10596,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-57c606a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11005,7 +10636,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-205a7d5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11034,7 +10665,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-73ff874"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11098,7 +10729,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-73800ec"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11173,7 +10804,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3556b2c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11202,7 +10833,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d8d415f"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -11226,7 +10857,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d8d415f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11255,7 +10886,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d8d415f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11284,7 +10915,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-77625d7"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11357,7 +10988,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d65a18c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11386,7 +11017,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-778ab6e"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -11410,7 +11041,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7741807"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11478,7 +11109,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f6bf6e3"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -11502,7 +11133,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3dfa675"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11531,7 +11162,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-13e9195"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11594,7 +11225,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f541f95"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11678,7 +11309,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-26855ea"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11712,7 +11343,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1fd627a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11746,7 +11377,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-15baf01"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11775,7 +11406,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6b2b5e4"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11860,7 +11491,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-fc5409c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11889,7 +11520,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-eebbd01"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11933,7 +11564,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0e6ef77"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -11962,7 +11593,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-54649be"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12020,7 +11651,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e735c68"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12090,7 +11721,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5282e2f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12217,7 +11848,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ddd39af"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12358,7 +11989,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-49762f0"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12427,7 +12058,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b317756"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12528,7 +12159,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-edc1805"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12600,7 +12231,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9eed370"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12668,7 +12299,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-89ae0f3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12697,7 +12328,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4e562e1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12741,12 +12372,31 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ad907a6"
   },
   {
-    "abi": 15,
+    "id": "parser-runescript",
+    "name": "RuneScript",
+    "language": "runescript",
+    "package": "github.com/LostCityRS/tree-sitter-runescript",
+    "version": "git-cf85bbd",
+    "sourceCommit": "cf85bbd5da0c5ad243301d889c7f84d790a4cae4",
+    "lastUpdated": "2024-11-06",
+    "upstreamSemver": "0.1.0",
+    "abi": 14,
+    "owners": [
+      "LostCityRS"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -12754,26 +12404,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-runescript",
-    "language": "runescript",
-    "lastUpdated": "2024-11-06",
-    "name": "RuneScript",
-    "owners": [
-      "LostCityRS"
-    ],
-    "package": "github.com/2004Scape/tree-sitter-runescript",
-    "sourceCommit": "cf85bbd5da0c5ad243301d889c7f84d790a4cae4",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0.",
-    "upstreamSemver": "0.1.0",
-    "version": "git-cf85bbd"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0."
   },
   {
     "abi": 15,
@@ -12824,7 +12455,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-77a3747"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12889,16 +12520,16 @@ export const PARSER_RELEASES: ParserRelease[] = [
     },
     "id": "parser-scala",
     "language": "scala",
-    "lastUpdated": "2026-04-08",
+    "lastUpdated": "2026-04-09",
     "name": "Scala",
     "owners": [
       "tree-sitter"
     ],
     "package": "github.com/tree-sitter/tree-sitter-scala",
-    "sourceCommit": "22af0ac923c90cef50a31085b27049d50c94c70f",
+    "sourceCommit": "617e8afd805658f497e0705dbf7678fbeffd479f",
     "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.25.0. Official tree-sitter repository.",
     "upstreamSemver": "0.25.0",
-    "version": "git-22af0ac"
+    "version": "git-617e8af"
   },
   {
     "abi": 15,
@@ -12930,7 +12561,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d850fd4"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -12959,7 +12590,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c6cb7c7"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13035,7 +12666,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1b9cebf"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13070,7 +12701,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3597575"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -13109,36 +12740,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-thehamsta-slang-slang",
-    "language": "slang",
-    "lastUpdated": "2025-09-01",
-    "name": "Slang",
-    "owners": [
-      "tree-sitter-grammars"
-    ],
-    "package": "github.com/theHamsta/tree-sitter-slang",
-    "sourceCommit": "1dbcc4abc7b3cdd663eb03d93031167d6ed19f56",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.3.1.",
-    "upstreamSemver": "0.3.1",
-    "version": "git-1dbcc4a"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-slang-slang",
+    "id": "parser-slang",
     "language": "slang",
     "lastUpdated": "2025-09-01",
     "name": "Slang",
@@ -13152,7 +12754,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1dbcc4a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13239,7 +12841,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-29f9c67"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13268,7 +12870,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-fdfa6a1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13297,7 +12899,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8327eb8"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13470,7 +13072,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-048fe68"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13506,7 +13108,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3597575"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13542,7 +13144,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3597575"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13576,7 +13178,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5a8fdd4"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -13629,33 +13231,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1ef52d3"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-spicedb",
+    "name": "Spicedb",
+    "language": "spicedb",
+    "package": "github.com/authzed/tree-sitter-spicedb",
+    "version": "git-a4e4645",
+    "sourceCommit": "a4e4645651f86d6684c15dfa9931b7841dc52a66",
+    "lastUpdated": "2024-02-08",
+    "upstreamSemver": null,
+    "abi": 14,
+    "owners": [
+      "authzed"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-spicedb",
-    "language": "spicedb",
-    "lastUpdated": "2024-02-08",
-    "name": "Spicedb",
-    "owners": [
-      "jzelinskie"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/jzelinskie/tree-sitter-spicedb",
-    "sourceCommit": "a4e4645651f86d6684c15dfa9931b7841dc52a66",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-a4e4645"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -13687,7 +13289,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d554c14"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13708,7 +13310,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-derekstride-sql-sql",
+    "id": "parser-sql",
     "language": "sql",
     "lastUpdated": "2026-03-02",
     "name": "SQL",
@@ -13722,42 +13324,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c2e1e08"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-derekstride-sql-sql-2",
-    "language": "sql",
-    "lastUpdated": "2026-02-22",
-    "name": "Sql",
-    "owners": [
-      "derekstride"
-    ],
-    "package": "github.com/derekstride/tree-sitter-sql",
-    "sourceCommit": "851e9cb257ba7c66cc8c14214a31c44d2f1e954e",
-    "summary": "Pinned in nvim-treesitter. highlights queries.",
-    "upstreamSemver": null,
-    "version": "git-851e9cb"
-  },
-  {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13786,7 +13353,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-072c969"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13816,12 +13383,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     ],
     "package": "github.com/metio/tree-sitter-ssh-client-config",
     "sourceCommit": "c01c35b4aacb3b1864fce2f3b492eb8baafd42a5",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2026.4.2.",
-    "upstreamSemver": "2026.4.2",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2026.4.9.",
+    "upstreamSemver": "2026.4.9",
     "version": "git-c01c35b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13865,7 +13432,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-71d2693"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13894,7 +13461,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e45c6d5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13937,7 +13504,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a92d6a5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -13980,7 +13547,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a92d6a5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14096,7 +13663,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-070edcf"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14183,7 +13750,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2b03ff4"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14212,7 +13779,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8b5bb27"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14241,7 +13808,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f4586b3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14270,7 +13837,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ae5199d"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14299,7 +13866,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9b7845c"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14347,7 +13914,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-da7f937"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14376,7 +13943,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-440d5f9"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14474,7 +14041,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3bce397"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14503,7 +14070,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6da5e3c"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14532,7 +14099,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3e9c482"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14561,7 +14128,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b117088"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14608,33 +14175,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a6267c2"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "id": "parser-task",
+    "name": "Task",
+    "language": "task",
+    "package": "github.com/AlexanderBrevig/tree-sitter-task",
+    "version": "git-f2cb435",
+    "sourceCommit": "f2cb435c5dbf3ee19493e224485d977cb2d36d8b",
+    "lastUpdated": "2022-08-17",
+    "upstreamSemver": null,
+    "abi": 13,
+    "owners": [
+      "AlexanderBrevig"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-task",
-    "language": "task",
-    "lastUpdated": "2022-08-17",
-    "name": "Task",
-    "owners": [
-      "alexanderbrevig"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/alexanderbrevig/tree-sitter-task",
-    "sourceCommit": "f2cb435c5dbf3ee19493e224485d977cb2d36d8b",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-f2cb435"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected."
   },
   {
     "abi": 15,
@@ -14785,35 +14352,6 @@ export const PARSER_RELEASES: ParserRelease[] = [
       {
         "format": "tar.gz",
         "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-michahoffmann-hcl-terraform",
-    "language": "terraform",
-    "lastUpdated": "2026-01-17",
-    "name": "Terraform",
-    "owners": [
-      "MichaHoffmann"
-    ],
-    "package": "github.com/MichaHoffmann/tree-sitter-hcl",
-    "sourceCommit": "64ad62785d442eb4d45df3a1764962dafd5bc98b",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected. Grammar path dialects/terraform.",
-    "upstreamSemver": null,
-    "version": "git-64ad627"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
       },
       {
         "format": "wasm",
@@ -14834,7 +14372,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-tree-sitter-grammars-hcl-terraform",
+    "id": "parser-terraform",
     "language": "terraform",
     "lastUpdated": "2026-01-17",
     "name": "Terraform",
@@ -14848,7 +14386,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-64ad627"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14892,7 +14430,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-76b419f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14921,7 +14459,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-568471b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14950,7 +14488,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-68fd0d8"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -14979,7 +14517,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4a77b2d"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15052,7 +14590,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-75d1b99"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15081,7 +14619,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3937c5c"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15110,7 +14648,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7cff70b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15311,7 +14849,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f6bf6e3"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15360,7 +14898,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-75b3874"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15389,7 +14927,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7f789ea"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15418,7 +14956,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-085648e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15535,7 +15073,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b5d0162"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15607,65 +15145,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2fcb563"
   },
   {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-philipp-m-ungrammar-ungrammar",
-    "language": "ungrammar",
-    "lastUpdated": "2022-07-12",
+    "id": "parser-ungrammar",
     "name": "Ungrammar",
-    "owners": [
-      "Philipp-M"
-    ],
-    "package": "github.com/Philipp-M/tree-sitter-ungrammar",
+    "language": "ungrammar",
+    "package": "github.com/tree-sitter-grammars/tree-sitter-ungrammar",
+    "version": "git-a7e1046",
     "sourceCommit": "a7e104629cff5a8b7367187610631e8f5eb7c6ea",
-    "summary": "Pinned in Helix. No bundled query files detected.",
+    "lastUpdated": "2022-07-12",
     "upstreamSemver": null,
-    "version": "git-a7e1046"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-ungrammar-ungrammar",
-    "language": "ungrammar",
-    "lastUpdated": "2023-02-28",
-    "name": "Ungrammar",
+    "abi": 13,
     "owners": [
       "tree-sitter-grammars"
     ],
-    "package": "github.com/tree-sitter-grammars/tree-sitter-ungrammar",
-    "sourceCommit": "debd26fed283d80456ebafa33a06957b0c52e451",
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected. Maintained in tree-sitter-grammars.",
-    "upstreamSemver": null,
-    "version": "git-debd26f"
+    "capabilities": {
+      "buildFromSource": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars."
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15740,7 +15249,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-10365cc"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15769,7 +15278,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4e0875f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15798,7 +15307,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d684060"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15827,7 +15336,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ad9b638"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15856,7 +15365,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-59a8889"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -15993,7 +15502,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4569bc1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16067,7 +15576,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9df4e7a"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16179,7 +15688,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f061895"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16208,7 +15717,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-274b3ce"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16266,7 +15775,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ce8011a"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16334,7 +15843,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e376947"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16363,7 +15872,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2ca28a9"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16392,7 +15901,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-92b0f7f"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16421,7 +15930,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-94ee612"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16450,7 +15959,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-52e3c62"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16479,7 +15988,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-272e89e"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16537,7 +16046,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-444214b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16614,7 +16123,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ae17db1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16643,7 +16152,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c917790"
   },
   {
-    "abi": 15,
+    "abi": null,
     "artifacts": [],
     "bundledQueries": {},
     "bundledQueryEditors": [],
@@ -16736,7 +16245,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-a51d636"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16765,7 +16274,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7d79024"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16794,7 +16303,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-48a7c2b"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16823,7 +16332,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-53dfc22"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16912,7 +16421,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-586e9a5"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -16941,7 +16450,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7bc11b7"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -17010,7 +16519,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4463985"
   },
   {
-    "abi": 15,
+    "abi": 13,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -17039,7 +16548,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-2c0e6be"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -17083,36 +16592,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-philipp-m-yuck-yuck",
-    "language": "yuck",
-    "lastUpdated": "2023-03-10",
-    "name": "Yuck",
-    "owners": [
-      "Philipp-M"
-    ],
-    "package": "github.com/Philipp-M/tree-sitter-yuck",
-    "sourceCommit": "e3d91a3c65decdea467adebe4127b8366fa47919",
-    "summary": "Pinned in Helix. No bundled query files detected.",
-    "upstreamSemver": null,
-    "version": "git-e3d91a3"
-  },
-  {
-    "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
-    "capabilities": {
-      "buildFromSource": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-tree-sitter-grammars-yuck-yuck",
+    "id": "parser-yuck",
     "language": "yuck",
     "lastUpdated": "2026-04-03",
     "name": "Yuck",
@@ -17126,7 +16606,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6c60112"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -17201,7 +16681,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6479aa1"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",
@@ -17230,7 +16710,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-4353b20"
   },
   {
-    "abi": 15,
+    "abi": 14,
     "artifacts": [
       {
         "format": "tar.gz",

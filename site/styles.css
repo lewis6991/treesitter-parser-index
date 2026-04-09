@@ -653,7 +653,7 @@ select {
   border-top: 1px solid var(--border);
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.5fr) repeat(5, minmax(0, 1fr));
   margin-bottom: 1.1rem;
   padding: 0.95rem 0;
 }

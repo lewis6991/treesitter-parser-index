@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-04-09",
   "kind": "prototype-query-packs",
-  "count": 231,
+  "count": 228,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -732,7 +732,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/jakestanger/tree-sitter-corn@git-4646547"
+            "github.com/corn-config/tree-sitter-corn@git-4646547"
           ]
         },
         {
@@ -1375,7 +1375,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/NullVoxPopuli/tree-sitter-glimmer-javascript@git-5cc865a"
+            "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-5cc865a"
           ]
         },
         {
@@ -1387,7 +1387,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/NullVoxPopuli/tree-sitter-glimmer-typescript@git-12d9894"
+            "github.com/ember-tooling/tree-sitter-glimmer-typescript@git-12d9894"
           ]
         },
         {
@@ -1532,7 +1532,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/MaeBrooks/tree-sitter-gren@git-c36aac5"
+            "github.com/gren-lang/tree-sitter-gren@git-c36aac5"
           ]
         },
         {
@@ -1636,7 +1636,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/connorlay/tree-sitter-heex@git-5842537"
+            "github.com/phoenixframework/tree-sitter-heex@git-5842537"
           ]
         },
         {
@@ -2004,7 +2004,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/IndianBoy42/tree-sitter-just@git-5685543"
+            "github.com/casey/tree-sitter-just@git-5685543"
           ]
         },
         {
@@ -2509,7 +2509,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/atom-ocaml/tree-sitter-ocamllex@git-33722b8"
+            "github.com/314eter/tree-sitter-ocamllex@git-33722b8"
           ]
         },
         {
@@ -3118,7 +3118,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/2004Scape/tree-sitter-runescript@git-cf85bbd"
+            "github.com/LostCityRS/tree-sitter-runescript@git-cf85bbd"
           ]
         },
         {
@@ -3350,7 +3350,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/derekstride/tree-sitter-sql@git-851e9cb"
+            "github.com/DerekStride/tree-sitter-sql@git-851e9cb"
           ]
         },
         {
@@ -3616,7 +3616,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/MichaHoffmann/tree-sitter-hcl@git-64ad627"
+            "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
           ]
         },
         {
@@ -4266,72 +4266,108 @@
           "language": "apex",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/aheber/tree-sitter-sfapex@git-3597575"
           ]
         },
         {
           "language": "astro",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/virchau13/tree-sitter-astro@git-213f6e6"
           ]
         },
         {
           "language": "bash",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-bash@git-a06c2e4"
           ]
         },
         {
           "language": "bibtex",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/latex-lsp/tree-sitter-bibtex@git-8d04ed2"
           ]
         },
         {
           "language": "c",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-c@git-ae19b67"
           ]
         },
         {
           "language": "c_sharp",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-c-sharp@git-8836663"
           ]
         },
         {
           "language": "cmake",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/uyha/tree-sitter-cmake@git-c7b2a71"
           ]
         },
         {
           "language": "cpp",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
           ]
         },
         {
           "language": "css",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-css@git-dda5cfc"
           ]
         },
         {
           "language": "cuda",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-48b066f"
           ]
         },
         {
           "language": "dart",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/UserNobody14/tree-sitter-dart@git-0fc19c3"
           ]
         },
         {
           "language": "dockerfile",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/camdencheek/tree-sitter-dockerfile@git-971acdd"
           ]
         },
         {
@@ -4344,132 +4380,198 @@
           "language": "elixir",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/elixir-lang/tree-sitter-elixir@git-7937d3b"
           ]
         },
         {
           "language": "elm",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/elm-tooling/tree-sitter-elm@git-6d9511c"
           ]
         },
         {
           "language": "enforce",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/simonvic/tree-sitter-enforce@git-eb27968"
           ]
         },
         {
           "language": "fennel",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
           ]
         },
         {
           "language": "fish",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/ram02z/tree-sitter-fish@git-fa2143f"
           ]
         },
         {
           "language": "foam",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/FoamScience/tree-sitter-foam@git-472c24f"
           ]
         },
         {
           "language": "gdscript",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/PrestonKnopp/tree-sitter-gdscript@git-9686853"
           ]
         },
         {
           "language": "git_config",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/the-mikedavis/tree-sitter-git-config@git-0fbc9f9"
           ]
         },
         {
           "language": "gleam",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/gleam-lang/tree-sitter-gleam@git-0bb1b0a"
           ]
         },
         {
           "language": "glimmer",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/ember-tooling/tree-sitter-glimmer@git-88af855"
           ]
         },
         {
           "language": "glsl",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-glsl@git-24a6c8e"
           ]
         },
         {
           "language": "go",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-go@git-2346a3a"
           ]
         },
         {
           "language": "hack",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/slackhq/tree-sitter-hack@git-1a7ded9"
           ]
         },
         {
           "language": "haskell",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-haskell@git-7fa19f1"
           ]
         },
         {
           "language": "hcl",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
           ]
         },
         {
           "language": "heex",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/phoenixframework/tree-sitter-heex@git-5842537"
           ]
         },
         {
           "language": "hlsl",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-hlsl@git-bab9111"
           ]
         },
         {
           "language": "html",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-html@git-73a3947"
           ]
         },
         {
           "language": "inko",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/inko-lang/tree-sitter-inko@git-v0.5.1"
           ]
         },
         {
           "language": "java",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-java@git-e10607b"
           ]
         },
         {
           "language": "javascript",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-javascript@git-58404d8"
           ]
         },
         {
           "language": "json",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-json@git-001c28d"
           ]
         },
         {
@@ -4482,258 +4584,387 @@
           "language": "julia",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-julia@git-8454f26"
           ]
         },
         {
           "language": "kotlin",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/fwcd/tree-sitter-kotlin@git-93bfeee"
           ]
         },
         {
           "language": "latex",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/latex-lsp/tree-sitter-latex@git-7e0ecdc"
           ]
         },
         {
           "language": "lua",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-lua@git-10fe005"
           ]
         },
         {
           "language": "markdown",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
           ]
         },
         {
           "language": "matlab",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/acristoffers/tree-sitter-matlab@git-c2390a5"
           ]
         },
         {
           "language": "nasm",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/naclsn/tree-sitter-nasm@git-d1b3638"
           ]
         },
         {
           "language": "nim",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/alaviss/tree-sitter-nim@git-3878440"
           ]
         },
         {
           "language": "nix",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/nix-community/tree-sitter-nix@git-eabf968"
           ]
         },
         {
           "language": "ocaml",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ocaml@git-5a979b3"
           ]
         },
         {
           "language": "odin",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-odin@git-d2ca8ef"
           ]
         },
         {
           "language": "perl",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-perl/tree-sitter-perl@git-ea9667d"
           ]
         },
         {
           "language": "php",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
           ]
         },
         {
           "language": "php_only",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
           ]
         },
         {
           "language": "python",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-python@git-v0.25.0"
           ]
         },
         {
           "language": "ql",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ql@git-1fd627a"
           ]
         },
         {
           "language": "query",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-query@git-fc5409c"
           ]
         },
         {
           "language": "r",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/r-lib/tree-sitter-r@git-0e6ef77"
           ]
         },
         {
           "language": "readline",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-readline@git-6b744c5"
           ]
         },
         {
           "language": "rst",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/stsewd/tree-sitter-rst@git-4e562e1"
           ]
         },
         {
           "language": "ruby",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ruby@git-ad907a6"
           ]
         },
         {
           "language": "rust",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-rust@git-77a3747"
           ]
         },
         {
           "language": "scala",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-scala@git-14c5cfd"
           ]
         },
         {
           "language": "scss",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/serenadeai/tree-sitter-scss@git-c478c68"
           ]
         },
         {
           "language": "slang",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-slang@git-1dbcc4a"
           ]
         },
         {
           "language": "supercollider",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/madskjeldgaard/tree-sitter-supercollider@git-2b03ff4"
           ]
         },
         {
           "language": "svelte",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-svelte@git-ae5199d"
           ]
         },
         {
           "language": "swift",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/alex-pinkus/tree-sitter-swift@git-8abb3e8"
           ]
         },
         {
           "language": "systemverilog",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/gmlarumbe/tree-sitter-systemverilog@git-2939285"
           ]
         },
         {
           "language": "tact",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tact-lang/tree-sitter-tact@git-a6267c2"
           ]
         },
         {
           "language": "terraform",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
           ]
         },
         {
           "language": "toml",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
           ]
         },
         {
           "language": "tsx",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-typescript@git-75b3874"
           ]
         },
         {
           "language": "twig",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/gbprod/tree-sitter-twig@git-7195ee5"
           ]
         },
         {
           "language": "typescript",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-typescript@git-75b3874"
           ]
         },
         {
           "language": "v",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/vlang/v-analyzer@git-095865d"
           ]
         },
         {
           "language": "vim",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-vim@git-3092fcd"
           ]
         },
         {
           "language": "vue",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-vue@git-ce8011a"
           ]
         },
         {
           "language": "wgsl",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/szebniok/tree-sitter-wgsl@git-40259f3"
           ]
         },
         {
           "language": "wgsl_bevy",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy@git-d9306a7"
           ]
         },
         {
           "language": "yaml",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-yaml@git-4463985"
           ]
         },
         {
           "language": "zig",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-zig@git-6479aa1"
           ]
         },
         {
           "language": "zsh",
           "queryKinds": [
             "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/georgeharker/tree-sitter-zsh@git-bd344c2"
           ]
         }
       ],
@@ -4855,516 +5086,774 @@
           "language": "ada",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/briot/tree-sitter-ada@git-6b58259"
           ]
         },
         {
           "language": "apex",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/aheber/tree-sitter-sfapex@git-3597575"
           ]
         },
         {
           "language": "bash",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-bash@git-a06c2e4"
           ]
         },
         {
           "language": "c",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-c@git-ae19b67"
           ]
         },
         {
           "language": "c_sharp",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-c-sharp@git-8836663"
           ]
         },
         {
           "language": "capnp",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-capnp@git-7b0883c"
           ]
         },
         {
           "language": "clojure",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
           ]
         },
         {
           "language": "cmake",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/uyha/tree-sitter-cmake@git-c7b2a71"
           ]
         },
         {
           "language": "cpp",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
           ]
         },
         {
           "language": "css",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-css@git-dda5cfc"
           ]
         },
         {
           "language": "cuda",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-48b066f"
           ]
         },
         {
           "language": "cue",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/eonpatapon/tree-sitter-cue@git-20bb919"
           ]
         },
         {
           "language": "d",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/gdamore/tree-sitter-d@git-fb028c8"
           ]
         },
         {
           "language": "dart",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/UserNobody14/tree-sitter-dart@git-0fc19c3"
           ]
         },
         {
           "language": "devicetree",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/joelspadin/tree-sitter-devicetree@git-e685f1f"
           ]
         },
         {
           "language": "diff",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-2520c3f"
           ]
         },
         {
           "language": "elixir",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/elixir-lang/tree-sitter-elixir@git-7937d3b"
           ]
         },
         {
           "language": "elm",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/elm-tooling/tree-sitter-elm@git-6d9511c"
           ]
         },
         {
           "language": "enforce",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/simonvic/tree-sitter-enforce@git-eb27968"
           ]
         },
         {
           "language": "fennel",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
           ]
         },
         {
           "language": "fish",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/ram02z/tree-sitter-fish@git-fa2143f"
           ]
         },
         {
           "language": "fortran",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/stadelmanma/tree-sitter-fortran@git-be30d90"
           ]
         },
         {
           "language": "gdscript",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/PrestonKnopp/tree-sitter-gdscript@git-9686853"
           ]
         },
         {
           "language": "glimmer",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/ember-tooling/tree-sitter-glimmer@git-88af855"
           ]
         },
         {
           "language": "glsl",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-glsl@git-24a6c8e"
           ]
         },
         {
           "language": "go",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-go@git-2346a3a"
           ]
         },
         {
           "language": "graphql",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/bkegley/tree-sitter-graphql@git-5e66e96"
           ]
         },
         {
           "language": "groovy",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/murtaza64/tree-sitter-groovy@git-781d9cd"
           ]
         },
         {
           "language": "haskell",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-haskell@git-7fa19f1"
           ]
         },
         {
           "language": "html",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-html@git-73a3947"
           ]
         },
         {
           "language": "ini",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/justinmk/tree-sitter-ini@git-e4018b5"
           ]
         },
         {
           "language": "janet_simple",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/sogaiu/tree-sitter-janet-simple@git-d183186"
           ]
         },
         {
           "language": "java",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-java@git-e10607b"
           ]
         },
         {
           "language": "javascript",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-javascript@git-58404d8"
           ]
         },
         {
           "language": "json",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-json@git-001c28d"
           ]
         },
         {
           "language": "jsonnet",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/sourcegraph/tree-sitter-jsonnet@git-ddd075f"
           ]
         },
         {
           "language": "julia",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-julia@git-8454f26"
           ]
         },
         {
           "language": "kdl",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-kdl@git-b37e3d5"
           ]
         },
         {
           "language": "kotlin",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/fwcd/tree-sitter-kotlin@git-93bfeee"
           ]
         },
         {
           "language": "latex",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/latex-lsp/tree-sitter-latex@git-7e0ecdc"
           ]
         },
         {
           "language": "liquidsoap",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/savonet/tree-sitter-liquidsoap@git-0169d92"
           ]
         },
         {
           "language": "lua",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-lua@git-10fe005"
           ]
         },
         {
           "language": "make",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-make@git-70613f3"
           ]
         },
         {
           "language": "markdown",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
           ]
         },
         {
           "language": "matlab",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/acristoffers/tree-sitter-matlab@git-c2390a5"
           ]
         },
         {
           "language": "nim",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/alaviss/tree-sitter-nim@git-3878440"
           ]
         },
         {
           "language": "nix",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/nix-community/tree-sitter-nix@git-eabf968"
           ]
         },
         {
           "language": "nu",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/nushell/tree-sitter-nu@git-696d257"
           ]
         },
         {
           "language": "objdump",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/ColinKennedy/tree-sitter-objdump@git-28d3b2e"
           ]
         },
         {
           "language": "ocaml",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ocaml@git-5a979b3"
           ]
         },
         {
           "language": "ocaml_interface",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ocaml@git-5a979b3"
           ]
         },
         {
           "language": "odin",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-odin@git-d2ca8ef"
           ]
         },
         {
           "language": "php",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
           ]
         },
         {
           "language": "php_only",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
           ]
         },
         {
           "language": "prisma",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/victorhqc/tree-sitter-prisma@git-3556b2c"
           ]
         },
         {
           "language": "proto",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/coder3101/tree-sitter-proto@git-d65a18c"
           ]
         },
         {
           "language": "python",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-python@git-v0.25.0"
           ]
         },
         {
           "language": "r",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/r-lib/tree-sitter-r@git-0e6ef77"
           ]
         },
         {
           "language": "ruby",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-ruby@git-ad907a6"
           ]
         },
         {
           "language": "rust",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-rust@git-77a3747"
           ]
         },
         {
           "language": "scala",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-scala@git-14c5cfd"
           ]
         },
         {
           "language": "scss",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/serenadeai/tree-sitter-scss@git-c478c68"
           ]
         },
         {
           "language": "smali",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-smali@git-fdfa6a1"
           ]
         },
         {
           "language": "solidity",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/JoranHonig/tree-sitter-solidity@git-048fe68"
           ]
         },
         {
           "language": "starlark",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-starlark@git-a453dbf"
           ]
         },
         {
           "language": "svelte",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-svelte@git-ae5199d"
           ]
         },
         {
           "language": "swift",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/alex-pinkus/tree-sitter-swift@git-8abb3e8"
           ]
         },
         {
           "language": "systemverilog",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/gmlarumbe/tree-sitter-systemverilog@git-2939285"
           ]
         },
         {
           "language": "tact",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tact-lang/tree-sitter-tact@git-a6267c2"
           ]
         },
         {
           "language": "tcl",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-tcl@git-8f11ac7"
           ]
         },
         {
           "language": "teal",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/euclidianAce/tree-sitter-teal@git-05d276e"
           ]
         },
         {
           "language": "templ",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/vrischmann/tree-sitter-templ@git-1c6db04"
           ]
         },
         {
           "language": "terraform",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
           ]
         },
         {
           "language": "toml",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
           ]
         },
         {
           "language": "tsx",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-typescript@git-75b3874"
           ]
         },
         {
           "language": "typescript",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter/tree-sitter-typescript@git-75b3874"
           ]
         },
         {
           "language": "typoscript",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/Teddytrombone/tree-sitter-typoscript@git-b5d0162"
           ]
         },
         {
           "language": "typst",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/uben0/tree-sitter-typst@git-46cf4de"
           ]
         },
         {
           "language": "usd",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/ColinKennedy/tree-sitter-usd@git-4e0875f"
           ]
         },
         {
           "language": "vhdl",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/jpt13653903/tree-sitter-vhdl@git-c2d9be3"
           ]
         },
         {
           "language": "vim",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-vim@git-3092fcd"
           ]
         },
         {
           "language": "vue",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-vue@git-ce8011a"
           ]
         },
         {
           "language": "xml",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-xml@git-5000ae8"
           ]
         },
         {
           "language": "yaml",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-yaml@git-4463985"
           ]
         },
         {
           "language": "yang",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/Hubro/tree-sitter-yang@git-2c0e6be"
           ]
         },
         {
           "language": "zig",
           "queryKinds": [
             "context"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-zig@git-6479aa1"
           ]
         }
       ],
@@ -8376,7 +8865,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/weartist/rainbow-csv-tree-sitter@git-d3dbf91"
+            "github.com/Kalmaegi/rainbow-csv-tree-sitter@git-d3dbf91"
           ]
         },
         {
@@ -8484,7 +8973,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/the-mikedavis/tree-sitter-diff@git-fd74c78"
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-fd74c78"
           ]
         },
         {
@@ -8707,7 +9196,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/ckafi/tree-sitter-elvish@git-e50787c"
+            "github.com/elves/tree-sitter-elvish@git-e50787c"
           ]
         },
         {
@@ -8827,7 +9316,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/alexanderbrevig/tree-sitter-forth@git-360ef13"
+            "github.com/AlexanderBrevig/tree-sitter-forth@git-360ef13"
           ]
         },
         {
@@ -9076,7 +9565,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/theHamsta/tree-sitter-glsl@git-24a6c8e"
+            "github.com/tree-sitter-grammars/tree-sitter-glsl@git-24a6c8e"
           ]
         },
         {
@@ -9194,7 +9683,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/MaeBrooks/tree-sitter-gren@git-76554f4"
+            "github.com/gren-lang/tree-sitter-gren@git-76554f4"
           ]
         },
         {
@@ -9436,7 +9925,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/rhizoome/tree-sitter-ink@git-8486e9b"
+            "github.com/rhizoome/tree-sitter-ink2@git-8486e9b"
           ]
         },
         {
@@ -9711,7 +10200,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/amaanq/tree-sitter-kdl@git-3ca569b"
+            "github.com/tree-sitter-grammars/tree-sitter-kdl@git-3ca569b"
           ]
         },
         {
@@ -9793,7 +10282,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/kepet19/tree-sitter-ldif@git-0a91720"
+            "github.com/kkmp-dk/tree-sitter-ldif@git-0a91720"
           ]
         },
         {
@@ -9955,7 +10444,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/markdoc-extra/tree-sitter-markdoc@git-5ffe71b"
+            "github.com/mohitsinghs/tree-sitter-markdoc@git-5ffe71b"
           ]
         },
         {
@@ -10252,7 +10741,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/milisims/tree-sitter-org@git-698bb1a"
+            "github.com/emiasims/tree-sitter-org@git-698bb1a"
           ]
         },
         {
@@ -10357,7 +10846,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/dlr-ft/tree-sitter-picat@git-ecb6b07"
+            "github.com/DLR-FT/tree-sitter-picat@git-ecb6b07"
           ]
         },
         {
@@ -10402,7 +10891,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/erasin/tree-sitter-po@git-417cee9"
+            "github.com/tree-sitter-grammars/tree-sitter-po@git-417cee9"
           ]
         },
         {
@@ -10976,7 +11465,7 @@
             "tags"
           ],
           "testedParserRefs": [
-            "github.com/jzelinskie/tree-sitter-spicedb@git-a4e4645"
+            "github.com/authzed/tree-sitter-spicedb@git-a4e4645"
           ]
         },
         {
@@ -11160,7 +11649,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/alexanderbrevig/tree-sitter-task@git-f2cb435"
+            "github.com/AlexanderBrevig/tree-sitter-task@git-f2cb435"
           ]
         },
         {
@@ -11381,7 +11870,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/Philipp-M/tree-sitter-ungrammar@git-a7e1046"
+            "github.com/tree-sitter-grammars/tree-sitter-ungrammar@git-a7e1046"
           ]
         },
         {
@@ -11667,7 +12156,7 @@
             "rainbows"
           ],
           "testedParserRefs": [
-            "github.com/Philipp-M/tree-sitter-yuck@git-e3d91a3"
+            "github.com/tree-sitter-grammars/tree-sitter-yuck@git-e3d91a3"
           ]
         },
         {
@@ -11730,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2169eba",
+      "version": "git-7e1b636",
       "languages": [
         "bash",
         "c",
@@ -12053,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2169eba",
+      "version": "git-7e1b636",
       "languages": [
         "glsl"
       ],
@@ -12096,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2169eba",
+      "version": "git-7e1b636",
       "languages": [
         "html"
       ],
@@ -12151,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2169eba",
+      "version": "git-7e1b636",
       "languages": [
         "proto"
       ],
@@ -12202,7 +12691,7 @@
       "id": "pack-parser-parser-abl",
       "name": "abl Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-04528ea",
+      "version": "git-28053ba",
       "languages": [
         "abl"
       ],
@@ -12233,7 +12722,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-04528ea"
+          "github.com/usagi-coffee/tree-sitter-abl@git-28053ba"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -12461,9 +12950,9 @@
       "summary": "highlights, tags queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-rush-rs-asm-asm",
+      "id": "pack-parser-parser-asm",
       "name": "Asm Parser Bundle",
-      "package": "github.com/rush-rs/tree-sitter-asm",
+      "package": "github.com/RubixDev/tree-sitter-asm",
       "version": "git-839741f",
       "languages": [
         "asm"
@@ -12500,7 +12989,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rush-rs/tree-sitter-asm@git-839741f"
+          "github.com/RubixDev/tree-sitter-asm@git-839741f"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -13159,52 +13648,7 @@
       "summary": "highlights queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-thehamsta-commonlisp-commonlisp",
-      "name": "CommonLisp Parser Bundle",
-      "package": "github.com/theHamsta/tree-sitter-commonlisp",
-      "version": "git-3232350",
-      "languages": [
-        "commonlisp"
-      ],
-      "languageCount": 1,
-      "languageDetails": [
-        {
-          "language": "commonlisp",
-          "queryKinds": [
-            "highlights",
-            "tags"
-          ]
-        }
-      ],
-      "owners": [
-        "tree-sitter-grammars"
-      ],
-      "layout": {
-        "installRoot": ".",
-        "queryRoot": "queries"
-      },
-      "targets": [],
-      "queryKinds": [
-        "highlights",
-        "tags"
-      ],
-      "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
-        "tags": [
-          "queries/tags.scm"
-        ]
-      },
-      "parserCompatibility": {
-        "tested": [
-          "github.com/theHamsta/tree-sitter-commonlisp@git-3232350"
-        ]
-      },
-      "summary": "highlights, tags queries ship with the parser repository."
-    },
-    {
-      "id": "pack-parser-parser-tree-sitter-grammars-commonlisp-commonlisp",
+      "id": "pack-parser-parser-commonlisp",
       "name": "CommonLisp Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-commonlisp",
       "version": "git-3232350",
@@ -13879,47 +14323,7 @@
       "summary": "highlights, injections queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-the-mikedavis-diff-diff",
-      "name": "Diff Parser Bundle",
-      "package": "github.com/the-mikedavis/tree-sitter-diff",
-      "version": "git-2520c3f",
-      "languages": [
-        "diff"
-      ],
-      "languageCount": 1,
-      "languageDetails": [
-        {
-          "language": "diff",
-          "queryKinds": [
-            "highlights"
-          ]
-        }
-      ],
-      "owners": [
-        "tree-sitter-grammars"
-      ],
-      "layout": {
-        "installRoot": ".",
-        "queryRoot": "queries"
-      },
-      "targets": [],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "parserCompatibility": {
-        "tested": [
-          "github.com/the-mikedavis/tree-sitter-diff@git-2520c3f"
-        ]
-      },
-      "summary": "highlights queries ship with the parser repository."
-    },
-    {
-      "id": "pack-parser-parser-tree-sitter-grammars-diff-diff",
+      "id": "pack-parser-parser-diff",
       "name": "Diff Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-diff",
       "version": "git-2520c3f",
@@ -14508,7 +14912,7 @@
       "summary": "highlights, injections queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-alexanderbrevig-forth-forth",
+      "id": "pack-parser-parser-forth",
       "name": "Forth Parser Bundle",
       "package": "github.com/AlexanderBrevig/tree-sitter-forth",
       "version": "git-360ef13",
@@ -15028,9 +15432,9 @@
       "summary": "folds, highlights, indents, injections, locals queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-nullvoxpopuli-glimmer-javascript-glimmer-javascript",
+      "id": "pack-parser-parser-glimmer-javascript",
       "name": "GlimmerJavascript Parser Bundle",
-      "package": "github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
+      "package": "github.com/ember-tooling/tree-sitter-glimmer-javascript",
       "version": "git-5cc865a",
       "languages": [
         "glimmer-javascript"
@@ -15072,15 +15476,15 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/NullVoxPopuli/tree-sitter-glimmer-javascript@git-5cc865a"
+          "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-5cc865a"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-nullvoxpopuli-glimmer-typescript-glimmer-typescript",
+      "id": "pack-parser-parser-glimmer-typescript",
       "name": "GlimmerTypescript Parser Bundle",
-      "package": "github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
+      "package": "github.com/ember-tooling/tree-sitter-glimmer-typescript",
       "version": "git-12d9894",
       "languages": [
         "glimmer-typescript"
@@ -15122,7 +15526,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/NullVoxPopuli/tree-sitter-glimmer-typescript@git-12d9894"
+          "github.com/ember-tooling/tree-sitter-glimmer-typescript@git-12d9894"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -15413,9 +15817,9 @@
       "summary": "highlights queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-connorlay-heex-heex",
+      "id": "pack-parser-parser-heex",
       "name": "Heex Parser Bundle",
-      "package": "github.com/connorlay/tree-sitter-heex",
+      "package": "github.com/phoenixframework/tree-sitter-heex",
       "version": "git-5842537",
       "languages": [
         "heex"
@@ -15447,7 +15851,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/connorlay/tree-sitter-heex@git-5842537"
+          "github.com/phoenixframework/tree-sitter-heex@git-5842537"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15945,9 +16349,9 @@
       "summary": "highlights, injections, locals queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-indianboy42-just-just",
+      "id": "pack-parser-parser-casey-just-just",
       "name": "Just Parser Bundle",
-      "package": "github.com/IndianBoy42/tree-sitter-just",
+      "package": "github.com/casey/tree-sitter-just",
       "version": "git-5685543",
       "languages": [
         "just"
@@ -15989,7 +16393,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/IndianBoy42/tree-sitter-just@git-5685543"
+          "github.com/casey/tree-sitter-just@git-5685543"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -16401,7 +16805,7 @@
     {
       "id": "pack-parser-parser-maebrooks-gren",
       "name": "MaeBrooksGren Parser Bundle",
-      "package": "github.com/MaeBrooks/tree-sitter-gren",
+      "package": "github.com/gren-lang/tree-sitter-gren",
       "version": "git-cecd8ce",
       "languages": [
         "MaeBrooks/gren"
@@ -16433,7 +16837,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/MaeBrooks/tree-sitter-gren@git-cecd8ce"
+          "github.com/gren-lang/tree-sitter-gren@git-cecd8ce"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17098,7 +17502,7 @@
     {
       "id": "pack-parser-parser-ocamllex",
       "name": "OCamllex Parser Bundle",
-      "package": "github.com/atom-ocaml/tree-sitter-ocamllex",
+      "package": "github.com/314eter/tree-sitter-ocamllex",
       "version": "git-33722b8",
       "languages": [
         "ocamllex"
@@ -17135,7 +17539,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/atom-ocaml/tree-sitter-ocamllex@git-33722b8"
+          "github.com/314eter/tree-sitter-ocamllex@git-33722b8"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -18418,7 +18822,7 @@
     {
       "id": "pack-parser-parser-runescript",
       "name": "RuneScript Parser Bundle",
-      "package": "github.com/2004Scape/tree-sitter-runescript",
+      "package": "github.com/LostCityRS/tree-sitter-runescript",
       "version": "git-cf85bbd",
       "languages": [
         "runescript"
@@ -18450,7 +18854,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/2004Scape/tree-sitter-runescript@git-cf85bbd"
+          "github.com/LostCityRS/tree-sitter-runescript@git-cf85bbd"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18509,7 +18913,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-22af0ac",
+      "version": "git-617e8af",
       "languages": [
         "scala"
       ],
@@ -18550,7 +18954,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-22af0ac"
+          "github.com/tree-sitter/tree-sitter-scala@git-617e8af"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18898,47 +19302,7 @@
       "summary": "highlights queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-derekstride-sql-sql-2",
-      "name": "Sql Parser Bundle",
-      "package": "github.com/derekstride/tree-sitter-sql",
-      "version": "git-851e9cb",
-      "languages": [
-        "sql"
-      ],
-      "languageCount": 1,
-      "languageDetails": [
-        {
-          "language": "sql",
-          "queryKinds": [
-            "highlights"
-          ]
-        }
-      ],
-      "owners": [
-        "derekstride"
-      ],
-      "layout": {
-        "installRoot": ".",
-        "queryRoot": "queries"
-      },
-      "targets": [],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "parserCompatibility": {
-        "tested": [
-          "github.com/derekstride/tree-sitter-sql@git-851e9cb"
-        ]
-      },
-      "summary": "highlights queries ship with the parser repository."
-    },
-    {
-      "id": "pack-parser-parser-derekstride-sql-sql",
+      "id": "pack-parser-parser-sql",
       "name": "SQL Parser Bundle",
       "package": "github.com/DerekStride/tree-sitter-sql",
       "version": "git-c2e1e08",

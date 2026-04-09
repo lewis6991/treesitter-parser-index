@@ -5,7 +5,7 @@
   "items": [
     {
       "language": "_gjs",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -281,7 +281,7 @@
     },
     {
       "language": "asm",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "neovim"
@@ -1112,7 +1112,7 @@
     {
       "language": "common_lisp",
       "parserLanguage": "commonlisp",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -1133,8 +1133,8 @@
     },
     {
       "language": "commonlisp",
-      "parserCount": 2,
-      "queryPackCount": 3,
+      "parserCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "neovim"
       ],
@@ -1636,8 +1636,8 @@
     },
     {
       "language": "diff",
-      "parserCount": 2,
-      "queryPackCount": 6,
+      "parserCount": 1,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
@@ -1940,7 +1940,7 @@
     },
     {
       "language": "ecma",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 4,
       "editors": [
         "helix",
@@ -2177,7 +2177,7 @@
     },
     {
       "language": "elvish",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -2547,7 +2547,7 @@
     },
     {
       "language": "forth",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 3,
       "editors": [
         "helix",
@@ -3082,7 +3082,7 @@
     {
       "language": "gjs",
       "parserLanguage": "glimmer_javascript",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -3158,7 +3158,7 @@
     },
     {
       "language": "glimmer_javascript",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "neovim"
@@ -3180,7 +3180,7 @@
     },
     {
       "language": "glimmer_typescript",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "neovim"
@@ -3202,7 +3202,7 @@
     },
     {
       "language": "glsl",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 5,
       "editors": [
         "helix",
@@ -3613,7 +3613,7 @@
     {
       "language": "gts",
       "parserLanguage": "glimmer_typescript",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -3802,7 +3802,7 @@
     },
     {
       "language": "heex",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 4,
       "editors": [
         "helix",
@@ -3848,7 +3848,7 @@
     },
     {
       "language": "help",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "neovim"
@@ -4018,7 +4018,7 @@
     },
     {
       "language": "html_tags",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "neovim"
@@ -4116,7 +4116,7 @@
     },
     {
       "language": "hyperlink",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "pulsar"
@@ -4677,7 +4677,7 @@
     {
       "language": "jsonc",
       "parserLanguage": "json",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -4728,7 +4728,7 @@
     {
       "language": "jsx",
       "parserLanguage": "javascript",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 4,
       "editors": [
         "helix",
@@ -4855,7 +4855,7 @@
     },
     {
       "language": "kdl",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 3,
       "editors": [
         "helix",
@@ -5294,7 +5294,7 @@
     },
     {
       "language": "llvm_mir_yaml",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -5717,7 +5717,7 @@
     },
     {
       "language": "meson",
-      "parserCount": 3,
+      "parserCount": 2,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -6071,7 +6071,7 @@
     },
     {
       "language": "norg",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "neovim"
@@ -6702,7 +6702,7 @@
     },
     {
       "language": "po",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -7315,7 +7315,7 @@
     },
     {
       "language": "quote",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "neovim"
@@ -8136,7 +8136,7 @@
     },
     {
       "language": "slang",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 3,
       "editors": [
         "helix",
@@ -8487,8 +8487,8 @@
     },
     {
       "language": "sql",
-      "parserCount": 2,
-      "queryPackCount": 5,
+      "parserCount": 1,
+      "queryPackCount": 4,
       "editors": [
         "helix",
         "lapce",
@@ -9126,7 +9126,7 @@
     },
     {
       "language": "terraform",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 4,
       "editors": [
         "neovim"
@@ -9310,7 +9310,7 @@
     },
     {
       "language": "todo",
-      "parserCount": 0,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "pulsar"
@@ -9671,7 +9671,7 @@
     },
     {
       "language": "ungrammar",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -10459,7 +10459,7 @@
     },
     {
       "language": "yuck",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",

@@ -17,11 +17,13 @@ export interface ParserRelease {
   name: string;
   language: string;
   package: string;
+  synthetic?: 'unknown';
+  syntheticPackIds?: string[];
   version: string;
   sourceCommit: string;
   lastUpdated: string | null;
   upstreamSemver: string | null;
-  abi: number;
+  abi: number | null;
   owners: string[];
   capabilities: ParserCapabilities;
   artifacts: ParserArtifact[];
