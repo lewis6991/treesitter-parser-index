@@ -1001,6 +1001,27 @@ select {
   white-space: nowrap;
 }
 
+.tree-item-side-pack {
+  gap: 0.08rem;
+}
+
+.tree-item-disclosure {
+  align-items: center;
+  color: var(--text-soft);
+  display: inline-flex;
+  flex: 0 0 0.8rem;
+  font-size: 0.72rem;
+  justify-content: center;
+  line-height: 1;
+  margin-right: 0.02rem;
+}
+
+.tree-item-pack:hover .tree-item-disclosure,
+.tree-item-pack:focus-visible .tree-item-disclosure,
+.tree-item-pack.is-selected .tree-item-disclosure {
+  color: var(--accent);
+}
+
 .tree-item-chip-groups {
   align-items: center;
   display: flex;

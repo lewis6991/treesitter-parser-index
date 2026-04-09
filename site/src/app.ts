@@ -9,7 +9,7 @@ import type {
 } from './types.js';
 
 type CompatibilityRank = 0 | 1 | 2 | 3;
-type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release'>;
+type ActiveFilters = Pick<FilterState, 'search' | 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release' | 'abi'>;
 
 const LANGUAGE_ALIASES: Record<string, string> = {
   'c-sharp': 'c_sharp',
@@ -40,6 +40,7 @@ interface FilterState {
   install: 'all' | 'wasm' | 'shared-library' | 'source-archive' | 'build-from-source';
   scanner: 'all' | 'custom' | 'none';
   release: 'all' | 'semver' | 'none';
+  abi: 'all' | 'none' | `${number}`;
   selectedParserId: string | null;
   selectedQueryId: string | null;
   selectedCoverage: CoverageSelection | null;
@@ -149,6 +150,7 @@ const state: FilterState = {
   install: 'all',
   scanner: 'all',
   release: 'all',
+  abi: 'all',
   selectedParserId: null,
   selectedQueryId: null,
   selectedCoverage: null,
@@ -508,6 +510,7 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
   const visibleQueryKinds = visibleQueryKindsForPack(pack, resolvedLanguage);
   const compatibilityToken = compatibilityTokenLabel(pack, parser, rank);
   const filterChips = renderTreePackSupportChips(visibleQueryKinds, pack.targets);
+  const disclosureLabel = isSelected ? '▾' : '▸';
 
   return `
     <section class="tree-node tree-node-pack">
@@ -515,11 +518,14 @@ function renderTreePack(pack: QueryPack, rank: CompatibilityRank, parser: Parser
         <div class="tree-item-head">
           <div>
             <div class="tree-item-title-row">
+              <span class="tree-item-disclosure">${escapeHtml(disclosureLabel)}</span>
               <h4>${escapeHtml(pack.name)}</h4>
               ${filterChips ? `<div class="tree-item-chip-groups">${filterChips}</div>` : ''}
             </div>
           </div>
-          ${renderCompatibilityBadge(rank, 'tree-item-token', compatibilityToken)}
+          <div class="tree-item-side tree-item-side-pack">
+            ${renderCompatibilityBadge(rank, 'tree-item-token', compatibilityToken)}
+          </div>
         </div>
         <div class="tree-item-meta">
           <span class="tree-item-summary-inline">${renderPackageLink(pack.package)}</span>
@@ -856,6 +862,10 @@ function parserMatchesFilters(parser: ParserRelease, filters: ActiveFilters): bo
     return false;
   }
 
+  if (!matchesAbi(parser, filters.abi)) {
+    return false;
+  }
+
   const packFiltersWithoutSearch = {
     ...filters,
     search: '',
@@ -1049,6 +1059,21 @@ function matchesRelease(
   return !parser.upstreamSemver;
 }
 
+function matchesAbi(
+  parser: ParserRelease,
+  abi: ActiveFilters['abi'] = state.abi,
+): boolean {
+  if (abi === 'all') {
+    return true;
+  }
+
+  if (abi === 'none') {
+    return parser.abi === null;
+  }
+
+  return String(parser.abi) === abi;
+}
+
 function matchesCustomScanner(
   parser: ParserRelease,
   scanner: ActiveFilters['scanner'] = state.scanner,
@@ -1086,6 +1111,7 @@ function getParserSearchText(parser: ParserRelease): string {
     parser.bundledQueryKinds.join(' '),
     freshness === 'stale' ? 'stale inactive abandoned' : '',
     freshness === 'active' ? 'active maintained current' : '',
+    parser.abi === null ? 'no abi abi none' : `abi abi-${parser.abi} abi ${parser.abi}`,
     parser.capabilities.customScanner ? 'scanner custom scanner external scanner' : '',
     parser.capabilities.wasm ? 'wasm' : '',
     sharedLibraryArtifactFormats(parser).length ? 'shared library native shared object dylib dll so' : '',
@@ -1456,6 +1482,10 @@ function getCoverageParsers(): ParserRelease[] {
       return false;
     }
 
+    if (!matchesAbi(parser)) {
+      return false;
+    }
+
     if (
       state.queryKind !== 'all' &&
       !parser.bundledQueryKinds.includes(state.queryKind)
@@ -1476,6 +1506,7 @@ function getActiveFilters(): ActiveFilters {
     install: state.install,
     scanner: state.scanner,
     release: state.release,
+    abi: state.abi,
   };
 }
 
@@ -1526,6 +1557,12 @@ function restoreStateFromUrl(): void {
 
   if (release === 'semver' || release === 'none') {
     state.release = release;
+  }
+
+  const abi = params.get('abi');
+
+  if (abi === 'none' || /^\d+$/.test(abi ?? '')) {
+    state.abi = abi as FilterState['abi'];
   }
 
   const parserId = params.get('parser');
@@ -1615,6 +1652,10 @@ function searchParamsFromState(snapshot: FilterState): URLSearchParams {
     params.set('release', snapshot.release);
   }
 
+  if (snapshot.abi !== 'all') {
+    params.set('abi', snapshot.abi);
+  }
+
   if (snapshot.selectedParserId) {
     params.set('parser', snapshot.selectedParserId);
   }
@@ -1640,6 +1681,7 @@ function filterCacheKey(filters: ActiveFilters): string {
     filters.install,
     filters.scanner,
     filters.release,
+    filters.abi,
   ].join('\u0000');
 }
 
@@ -1883,6 +1925,17 @@ function renderParserLastUpdated(
 function renderParserSignalChips(parser: ParserRelease): string[] {
   const chips: string[] = [];
 
+  if (parser.abi !== null) {
+    chips.push(
+      renderFilterChip(
+        `abi ${renderParserAbi(parser)}`,
+        'chip chip-outline',
+        { 'data-filter-abi': renderParserAbi(parser) },
+        state.abi === renderParserAbi(parser),
+      ),
+    );
+  }
+
   if (parser.capabilities.customScanner) {
     chips.push(
       renderFilterChip(
@@ -2013,7 +2066,7 @@ function renderActiveFilterSelectControl(
   label: string,
   value: string,
   options: readonly FilterOption[],
-  filter: 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release',
+  filter: 'language' | 'editor' | 'queryKind' | 'install' | 'scanner' | 'release' | 'abi',
   className: string,
 ): string {
   const isActive = value !== 'all';
@@ -2276,7 +2329,8 @@ function renderActiveFilterStrip(): void {
     state.queryKind !== 'all' ||
     state.install !== 'all' ||
     state.scanner !== 'all' ||
-    state.release !== 'all',
+    state.release !== 'all' ||
+    state.abi !== 'all',
   );
   const allEditorOption: FilterOption = {
     value: 'all',
@@ -2373,6 +2427,34 @@ function renderActiveFilterStrip(): void {
       value,
       label: `${label} (${count})`,
     }));
+  const allAbiOption: FilterOption = {
+    value: 'all',
+    label: `All (${countFilteredParsers({ ...filters, abi: 'all' })})`,
+  };
+  const abiOptions = unique(
+    data.parsers
+      .map((parser) => parser.abi)
+      .filter((abi): abi is number => abi !== null)
+      .sort((left, right) => left - right)
+      .map(String),
+  );
+  const countedAbiOptions = [
+    {
+      value: 'none',
+      count: countFilteredParsers({ ...filters, abi: 'none' }),
+      label: 'No ABI',
+    },
+    ...abiOptions.map((value) => ({
+      value,
+      count: countFilteredParsers({ ...filters, abi: value as FilterState['abi'] }),
+      label: `ABI ${value}`,
+    })),
+  ]
+    .filter((option) => option.count > 0 || option.value === state.abi)
+    .map(({ value, label, count }) => ({
+      value,
+      label: `${label} (${count})`,
+    }));
 
   if (state.search) {
     chips.push(
@@ -2435,6 +2517,15 @@ function renderActiveFilterStrip(): void {
         : state.release === 'none'
           ? 'chip chip-active-filter chip-danger'
           : 'chip chip-active-filter chip-outline',
+    ),
+  );
+  chips.push(
+    renderActiveFilterSelectControl(
+      'ABI',
+      state.abi,
+      [allAbiOption, ...countedAbiOptions],
+      'abi',
+      'chip chip-active-filter chip-outline',
     ),
   );
 
@@ -2640,6 +2731,7 @@ function resetActiveFilters(): void {
   state.install = 'all';
   state.scanner = 'all';
   state.release = 'all';
+  state.abi = 'all';
 }
 
 function clickFilterAction(event: Event): boolean {
@@ -2650,7 +2742,7 @@ function clickFilterAction(event: Event): boolean {
   }
 
   const control = target.closest<HTMLElement>(
-    '[data-filter-search], [data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner], [data-filter-release], [data-clear-all-filters]',
+    '[data-filter-search], [data-filter-editor], [data-filter-query-kind], [data-filter-install], [data-filter-scanner], [data-filter-release], [data-filter-abi], [data-clear-all-filters]',
   );
 
   if (!control) {
@@ -2703,6 +2795,14 @@ function clickFilterAction(event: Event): boolean {
     return true;
   }
 
+  const abi = control.dataset['filterAbi'];
+
+  if (abi) {
+    state.abi = state.abi === abi ? 'all' : abi as FilterState['abi'];
+    renderFull();
+    return true;
+  }
+
   const install = control.dataset['filterInstall'] as FilterState['install'] | undefined;
 
   if (!install) {
@@ -2742,6 +2842,9 @@ function changeActiveFilterControl(event: Event): boolean {
       break;
     case 'release':
       state.release = target.value as FilterState['release'];
+      break;
+    case 'abi':
+      state.abi = target.value as FilterState['abi'];
       break;
     default:
       return false;
