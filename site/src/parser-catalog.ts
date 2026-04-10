@@ -39,12 +39,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
   },
   {
     "id": "parser-abl",
-    "name": "abl",
+    "name": "ABL",
     "language": "abl",
     "package": "github.com/usagi-coffee/tree-sitter-abl",
-    "version": "git-28053ba",
-    "sourceCommit": "28053ba2253e5a1985e76195533f75413f3fe997",
-    "lastUpdated": "2026-04-08",
+    "version": "git-063230b",
+    "sourceCommit": "063230bcefab85dd405a195f50009e9c6439b8d0",
+    "lastUpdated": "2026-04-10",
     "upstreamSemver": "0.0.51",
     "abi": 15,
     "owners": [
@@ -239,11 +239,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "queries/highlights.scm"
       ],
-      "locals": [
-        "queries/locals.scm"
-      ],
       "tags": [
         "queries/tags.scm"
+      ],
+      "locals": [
+        "queries/locals.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -1415,11 +1415,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "cfhtml/queries/highlights.scm"
       ],
-      "indents": [
-        "cfhtml/queries/indents.scm"
-      ],
       "injections": [
         "cfhtml/queries/injections.scm"
+      ],
+      "indents": [
+        "cfhtml/queries/indents.scm"
       ],
       "tags": [
         "cfhtml/queries/tags.scm"
@@ -1465,11 +1465,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "cfml/queries/highlights.scm"
       ],
-      "indents": [
-        "cfml/queries/indents.scm"
-      ],
       "injections": [
         "cfml/queries/injections.scm"
+      ],
+      "indents": [
+        "cfml/queries/indents.scm"
       ],
       "tags": [
         "cfml/queries/tags.scm"
@@ -2567,14 +2567,14 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "queries/highlights.scm"
       ],
-      "indents": [
-        "queries/indents.scm"
-      ],
       "locals": [
         "queries/locals.scm"
       ],
       "tags": [
         "queries/tags.scm"
+      ],
+      "indents": [
+        "queries/indents.scm"
       ],
       "textobjects": [
         "queries/textobjects.scm"
@@ -4988,20 +4988,20 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "locals"
     ],
     "bundledQueries": {
-      "folds": [
-        "queries/glimmer/folds.scm"
-      ],
       "highlights": [
         "queries/glimmer/highlights.scm"
-      ],
-      "indents": [
-        "queries/glimmer/indents.scm"
       ],
       "injections": [
         "queries/glimmer/injections.scm"
       ],
       "locals": [
         "queries/glimmer/locals.scm"
+      ],
+      "indents": [
+        "queries/glimmer/indents.scm"
+      ],
+      "folds": [
+        "queries/glimmer/folds.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -8689,11 +8689,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "helix-queries/highlights.scm"
       ],
-      "injections": [
-        "helix-queries/injections.scm"
-      ],
       "locals": [
         "helix-queries/locals.scm"
+      ],
+      "injections": [
+        "helix-queries/injections.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -12857,9 +12857,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Scala",
     "language": "scala",
     "package": "github.com/tree-sitter/tree-sitter-scala",
-    "version": "git-617e8af",
-    "sourceCommit": "617e8afd805658f497e0705dbf7678fbeffd479f",
-    "lastUpdated": "2026-04-09",
+    "version": "git-717d9ea",
+    "sourceCommit": "717d9eadbcb7bd14dc861840d8402d66759e1d65",
+    "lastUpdated": "2026-04-10",
     "upstreamSemver": "0.25.0",
     "abi": 15,
     "owners": [
@@ -13893,11 +13893,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "grammars/stan/queries/highlights.scm"
       ],
-      "locals": [
-        "grammars/stan/queries/locals.scm"
-      ],
       "tags": [
         "grammars/stan/queries/tags.scm"
+      ],
+      "locals": [
+        "grammars/stan/queries/locals.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -13937,11 +13937,11 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "grammars/stanfunctions/queries/sf-highlights.scm"
       ],
-      "locals": [
-        "grammars/stanfunctions/queries/sf-locals.scm"
-      ],
       "tags": [
         "grammars/stanfunctions/queries/sf-tags.scm"
+      ],
+      "locals": [
+        "grammars/stanfunctions/queries/sf-locals.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -13987,14 +13987,14 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "queries/highlights.scm"
       ],
-      "injections": [
-        "queries/injections.scm"
+      "tags": [
+        "queries/tags.scm"
       ],
       "locals": [
         "queries/locals.scm"
       ],
-      "tags": [
-        "queries/tags.scm"
+      "injections": [
+        "queries/injections.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -14581,14 +14581,14 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "highlights": [
         "queries/highlights.scm"
       ],
-      "injections": [
-        "queries/injections.scm"
-      ],
       "locals": [
         "queries/locals.scm"
       ],
       "tags": [
         "queries/tags.scm"
+      ],
+      "injections": [
+        "queries/injections.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -16587,14 +16587,14 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "injections"
     ],
     "bundledQueries": {
-      "folds": [
-        "queries/folds.scm"
-      ],
       "highlights": [
         "queries/highlights.scm"
       ],
       "injections": [
         "queries/injections.scm"
+      ],
+      "folds": [
+        "queries/folds.scm"
       ]
     },
     "bundledQueryEditors": [],
@@ -17240,9 +17240,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Zsh",
     "language": "zsh",
     "package": "github.com/georgeharker/tree-sitter-zsh",
-    "version": "git-a1741ee",
-    "sourceCommit": "a1741eec390116d5dd95745c58f9ec8e958fa98c",
-    "lastUpdated": "2026-04-08",
+    "version": "git-afd08f9",
+    "sourceCommit": "afd08f9fa687d114e9342d077ba26b842a28c631",
+    "lastUpdated": "2026-04-09",
     "upstreamSemver": "0.60.0",
     "abi": 15,
     "owners": [
