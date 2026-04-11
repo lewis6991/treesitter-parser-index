@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10",
+  "generatedAt": "2026-04-11",
   "kind": "prototype-query-packs",
   "count": 228,
   "items": [
@@ -6301,7 +6301,7 @@
       "id": "pack-neovim-matchup",
       "name": "vim-matchup",
       "package": "github.com/andymass/vim-matchup",
-      "version": "git-0fb1e6b",
+      "version": "git-dccb2d1",
       "languages": [
         "astro",
         "bash",
@@ -8083,7 +8083,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-03d2b4a",
+      "version": "git-eb49c5e",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-081081e",
+      "version": "git-45c0ced",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-081081e",
+      "version": "git-45c0ced",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-081081e",
+      "version": "git-45c0ced",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-081081e",
+      "version": "git-45c0ced",
       "languages": [
         "proto"
       ],
@@ -12691,7 +12691,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-063230b",
+      "version": "git-43fa3a2",
       "languages": [
         "abl"
       ],
@@ -12722,7 +12722,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-063230b"
+          "github.com/usagi-coffee/tree-sitter-abl@git-43fa3a2"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -12843,11 +12843,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -13265,11 +13265,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfhtml/queries/injections.scm"
-        ],
         "indents": [
           "cfhtml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfhtml/queries/injections.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -13323,11 +13323,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -14127,14 +14127,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
+        "indents": [
+          "queries/indents.scm"
+        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
-        ],
-        "indents": [
-          "queries/indents.scm"
         ],
         "textobjects": [
           "queries/textobjects.scm"
@@ -15408,20 +15408,20 @@
         "locals"
       ],
       "queries": {
+        "folds": [
+          "queries/glimmer/folds.scm"
+        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
-        ],
-        "folds": [
-          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
@@ -16534,7 +16534,7 @@
       "id": "pack-parser-parser-fwcd-kotlin-kotlin",
       "name": "Kotlin Parser Bundle",
       "package": "github.com/fwcd/tree-sitter-kotlin",
-      "version": "git-6032dfd",
+      "version": "git-57170e5",
       "languages": [
         "kotlin"
       ],
@@ -16572,7 +16572,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/fwcd/tree-sitter-kotlin@git-6032dfd"
+          "github.com/fwcd/tree-sitter-kotlin@git-57170e5"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -16788,11 +16788,11 @@
         "highlights": [
           "helix-queries/highlights.scm"
         ],
-        "locals": [
-          "helix-queries/locals.scm"
-        ],
         "injections": [
           "helix-queries/injections.scm"
+        ],
+        "locals": [
+          "helix-queries/locals.scm"
         ]
       },
       "parserCompatibility": {
@@ -17058,7 +17058,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-60d1fee",
+      "version": "git-38b1ab3",
       "languages": [
         "mlir"
       ],
@@ -17094,7 +17094,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-60d1fee"
+          "github.com/artagnon/tree-sitter-mlir@git-38b1ab3"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -18913,7 +18913,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-717d9ea",
+      "version": "git-d1722b5",
       "languages": [
         "scala"
       ],
@@ -18954,7 +18954,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-717d9ea"
+          "github.com/tree-sitter/tree-sitter-scala@git-d1722b5"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19345,7 +19345,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-c01c35b",
+      "version": "git-2223c63",
       "languages": [
         "ssh-client-config"
       ],
@@ -19376,7 +19376,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-c01c35b"
+          "github.com/metio/tree-sitter-ssh-client-config@git-2223c63"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19462,11 +19462,11 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "tags": [
-          "grammars/stan/queries/tags.scm"
-        ],
         "locals": [
           "grammars/stan/queries/locals.scm"
+        ],
+        "tags": [
+          "grammars/stan/queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19512,11 +19512,11 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "tags": [
-          "grammars/stanfunctions/queries/sf-tags.scm"
-        ],
         "locals": [
           "grammars/stanfunctions/queries/sf-locals.scm"
+        ],
+        "tags": [
+          "grammars/stanfunctions/queries/sf-tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19564,14 +19564,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
+        "injections": [
+          "queries/injections.scm"
         ],
         "locals": [
           "queries/locals.scm"
         ],
-        "injections": [
-          "queries/injections.scm"
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19749,14 +19749,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
+        "injections": [
+          "queries/injections.scm"
+        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
-        ],
-        "injections": [
-          "queries/injections.scm"
         ]
       },
       "parserCompatibility": {
@@ -20664,14 +20664,14 @@
         "injections"
       ],
       "queries": {
+        "folds": [
+          "queries/folds.scm"
+        ],
         "highlights": [
           "queries/highlights.scm"
         ],
         "injections": [
           "queries/injections.scm"
-        ],
-        "folds": [
-          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
