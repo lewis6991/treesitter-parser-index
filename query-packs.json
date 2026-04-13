@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12",
+  "generatedAt": "2026-04-13",
   "kind": "prototype-query-packs",
   "count": 228,
   "items": [
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5a47e98",
+      "version": "git-497b6de",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5a47e98",
+      "version": "git-497b6de",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5a47e98",
+      "version": "git-497b6de",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5a47e98",
+      "version": "git-497b6de",
       "languages": [
         "proto"
       ],
@@ -12691,7 +12691,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-43fa3a2",
+      "version": "git-b854b8d",
       "languages": [
         "abl"
       ],
@@ -12722,7 +12722,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-43fa3a2"
+          "github.com/usagi-coffee/tree-sitter-abl@git-b854b8d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13265,11 +13265,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfhtml/queries/injections.scm"
-        ],
         "indents": [
           "cfhtml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfhtml/queries/injections.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -13323,11 +13323,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -15990,7 +15990,7 @@
       "id": "pack-parser-parser-idl",
       "name": "idl Parser Bundle",
       "package": "github.com/cathaysia/tree-sitter-idl",
-      "version": "git-fb65762",
+      "version": "git-123e30e",
       "languages": [
         "idl"
       ],
@@ -16021,7 +16021,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cathaysia/tree-sitter-idl@git-fb65762"
+          "github.com/cathaysia/tree-sitter-idl@git-123e30e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19620,7 +19620,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-da7f937",
+      "version": "git-64f26c3",
       "languages": [
         "swift"
       ],
@@ -19661,7 +19661,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-da7f937"
+          "github.com/alex-pinkus/tree-sitter-swift@git-64f26c3"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
