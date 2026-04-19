@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-18",
+  "generatedAt": "2026-04-19",
   "kind": "prototype-query-packs",
   "count": 228,
   "items": [
@@ -12691,7 +12691,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-b854b8d",
+      "version": "git-d92c556",
       "languages": [
         "abl"
       ],
@@ -12722,7 +12722,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-b854b8d"
+          "github.com/usagi-coffee/tree-sitter-abl@git-d92c556"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17398,7 +17398,7 @@
       "id": "pack-parser-parser-ocaml",
       "name": "OCaml Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-35c9d3e",
+      "version": "git-2c40c13",
       "languages": [
         "ocaml"
       ],
@@ -17439,7 +17439,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-35c9d3e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-2c40c13"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17448,7 +17448,7 @@
       "id": "pack-parser-parser-ocaml-interface",
       "name": "OCamlInterface Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-35c9d3e",
+      "version": "git-2c40c13",
       "languages": [
         "ocaml_interface"
       ],
@@ -17489,7 +17489,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-35c9d3e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-2c40c13"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17543,7 +17543,7 @@
       "id": "pack-parser-parser-ocaml-type",
       "name": "OCamlType Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-35c9d3e",
+      "version": "git-2c40c13",
       "languages": [
         "ocaml_type"
       ],
@@ -17584,7 +17584,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-35c9d3e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-2c40c13"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18378,7 +18378,7 @@
       "id": "pack-parser-parser-razor",
       "name": "Razor Parser Bundle",
       "package": "github.com/tris203/tree-sitter-razor",
-      "version": "git-1e8ec29",
+      "version": "git-a57265c",
       "languages": [
         "razor"
       ],
@@ -18409,7 +18409,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tris203/tree-sitter-razor@git-1e8ec29"
+          "github.com/tris203/tree-sitter-razor@git-a57265c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18908,7 +18908,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-a06047e",
+      "version": "git-38950b5",
       "languages": [
         "scala"
       ],
@@ -18949,7 +18949,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-a06047e"
+          "github.com/tree-sitter/tree-sitter-scala@git-38950b5"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
