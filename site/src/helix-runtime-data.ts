@@ -2949,7 +2949,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/slint-ui/tree-sitter-slint@git-f11da7e"
+      "github.com/slint-ui/tree-sitter-slint@git-68b2524"
     ]
   },
   {
