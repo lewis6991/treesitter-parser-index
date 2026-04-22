@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21",
+  "generatedAt": "2026-04-22",
   "kind": "prototype-languages",
   "count": 509,
   "items": [
@@ -3740,7 +3740,7 @@
     {
       "language": "haxe",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "helix",
         "lapce"
@@ -3753,6 +3753,7 @@
         "tags"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,
