@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22",
+  "generatedAt": "2026-04-24",
   "kind": "prototype-query-packs",
   "count": 229,
   "items": [
@@ -8083,7 +8083,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-1ffcd3a",
+      "version": "git-3beb268",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-14f0a25",
+      "version": "git-20c4fb0",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-14f0a25",
+      "version": "git-20c4fb0",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-14f0a25",
+      "version": "git-20c4fb0",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-14f0a25",
+      "version": "git-20c4fb0",
       "languages": [
         "proto"
       ],
@@ -13083,7 +13083,7 @@
       "id": "pack-parser-parser-c",
       "name": "C Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-c",
-      "version": "git-ae19b67",
+      "version": "git-b780e47",
       "languages": [
         "c"
       ],
@@ -13119,7 +13119,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-c@git-ae19b67"
+          "github.com/tree-sitter/tree-sitter-c@git-b780e47"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17343,7 +17343,7 @@
       "id": "pack-parser-parser-nushell-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/nushell/tree-sitter-nu",
-      "version": "git-696d257",
+      "version": "git-348b787",
       "languages": [
         "nu"
       ],
@@ -17379,7 +17379,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nushell/tree-sitter-nu@git-696d257"
+          "github.com/nushell/tree-sitter-nu@git-348b787"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -17856,7 +17856,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-f9405e4",
+      "version": "git-e800f06",
       "languages": [
         "pkl"
       ],
@@ -17897,7 +17897,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-f9405e4"
+          "github.com/apple/tree-sitter-pkl@git-e800f06"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18578,7 +18578,7 @@
       "id": "pack-parser-parser-rescript",
       "name": "ReScript Parser Bundle",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-1e04f06",
+      "version": "git-3184459",
       "languages": [
         "rescript"
       ],
@@ -18619,7 +18619,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rescript-lang/tree-sitter-rescript@git-1e04f06"
+          "github.com/rescript-lang/tree-sitter-rescript@git-3184459"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18948,7 +18948,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-38950b5",
+      "version": "git-797335c",
       "languages": [
         "scala"
       ],
@@ -18989,7 +18989,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-38950b5"
+          "github.com/tree-sitter/tree-sitter-scala@git-797335c"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
