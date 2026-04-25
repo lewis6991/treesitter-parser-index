@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24",
+  "generatedAt": "2026-04-25",
   "kind": "prototype-languages",
   "count": 509,
   "items": [
@@ -2581,7 +2581,8 @@
         "folds",
         "highlights",
         "indents",
-        "injections"
+        "injections",
+        "tags"
       ],
       "queryRoots": [
         "queries",
