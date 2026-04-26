@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25",
+  "generatedAt": "2026-04-26",
   "kind": "prototype-query-packs",
   "count": 229,
   "items": [
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7cfdc06",
+      "version": "git-832c17e",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7cfdc06",
+      "version": "git-832c17e",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7cfdc06",
+      "version": "git-832c17e",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7cfdc06",
+      "version": "git-832c17e",
       "languages": [
         "proto"
       ],
@@ -12861,7 +12861,7 @@
       "id": "pack-parser-parser-apex",
       "name": "apex Parser Bundle",
       "package": "github.com/aheber/tree-sitter-sfapex",
-      "version": "git-77632e1",
+      "version": "git-94f1e55",
       "languages": [
         "apex"
       ],
@@ -12899,7 +12899,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/aheber/tree-sitter-sfapex@git-77632e1"
+          "github.com/aheber/tree-sitter-sfapex@git-94f1e55"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13265,11 +13265,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfhtml/queries/injections.scm"
-        ],
         "indents": [
           "cfhtml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfhtml/queries/injections.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -13323,11 +13323,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -18583,7 +18583,7 @@
       "id": "pack-parser-parser-rescript",
       "name": "ReScript Parser Bundle",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-cafdc4f",
+      "version": "git-7dbc8a8",
       "languages": [
         "rescript"
       ],
@@ -18624,7 +18624,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rescript-lang/tree-sitter-rescript@git-cafdc4f"
+          "github.com/rescript-lang/tree-sitter-rescript@git-7dbc8a8"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18953,7 +18953,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-f87cb86",
+      "version": "git-e805b80",
       "languages": [
         "scala"
       ],
@@ -18994,7 +18994,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-f87cb86"
+          "github.com/tree-sitter/tree-sitter-scala@git-e805b80"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19058,7 +19058,7 @@
       "id": "pack-parser-parser-sflog",
       "name": "sfLog Parser Bundle",
       "package": "github.com/aheber/tree-sitter-sfapex",
-      "version": "git-77632e1",
+      "version": "git-94f1e55",
       "languages": [
         "sflog"
       ],
@@ -19089,7 +19089,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/aheber/tree-sitter-sfapex@git-77632e1"
+          "github.com/aheber/tree-sitter-sfapex@git-94f1e55"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19263,7 +19263,7 @@
       "id": "pack-parser-parser-soql",
       "name": "soql Parser Bundle",
       "package": "github.com/aheber/tree-sitter-sfapex",
-      "version": "git-77632e1",
+      "version": "git-94f1e55",
       "languages": [
         "soql"
       ],
@@ -19295,7 +19295,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/aheber/tree-sitter-sfapex@git-77632e1"
+          "github.com/aheber/tree-sitter-sfapex@git-94f1e55"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19304,7 +19304,7 @@
       "id": "pack-parser-parser-sosl",
       "name": "sosl Parser Bundle",
       "package": "github.com/aheber/tree-sitter-sfapex",
-      "version": "git-77632e1",
+      "version": "git-94f1e55",
       "languages": [
         "sosl"
       ],
@@ -19336,7 +19336,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/aheber/tree-sitter-sfapex@git-77632e1"
+          "github.com/aheber/tree-sitter-sfapex@git-94f1e55"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
