@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27",
+  "generatedAt": "2026-04-28",
   "kind": "prototype-languages",
   "count": 509,
   "items": [
@@ -885,7 +885,9 @@
       "language": "cfquery",
       "parserCount": 1,
       "queryPackCount": 1,
-      "editors": [],
+      "editors": [
+        "neovim"
+      ],
       "queryKinds": [
         "highlights",
         "tags"
