@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01",
+  "generatedAt": "2026-05-02",
   "kind": "prototype-query-packs",
   "count": 229,
   "items": [
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-950161f",
+      "version": "git-9155bf4",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-950161f",
+      "version": "git-9155bf4",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-950161f",
+      "version": "git-9155bf4",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-950161f",
+      "version": "git-9155bf4",
       "languages": [
         "proto"
       ],
@@ -16122,7 +16122,7 @@
       "id": "pack-parser-parser-javadoc",
       "name": "Javadoc Parser Bundle",
       "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-11ec3cd",
+      "version": "git-93d488b",
       "languages": [
         "javadoc"
       ],
@@ -16158,7 +16158,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rmuir/tree-sitter-javadoc@git-11ec3cd"
+          "github.com/rmuir/tree-sitter-javadoc@git-93d488b"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -18585,7 +18585,7 @@
       "id": "pack-parser-parser-rescript",
       "name": "ReScript Parser Bundle",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-5b90cd4",
+      "version": "git-1964cef",
       "languages": [
         "rescript"
       ],
@@ -18626,7 +18626,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rescript-lang/tree-sitter-rescript@git-5b90cd4"
+          "github.com/rescript-lang/tree-sitter-rescript@git-1964cef"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -20502,7 +20502,7 @@
       "id": "pack-parser-parser-vhdl",
       "name": "Vhdl Parser Bundle",
       "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-9df4e7a",
+      "version": "git-b8e31d1",
       "languages": [
         "vhdl"
       ],
@@ -20533,7 +20533,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/jpt13653903/tree-sitter-vhdl@git-9df4e7a"
+          "github.com/jpt13653903/tree-sitter-vhdl@git-b8e31d1"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
