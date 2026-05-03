@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02",
+  "generatedAt": "2026-05-03",
   "kind": "prototype-parsers",
   "count": 509,
   "items": [
@@ -1302,22 +1302,45 @@
       "version": "git-ba89b51"
     },
     {
+      "id": "parser-cfhtml",
+      "name": "Cfhtml",
+      "language": "cfhtml",
+      "package": "github.com/cfmleditor/tree-sitter-cfml",
+      "version": "git-f90a2c6",
+      "sourceCommit": "f90a2c61fdc6994c63ac0f1fa62bd6821a2cc328",
+      "lastUpdated": "2026-05-03",
+      "upstreamSemver": "0.26.8",
       "abi": 15,
+      "owners": [
+        "cfmleditor"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "tags"
       ],
       "bundledQueries": {
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfhtml/queries/indents.scm"
-        ],
         "injections": [
           "cfhtml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfhtml/queries/indents.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -1326,11 +1349,20 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "indents",
-        "injections",
-        "tags"
+      "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.8. Grammar path cfhtml."
+    },
+    {
+      "id": "parser-cfml",
+      "name": "Cfml",
+      "language": "cfml",
+      "package": "github.com/cfmleditor/tree-sitter-cfml",
+      "version": "git-f90a2c6",
+      "sourceCommit": "f90a2c61fdc6994c63ac0f1fa62bd6821a2cc328",
+      "lastUpdated": "2026-05-03",
+      "upstreamSemver": "0.26.8",
+      "abi": 15,
+      "owners": [
+        "cfmleditor"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -1338,36 +1370,27 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-cfhtml",
-      "language": "cfhtml",
-      "lastUpdated": "2026-04-29",
-      "name": "Cfhtml",
-      "owners": [
-        "cfmleditor"
-      ],
-      "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "sourceCommit": "afb8d70917830d37b8c549cac41a8377b3c19593",
-      "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.6. Grammar path cfhtml.",
-      "upstreamSemver": "0.26.6",
-      "version": "git-afb8d70"
-    },
-    {
-      "abi": 15,
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "tags"
       ],
       "bundledQueries": {
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfml/queries/indents.scm"
-        ],
         "injections": [
           "cfml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfml/queries/indents.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -1376,11 +1399,20 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "indents",
-        "injections",
-        "tags"
+      "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.8. Grammar path cfml."
+    },
+    {
+      "id": "parser-cfquery",
+      "name": "Cfquery",
+      "language": "cfquery",
+      "package": "github.com/cfmleditor/tree-sitter-cfml",
+      "version": "git-f90a2c6",
+      "sourceCommit": "f90a2c61fdc6994c63ac0f1fa62bd6821a2cc328",
+      "lastUpdated": "2026-05-03",
+      "upstreamSemver": "0.26.8",
+      "abi": 15,
+      "owners": [
+        "cfmleditor"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -1388,26 +1420,15 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-cfml",
-      "language": "cfml",
-      "lastUpdated": "2026-04-29",
-      "name": "Cfml",
-      "owners": [
-        "cfmleditor"
-      ],
-      "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "sourceCommit": "afb8d70917830d37b8c549cac41a8377b3c19593",
-      "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.6. Grammar path cfml.",
-      "upstreamSemver": "0.26.6",
-      "version": "git-afb8d70"
-    },
-    {
-      "abi": 15,
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "tags"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1420,9 +1441,20 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "tags"
+      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.8. Grammar path cfquery."
+    },
+    {
+      "id": "parser-cfscript",
+      "name": "Cfscript",
+      "language": "cfscript",
+      "package": "github.com/cfmleditor/tree-sitter-cfml",
+      "version": "git-f90a2c6",
+      "sourceCommit": "f90a2c61fdc6994c63ac0f1fa62bd6821a2cc328",
+      "lastUpdated": "2026-05-03",
+      "upstreamSemver": "0.26.8",
+      "abi": 15,
+      "owners": [
+        "cfmleditor"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -1430,26 +1462,15 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-cfquery",
-      "language": "cfquery",
-      "lastUpdated": "2026-04-29",
-      "name": "Cfquery",
-      "owners": [
-        "cfmleditor"
-      ],
-      "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "sourceCommit": "afb8d70917830d37b8c549cac41a8377b3c19593",
-      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.6. Grammar path cfquery.",
-      "upstreamSemver": "0.26.6",
-      "version": "git-afb8d70"
-    },
-    {
-      "abi": 15,
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "tags"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1460,28 +1481,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "tags"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
-      "id": "parser-cfscript",
-      "language": "cfscript",
-      "lastUpdated": "2026-04-29",
-      "name": "Cfscript",
-      "owners": [
-        "cfmleditor"
-      ],
-      "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "sourceCommit": "afb8d70917830d37b8c549cac41a8377b3c19593",
-      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.6. Grammar path cfscript.",
-      "upstreamSemver": "0.26.6",
-      "version": "git-afb8d70"
+      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.8. Grammar path cfscript."
     },
     {
       "abi": null,
@@ -2723,26 +2723,17 @@
       "version": "git-954da72"
     },
     {
+      "id": "parser-devicetree",
+      "name": "Devicetree",
+      "language": "devicetree",
+      "package": "github.com/joelspadin/tree-sitter-devicetree",
+      "version": "git-e78bf56",
+      "sourceCommit": "e78bf56f206cb47bee28a217423acb651e076848",
+      "lastUpdated": "2026-05-02",
+      "upstreamSemver": "0.15.0",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        },
-        {
-          "format": "wasm",
-          "kind": "release-asset",
-          "name": "tree-sitter-devicetree.wasm"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "joelspadin"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -2750,18 +2741,27 @@
         "sourceArchive": true,
         "wasm": true
       },
-      "id": "parser-devicetree",
-      "language": "devicetree",
-      "lastUpdated": "2025-11-02",
-      "name": "Devicetree",
-      "owners": [
-        "joelspadin"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        },
+        {
+          "kind": "release-asset",
+          "format": "wasm",
+          "name": "tree-sitter-devicetree.wasm"
+        }
       ],
-      "package": "github.com/joelspadin/tree-sitter-devicetree",
-      "sourceCommit": "e685f1f6ac1702b046415efb476444167d63e41a",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.15.0.",
-      "upstreamSemver": "0.15.0",
-      "version": "git-e685f1f"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.15.0."
     },
     {
       "abi": 15,
@@ -7021,38 +7021,17 @@
       "version": "git-e10607b"
     },
     {
-      "id": "parser-javadoc",
-      "name": "Javadoc",
-      "language": "javadoc",
-      "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-93d488b",
-      "sourceCommit": "93d488bb1472c9a83776cd22cd8fd756a9da8161",
-      "lastUpdated": "2026-05-01",
-      "upstreamSemver": "0.3.1",
       "abi": 15,
-      "owners": [
-        "rmuir"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-javadoc.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections"
       ],
       "bundledQueries": {
         "highlights": [
@@ -7063,7 +7042,28 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1."
+      "bundledQueryKinds": [
+        "highlights",
+        "injections"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-javadoc",
+      "language": "javadoc",
+      "lastUpdated": "2026-05-01",
+      "name": "Javadoc",
+      "owners": [
+        "rmuir"
+      ],
+      "package": "github.com/rmuir/tree-sitter-javadoc",
+      "sourceCommit": "93d488bb1472c9a83776cd22cd8fd756a9da8161",
+      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1.",
+      "upstreamSemver": "0.3.1",
+      "version": "git-93d488b"
     },
     {
       "abi": 15,
@@ -12535,9 +12535,9 @@
       "name": "ReScript",
       "language": "rescript",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-1964cef",
-      "sourceCommit": "1964cef607800fbc03ebba7bec08d193b5aedf7b",
-      "lastUpdated": "2026-05-01",
+      "version": "git-5c71beb",
+      "sourceCommit": "5c71bebe716dc89ca84b816f9646456dd85666cc",
+      "lastUpdated": "2026-05-02",
       "upstreamSemver": "6.0.0",
       "abi": 15,
       "owners": [
@@ -15537,34 +15537,34 @@
       "version": "git-cfca210"
     },
     {
-      "id": "parser-tree-sitter-vcl",
-      "name": "TreeSitterVcl",
-      "language": "tree_sitter_vcl",
-      "package": "github.com/ntsk/tree-sitter-vcl",
-      "version": "git-3cc3657",
-      "sourceCommit": "3cc36571551c3a3ddce4df994982e410cafeb0ff",
-      "lastUpdated": "2026-05-01",
-      "upstreamSemver": "0.2.1",
       "abi": 15,
-      "owners": [
-        "ntsk"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-tree-sitter-vcl",
+      "language": "tree_sitter_vcl",
+      "lastUpdated": "2026-05-01",
+      "name": "TreeSitterVcl",
+      "owners": [
+        "ntsk"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.2.1."
+      "package": "github.com/ntsk/tree-sitter-vcl",
+      "sourceCommit": "3cc36571551c3a3ddce4df994982e410cafeb0ff",
+      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.2.1.",
+      "upstreamSemver": "0.2.1",
+      "version": "git-3cc3657"
     },
     {
       "abi": 15,
@@ -16314,37 +16314,17 @@
       "version": "git-227d277"
     },
     {
-      "id": "parser-vhdl",
-      "name": "Vhdl",
-      "language": "vhdl",
-      "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-b8e31d1",
-      "sourceCommit": "b8e31d110c6b039899d0f307792bdb0ff50ece2c",
-      "lastUpdated": "2026-05-01",
-      "upstreamSemver": "1.5.0",
       "abi": 15,
-      "owners": [
-        "jpt13653903"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-vhdl.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -16352,7 +16332,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.5.0."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-vhdl",
+      "language": "vhdl",
+      "lastUpdated": "2026-05-01",
+      "name": "Vhdl",
+      "owners": [
+        "jpt13653903"
+      ],
+      "package": "github.com/jpt13653903/tree-sitter-vhdl",
+      "sourceCommit": "b8e31d110c6b039899d0f307792bdb0ff50ece2c",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.5.0.",
+      "upstreamSemver": "1.5.0",
+      "version": "git-b8e31d1"
     },
     {
       "abi": 14,
