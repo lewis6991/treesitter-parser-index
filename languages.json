@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-05",
+  "generatedAt": "2026-05-06",
   "kind": "prototype-languages",
-  "count": 509,
+  "count": 510,
   "items": [
     {
       "language": "_gjs",
@@ -1149,6 +1149,21 @@
       "queryRoots": [
         "queries",
         "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "containerfile",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights",
+        "injections"
+      ],
+      "queryRoots": [
+        "queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -6805,8 +6820,8 @@
     },
     {
       "language": "powershell",
-      "parserCount": 1,
-      "queryPackCount": 4,
+      "parserCount": 2,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
@@ -9404,16 +9419,6 @@
       "hasReleaseArtifacts": true
     },
     {
-      "language": "tree_sitter_vcl",
-      "parserCount": 1,
-      "queryPackCount": 0,
-      "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
-      "hasWasm": false,
-      "hasReleaseArtifacts": true
-    },
-    {
       "language": "treesitter_gularen",
       "parserCount": 1,
       "queryPackCount": 1,
@@ -9840,6 +9845,16 @@
     },
     {
       "language": "vcard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "vcl",
       "parserCount": 1,
       "queryPackCount": 0,
       "editors": [],
