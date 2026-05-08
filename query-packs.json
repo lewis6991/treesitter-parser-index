@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07",
+  "generatedAt": "2026-05-08",
   "kind": "prototype-query-packs",
   "count": 232,
   "items": [
@@ -8083,7 +8083,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-87d5c05",
+      "version": "git-7d92fbd",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12219,7 +12219,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6aa90e7",
+      "version": "git-6766514",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12542,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6aa90e7",
+      "version": "git-6766514",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12585,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6aa90e7",
+      "version": "git-6766514",
       "languages": [
         "html"
       ],
@@ -12640,7 +12640,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6aa90e7",
+      "version": "git-6766514",
       "languages": [
         "proto"
       ],
@@ -14233,7 +14233,7 @@
       "id": "pack-parser-parser-dart",
       "name": "Dart Parser Bundle",
       "package": "github.com/UserNobody14/tree-sitter-dart",
-      "version": "git-02e9bb1",
+      "version": "git-507c554",
       "languages": [
         "dart"
       ],
@@ -14269,7 +14269,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/UserNobody14/tree-sitter-dart@git-02e9bb1"
+          "github.com/UserNobody14/tree-sitter-dart@git-507c554"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -19792,7 +19792,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-ed1196c",
+      "version": "git-30f3056",
       "languages": [
         "swift"
       ],
@@ -19833,7 +19833,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-ed1196c"
+          "github.com/alex-pinkus/tree-sitter-swift@git-30f3056"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

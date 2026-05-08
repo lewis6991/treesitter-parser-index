@@ -652,32 +652,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-501133e"
   },
   {
-    "id": "parser-batch",
-    "name": "Batch",
-    "language": "batch",
-    "package": "github.com/wharflab/tree-sitter-batch",
-    "version": "git-cc33462",
-    "sourceCommit": "cc334624b317c8dde21bbb9805b06ef761fcd958",
-    "lastUpdated": "2026-04-25",
-    "upstreamSemver": "0.11.1",
     "abi": 14,
-    "owners": [
-      "wharflab"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -685,7 +665,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.11.1."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-batch",
+    "language": "batch",
+    "lastUpdated": "2026-04-25",
+    "name": "Batch",
+    "owners": [
+      "wharflab"
+    ],
+    "package": "github.com/wharflab/tree-sitter-batch",
+    "sourceCommit": "cc334624b317c8dde21bbb9805b06ef761fcd958",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.11.1.",
+    "upstreamSemver": "0.11.1",
+    "version": "git-cc33462"
   },
   {
     "abi": 15,
@@ -2658,12 +2658,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-47f97f8"
   },
   {
+    "id": "parser-dart",
+    "name": "Dart",
+    "language": "dart",
+    "package": "github.com/UserNobody14/tree-sitter-dart",
+    "version": "git-507c554",
+    "sourceCommit": "507c5546dc73667c03d36803ee9bd4df0bbe4b0b",
+    "lastUpdated": "2026-05-08",
+    "upstreamSemver": "1.0.0",
     "abi": 15,
+    "owners": [
+      "UserNobody14"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -2674,28 +2695,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-dart",
-    "language": "dart",
-    "lastUpdated": "2026-05-06",
-    "name": "Dart",
-    "owners": [
-      "UserNobody14"
-    ],
-    "package": "github.com/UserNobody14/tree-sitter-dart",
-    "sourceCommit": "02e9bb191c7cb6c73cbd9e09a5d089e4496f9cff",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 1.0.0.",
-    "upstreamSemver": "1.0.0",
-    "version": "git-02e9bb1"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 1.0.0."
   },
   {
     "abi": 14,
@@ -9040,43 +9040,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5ffe71b"
   },
   {
-    "id": "parser-markdown",
-    "name": "Markdown",
-    "language": "markdown",
-    "package": "github.com/tree-sitter-grammars/tree-sitter-markdown",
-    "version": "git-c357072",
-    "sourceCommit": "c3570720f7f7bbad22fe96603f106276618e0cf5",
-    "lastUpdated": "2026-05-06",
-    "upstreamSemver": "0.5.3",
     "abi": 15,
-    "owners": [
-      "tree-sitter-grammars"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-markdown.wasm"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-markdown_inline.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -9087,20 +9066,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.5.3. Maintained in tree-sitter-grammars. Grammar path tree-sitter-markdown."
-  },
-  {
-    "id": "parser-markdown-inline",
-    "name": "MarkdownInline",
-    "language": "markdown_inline",
-    "package": "github.com/tree-sitter-grammars/tree-sitter-markdown",
-    "version": "git-c357072",
-    "sourceCommit": "c3570720f7f7bbad22fe96603f106276618e0cf5",
-    "lastUpdated": "2026-05-06",
-    "upstreamSemver": "0.5.3",
-    "abi": 15,
-    "owners": [
-      "tree-sitter-grammars"
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -9108,25 +9076,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
+    "id": "parser-markdown",
+    "language": "markdown",
+    "lastUpdated": "2026-05-06",
+    "name": "Markdown",
+    "owners": [
+      "tree-sitter-grammars"
+    ],
+    "package": "github.com/tree-sitter-grammars/tree-sitter-markdown",
+    "sourceCommit": "c3570720f7f7bbad22fe96603f106276618e0cf5",
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.5.3. Maintained in tree-sitter-grammars. Grammar path tree-sitter-markdown.",
+    "upstreamSemver": "0.5.3",
+    "version": "git-c357072"
+  },
+  {
+    "abi": 15,
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-markdown.wasm"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-markdown_inline.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -9137,7 +9116,28 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.5.3. Maintained in tree-sitter-grammars. Grammar path tree-sitter-markdown-inline."
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
+    "id": "parser-markdown-inline",
+    "language": "markdown_inline",
+    "lastUpdated": "2026-05-06",
+    "name": "MarkdownInline",
+    "owners": [
+      "tree-sitter-grammars"
+    ],
+    "package": "github.com/tree-sitter-grammars/tree-sitter-markdown",
+    "sourceCommit": "c3570720f7f7bbad22fe96603f106276618e0cf5",
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.5.3. Maintained in tree-sitter-grammars. Grammar path tree-sitter-markdown-inline.",
+    "upstreamSemver": "0.5.3",
+    "version": "git-c357072"
   },
   {
     "abi": 15,
@@ -14406,9 +14406,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Swift",
     "language": "swift",
     "package": "github.com/alex-pinkus/tree-sitter-swift",
-    "version": "git-ed1196c",
-    "sourceCommit": "ed1196c32ee83edda764b7f581800edc7ca92fa4",
-    "lastUpdated": "2026-05-06",
+    "version": "git-30f3056",
+    "sourceCommit": "30f30560932cf5b6ab26a383b372233db461b80a",
+    "lastUpdated": "2026-05-08",
     "upstreamSemver": "0.7.2-pypi",
     "abi": null,
     "owners": [
