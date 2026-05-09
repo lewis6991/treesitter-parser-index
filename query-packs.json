@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08",
+  "generatedAt": "2026-05-09",
   "kind": "prototype-query-packs",
   "count": 232,
   "items": [
@@ -8083,7 +8083,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-7d92fbd",
+      "version": "git-107b9e9",
       "languages": [
         "_gjs",
         "_javascript",
@@ -10728,7 +10728,8 @@
         {
           "language": "openscad",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "injections"
           ],
           "testedParserRefs": [
             "github.com/openscad/tree-sitter-openscad@git-acc196e"
@@ -12219,7 +12220,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6766514",
+      "version": "git-5409d47",
       "languages": [
         "bash",
         "c",
@@ -12542,7 +12543,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6766514",
+      "version": "git-5409d47",
       "languages": [
         "glsl"
       ],
@@ -12585,7 +12586,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6766514",
+      "version": "git-5409d47",
       "languages": [
         "html"
       ],
@@ -12640,7 +12641,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6766514",
+      "version": "git-5409d47",
       "languages": [
         "proto"
       ],
@@ -17185,7 +17186,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-63dc64a",
+      "version": "git-40cecd3",
       "languages": [
         "mlir"
       ],
@@ -17221,7 +17222,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-63dc64a"
+          "github.com/artagnon/tree-sitter-mlir@git-40cecd3"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -18710,7 +18711,7 @@
       "id": "pack-parser-parser-rescript",
       "name": "ReScript Parser Bundle",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-5c71beb",
+      "version": "git-990214a",
       "languages": [
         "rescript"
       ],
@@ -18751,7 +18752,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rescript-lang/tree-sitter-rescript@git-5c71beb"
+          "github.com/rescript-lang/tree-sitter-rescript@git-990214a"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -19512,7 +19513,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-fa3475d",
+      "version": "git-96f7772",
       "languages": [
         "ssh-client-config"
       ],
@@ -19543,7 +19544,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-fa3475d"
+          "github.com/metio/tree-sitter-ssh-client-config@git-96f7772"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

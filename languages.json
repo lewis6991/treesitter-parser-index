@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08",
+  "generatedAt": "2026-05-09",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -6386,7 +6386,8 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "injections"
       ],
       "queryRoots": [
         "runtime/queries"

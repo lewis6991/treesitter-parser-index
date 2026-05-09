@@ -2310,7 +2310,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "openscad",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "injections"
     ],
     "testedParserRefs": [
       "github.com/openscad/tree-sitter-openscad@git-acc196e"
