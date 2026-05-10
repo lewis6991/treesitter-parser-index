@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09",
+  "generatedAt": "2026-05-10",
   "kind": "prototype-query-packs",
   "count": 232,
   "items": [
@@ -12220,7 +12220,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5409d47",
+      "version": "git-c8f09ca",
       "languages": [
         "bash",
         "c",
@@ -12543,7 +12543,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5409d47",
+      "version": "git-c8f09ca",
       "languages": [
         "glsl"
       ],
@@ -12586,7 +12586,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5409d47",
+      "version": "git-c8f09ca",
       "languages": [
         "html"
       ],
@@ -12641,7 +12641,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5409d47",
+      "version": "git-c8f09ca",
       "languages": [
         "proto"
       ],
@@ -17146,7 +17146,7 @@
       "id": "pack-parser-parser-mcfunction",
       "name": "MCFunction Parser Bundle",
       "package": "github.com/bbfh-dev/tree-sitter-mcfunction",
-      "version": "git-6015276",
+      "version": "git-b44f0fd",
       "languages": [
         "mcfunction"
       ],
@@ -17177,7 +17177,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/bbfh-dev/tree-sitter-mcfunction@git-6015276"
+          "github.com/bbfh-dev/tree-sitter-mcfunction@git-b44f0fd"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17531,7 +17531,7 @@
       "id": "pack-parser-parser-ocaml",
       "name": "OCaml Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-ec8dcc9",
+      "version": "git-6902a86",
       "languages": [
         "ocaml"
       ],
@@ -17572,7 +17572,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-ec8dcc9"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-6902a86"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17581,7 +17581,7 @@
       "id": "pack-parser-parser-ocaml-interface",
       "name": "OCamlInterface Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-ec8dcc9",
+      "version": "git-6902a86",
       "languages": [
         "ocaml_interface"
       ],
@@ -17622,7 +17622,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-ec8dcc9"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-6902a86"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17676,7 +17676,7 @@
       "id": "pack-parser-parser-ocaml-type",
       "name": "OCamlType Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-ec8dcc9",
+      "version": "git-6902a86",
       "languages": [
         "ocaml_type"
       ],
@@ -17717,7 +17717,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-ec8dcc9"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-6902a86"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
