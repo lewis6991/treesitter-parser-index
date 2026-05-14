@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13",
+  "generatedAt": "2026-05-14",
   "kind": "prototype-query-packs",
   "count": 232,
   "items": [
@@ -12028,7 +12028,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/wgsl-tooling-wg/tree-sitter-wesl@git-94ee612"
+            "github.com/webgpu-tools/tree-sitter-wesl@git-94ee612"
           ]
         },
         {
@@ -12220,7 +12220,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-394f022",
+      "version": "git-75f0940",
       "languages": [
         "bash",
         "c",
@@ -12543,7 +12543,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-394f022",
+      "version": "git-75f0940",
       "languages": [
         "glsl"
       ],
@@ -12586,7 +12586,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-394f022",
+      "version": "git-75f0940",
       "languages": [
         "html"
       ],
@@ -12641,7 +12641,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-394f022",
+      "version": "git-75f0940",
       "languages": [
         "proto"
       ],
@@ -13306,11 +13306,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfhtml/queries/injections.scm"
-        ],
         "indents": [
           "cfhtml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfhtml/queries/injections.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -13364,11 +13364,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -15523,7 +15523,7 @@
       "id": "pack-parser-parser-glimmer-javascript",
       "name": "GlimmerJavascript Parser Bundle",
       "package": "github.com/ember-tooling/tree-sitter-glimmer-javascript",
-      "version": "git-2376e3c",
+      "version": "git-d9cf7a2",
       "languages": [
         "glimmer-javascript"
       ],
@@ -15564,7 +15564,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-2376e3c"
+          "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-d9cf7a2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17949,7 +17949,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-4b0c34d",
+      "version": "git-ed7b2e1",
       "languages": [
         "pkl"
       ],
@@ -17990,7 +17990,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-4b0c34d"
+          "github.com/apple/tree-sitter-pkl@git-ed7b2e1"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

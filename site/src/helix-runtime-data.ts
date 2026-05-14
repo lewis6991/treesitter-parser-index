@@ -3610,7 +3610,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/wgsl-tooling-wg/tree-sitter-wesl@git-94ee612"
+      "github.com/webgpu-tools/tree-sitter-wesl@git-94ee612"
     ]
   },
   {
