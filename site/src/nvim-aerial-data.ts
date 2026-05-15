@@ -62,6 +62,12 @@ export const NVIM_AERIAL_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "elm",
+    "queryKinds": [
+      "aerial"
+    ]
+  },
+  {
     "language": "enforce",
     "queryKinds": [
       "aerial"

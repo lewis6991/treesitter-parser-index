@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14",
+  "generatedAt": "2026-05-15",
   "kind": "prototype-query-packs",
   "count": 232,
   "items": [
@@ -5880,7 +5880,7 @@
       "id": "pack-neovim-aerial",
       "name": "aerial.nvim",
       "package": "github.com/stevearc/aerial.nvim",
-      "version": "git-645d108",
+      "version": "git-43dd88a",
       "languages": [
         "bash",
         "c",
@@ -5892,6 +5892,7 @@
         "djot",
         "editorconfig",
         "elixir",
+        "elm",
         "enforce",
         "fish",
         "go",
@@ -5939,7 +5940,7 @@
         "yaml",
         "zig"
       ],
-      "languageCount": 56,
+      "languageCount": 57,
       "languageDetails": [
         {
           "language": "bash",
@@ -5997,6 +5998,12 @@
         },
         {
           "language": "elixir",
+          "queryKinds": [
+            "outline"
+          ]
+        },
+        {
+          "language": "elm",
           "queryKinds": [
             "outline"
           ]
@@ -6295,7 +6302,7 @@
         "outline": "queries/{language}/aerial.scm"
       },
       "parserCompatibility": {},
-      "summary": "Outline queries live under queries/{language}/aerial.scm for 56 languages."
+      "summary": "Outline queries live under queries/{language}/aerial.scm for 57 languages."
     },
     {
       "id": "pack-neovim-matchup",
@@ -12220,7 +12227,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-75f0940",
+      "version": "git-700b0b5",
       "languages": [
         "bash",
         "c",
@@ -12543,7 +12550,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-75f0940",
+      "version": "git-700b0b5",
       "languages": [
         "glsl"
       ],
@@ -12586,7 +12593,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-75f0940",
+      "version": "git-700b0b5",
       "languages": [
         "html"
       ],
@@ -12641,7 +12648,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-75f0940",
+      "version": "git-700b0b5",
       "languages": [
         "proto"
       ],
@@ -12812,7 +12819,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-3e4ccb6",
+      "version": "git-0d5b5cf",
       "languages": [
         "al"
       ],
@@ -12844,16 +12851,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-3e4ccb6"
+          "github.com/SShadowS/tree-sitter-al@git-0d5b5cf"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -16123,7 +16130,7 @@
       "id": "pack-parser-parser-idl",
       "name": "idl Parser Bundle",
       "package": "github.com/cathaysia/tree-sitter-idl",
-      "version": "git-d323227",
+      "version": "git-d9ac4b1",
       "languages": [
         "idl"
       ],
@@ -16154,7 +16161,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cathaysia/tree-sitter-idl@git-d323227"
+          "github.com/cathaysia/tree-sitter-idl@git-d9ac4b1"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17766,7 +17773,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-21fd668",
+      "version": "git-9b651c0",
       "languages": [
         "perl"
       ],
@@ -17799,7 +17806,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-21fd668"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-9b651c0"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

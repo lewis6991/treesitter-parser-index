@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14",
+  "generatedAt": "2026-05-15",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -2161,7 +2161,7 @@
     {
       "language": "elm",
       "parserCount": 1,
-      "queryPackCount": 6,
+      "queryPackCount": 7,
       "editors": [
         "helix",
         "lapce",
@@ -2174,6 +2174,7 @@
         "injections",
         "locals",
         "matchup",
+        "outline",
         "tags",
         "textobjects"
       ],
