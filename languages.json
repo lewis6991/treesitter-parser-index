@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15",
+  "generatedAt": "2026-05-16",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -171,7 +171,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": true,
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -216,7 +216,7 @@
     {
       "language": "angular",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "neovim"
       ],
@@ -228,6 +228,7 @@
         "locals"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,

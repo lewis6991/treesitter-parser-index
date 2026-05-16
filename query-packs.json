@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-15",
+  "generatedAt": "2026-05-16",
   "kind": "prototype-query-packs",
-  "count": 232,
+  "count": 233,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12227,7 +12227,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-700b0b5",
+      "version": "git-3bd9d13",
       "languages": [
         "bash",
         "c",
@@ -12550,7 +12550,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-700b0b5",
+      "version": "git-3bd9d13",
       "languages": [
         "glsl"
       ],
@@ -12593,7 +12593,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-700b0b5",
+      "version": "git-3bd9d13",
       "languages": [
         "html"
       ],
@@ -12648,7 +12648,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-700b0b5",
+      "version": "git-3bd9d13",
       "languages": [
         "proto"
       ],
@@ -12819,7 +12819,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-0d5b5cf",
+      "version": "git-60b6824",
       "languages": [
         "al"
       ],
@@ -12860,10 +12860,69 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-0d5b5cf"
+          "github.com/SShadowS/tree-sitter-al@git-60b6824"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-angular",
+      "name": "Angular Parser Bundle",
+      "package": "github.com/dlvandenberg/tree-sitter-angular",
+      "version": "git-38a8014",
+      "languages": [
+        "angular"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "angular",
+          "queryKinds": [
+            "folds",
+            "highlights",
+            "indents",
+            "injections"
+          ]
+        }
+      ],
+      "owners": [
+        "dlvandenberg"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [
+        "neovim@>=0.11/core:folds",
+        "neovim@>=0.11/core:highlights",
+        "neovim@>=0.11/core:indents"
+      ],
+      "queryKinds": [
+        "folds",
+        "highlights",
+        "indents",
+        "injections"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "folds": [
+          "queries/folds.scm"
+        ],
+        "indents": [
+          "queries/indents.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/dlvandenberg/tree-sitter-angular@git-38a8014"
+        ]
+      },
+      "summary": "folds, highlights, indents, injections queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-apex",
@@ -13276,7 +13335,7 @@
       "id": "pack-parser-parser-cfhtml",
       "name": "Cfhtml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-41b4b48",
+      "version": "git-7f59b28",
       "languages": [
         "cfhtml"
       ],
@@ -13313,11 +13372,11 @@
         "highlights": [
           "cfhtml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfhtml/queries/indents.scm"
-        ],
         "injections": [
           "cfhtml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfhtml/queries/indents.scm"
         ],
         "tags": [
           "cfhtml/queries/tags.scm"
@@ -13325,7 +13384,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-41b4b48"
+          "github.com/cfmleditor/tree-sitter-cfml@git-7f59b28"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13334,7 +13393,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-41b4b48",
+      "version": "git-7f59b28",
       "languages": [
         "cfml"
       ],
@@ -13371,11 +13430,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfml/queries/indents.scm"
-        ],
         "injections": [
           "cfml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfml/queries/indents.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13383,7 +13442,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-41b4b48"
+          "github.com/cfmleditor/tree-sitter-cfml@git-7f59b28"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13392,7 +13451,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-41b4b48",
+      "version": "git-7f59b28",
       "languages": [
         "cfquery"
       ],
@@ -13430,7 +13489,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-41b4b48"
+          "github.com/cfmleditor/tree-sitter-cfml@git-7f59b28"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13439,7 +13498,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-41b4b48",
+      "version": "git-7f59b28",
       "languages": [
         "cfscript"
       ],
@@ -13475,7 +13534,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-41b4b48"
+          "github.com/cfmleditor/tree-sitter-cfml@git-7f59b28"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
