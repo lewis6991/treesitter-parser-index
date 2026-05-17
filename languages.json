@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16",
+  "generatedAt": "2026-05-17",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -862,9 +862,7 @@
       "language": "cfhtml",
       "parserCount": 1,
       "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
+      "editors": [],
       "queryKinds": [
         "highlights",
         "indents",
@@ -881,9 +879,7 @@
       "language": "cfml",
       "parserCount": 1,
       "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
+      "editors": [],
       "queryKinds": [
         "highlights",
         "indents",
@@ -900,9 +896,7 @@
       "language": "cfquery",
       "parserCount": 1,
       "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
+      "editors": [],
       "queryKinds": [
         "highlights",
         "tags"
@@ -5138,7 +5132,7 @@
     {
       "language": "lean",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "helix",
         "lapce"
@@ -5150,6 +5144,7 @@
         "locals"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,
