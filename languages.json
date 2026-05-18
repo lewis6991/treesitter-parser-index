@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-17",
+  "generatedAt": "2026-05-18",
   "kind": "prototype-languages",
-  "count": 511,
+  "count": 510,
   "items": [
     {
       "language": "_gjs",
@@ -171,7 +171,7 @@
       "queryRoots": [
         "queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
@@ -856,23 +856,6 @@
       "queryKinds": [],
       "queryRoots": [],
       "hasWasm": true,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "cfhtml",
-      "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
-      "queryKinds": [
-        "highlights",
-        "indents",
-        "injections",
-        "tags"
-      ],
-      "queryRoots": [
-        "cfhtml/queries"
-      ],
-      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
