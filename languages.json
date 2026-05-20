@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19",
+  "generatedAt": "2026-05-20",
   "kind": "prototype-languages",
   "count": 510,
   "items": [
@@ -545,7 +545,7 @@
     {
       "language": "blade",
       "parserCount": 1,
-      "queryPackCount": 3,
+      "queryPackCount": 4,
       "editors": [
         "helix",
         "lapce",
@@ -556,10 +556,12 @@
         "highlights",
         "indents",
         "injections",
+        "matchup",
         "rainbows",
         "textobjects"
       ],
       "queryRoots": [
+        "after/queries",
         "queries",
         "runtime/queries"
       ],
@@ -1242,6 +1244,7 @@
         "outline",
         "overrides",
         "rainbows",
+        "runnables",
         "tags",
         "textobjects"
       ],

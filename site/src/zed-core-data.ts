@@ -36,6 +36,7 @@ export const ZED_CORE_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections",
       "outline",
       "overrides",
+      "runnables",
       "textobjects"
     ]
   },

@@ -14,6 +14,12 @@ export const NVIM_MATCHUP_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "blade",
+    "queryKinds": [
+      "matchup"
+    ]
+  },
+  {
     "language": "c",
     "queryKinds": [
       "matchup"
