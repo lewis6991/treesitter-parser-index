@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-21",
+  "generatedAt": "2026-05-22",
   "kind": "prototype-languages",
-  "count": 510,
+  "count": 511,
   "items": [
     {
       "language": "_gjs",
@@ -7996,6 +7996,16 @@
       "queryRoots": [
         "runtime/queries"
       ],
+      "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "sas",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": true,
       "hasReleaseArtifacts": true
     },

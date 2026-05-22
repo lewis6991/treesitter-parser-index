@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21",
+  "generatedAt": "2026-05-22",
   "kind": "prototype-query-packs",
   "count": 233,
   "items": [
@@ -8097,7 +8097,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-8c41b11",
+      "version": "git-a62d374",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12234,7 +12234,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7f7c215",
+      "version": "git-e2a1c4c",
       "languages": [
         "bash",
         "c",
@@ -12558,7 +12558,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7f7c215",
+      "version": "git-e2a1c4c",
       "languages": [
         "glsl"
       ],
@@ -12601,7 +12601,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7f7c215",
+      "version": "git-e2a1c4c",
       "languages": [
         "html"
       ],
@@ -12656,7 +12656,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7f7c215",
+      "version": "git-e2a1c4c",
       "languages": [
         "proto"
       ],
@@ -15094,7 +15094,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-ab2b1a4",
+      "version": "git-cfc1245",
       "languages": [
         "fsharp"
       ],
@@ -15135,7 +15135,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-ab2b1a4"
+          "github.com/ionide/tree-sitter-fsharp@git-cfc1245"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15144,7 +15144,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-ab2b1a4",
+      "version": "git-cfc1245",
       "languages": [
         "fsharp_signature"
       ],
@@ -15185,7 +15185,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-ab2b1a4"
+          "github.com/ionide/tree-sitter-fsharp@git-cfc1245"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -16800,7 +16800,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-6a4a622",
+      "version": "git-15c50c0",
       "languages": [
         "lean"
       ],
@@ -16841,7 +16841,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-6a4a622"
+          "github.com/Julian/tree-sitter-lean@git-15c50c0"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18567,7 +18567,7 @@
       "id": "pack-parser-parser-r",
       "name": "R Parser Bundle",
       "package": "github.com/r-lib/tree-sitter-r",
-      "version": "git-0e6ef77",
+      "version": "git-8ac99ed",
       "languages": [
         "r"
       ],
@@ -18603,7 +18603,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/r-lib/tree-sitter-r@git-0e6ef77"
+          "github.com/r-lib/tree-sitter-r@git-8ac99ed"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -21039,7 +21039,7 @@
       "id": "pack-parser-parser-tree-sitter-grammars-yaml-yaml",
       "name": "YAML Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-yaml",
-      "version": "git-4463985",
+      "version": "git-a1c4812",
       "languages": [
         "yaml"
       ],
@@ -21070,7 +21070,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-yaml@git-4463985"
+          "github.com/tree-sitter-grammars/tree-sitter-yaml@git-a1c4812"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
