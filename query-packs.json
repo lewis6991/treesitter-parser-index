@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22",
+  "generatedAt": "2026-05-24",
   "kind": "prototype-query-packs",
   "count": 233,
   "items": [
@@ -12234,7 +12234,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e2a1c4c",
+      "version": "git-b0911cc",
       "languages": [
         "bash",
         "c",
@@ -12558,7 +12558,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e2a1c4c",
+      "version": "git-b0911cc",
       "languages": [
         "glsl"
       ],
@@ -12601,7 +12601,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e2a1c4c",
+      "version": "git-b0911cc",
       "languages": [
         "html"
       ],
@@ -12656,7 +12656,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e2a1c4c",
+      "version": "git-b0911cc",
       "languages": [
         "proto"
       ],
@@ -13343,7 +13343,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-6b4a439",
+      "version": "git-4ae0299",
       "languages": [
         "cfml"
       ],
@@ -13377,11 +13377,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfml/queries/indents.scm"
-        ],
         "injections": [
           "cfml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfml/queries/indents.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13389,7 +13389,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-6b4a439"
+          "github.com/cfmleditor/tree-sitter-cfml@git-4ae0299"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13398,7 +13398,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-6b4a439",
+      "version": "git-4ae0299",
       "languages": [
         "cfquery"
       ],
@@ -13434,7 +13434,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-6b4a439"
+          "github.com/cfmleditor/tree-sitter-cfml@git-4ae0299"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13443,7 +13443,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-6b4a439",
+      "version": "git-4ae0299",
       "languages": [
         "cfscript"
       ],
@@ -13479,7 +13479,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-6b4a439"
+          "github.com/cfmleditor/tree-sitter-cfml@git-4ae0299"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17247,7 +17247,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-f234edc",
+      "version": "git-40ed63e",
       "languages": [
         "mlir"
       ],
@@ -17283,7 +17283,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-f234edc"
+          "github.com/artagnon/tree-sitter-mlir@git-40ed63e"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19574,7 +19574,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-7191895",
+      "version": "git-7fe108c",
       "languages": [
         "ssh-client-config"
       ],
@@ -19605,7 +19605,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-7191895"
+          "github.com/metio/tree-sitter-ssh-client-config@git-7fe108c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
