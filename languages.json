@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24",
+  "generatedAt": "2026-05-25",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -7084,7 +7084,7 @@
     {
       "language": "puppet",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "neovim"
       ],
@@ -7093,9 +7093,11 @@
         "highlights",
         "indents",
         "injections",
-        "locals"
+        "locals",
+        "outline"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": true,
@@ -9643,7 +9645,7 @@
     {
       "language": "typst",
       "parserCount": 1,
-      "queryPackCount": 3,
+      "queryPackCount": 4,
       "editors": [
         "helix",
         "lapce",
@@ -9655,6 +9657,7 @@
         "highlights",
         "indents",
         "injections",
+        "outline",
         "tags",
         "textobjects"
       ],

@@ -200,6 +200,12 @@ export const NVIM_AERIAL_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "puppet",
+    "queryKinds": [
+      "aerial"
+    ]
+  },
+  {
     "language": "python",
     "queryKinds": [
       "aerial"
@@ -297,6 +303,12 @@ export const NVIM_AERIAL_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   },
   {
     "language": "typescript",
+    "queryKinds": [
+      "aerial"
+    ]
+  },
+  {
+    "language": "typst",
     "queryKinds": [
       "aerial"
     ]
