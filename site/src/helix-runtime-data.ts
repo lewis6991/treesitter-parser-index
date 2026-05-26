@@ -379,6 +379,18 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "concerto",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "locals",
+      "textobjects"
+    ],
+    "testedParserRefs": [
+      "github.com/accordproject/concerto-tree-sitter@git-77ae6b9"
+    ]
+  },
+  {
     "language": "cpon",
     "queryKinds": [
       "highlights",
@@ -1033,7 +1045,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/the-mikedavis/tree-sitter-git-config@git-9c2a1b7"
+      "github.com/the-mikedavis/tree-sitter-git-config@git-0fbc9f9"
     ]
   },
   {
@@ -2742,10 +2754,11 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "robot",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "indents"
     ],
     "testedParserRefs": [
-      "github.com/Hubro/tree-sitter-robot@git-322e4cc"
+      "github.com/Hubro/tree-sitter-robot@git-0f010f4"
     ]
   },
   {
@@ -3136,10 +3149,11 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections",
       "locals",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-svelte@git-ae5199d"
+      "github.com/themixednuts/tree-sitter-htmlx@git-3be6db3"
     ]
   },
   {

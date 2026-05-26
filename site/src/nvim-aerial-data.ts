@@ -278,6 +278,12 @@ export const NVIM_AERIAL_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "systemverilog",
+    "queryKinds": [
+      "aerial"
+    ]
+  },
+  {
     "language": "teal",
     "queryKinds": [
       "aerial"
@@ -315,6 +321,12 @@ export const NVIM_AERIAL_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   },
   {
     "language": "usd",
+    "queryKinds": [
+      "aerial"
+    ]
+  },
+  {
+    "language": "vhdl",
     "queryKinds": [
       "aerial"
     ]

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-25",
+  "generatedAt": "2026-05-26",
   "kind": "prototype-languages",
-  "count": 511,
+  "count": 512,
   "items": [
     {
       "language": "_gjs",
@@ -1142,6 +1142,26 @@
       ],
       "queryRoots": [
         "queries",
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "concerto",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "locals",
+        "textobjects"
+      ],
+      "queryRoots": [
         "runtime/queries"
       ],
       "hasWasm": false,
@@ -8812,7 +8832,7 @@
     },
     {
       "language": "svelte",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 5,
       "editors": [
         "helix",
@@ -8828,6 +8848,7 @@
         "locals",
         "matchup",
         "rainbows",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -8948,7 +8969,7 @@
     {
       "language": "systemverilog",
       "parserCount": 1,
-      "queryPackCount": 5,
+      "queryPackCount": 6,
       "editors": [
         "helix",
         "lapce",
@@ -8959,6 +8980,7 @@
         "folds",
         "highlights",
         "injections",
+        "outline",
         "textobjects"
       ],
       "queryRoots": [
@@ -9917,7 +9939,7 @@
     {
       "language": "vhdl",
       "parserCount": 1,
-      "queryPackCount": 4,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
@@ -9927,7 +9949,8 @@
         "context",
         "folds",
         "highlights",
-        "injections"
+        "injections",
+        "outline"
       ],
       "queryRoots": [
         "queries",
