@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-26",
+  "generatedAt": "2026-05-27",
   "kind": "prototype-languages",
-  "count": 512,
+  "count": 513,
   "items": [
     {
       "language": "_gjs",
@@ -9385,6 +9385,25 @@
       ],
       "queryKinds": [
         "highlights"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "tolk",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections"
       ],
       "queryRoots": [
         "runtime/queries"

@@ -3362,6 +3362,17 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "tolk",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "injections"
+    ],
+    "testedParserRefs": [
+      "github.com/ton-blockchain/ton-language-server@git-e90dbb8"
+    ]
+  },
+  {
     "language": "toml",
     "queryKinds": [
       "highlights",
