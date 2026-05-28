@@ -998,7 +998,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/bezhermoso/tree-sitter-ghostty@git-8438a93"
+      "github.com/bezhermoso/tree-sitter-ghostty@git-4a0fd2a"
     ]
   },
   {
@@ -1852,6 +1852,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "folds",
       "highlights",
+      "indents",
       "injections",
       "textobjects"
     ],
@@ -2675,10 +2676,13 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
-      "locals"
+      "locals",
+      "rainbows",
+      "tags",
+      "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/r-lib/tree-sitter-r@git-cc04302"
+      "github.com/r-lib/tree-sitter-r@git-0e6ef77"
     ]
   },
   {

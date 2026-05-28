@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27",
+  "generatedAt": "2026-05-28",
   "kind": "prototype-query-packs",
   "count": 233,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-6c48d18",
+      "version": "git-c1ab774",
       "languages": [
         "_gjs",
         "_javascript",
@@ -9460,7 +9460,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/bezhermoso/tree-sitter-ghostty@git-8438a93"
+            "github.com/bezhermoso/tree-sitter-ghostty@git-4a0fd2a"
           ]
         },
         {
@@ -10314,6 +10314,7 @@
           "queryKinds": [
             "folds",
             "highlights",
+            "indents",
             "injections",
             "textobjects"
           ],
@@ -11137,10 +11138,13 @@
           "queryKinds": [
             "highlights",
             "injections",
-            "locals"
+            "locals",
+            "rainbows",
+            "tags",
+            "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/r-lib/tree-sitter-r@git-cc04302"
+            "github.com/r-lib/tree-sitter-r@git-0e6ef77"
           ]
         },
         {
@@ -12289,7 +12293,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e254582",
+      "version": "git-58f84cf",
       "languages": [
         "bash",
         "c",
@@ -12613,7 +12617,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e254582",
+      "version": "git-58f84cf",
       "languages": [
         "glsl"
       ],
@@ -12656,7 +12660,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e254582",
+      "version": "git-58f84cf",
       "languages": [
         "html"
       ],
@@ -12711,7 +12715,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e254582",
+      "version": "git-58f84cf",
       "languages": [
         "proto"
       ],
@@ -13432,11 +13436,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -14675,7 +14679,7 @@
       "id": "pack-parser-parser-editorconfig",
       "name": "Editorconfig Parser Bundle",
       "package": "github.com/ValdezFOmar/tree-sitter-editorconfig",
-      "version": "git-bfd7439",
+      "version": "git-9d843ad",
       "languages": [
         "editorconfig"
       ],
@@ -14708,7 +14712,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ValdezFOmar/tree-sitter-editorconfig@git-bfd7439"
+          "github.com/ValdezFOmar/tree-sitter-editorconfig@git-9d843ad"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18065,7 +18069,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-ed7b2e1",
+      "version": "git-e685a5f",
       "languages": [
         "pkl"
       ],
@@ -18106,7 +18110,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-ed7b2e1"
+          "github.com/apple/tree-sitter-pkl@git-e685a5f"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

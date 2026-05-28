@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27",
+  "generatedAt": "2026-05-28",
   "kind": "prototype-languages",
   "count": 513,
   "items": [
@@ -5088,6 +5088,7 @@
         "context",
         "folds",
         "highlights",
+        "indents",
         "injections",
         "outline",
         "textobjects"
@@ -7383,6 +7384,7 @@
         "injections",
         "locals",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],
