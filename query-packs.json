@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28",
+  "generatedAt": "2026-05-29",
   "kind": "prototype-query-packs",
   "count": 233,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-c1ab774",
+      "version": "git-b1c385c",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12293,7 +12293,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-58f84cf",
+      "version": "git-3d9852a",
       "languages": [
         "bash",
         "c",
@@ -12617,7 +12617,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-58f84cf",
+      "version": "git-3d9852a",
       "languages": [
         "glsl"
       ],
@@ -12660,7 +12660,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-58f84cf",
+      "version": "git-3d9852a",
       "languages": [
         "html"
       ],
@@ -12715,7 +12715,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-58f84cf",
+      "version": "git-3d9852a",
       "languages": [
         "proto"
       ],
@@ -16859,7 +16859,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-e4cd9b8",
+      "version": "git-181182c",
       "languages": [
         "lean"
       ],
@@ -16900,7 +16900,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-e4cd9b8"
+          "github.com/Julian/tree-sitter-lean@git-181182c"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18069,7 +18069,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-e685a5f",
+      "version": "git-2722604",
       "languages": [
         "pkl"
       ],
@@ -18110,7 +18110,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-e685a5f"
+          "github.com/apple/tree-sitter-pkl@git-2722604"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
