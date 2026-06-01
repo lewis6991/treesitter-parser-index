@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-31",
+  "generatedAt": "2026-06-01",
   "kind": "prototype-languages",
-  "count": 513,
+  "count": 512,
   "items": [
     {
       "language": "_gjs",
@@ -1281,7 +1281,7 @@
     {
       "language": "cross_config",
       "parserLanguage": "toml",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -2895,7 +2895,7 @@
     {
       "language": "git_cliff_config",
       "parserLanguage": "toml",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -4509,7 +4509,7 @@
     {
       "language": "jjconfig",
       "parserLanguage": "toml",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -5753,7 +5753,7 @@
     },
     {
       "language": "meson",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -5775,7 +5775,7 @@
     {
       "language": "miseconfig",
       "parserLanguage": "toml",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -7722,19 +7722,8 @@
       "hasReleaseArtifacts": true
     },
     {
-      "language": "robots",
-      "parserCount": 1,
-      "queryPackCount": 0,
-      "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
-      "hasWasm": false,
-      "hasReleaseArtifacts": true
-    },
-    {
       "language": "robots_txt",
-      "parserLanguage": "robots",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -9415,7 +9404,7 @@
     },
     {
       "language": "toml",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 7,
       "editors": [
         "helix",

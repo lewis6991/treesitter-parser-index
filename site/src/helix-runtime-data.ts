@@ -64,7 +64,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-agda@git-c21c3a0"
+      "github.com/tree-sitter/tree-sitter-agda@git-e8d47a6"
     ]
   },
   {
@@ -87,7 +87,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/amber-lang/tree-sitter-amber@git-dc69f42"
+      "github.com/amber-lang/tree-sitter-amber@git-107c6d4"
     ]
   },
   {
@@ -108,7 +108,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/Beaglefoot/tree-sitter-awk@git-a799bc5"
+      "github.com/Beaglefoot/tree-sitter-awk@git-34bbdc7"
     ]
   },
   {
@@ -122,7 +122,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-bash@git-487734f"
+      "github.com/tree-sitter/tree-sitter-bash@git-a06c2e4"
     ]
   },
   {
@@ -162,7 +162,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/latex-lsp/tree-sitter-bibtex@git-ccfd77d"
+      "github.com/latex-lsp/tree-sitter-bibtex@git-8d04ed2"
     ]
   },
   {
@@ -171,7 +171,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-bicep@git-0092c7d"
+      "github.com/tree-sitter-grammars/tree-sitter-bicep@git-bff5988"
     ]
   },
   {
@@ -194,7 +194,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/EmranMR/tree-sitter-blade@git-59ce5b6"
+      "github.com/EmranMR/tree-sitter-blade@git-5dbdcb0"
     ]
   },
   {
@@ -218,7 +218,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-c@git-7fa1be1"
+      "github.com/tree-sitter/tree-sitter-c@git-b780e47"
     ]
   },
   {
@@ -230,7 +230,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-c-sharp@git-b5eb574"
+      "github.com/tree-sitter/tree-sitter-c-sharp@git-cac6d5f"
     ]
   },
   {
@@ -253,7 +253,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/caddyserver/tree-sitter-caddyfile@git-8951716"
+      "github.com/caddyserver/tree-sitter-caddyfile@git-683332a"
     ]
   },
   {
@@ -297,7 +297,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tymbalodeon/tree-sitter-chuck@git-2fd18bc"
+      "github.com/tymbalodeon/tree-sitter-chuck@git-68fb7bd"
     ]
   },
   {
@@ -316,7 +316,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/xlittlerag/tree-sitter-clarity@git-7fa5482"
+      "github.com/xlittlerag/tree-sitter-clarity@git-1436da3"
     ]
   },
   {
@@ -341,7 +341,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/uyha/tree-sitter-cmake@git-6e51463"
+      "github.com/uyha/tree-sitter-cmake@git-c7b2a71"
     ]
   },
   {
@@ -361,7 +361,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/stsewd/tree-sitter-comment@git-aefcc28"
+      "github.com/stsewd/tree-sitter-comment@git-66272d2"
     ]
   },
   {
@@ -387,7 +387,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/accordproject/concerto-tree-sitter@git-77ae6b9"
+      "github.com/accordproject/concerto-tree-sitter@git-920ba23"
     ]
   },
   {
@@ -424,7 +424,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "toml",
     "testedParserRefs": [
-      "github.com/ikatyang/tree-sitter-toml@git-7cff70b"
+      "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
     ]
   },
   {
@@ -438,7 +438,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/crystal-lang-tools/tree-sitter-crystal@git-76afc1f"
+      "github.com/crystal-lang-tools/tree-sitter-crystal@git-50ca9e6"
     ]
   },
   {
@@ -450,7 +450,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "rainbows"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-css@git-6e327db"
+      "github.com/tree-sitter/tree-sitter-css@git-dda5cfc"
     ]
   },
   {
@@ -480,7 +480,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/elliotfontaine/tree-sitter-cylc@git-30dd40d"
+      "github.com/elliotfontaine/tree-sitter-cylc@git-6d1d811"
     ]
   },
   {
@@ -506,7 +506,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gdamore/tree-sitter-d@git-5566f8c"
+      "github.com/gdamore/tree-sitter-d@git-8bcb13d"
     ]
   },
   {
@@ -520,7 +520,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/UserNobody14/tree-sitter-dart@git-e398400"
+      "github.com/UserNobody14/tree-sitter-dart@git-a9bdfa3"
     ]
   },
   {
@@ -547,7 +547,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/joelspadin/tree-sitter-devicetree@git-877adbf"
+      "github.com/joelspadin/tree-sitter-devicetree@git-e78bf56"
     ]
   },
   {
@@ -567,7 +567,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-diff@git-fd74c78"
+      "github.com/tree-sitter-grammars/tree-sitter-diff@git-2520c3f"
     ]
   },
   {
@@ -577,7 +577,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/treeman/tree-sitter-djot@git-67e6e23"
+      "github.com/treeman/tree-sitter-djot@git-759a618"
     ]
   },
   {
@@ -593,7 +593,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "hcl",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-9e3ec98"
+      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
     ]
   },
   {
@@ -617,7 +617,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/camdencheek/tree-sitter-dockerfile@git-087daa2"
+      "github.com/camdencheek/tree-sitter-dockerfile@git-971acdd"
     ]
   },
   {
@@ -660,7 +660,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "scheme",
     "testedParserRefs": [
-      "github.com/6cdh/tree-sitter-scheme@git-af3af6c"
+      "github.com/6cdh/tree-sitter-scheme@git-c6cb7c7"
     ]
   },
   {
@@ -743,7 +743,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "embedded-template",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-embedded-template@git-d21df11"
+      "github.com/tree-sitter/tree-sitter-embedded-template@git-5bce9d5"
     ]
   },
   {
@@ -753,7 +753,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/Wilfred/tree-sitter-elisp@git-e5524fd"
+      "github.com/Wilfred/tree-sitter-elisp@git-29b4e49"
     ]
   },
   {
@@ -767,7 +767,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/elixir-lang/tree-sitter-elixir@git-02a6f7f"
+      "github.com/elixir-lang/tree-sitter-elixir@git-7937d3b"
     ]
   },
   {
@@ -780,7 +780,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/elm-tooling/tree-sitter-elm@git-df4cb63"
+      "github.com/elm-tooling/tree-sitter-elm@git-6d9511c"
     ]
   },
   {
@@ -800,7 +800,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/jobindex-open/tree-sitter-embedded-perl@git-14b9a94"
+      "github.com/jobindex-open/tree-sitter-embedded-perl@git-5557a53"
     ]
   },
   {
@@ -811,7 +811,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "bash",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-bash@git-487734f"
+      "github.com/tree-sitter/tree-sitter-bash@git-a06c2e4"
     ]
   },
   {
@@ -822,7 +822,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "embedded-template",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-embedded-template@git-d21df11"
+      "github.com/tree-sitter/tree-sitter-embedded-template@git-5bce9d5"
     ]
   },
   {
@@ -836,7 +836,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/the-mikedavis/tree-sitter-erlang@git-33a3e4f"
+      "github.com/the-mikedavis/tree-sitter-erlang@git-d85b18e"
     ]
   },
   {
@@ -855,7 +855,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "rainbows"
     ],
     "testedParserRefs": [
-      "github.com/alexmozaidze/tree-sitter-fennel@git-cfbfa47"
+      "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
     ]
   },
   {
@@ -879,7 +879,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/google/tree-sitter-fidl@git-bdbb635"
+      "github.com/google/tree-sitter-fidl@git-0a8910f"
     ]
   },
   {
@@ -891,7 +891,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/ram02z/tree-sitter-fish@git-a78aef9"
+      "github.com/ram02z/tree-sitter-fish@git-f435b0b"
     ]
   },
   {
@@ -945,7 +945,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/ionide/tree-sitter-fsharp@git-996ea99"
+      "github.com/ionide/tree-sitter-fsharp@git-cfc1245"
     ]
   },
   {
@@ -1021,7 +1021,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "toml",
     "testedParserRefs": [
-      "github.com/ikatyang/tree-sitter-toml@git-7cff70b"
+      "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
     ]
   },
   {
@@ -1033,7 +1033,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "gitcommit",
     "testedParserRefs": [
-      "github.com/gbprod/tree-sitter-gitcommit@git-a716678"
+      "github.com/gbprod/tree-sitter-gitcommit@git-49715a9"
     ]
   },
   {
@@ -1066,7 +1066,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "gitcommit",
     "testedParserRefs": [
-      "github.com/gbprod/tree-sitter-gitcommit@git-a716678"
+      "github.com/gbprod/tree-sitter-gitcommit@git-49715a9"
     ]
   },
   {
@@ -1076,7 +1076,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/the-mikedavis/tree-sitter-git-rebase@git-d8a4207"
+      "github.com/the-mikedavis/tree-sitter-git-rebase@git-32686d6"
     ]
   },
   {
@@ -1120,7 +1120,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "glimmer-javascript",
     "testedParserRefs": [
-      "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-5cc865a"
+      "github.com/ember-tooling/tree-sitter-glimmer-javascript@git-d9cf7a2"
     ]
   },
   {
@@ -1169,7 +1169,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/willcassella/tree-sitter-gn@git-e18d6e3"
+      "github.com/willcassella/tree-sitter-gn@git-fbaa7b3"
     ]
   },
   {
@@ -1193,7 +1193,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-go@git-12fe553"
+      "github.com/tree-sitter/tree-sitter-go@git-2346a3a"
     ]
   },
   {
@@ -1236,7 +1236,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/ngalaiko/tree-sitter-go-template@git-ca26229"
+      "github.com/ngalaiko/tree-sitter-go-template@git-aa71f63"
     ]
   },
   {
@@ -1360,7 +1360,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/vantreeseba/tree-sitter-haxe@git-a55f3e2"
+      "github.com/vantreeseba/tree-sitter-haxe@git-f2a2394"
     ]
   },
   {
@@ -1373,7 +1373,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-9e3ec98"
+      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
     ]
   },
   {
@@ -1382,7 +1382,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/quantonganh/tree-sitter-hdl@git-2939023"
+      "github.com/quantonganh/tree-sitter-hdl@git-2199fdf"
     ]
   },
   {
@@ -1404,7 +1404,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "gotmpl",
     "testedParserRefs": [
-      "github.com/ngalaiko/tree-sitter-go-template@git-ca26229"
+      "github.com/ngalaiko/tree-sitter-go-template@git-aa71f63"
     ]
   },
   {
@@ -1424,7 +1424,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/urbit-pilled/tree-sitter-hoon@git-1d5df35"
+      "github.com/urbit-pilled/tree-sitter-hoon@git-1545137"
     ]
   },
   {
@@ -1445,7 +1445,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-html@git-cbb91a0"
+      "github.com/tree-sitter/tree-sitter-html@git-73a3947"
     ]
   },
   {
@@ -1455,7 +1455,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/interdependence/tree-sitter-htmldjango@git-3a64316"
+      "github.com/interdependence/tree-sitter-htmldjango@git-a103188"
     ]
   },
   {
@@ -1467,7 +1467,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/pfeiferj/tree-sitter-hurl@git-1124058"
+      "github.com/pfeiferj/tree-sitter-hurl@git-597efbd"
     ]
   },
   {
@@ -1477,7 +1477,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "scheme",
     "testedParserRefs": [
-      "github.com/6cdh/tree-sitter-scheme@git-af3af6c"
+      "github.com/6cdh/tree-sitter-scheme@git-c6cb7c7"
     ]
   },
   {
@@ -1510,7 +1510,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/justinmk/tree-sitter-ini@git-32b3186"
+      "github.com/justinmk/tree-sitter-ini@git-e4018b5"
     ]
   },
   {
@@ -1546,7 +1546,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "janet-simple",
     "testedParserRefs": [
-      "github.com/sogaiu/tree-sitter-janet-simple@git-51271e2"
+      "github.com/sogaiu/tree-sitter-janet-simple@git-3c1bdcf"
     ]
   },
   {
@@ -1560,7 +1560,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-java@git-09d650d"
+      "github.com/tree-sitter/tree-sitter-java@git-e10607b"
     ]
   },
   {
@@ -1575,7 +1575,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-javascript@git-3a837b6"
+      "github.com/tree-sitter/tree-sitter-javascript@git-58404d8"
     ]
   },
   {
@@ -1599,7 +1599,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "toml",
     "testedParserRefs": [
-      "github.com/ikatyang/tree-sitter-toml@git-7cff70b"
+      "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
     ]
   },
   {
@@ -1649,7 +1649,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-jsdoc@git-189a6a4"
+      "github.com/tree-sitter/tree-sitter-jsdoc@git-658d18d"
     ]
   },
   {
@@ -1662,7 +1662,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-json@git-7307675"
+      "github.com/tree-sitter/tree-sitter-json@git-001c28d"
     ]
   },
   {
@@ -1676,7 +1676,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "json",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-json@git-7307675"
+      "github.com/tree-sitter/tree-sitter-json@git-001c28d"
     ]
   },
   {
@@ -1689,7 +1689,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/Joakker/tree-sitter-json5@git-c23f7a9"
+      "github.com/Joakker/tree-sitter-json5@git-248b856"
     ]
   },
   {
@@ -1703,7 +1703,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "json",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-json@git-7307675"
+      "github.com/tree-sitter/tree-sitter-json@git-001c28d"
     ]
   },
   {
@@ -1713,7 +1713,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/sourcegraph/tree-sitter-jsonnet@git-0475a50"
+      "github.com/sourcegraph/tree-sitter-jsonnet@git-ddd075f"
     ]
   },
   {
@@ -1729,7 +1729,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "javascript",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-javascript@git-3a837b6"
+      "github.com/tree-sitter/tree-sitter-javascript@git-58404d8"
     ]
   },
   {
@@ -1743,7 +1743,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-julia@git-e84f10d"
+      "github.com/tree-sitter/tree-sitter-julia@git-e0f9dcd"
     ]
   },
   {
@@ -1758,7 +1758,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/poliorcetics/tree-sitter-just@git-b75dace"
+      "github.com/poliorcetics/tree-sitter-just@git-f749ec8"
     ]
   },
   {
@@ -1794,7 +1794,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-kdl@git-3ca569b"
+      "github.com/tree-sitter-grammars/tree-sitter-kdl@git-b37e3d5"
     ]
   },
   {
@@ -1829,7 +1829,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-c4ddea3"
+      "github.com/fwcd/tree-sitter-kotlin@git-f66d290"
     ]
   },
   {
@@ -1976,7 +1976,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-lua@git-e40f5b6"
+      "github.com/tree-sitter-grammars/tree-sitter-lua@git-10fe005"
     ]
   },
   {
@@ -2039,7 +2039,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/mohitsinghs/tree-sitter-markdoc@git-5ffe71b"
+      "github.com/mohitsinghs/tree-sitter-markdoc@git-e4211fe"
     ]
   },
   {
@@ -2050,7 +2050,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-2dfd57f"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
     ]
   },
   {
@@ -2061,7 +2061,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "markdown",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-2dfd57f"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
     ]
   },
   {
@@ -2072,7 +2072,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "markdown_inline",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-2dfd57f"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
     ]
   },
   {
@@ -2087,7 +2087,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/acristoffers/tree-sitter-matlab@git-55d89cb"
+      "github.com/acristoffers/tree-sitter-matlab@git-c2390a5"
     ]
   },
   {
@@ -2107,7 +2107,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/staysail/tree-sitter-meson@git-32a83e8"
+      "github.com/tree-sitter-grammars/tree-sitter-meson@git-c84f354"
     ]
   },
   {
@@ -2120,7 +2120,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "toml",
     "testedParserRefs": [
-      "github.com/ikatyang/tree-sitter-toml@git-7cff70b"
+      "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
     ]
   },
   {
@@ -2199,7 +2199,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "gitlab.com/joncoole/tree-sitter-nginx@git-b4b61db"
+      "gitlab.com/joncoole/tree-sitter-nginx@git-f6d13cf"
     ]
   },
   {
@@ -2235,7 +2235,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-1b69cf1"
+      "github.com/nix-community/tree-sitter-nix@git-69fbfb0"
     ]
   },
   {
@@ -2271,7 +2271,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-9965d20"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
     ]
   },
   {
@@ -2281,7 +2281,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-9965d20"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
     ]
   },
   {
@@ -2305,7 +2305,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/novusnota/tree-sitter-ohm@git-80f14f0"
+      "github.com/novusnota/tree-sitter-ohm@git-a1de3e7"
     ]
   },
   {
@@ -2327,7 +2327,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/openscad/tree-sitter-openscad@git-acc196e"
+      "github.com/openscad/tree-sitter-openscad@git-4c36a4f"
     ]
   },
   {
@@ -2348,7 +2348,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/Isopod/tree-sitter-pascal@git-2fd40f4"
+      "github.com/Isopod/tree-sitter-pascal@git-042119e"
     ]
   },
   {
@@ -2366,7 +2366,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/mtoohey31/tree-sitter-pem@git-be67a43"
+      "github.com/mtoohey31/tree-sitter-pem@git-62842ea"
     ]
   },
   {
@@ -2417,7 +2417,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-php@git-f860e59"
+      "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
     ]
   },
   {
@@ -2428,7 +2428,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-php@git-cf1f4a0"
+      "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
     ]
   },
   {
@@ -2453,7 +2453,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "requirements",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-requirements@git-caeb2ba"
+      "github.com/tree-sitter-grammars/tree-sitter-requirements@git-2c3bb29"
     ]
   },
   {
@@ -2466,7 +2466,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "bash",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-bash@git-487734f"
+      "github.com/tree-sitter/tree-sitter-bash@git-a06c2e4"
     ]
   },
   {
@@ -2496,7 +2496,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-perl/tree-sitter-pod@git-0bf8387"
+      "github.com/tree-sitter-perl/tree-sitter-pod@git-cd19313"
     ]
   },
   {
@@ -2552,7 +2552,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-properties@git-579b62f"
+      "github.com/tree-sitter-grammars/tree-sitter-properties@git-6310671"
     ]
   },
   {
@@ -2566,7 +2566,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "proto",
     "testedParserRefs": [
-      "github.com/sdoerner/tree-sitter-proto@git-778ab6e"
+      "github.com/sdoerner/tree-sitter-proto@git-35a6a3b"
     ]
   },
   {
@@ -2658,7 +2658,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "markdown",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-2dfd57f"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
     ]
   },
   {
@@ -2695,7 +2695,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "scheme",
     "testedParserRefs": [
-      "github.com/6cdh/tree-sitter-scheme@git-af3af6c"
+      "github.com/6cdh/tree-sitter-scheme@git-c6cb7c7"
     ]
   },
   {
@@ -2705,7 +2705,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "rainbows"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-regex@git-e1cfca3"
+      "github.com/tree-sitter/tree-sitter-regex@git-b2ac15e"
     ]
   },
   {
@@ -2752,7 +2752,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "markdown",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-2dfd57f"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-f969cd3"
     ]
   },
   {
@@ -2773,9 +2773,9 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags",
       "textobjects"
     ],
-    "parserLanguage": "robots",
+    "parserLanguage": "robots-txt",
     "testedParserRefs": [
-      "github.com/opa-oz/tree-sitter-robots-txt@git-8e3a420"
+      "github.com/opa-oz/tree-sitter-robots-txt@git-0c06610"
     ]
   },
   {
@@ -2818,7 +2818,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/stsewd/tree-sitter-rst@git-ab09cab"
+      "github.com/stsewd/tree-sitter-rst@git-6322f26"
     ]
   },
   {
@@ -2833,7 +2833,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ruby@git-206c707"
+      "github.com/tree-sitter/tree-sitter-ruby@git-ad907a6"
     ]
   },
   {
@@ -2848,7 +2848,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-rust@git-261b202"
+      "github.com/tree-sitter/tree-sitter-rust@git-77a3747"
     ]
   },
   {
@@ -2872,7 +2872,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "rust",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-rust@git-261b202"
+      "github.com/tree-sitter/tree-sitter-rust@git-77a3747"
     ]
   },
   {
@@ -2897,7 +2897,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-2d55e74"
+      "github.com/tree-sitter/tree-sitter-scala@git-4d081d9"
     ]
   },
   {
@@ -2920,7 +2920,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/6cdh/tree-sitter-scheme@git-af3af6c"
+      "github.com/6cdh/tree-sitter-scheme@git-c6cb7c7"
     ]
   },
   {
@@ -2999,7 +2999,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/indoorvivants/tree-sitter-smithy@git-8327eb8"
+      "github.com/indoorvivants/tree-sitter-smithy@git-ec4fe14"
     ]
   },
   {
@@ -3043,7 +3043,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nilshelmig/tree-sitter-sourcepawn@git-f2af8d0"
+      "github.com/nilshelmig/tree-sitter-sourcepawn@git-5a8fdd4"
     ]
   },
   {
@@ -3118,7 +3118,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/manueldiagostino/tree-sitter-strictdoc@git-070edcf"
+      "github.com/manueldiagostino/tree-sitter-strictdoc@git-bba07bd"
     ]
   },
   {
@@ -3131,7 +3131,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/bearcove/styx@git-ff7f496"
+      "github.com/bearcove/styx@git-51feb2a"
     ]
   },
   {
@@ -3157,7 +3157,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/themixednuts/tree-sitter-htmlx@git-3be6db3"
+      "github.com/themixednuts/tree-sitter-htmlx@git-80c3e69"
     ]
   },
   {
@@ -3184,7 +3184,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-57c1c6d"
+      "github.com/alex-pinkus/tree-sitter-swift@git-7b7909f"
     ]
   },
   {
@@ -3196,7 +3196,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "ini",
     "testedParserRefs": [
-      "github.com/justinmk/tree-sitter-ini@git-32b3186"
+      "github.com/justinmk/tree-sitter-ini@git-e4018b5"
     ]
   },
   {
@@ -3205,7 +3205,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-3bd2c5d"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-5f7a412"
     ]
   },
   {
@@ -3293,7 +3293,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/uncenter/tree-sitter-tera@git-e8d679a"
+      "github.com/uncenter/tree-sitter-tera@git-3a38c36"
     ]
   },
   {
@@ -3317,7 +3317,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "hcl",
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-9e3ec98"
+      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
     ]
   },
   {
@@ -3353,7 +3353,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tlaplus-community/tree-sitter-tlaplus@git-4ba91b0"
+      "github.com/tlaplus-community/tree-sitter-tlaplus@git-add4081"
     ]
   },
   {
@@ -3386,7 +3386,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/ikatyang/tree-sitter-toml@git-7cff70b"
+      "github.com/tree-sitter-grammars/tree-sitter-toml@git-64b5683"
     ]
   },
   {
@@ -3396,7 +3396,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents"
     ],
     "testedParserRefs": [
-      "github.com/tenzir/tree-sitter-tql@git-d3b3b26"
+      "github.com/tenzir/tree-sitter-tql@git-477e8ba"
     ]
   },
   {
@@ -3434,7 +3434,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/gbprod/tree-sitter-twig@git-085648e"
+      "github.com/gbprod/tree-sitter-twig@git-0afd9a6"
     ]
   },
   {
@@ -3482,7 +3482,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-ungrammar@git-a7e1046"
+      "github.com/tree-sitter-grammars/tree-sitter-ungrammar@git-debd26f"
     ]
   },
   {
@@ -3505,7 +3505,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/Jummit/tree-sitter-uxntal@git-d684060"
+      "github.com/Jummit/tree-sitter-uxntal@git-1a44f8d"
     ]
   },
   {
@@ -3528,7 +3528,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/vala-lang/tree-sitter-vala@git-c9eea93"
+      "github.com/vala-lang/tree-sitter-vala@git-97e6db3"
     ]
   },
   {
@@ -3559,7 +3559,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/jpt13653903/tree-sitter-vhdl@git-32d3e3d"
+      "github.com/jpt13653903/tree-sitter-vhdl@git-b8e31d1"
     ]
   },
   {
@@ -3618,7 +3618,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "html",
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-html@git-cbb91a0"
+      "github.com/tree-sitter/tree-sitter-html@git-73a3947"
     ]
   },
   {
@@ -3768,7 +3768,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "rainbows"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-yuck@git-e3d91a3"
+      "github.com/tree-sitter-grammars/tree-sitter-yuck@git-6c60112"
     ]
   },
   {
