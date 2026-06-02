@@ -1,29 +1,20 @@
 {
-  "generatedAt": "2026-06-01",
+  "generatedAt": "2026-06-02",
   "kind": "prototype-parsers",
   "count": 512,
   "items": [
     {
+      "id": "parser-abl",
+      "name": "ABL",
+      "language": "abl",
+      "package": "github.com/usagi-coffee/tree-sitter-abl",
+      "version": "git-6210387",
+      "sourceCommit": "6210387b71a0d4df10af7f12d6e41be5718cca69",
+      "lastUpdated": "2026-06-01",
+      "upstreamSemver": "0.0.51",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        },
-        {
-          "format": "wasm",
-          "kind": "release-asset",
-          "name": "tree-sitter-abl.wasm"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "usagi-coffee"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -31,18 +22,27 @@
         "sourceArchive": true,
         "wasm": true
       },
-      "id": "parser-abl",
-      "language": "abl",
-      "lastUpdated": "2026-04-18",
-      "name": "ABL",
-      "owners": [
-        "usagi-coffee"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        },
+        {
+          "kind": "release-asset",
+          "format": "wasm",
+          "name": "tree-sitter-abl.wasm"
+        }
       ],
-      "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "sourceCommit": "d92c556a9429fc52f5cea47347fd1985a8502687",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.51.",
-      "upstreamSemver": "0.0.51",
-      "version": "git-d92c556"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.51."
     },
     {
       "abi": 14,
@@ -246,34 +246,34 @@
       "version": "git-58d462b"
     },
     {
-      "id": "parser-amber",
-      "name": "Amber",
-      "language": "amber",
-      "package": "github.com/amber-lang/tree-sitter-amber",
-      "version": "git-107c6d4",
-      "sourceCommit": "107c6d4a420fb0c5962b62ebd9347b7eb0015957",
-      "lastUpdated": "2025-11-26",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "amber-lang"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-amber",
+      "language": "amber",
+      "lastUpdated": "2025-11-26",
+      "name": "Amber",
+      "owners": [
+        "amber-lang"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/amber-lang/tree-sitter-amber",
+      "sourceCommit": "107c6d4a420fb0c5962b62ebd9347b7eb0015957",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-107c6d4"
     },
     {
       "abi": 15,
@@ -513,34 +513,34 @@
       "version": "git-83e5c26"
     },
     {
-      "id": "parser-awk",
-      "name": "Awk",
-      "language": "awk",
-      "package": "github.com/Beaglefoot/tree-sitter-awk",
-      "version": "git-34bbdc7",
-      "sourceCommit": "34bbdc7cce8e803096f47b625979e34c1be38127",
-      "lastUpdated": "2024-11-02",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "Beaglefoot"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-awk",
+      "language": "awk",
+      "lastUpdated": "2024-11-02",
+      "name": "Awk",
+      "owners": [
+        "Beaglefoot"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/Beaglefoot/tree-sitter-awk",
+      "sourceCommit": "34bbdc7cce8e803096f47b625979e34c1be38127",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-34bbdc7"
     },
     {
       "abi": 15,
@@ -638,21 +638,17 @@
       "version": "git-501133e"
     },
     {
+      "id": "parser-batch",
+      "name": "Batch",
+      "language": "batch",
+      "package": "github.com/wharflab/tree-sitter-batch",
+      "version": "git-acc7df6",
+      "sourceCommit": "acc7df667ec98b83ddb84b9b8568ad5067c8125b",
+      "lastUpdated": "2026-06-01",
+      "upstreamSemver": "0.11.1",
       "abi": 14,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "wharflab"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -660,18 +656,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-batch",
-      "language": "batch",
-      "lastUpdated": "2026-05-25",
-      "name": "Batch",
-      "owners": [
-        "wharflab"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/wharflab/tree-sitter-batch",
-      "sourceCommit": "5fc5f54267ef9a78e7a5319b80e092194252aabf",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.11.1.",
-      "upstreamSemver": "0.11.1",
-      "version": "git-5fc5f54"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.11.1."
     },
     {
       "abi": 15,
@@ -1145,34 +1145,12 @@
       "version": "git-9b3fde9"
     },
     {
-      "id": "parser-caddyfile",
-      "name": "Caddyfile",
-      "language": "caddyfile",
-      "package": "github.com/caddyserver/tree-sitter-caddyfile",
-      "version": "git-683332a",
-      "sourceCommit": "683332a6430675abfd9867201ef47b2b99bdb266",
-      "lastUpdated": "2026-05-02",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "caddyserver"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1186,7 +1164,29 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. highlights, injections, locals queries."
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-caddyfile",
+      "language": "caddyfile",
+      "lastUpdated": "2026-05-02",
+      "name": "Caddyfile",
+      "owners": [
+        "caddyserver"
+      ],
+      "package": "github.com/caddyserver/tree-sitter-caddyfile",
+      "sourceCommit": "683332a6430675abfd9867201ef47b2b99bdb266",
+      "summary": "Pinned in Helix. highlights, injections, locals queries.",
+      "upstreamSemver": null,
+      "version": "git-683332a"
     },
     {
       "abi": 14,
@@ -1362,9 +1362,9 @@
       "name": "Cfml",
       "language": "cfml",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-8e50901",
-      "sourceCommit": "8e5090127a0e8fbd9816ece002b408a210489c3d",
-      "lastUpdated": "2026-05-31",
+      "version": "git-5279bde",
+      "sourceCommit": "5279bde9b31d54efa68efb77a4b18ee9508518e4",
+      "lastUpdated": "2026-06-02",
       "upstreamSemver": "0.26.20",
       "abi": 15,
       "owners": [
@@ -1410,9 +1410,9 @@
       "name": "Cfquery",
       "language": "cfquery",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-8e50901",
-      "sourceCommit": "8e5090127a0e8fbd9816ece002b408a210489c3d",
-      "lastUpdated": "2026-05-31",
+      "version": "git-5279bde",
+      "sourceCommit": "5279bde9b31d54efa68efb77a4b18ee9508518e4",
+      "lastUpdated": "2026-06-02",
       "upstreamSemver": "0.26.20",
       "abi": 15,
       "owners": [
@@ -1450,9 +1450,9 @@
       "name": "Cfscript",
       "language": "cfscript",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-8e50901",
-      "sourceCommit": "8e5090127a0e8fbd9816ece002b408a210489c3d",
-      "lastUpdated": "2026-05-31",
+      "version": "git-5279bde",
+      "sourceCommit": "5279bde9b31d54efa68efb77a4b18ee9508518e4",
+      "lastUpdated": "2026-06-02",
       "upstreamSemver": "0.26.20",
       "abi": 15,
       "owners": [
@@ -1688,34 +1688,34 @@
       "version": "git-0215052"
     },
     {
-      "id": "parser-clarity",
-      "name": "Clarity",
-      "language": "clarity",
-      "package": "github.com/xlittlerag/tree-sitter-clarity",
-      "version": "git-1436da3",
-      "sourceCommit": "1436da3946359fcd7ac2d81917aaa78ef1e01755",
-      "lastUpdated": "2026-03-13",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "xlittlerag"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-clarity",
+      "language": "clarity",
+      "lastUpdated": "2026-03-13",
+      "name": "Clarity",
+      "owners": [
+        "xlittlerag"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/xlittlerag/tree-sitter-clarity",
+      "sourceCommit": "1436da3946359fcd7ac2d81917aaa78ef1e01755",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-1436da3"
     },
     {
       "abi": 13,
@@ -1856,34 +1856,34 @@
       "version": "git-3232350"
     },
     {
-      "id": "parser-concerto",
-      "name": "Concerto",
-      "language": "concerto",
-      "package": "github.com/accordproject/concerto-tree-sitter",
-      "version": "git-920ba23",
-      "sourceCommit": "920ba23ea93af56b19dfc38fcddf80b3ddc62685",
-      "lastUpdated": "2026-03-19",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "accordproject"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-concerto",
+      "language": "concerto",
+      "lastUpdated": "2026-03-19",
+      "name": "Concerto",
+      "owners": [
+        "accordproject"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/accordproject/concerto-tree-sitter",
+      "sourceCommit": "920ba23ea93af56b19dfc38fcddf80b3ddc62685",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-920ba23"
     },
     {
       "abi": 14,
@@ -2095,34 +2095,34 @@
       "version": "git-8b5b49e"
     },
     {
-      "id": "parser-crystal-lang-tools-crystal-crystal",
-      "name": "Crystal",
-      "language": "crystal",
-      "package": "github.com/crystal-lang-tools/tree-sitter-crystal",
-      "version": "git-50ca9e6",
-      "sourceCommit": "50ca9e6fcfb16a2cbcad59203cfd8ad650e25c49",
-      "lastUpdated": "2025-10-12",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "crystal-lang-tools"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-crystal-lang-tools-crystal-crystal",
+      "language": "crystal",
+      "lastUpdated": "2025-10-12",
+      "name": "Crystal",
+      "owners": [
+        "crystal-lang-tools"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/crystal-lang-tools/tree-sitter-crystal",
+      "sourceCommit": "50ca9e6fcfb16a2cbcad59203cfd8ad650e25c49",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-50ca9e6"
     },
     {
       "abi": 14,
@@ -2460,34 +2460,34 @@
       "version": "git-8bad395"
     },
     {
-      "id": "parser-cylc",
-      "name": "Cylc",
-      "language": "cylc",
-      "package": "github.com/elliotfontaine/tree-sitter-cylc",
-      "version": "git-6d1d811",
-      "sourceCommit": "6d1d81137112299324b526477ce1db989ab58fb8",
-      "lastUpdated": "2025-09-08",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "elliotfontaine"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-cylc",
+      "language": "cylc",
+      "lastUpdated": "2025-09-08",
+      "name": "Cylc",
+      "owners": [
+        "elliotfontaine"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/elliotfontaine/tree-sitter-cylc",
+      "sourceCommit": "6d1d81137112299324b526477ce1db989ab58fb8",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-6d1d811"
     },
     {
       "abi": 14,
@@ -2538,34 +2538,34 @@
       "version": "git-62f44f5"
     },
     {
-      "id": "parser-d",
-      "name": "D",
-      "language": "d",
-      "package": "github.com/gdamore/tree-sitter-d",
-      "version": "git-8bcb13d",
-      "sourceCommit": "8bcb13dbddf16ca44a42f8e98e8cf3d86b2b2e48",
-      "lastUpdated": "2026-05-27",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "gdamore"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-d",
+      "language": "d",
+      "lastUpdated": "2026-05-27",
+      "name": "D",
+      "owners": [
+        "gdamore"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/gdamore/tree-sitter-d",
+      "sourceCommit": "8bcb13dbddf16ca44a42f8e98e8cf3d86b2b2e48",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-8bcb13d"
     },
     {
       "abi": 14,
@@ -3691,34 +3691,34 @@
       "version": "git-e50787c"
     },
     {
-      "id": "parser-embedded-perl",
-      "name": "Embedded Perl",
-      "language": "embedded-perl",
-      "package": "github.com/jobindex-open/tree-sitter-embedded-perl",
-      "version": "git-5557a53",
-      "sourceCommit": "5557a53f1f59a67cbd54c25bacd0c56d43158818",
-      "lastUpdated": "2026-03-18",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "jobindex-open"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-embedded-perl",
+      "language": "embedded-perl",
+      "lastUpdated": "2026-03-18",
+      "name": "Embedded Perl",
+      "owners": [
+        "jobindex-open"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/jobindex-open/tree-sitter-embedded-perl",
+      "sourceCommit": "5557a53f1f59a67cbd54c25bacd0c56d43158818",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-5557a53"
     },
     {
       "abi": 15,
@@ -4019,34 +4019,34 @@
       "version": "git-ce72d1c"
     },
     {
-      "id": "parser-fidl",
-      "name": "Fidl",
-      "language": "fidl",
-      "package": "github.com/google/tree-sitter-fidl",
-      "version": "git-0a8910f",
-      "sourceCommit": "0a8910f293268e27ff554357c229ba172b0eaed2",
-      "lastUpdated": "2024-02-27",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "google"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-fidl",
+      "language": "fidl",
+      "lastUpdated": "2024-02-27",
+      "name": "Fidl",
+      "owners": [
+        "google"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/google/tree-sitter-fidl",
+      "sourceCommit": "0a8910f293268e27ff554357c229ba172b0eaed2",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-0a8910f"
     },
     {
       "abi": 14,
@@ -4079,34 +4079,34 @@
       "version": "git-8503d3a"
     },
     {
-      "id": "parser-fish",
-      "name": "Fish",
-      "language": "fish",
-      "package": "github.com/ram02z/tree-sitter-fish",
-      "version": "git-f435b0b",
-      "sourceCommit": "f435b0bd772578c70e5d158b85267bb886316f88",
-      "lastUpdated": "2026-04-16",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "ram02z"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-fish",
+      "language": "fish",
+      "lastUpdated": "2026-04-16",
+      "name": "Fish",
+      "owners": [
+        "ram02z"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/ram02z/tree-sitter-fish",
+      "sourceCommit": "f435b0bd772578c70e5d158b85267bb886316f88",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-f435b0b"
     },
     {
       "abi": 14,
@@ -5258,34 +5258,34 @@
       "version": "git-bc06955"
     },
     {
-      "id": "parser-willcassella-gn-gn",
-      "name": "Gn",
-      "language": "gn",
-      "package": "github.com/willcassella/tree-sitter-gn",
-      "version": "git-fbaa7b3",
-      "sourceCommit": "fbaa7b3d52b958e3ac06e15416e1785138bde063",
-      "lastUpdated": "2023-12-10",
-      "upstreamSemver": null,
       "abi": 13,
-      "owners": [
-        "willcassella"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-willcassella-gn-gn",
+      "language": "gn",
+      "lastUpdated": "2023-12-10",
+      "name": "Gn",
+      "owners": [
+        "willcassella"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/willcassella/tree-sitter-gn",
+      "sourceCommit": "fbaa7b3d52b958e3ac06e15416e1785138bde063",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-fbaa7b3"
     },
     {
       "abi": null,
@@ -5569,34 +5569,34 @@
       "version": "git-aa71f63"
     },
     {
-      "id": "parser-gotmpl",
-      "name": "Gotmpl",
-      "language": "gotmpl",
-      "package": "github.com/ngalaiko/tree-sitter-go-template",
-      "version": "git-aa71f63",
-      "sourceCommit": "aa71f63de226c5592dfbfc1f29949522d7c95fac",
-      "lastUpdated": "2026-03-21",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "ngalaiko"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-gotmpl",
+      "language": "gotmpl",
+      "lastUpdated": "2026-03-21",
+      "name": "Gotmpl",
+      "owners": [
+        "ngalaiko"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/ngalaiko/tree-sitter-go-template",
+      "sourceCommit": "aa71f63de226c5592dfbfc1f29949522d7c95fac",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-aa71f63"
     },
     {
       "abi": 13,
@@ -6160,34 +6160,34 @@
       "version": "git-64ad627"
     },
     {
-      "id": "parser-hdl",
-      "name": "Hdl",
-      "language": "hdl",
-      "package": "github.com/quantonganh/tree-sitter-hdl",
-      "version": "git-2199fdf",
-      "sourceCommit": "2199fdf1d302100a53002ea2cf540999119836a0",
-      "lastUpdated": "2025-09-09",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "quantonganh"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-hdl",
+      "language": "hdl",
+      "lastUpdated": "2025-09-09",
+      "name": "Hdl",
+      "owners": [
+        "quantonganh"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/quantonganh/tree-sitter-hdl",
+      "sourceCommit": "2199fdf1d302100a53002ea2cf540999119836a0",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-2199fdf"
     },
     {
       "abi": 15,
@@ -6403,34 +6403,34 @@
       "version": "git-c390f10"
     },
     {
-      "id": "parser-hoon",
-      "name": "Hoon",
-      "language": "hoon",
-      "package": "github.com/urbit-pilled/tree-sitter-hoon",
-      "version": "git-1545137",
-      "sourceCommit": "1545137aadcc63660c47db9ad98d02fa602655d0",
-      "lastUpdated": "2024-12-17",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "urbit-pilled"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-hoon",
+      "language": "hoon",
+      "lastUpdated": "2024-12-17",
+      "name": "Hoon",
+      "owners": [
+        "urbit-pilled"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/urbit-pilled/tree-sitter-hoon",
+      "sourceCommit": "1545137aadcc63660c47db9ad98d02fa602655d0",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-1545137"
     },
     {
       "abi": 14,
@@ -6635,34 +6635,34 @@
       "version": "git-db8b439"
     },
     {
-      "id": "parser-hurl",
-      "name": "Hurl",
-      "language": "hurl",
-      "package": "github.com/pfeiferj/tree-sitter-hurl",
-      "version": "git-597efbd",
-      "sourceCommit": "597efbd7ce9a814bb058f48eabd055b1d1e12145",
-      "lastUpdated": "2025-09-13",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "pfeiferj"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-hurl",
+      "language": "hurl",
+      "lastUpdated": "2025-09-13",
+      "name": "Hurl",
+      "owners": [
+        "pfeiferj"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/pfeiferj/tree-sitter-hurl",
+      "sourceCommit": "597efbd7ce9a814bb058f48eabd055b1d1e12145",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-597efbd"
     },
     {
       "id": "parser-unknown-hyperlink",
@@ -7564,34 +7564,34 @@
       "summary": "Synthetic placeholder for query sources with no matching parser release in the catalog."
     },
     {
-      "id": "parser-jsonnet",
-      "name": "Jsonnet",
-      "language": "jsonnet",
-      "package": "github.com/sourcegraph/tree-sitter-jsonnet",
-      "version": "git-ddd075f",
-      "sourceCommit": "ddd075f1939aed8147b7aa67f042eda3fce22790",
-      "lastUpdated": "2024-08-15",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "sourcegraph"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-jsonnet",
+      "language": "jsonnet",
+      "lastUpdated": "2024-08-15",
+      "name": "Jsonnet",
+      "owners": [
+        "sourcegraph"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/sourcegraph/tree-sitter-jsonnet",
+      "sourceCommit": "ddd075f1939aed8147b7aa67f042eda3fce22790",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-ddd075f"
     },
     {
       "id": "parser-unknown-jsx",
@@ -7761,34 +7761,34 @@
       "version": "git-5685543"
     },
     {
-      "id": "parser-poliorcetics-just-just",
-      "name": "Just",
-      "language": "just",
-      "package": "github.com/poliorcetics/tree-sitter-just",
-      "version": "git-f749ec8",
-      "sourceCommit": "f749ec853adcacc5f14e9ec375f244104e033d88",
-      "lastUpdated": "2025-08-23",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "poliorcetics"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-poliorcetics-just-just",
+      "language": "just",
+      "lastUpdated": "2025-08-23",
+      "name": "Just",
+      "owners": [
+        "poliorcetics"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/poliorcetics/tree-sitter-just",
+      "sourceCommit": "f749ec853adcacc5f14e9ec375f244104e033d88",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-f749ec8"
     },
     {
       "abi": 15,
@@ -7908,34 +7908,34 @@
       "version": "git-9ac99fe"
     },
     {
-      "id": "parser-kdl",
-      "name": "Kdl",
-      "language": "kdl",
-      "package": "github.com/tree-sitter-grammars/tree-sitter-kdl",
-      "version": "git-b37e3d5",
-      "sourceCommit": "b37e3d58e5c5cf8d739b315d6114e02d42e66664",
-      "lastUpdated": "2024-06-08",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "tree-sitter-grammars"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-kdl",
+      "language": "kdl",
+      "lastUpdated": "2024-06-08",
+      "name": "Kdl",
+      "owners": [
+        "tree-sitter-grammars"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars."
+      "package": "github.com/tree-sitter-grammars/tree-sitter-kdl",
+      "sourceCommit": "b37e3d58e5c5cf8d739b315d6114e02d42e66664",
+      "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars.",
+      "upstreamSemver": null,
+      "version": "git-b37e3d5"
     },
     {
       "abi": 15,
@@ -9058,21 +9058,17 @@
       "version": "git-cecd8ce"
     },
     {
+      "id": "parser-magik",
+      "name": "Magik",
+      "language": "magik",
+      "package": "github.com/krn-robin/tree-sitter-magik",
+      "version": "git-3d9d50f",
+      "sourceCommit": "3d9d50fb2297dae0a3bf91cb34a8bf36c7097215",
+      "lastUpdated": "2026-06-01",
+      "upstreamSemver": "0.0.1",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "krn-robin"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -9080,18 +9076,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-magik",
-      "language": "magik",
-      "lastUpdated": "2026-05-25",
-      "name": "Magik",
-      "owners": [
-        "krn-robin"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/krn-robin/tree-sitter-magik",
-      "sourceCommit": "3369b8c24ffde5f2a6166b7f99deb3e792dfaea1",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1.",
-      "upstreamSemver": "0.0.1",
-      "version": "git-3369b8c"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1."
     },
     {
       "abi": null,
@@ -9214,34 +9214,34 @@
       "version": "git-70613f3"
     },
     {
-      "id": "parser-markdoc",
-      "name": "Markdoc",
-      "language": "markdoc",
-      "package": "github.com/mohitsinghs/tree-sitter-markdoc",
-      "version": "git-e4211fe",
-      "sourceCommit": "e4211fe541a13350275e4684de79adfebe9a91f8",
-      "lastUpdated": "2024-10-06",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "mohitsinghs"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-markdoc",
+      "language": "markdoc",
+      "lastUpdated": "2024-10-06",
+      "name": "Markdoc",
+      "owners": [
+        "mohitsinghs"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/mohitsinghs/tree-sitter-markdoc",
+      "sourceCommit": "e4211fe541a13350275e4684de79adfebe9a91f8",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-e4211fe"
     },
     {
       "abi": 15,
@@ -9703,34 +9703,34 @@
       "version": "git-12d0111"
     },
     {
-      "id": "parser-joncoole-nginx-nginx",
-      "name": "Nginx",
-      "language": "nginx",
-      "package": "gitlab.com/joncoole/tree-sitter-nginx",
-      "version": "git-f6d13cf",
-      "sourceCommit": "f6d13cf6281b25f2ce342a49a41a10a0381e00f0",
-      "lastUpdated": null,
-      "upstreamSemver": null,
       "abi": null,
-      "owners": [
-        "joncoole"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-joncoole-nginx-nginx",
+      "language": "nginx",
+      "lastUpdated": null,
+      "name": "Nginx",
+      "owners": [
+        "joncoole"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "gitlab.com/joncoole/tree-sitter-nginx",
+      "sourceCommit": "f6d13cf6281b25f2ce342a49a41a10a0381e00f0",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-f6d13cf"
     },
     {
       "abi": 15,
@@ -10470,34 +10470,34 @@
       "version": "git-d2ca8ef"
     },
     {
-      "id": "parser-ohm",
-      "name": "Ohm",
-      "language": "ohm",
-      "package": "github.com/novusnota/tree-sitter-ohm",
-      "version": "git-a1de3e7",
-      "sourceCommit": "a1de3e748a185a335b446613aaeff1eb10e83cdf",
-      "lastUpdated": "2025-12-12",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "novusnota"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-ohm",
+      "language": "ohm",
+      "lastUpdated": "2025-12-12",
+      "name": "Ohm",
+      "owners": [
+        "novusnota"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/novusnota/tree-sitter-ohm",
+      "sourceCommit": "a1de3e748a185a335b446613aaeff1eb10e83cdf",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-a1de3e7"
     },
     {
       "abi": 14,
@@ -10530,34 +10530,34 @@
       "version": "git-8e1d24a"
     },
     {
-      "id": "parser-openscad",
-      "name": "Openscad",
-      "language": "openscad",
-      "package": "github.com/openscad/tree-sitter-openscad",
-      "version": "git-4c36a4f",
-      "sourceCommit": "4c36a4fb569688c97cfa28090031e039a6079244",
-      "lastUpdated": "2026-03-21",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "openscad"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-openscad",
+      "language": "openscad",
+      "lastUpdated": "2026-03-21",
+      "name": "Openscad",
+      "owners": [
+        "openscad"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/openscad/tree-sitter-openscad",
+      "sourceCommit": "4c36a4fb569688c97cfa28090031e039a6079244",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-4c36a4f"
     },
     {
       "abi": 13,
@@ -10650,34 +10650,34 @@
       "version": "git-2023939"
     },
     {
-      "id": "parser-mtoohey31-pem-pem",
-      "name": "Pem",
-      "language": "pem",
-      "package": "github.com/mtoohey31/tree-sitter-pem",
-      "version": "git-62842ea",
-      "sourceCommit": "62842ea106ff66876f9af4cccdf87913d1ed912e",
-      "lastUpdated": "2023-02-05",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "mtoohey31"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-mtoohey31-pem-pem",
+      "language": "pem",
+      "lastUpdated": "2023-02-05",
+      "name": "Pem",
+      "owners": [
+        "mtoohey31"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/mtoohey31/tree-sitter-pem",
+      "sourceCommit": "62842ea106ff66876f9af4cccdf87913d1ed912e",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-62842ea"
     },
     {
       "abi": 15,
@@ -10776,37 +10776,17 @@
       "version": "git-5b97493"
     },
     {
-      "id": "parser-tree-sitter-perl-perl-perl",
-      "name": "Perl",
-      "language": "perl",
-      "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-05e8c27",
-      "sourceCommit": "05e8c278a4dc5231951e4e2408c01549fafb6f26",
-      "lastUpdated": "2026-05-31",
-      "upstreamSemver": "1.0.3",
       "abi": null,
-      "owners": [
-        "tree-sitter-perl"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-perl.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -10816,7 +10796,27 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.0.3."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-tree-sitter-perl-perl-perl",
+      "language": "perl",
+      "lastUpdated": "2026-05-31",
+      "name": "Perl",
+      "owners": [
+        "tree-sitter-perl"
+      ],
+      "package": "github.com/tree-sitter-perl/tree-sitter-perl",
+      "sourceCommit": "05e8c278a4dc5231951e4e2408c01549fafb6f26",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.0.3.",
+      "upstreamSemver": "1.0.3",
+      "version": "git-05e8c27"
     },
     {
       "abi": 14,
@@ -11084,34 +11084,12 @@
       "version": "git-afece58"
     },
     {
-      "id": "parser-pkl",
-      "name": "Pkl",
-      "language": "pkl",
-      "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-6ceea36",
-      "sourceCommit": "6ceea3649973a0c993399104fdf5fb5c3207f5d2",
-      "lastUpdated": "2026-06-01",
-      "upstreamSemver": "0.20.0",
       "abi": 15,
-      "owners": [
-        "apple"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -11125,7 +11103,29 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.20.0."
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-pkl",
+      "language": "pkl",
+      "lastUpdated": "2026-06-01",
+      "name": "Pkl",
+      "owners": [
+        "apple"
+      ],
+      "package": "github.com/apple/tree-sitter-pkl",
+      "sourceCommit": "6ceea3649973a0c993399104fdf5fb5c3207f5d2",
+      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.20.0.",
+      "upstreamSemver": "0.20.0",
+      "version": "git-6ceea36"
     },
     {
       "abi": 14,
@@ -11158,37 +11158,17 @@
       "version": "git-417cee9"
     },
     {
-      "id": "parser-pod",
-      "name": "Pod",
-      "language": "pod",
-      "package": "github.com/tree-sitter-perl/tree-sitter-pod",
-      "version": "git-ffbd7f3",
-      "sourceCommit": "ffbd7f3b7b68edaaa0532898953c627355cb1a1a",
-      "lastUpdated": "2026-05-31",
-      "upstreamSemver": "1.1.0",
       "abi": null,
-      "owners": [
-        "tree-sitter-perl"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-pod.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -11196,7 +11176,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.0."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-pod",
+      "language": "pod",
+      "lastUpdated": "2026-05-31",
+      "name": "Pod",
+      "owners": [
+        "tree-sitter-perl"
+      ],
+      "package": "github.com/tree-sitter-perl/tree-sitter-pod",
+      "sourceCommit": "ffbd7f3b7b68edaaa0532898953c627355cb1a1a",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.0.",
+      "upstreamSemver": "1.1.0",
+      "version": "git-ffbd7f3"
     },
     {
       "abi": 14,
@@ -11336,21 +11336,17 @@
       "version": "git-d398441"
     },
     {
+      "id": "parser-wharflab-powershell-powershell",
+      "name": "Powershell",
+      "language": "powershell",
+      "package": "github.com/wharflab/tree-sitter-powershell",
+      "version": "git-e9adc46",
+      "sourceCommit": "e9adc466a3a104a27a2696fbc5a573d410e7e519",
+      "lastUpdated": "2026-06-01",
+      "upstreamSemver": "0.38.1",
       "abi": 14,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "wharflab"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -11358,18 +11354,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-wharflab-powershell-powershell",
-      "language": "powershell",
-      "lastUpdated": "2026-05-25",
-      "name": "Powershell",
-      "owners": [
-        "wharflab"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/wharflab/tree-sitter-powershell",
-      "sourceCommit": "e521071b16bfa4aa99ab4f6299451d235d3109a4",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1.",
-      "upstreamSemver": "0.38.1",
-      "version": "git-e521071"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1."
     },
     {
       "abi": 14,
@@ -11639,34 +11639,34 @@
       "version": "git-d65a18c"
     },
     {
-      "id": "parser-sdoerner-proto-proto",
-      "name": "Proto",
-      "language": "proto",
-      "package": "github.com/sdoerner/tree-sitter-proto",
-      "version": "git-35a6a3b",
-      "sourceCommit": "35a6a3b543e418b7037328261f40e912c767c598",
-      "lastUpdated": "2025-05-09",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "sdoerner"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-sdoerner-proto-proto",
+      "language": "proto",
+      "lastUpdated": "2025-05-09",
+      "name": "Proto",
+      "owners": [
+        "sdoerner"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/sdoerner/tree-sitter-proto",
+      "sourceCommit": "35a6a3b543e418b7037328261f40e912c767c598",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-35a6a3b"
     },
     {
       "abi": null,
@@ -13574,34 +13574,34 @@
       "version": "git-fdfa6a1"
     },
     {
-      "id": "parser-smithy",
-      "name": "Smithy",
-      "language": "smithy",
-      "package": "github.com/indoorvivants/tree-sitter-smithy",
-      "version": "git-ec4fe14",
-      "sourceCommit": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433",
-      "lastUpdated": "2025-05-13",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "indoorvivants"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-smithy",
+      "language": "smithy",
+      "lastUpdated": "2025-05-13",
+      "name": "Smithy",
+      "owners": [
+        "indoorvivants"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/indoorvivants/tree-sitter-smithy",
+      "sourceCommit": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-ec4fe14"
     },
     {
       "abi": 14,
@@ -14360,34 +14360,34 @@
       "version": "git-ac874dd"
     },
     {
-      "id": "parser-strictdoc",
-      "name": "Strictdoc",
-      "language": "strictdoc",
-      "package": "github.com/manueldiagostino/tree-sitter-strictdoc",
-      "version": "git-bba07bd",
-      "sourceCommit": "bba07bd4d41835e3e5f456a9603ce601b1be1937",
-      "lastUpdated": "2025-09-22",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "manueldiagostino"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-strictdoc",
+      "language": "strictdoc",
+      "lastUpdated": "2025-09-22",
+      "name": "Strictdoc",
+      "owners": [
+        "manueldiagostino"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/manueldiagostino/tree-sitter-strictdoc",
+      "sourceCommit": "bba07bd4d41835e3e5f456a9603ce601b1be1937",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-bba07bd"
     },
     {
       "abi": 14,
@@ -14420,34 +14420,34 @@
       "version": "git-319cdca"
     },
     {
-      "id": "parser-styx",
-      "name": "Styx",
-      "language": "styx",
-      "package": "github.com/bearcove/styx",
-      "version": "git-51feb2a",
-      "sourceCommit": "51feb2a67f211e806e5e2764bc5c06738a6c40d7",
-      "lastUpdated": "2026-05-22",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "bearcove"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-styx",
+      "language": "styx",
+      "lastUpdated": "2026-05-22",
+      "name": "Styx",
+      "owners": [
+        "bearcove"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected. Grammar path crates/tree-sitter-styx."
+      "package": "github.com/bearcove/styx",
+      "sourceCommit": "51feb2a67f211e806e5e2764bc5c06738a6c40d7",
+      "summary": "Pinned in Helix. No bundled query files detected. Grammar path crates/tree-sitter-styx.",
+      "upstreamSemver": null,
+      "version": "git-51feb2a"
     },
     {
       "abi": 15,
@@ -14540,34 +14540,34 @@
       "version": "git-f4586b3"
     },
     {
-      "id": "parser-themixednuts-htmlx-svelte",
-      "name": "Svelte",
-      "language": "svelte",
-      "package": "github.com/themixednuts/tree-sitter-htmlx",
-      "version": "git-80c3e69",
-      "sourceCommit": "80c3e698ec7379772c7f2aecb9b4b4c4ac52ff0b",
-      "lastUpdated": "2026-05-21",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "themixednuts"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-themixednuts-htmlx-svelte",
+      "language": "svelte",
+      "lastUpdated": "2026-05-21",
+      "name": "Svelte",
+      "owners": [
+        "themixednuts"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected. Grammar path crates/tree-sitter-svelte."
+      "package": "github.com/themixednuts/tree-sitter-htmlx",
+      "sourceCommit": "80c3e698ec7379772c7f2aecb9b4b4c4ac52ff0b",
+      "summary": "Pinned in Helix. No bundled query files detected. Grammar path crates/tree-sitter-svelte.",
+      "upstreamSemver": null,
+      "version": "git-80c3e69"
     },
     {
       "abi": 14,
@@ -14630,39 +14630,17 @@
       "version": "git-9b7845c"
     },
     {
-      "id": "parser-swift",
-      "name": "Swift",
-      "language": "swift",
-      "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-d42e9bb",
-      "sourceCommit": "d42e9bb24646c4dbf1f5ec476a35b96d817da448",
-      "lastUpdated": "2026-06-01",
-      "upstreamSemver": "0.7.3",
       "abi": null,
-      "owners": [
-        "alex-pinkus"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-swift.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -14676,7 +14654,29 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3."
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-swift",
+      "language": "swift",
+      "lastUpdated": "2026-06-01",
+      "name": "Swift",
+      "owners": [
+        "alex-pinkus"
+      ],
+      "package": "github.com/alex-pinkus/tree-sitter-swift",
+      "sourceCommit": "d42e9bb24646c4dbf1f5ec476a35b96d817da448",
+      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3.",
+      "upstreamSemver": "0.7.3",
+      "version": "git-d42e9bb"
     },
     {
       "abi": 13,
@@ -15503,34 +15503,34 @@
       "version": "git-64b5683"
     },
     {
-      "id": "parser-tql",
-      "name": "Tql",
-      "language": "tql",
-      "package": "github.com/tenzir/tree-sitter-tql",
-      "version": "git-477e8ba",
-      "sourceCommit": "477e8ba230867b9135deb7af88ea96f160900173",
-      "lastUpdated": "2026-05-13",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "tenzir"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-tql",
+      "language": "tql",
+      "lastUpdated": "2026-05-13",
+      "name": "Tql",
+      "owners": [
+        "tenzir"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/tenzir/tree-sitter-tql",
+      "sourceCommit": "477e8ba230867b9135deb7af88ea96f160900173",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-477e8ba"
     },
     {
       "abi": 15,
@@ -15754,34 +15754,34 @@
       "version": "git-7f789ea"
     },
     {
-      "id": "parser-twig",
-      "name": "Twig",
-      "language": "twig",
-      "package": "github.com/gbprod/tree-sitter-twig",
-      "version": "git-0afd9a6",
-      "sourceCommit": "0afd9a6d808944e65a7be393e31868b85345735f",
-      "lastUpdated": "2026-05-13",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "gbprod"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-twig",
+      "language": "twig",
+      "lastUpdated": "2026-05-13",
+      "name": "Twig",
+      "owners": [
+        "gbprod"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/gbprod/tree-sitter-twig",
+      "sourceCommit": "0afd9a6d808944e65a7be393e31868b85345735f",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-0afd9a6"
     },
     {
       "abi": 14,
@@ -15978,34 +15978,34 @@
       "version": "git-2fcb563"
     },
     {
-      "id": "parser-ungrammar",
-      "name": "Ungrammar",
-      "language": "ungrammar",
-      "package": "github.com/tree-sitter-grammars/tree-sitter-ungrammar",
-      "version": "git-debd26f",
-      "sourceCommit": "debd26fed283d80456ebafa33a06957b0c52e451",
-      "lastUpdated": "2023-02-28",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "tree-sitter-grammars"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-ungrammar",
+      "language": "ungrammar",
+      "lastUpdated": "2023-02-28",
+      "name": "Ungrammar",
+      "owners": [
+        "tree-sitter-grammars"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars."
+      "package": "github.com/tree-sitter-grammars/tree-sitter-ungrammar",
+      "sourceCommit": "debd26fed283d80456ebafa33a06957b0c52e451",
+      "summary": "Pinned in Helix. No bundled query files detected. Maintained in tree-sitter-grammars.",
+      "upstreamSemver": null,
+      "version": "git-debd26f"
     },
     {
       "abi": 14,
@@ -16115,34 +16115,34 @@
       "version": "git-4e0875f"
     },
     {
-      "id": "parser-jummit-uxntal-uxntal",
-      "name": "Uxntal",
-      "language": "uxntal",
-      "package": "github.com/Jummit/tree-sitter-uxntal",
-      "version": "git-1a44f8d",
-      "sourceCommit": "1a44f8d31053096b79c52f10a39da12479edbf64",
-      "lastUpdated": "2024-03-23",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "Jummit"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-jummit-uxntal-uxntal",
+      "language": "uxntal",
+      "lastUpdated": "2024-03-23",
+      "name": "Uxntal",
+      "owners": [
+        "Jummit"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/Jummit/tree-sitter-uxntal",
+      "sourceCommit": "1a44f8d31053096b79c52f10a39da12479edbf64",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-1a44f8d"
     },
     {
       "abi": 14,
@@ -16205,34 +16205,34 @@
       "version": "git-59a8889"
     },
     {
-      "id": "parser-vala",
-      "name": "Vala",
-      "language": "vala",
-      "package": "github.com/vala-lang/tree-sitter-vala",
-      "version": "git-97e6db3",
-      "sourceCommit": "97e6db3c8c73b15a9541a458d8e797a07f588ef4",
-      "lastUpdated": "2024-10-29",
-      "upstreamSemver": null,
       "abi": 13,
-      "owners": [
-        "vala-lang"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-vala",
+      "language": "vala",
+      "lastUpdated": "2024-10-29",
+      "name": "Vala",
+      "owners": [
+        "vala-lang"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/vala-lang/tree-sitter-vala",
+      "sourceCommit": "97e6db3c8c73b15a9541a458d8e797a07f588ef4",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-97e6db3"
     },
     {
       "abi": 15,
