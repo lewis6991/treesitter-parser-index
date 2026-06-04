@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03",
+  "generatedAt": "2026-06-04",
   "kind": "prototype-query-packs",
   "count": 233,
   "items": [
@@ -12293,7 +12293,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7a8f139",
+      "version": "git-20f784e",
       "languages": [
         "bash",
         "c",
@@ -12617,7 +12617,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7a8f139",
+      "version": "git-20f784e",
       "languages": [
         "glsl"
       ],
@@ -12660,7 +12660,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7a8f139",
+      "version": "git-20f784e",
       "languages": [
         "html"
       ],
@@ -12715,7 +12715,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-7a8f139",
+      "version": "git-20f784e",
       "languages": [
         "proto"
       ],
@@ -15478,7 +15478,7 @@
       "id": "pack-parser-parser-gleam",
       "name": "Gleam Parser Bundle",
       "package": "github.com/gleam-lang/tree-sitter-gleam",
-      "version": "git-4e4643c",
+      "version": "git-0ae061f",
       "languages": [
         "gleam"
       ],
@@ -15524,7 +15524,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/gleam-lang/tree-sitter-gleam@git-4e4643c"
+          "github.com/gleam-lang/tree-sitter-gleam@git-0ae061f"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
