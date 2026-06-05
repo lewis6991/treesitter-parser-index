@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04",
+  "generatedAt": "2026-06-05",
   "kind": "prototype-query-packs",
-  "count": 233,
+  "count": 234,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-72d5837",
+      "version": "git-7eb1a28",
       "languages": [
         "_gjs",
         "_javascript",
@@ -8398,7 +8398,7 @@
         "spade",
         "spicedb",
         "sql",
-        "sshclientconfig",
+        "ssh_client_config",
         "starlark",
         "strace",
         "strictdoc",
@@ -8567,6 +8567,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -8579,6 +8580,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
@@ -8688,6 +8690,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "tags",
             "textobjects"
           ],
@@ -8775,7 +8778,8 @@
         {
           "language": "clarity",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "locals"
           ],
           "testedParserRefs": [
             "github.com/xlittlerag/tree-sitter-clarity@git-1436da3"
@@ -8788,10 +8792,11 @@
             "indents",
             "injections",
             "rainbows",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/sogaiu/tree-sitter-clojure@git-e57c569"
+            "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
           ]
         },
         {
@@ -8868,12 +8873,13 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-cpp@git-56455f4"
+            "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
           ]
         },
         {
@@ -8909,7 +8915,8 @@
             "highlights",
             "indents",
             "injections",
-            "rainbows"
+            "rainbows",
+            "textobjects"
           ],
           "testedParserRefs": [
             "github.com/tree-sitter/tree-sitter-css@git-dda5cfc"
@@ -8965,6 +8972,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -8979,6 +8987,7 @@
             "injections",
             "locals",
             "rainbows",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -9212,6 +9221,7 @@
           "language": "elisp",
           "queryKinds": [
             "highlights",
+            "locals",
             "tags"
           ],
           "testedParserRefs": [
@@ -9224,6 +9234,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
@@ -9314,6 +9325,7 @@
           "language": "fennel",
           "queryKinds": [
             "highlights",
+            "locals",
             "rainbows"
           ],
           "testedParserRefs": [
@@ -9350,6 +9362,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -9595,7 +9608,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/gleam-lang/tree-sitter-gleam@git-dae1551"
+            "github.com/gleam-lang/tree-sitter-gleam@git-4e4643c"
           ]
         },
         {
@@ -9605,7 +9618,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/ember-tooling/tree-sitter-glimmer@git-5dc6d10"
+            "github.com/ember-tooling/tree-sitter-glimmer@git-88af855"
           ]
         },
         {
@@ -9774,7 +9787,8 @@
           "queryKinds": [
             "highlights",
             "injections",
-            "locals"
+            "locals",
+            "textobjects"
           ],
           "testedParserRefs": [
             "git.sr.ht/~ecs/tree-sitter-hare@git-07035a2"
@@ -9786,6 +9800,7 @@
             "highlights",
             "injections",
             "locals",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -9841,7 +9856,8 @@
         {
           "language": "hdl",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "locals"
           ],
           "testedParserRefs": [
             "github.com/quantonganh/tree-sitter-hdl@git-2199fdf"
@@ -10017,6 +10033,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
@@ -10202,6 +10219,7 @@
             "indents",
             "injections",
             "locals",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10434,7 +10452,9 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10690,14 +10710,17 @@
         {
           "language": "nix",
           "queryKinds": [
+            "folds",
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-69fbfb0"
+            "github.com/numtide/tree-sitter-nix@git-70f34e9"
           ]
         },
         {
@@ -10730,7 +10753,8 @@
             "highlights",
             "indents",
             "injections",
-            "locals"
+            "locals",
+            "textobjects"
           ],
           "testedParserRefs": [
             "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
@@ -10786,7 +10810,8 @@
           "language": "openscad",
           "queryKinds": [
             "highlights",
-            "injections"
+            "injections",
+            "locals"
           ],
           "testedParserRefs": [
             "github.com/openscad/tree-sitter-openscad@git-4c36a4f"
@@ -10807,6 +10832,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10850,6 +10876,7 @@
             "highlights",
             "indents",
             "injections",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10874,6 +10901,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
@@ -10887,6 +10915,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "tags"
           ],
           "testedParserRefs": [
@@ -11356,6 +11385,7 @@
             "indents",
             "injections",
             "locals",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -11377,6 +11407,7 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
             "rainbows",
             "tags",
             "textobjects"
@@ -11494,7 +11525,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/JoranHonig/tree-sitter-solidity@git-f7f5251"
+            "github.com/JoranHonig/tree-sitter-solidity@git-048fe68"
           ]
         },
         {
@@ -11502,6 +11533,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -11537,16 +11569,16 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/DerekStride/tree-sitter-sql@git-86e3d03"
+            "github.com/DerekStride/tree-sitter-sql@git-851e9cb"
           ]
         },
         {
-          "language": "sshclientconfig",
+          "language": "ssh_client_config",
           "queryKinds": [
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/metio/tree-sitter-ssh-client-config@git-e45c6d5"
+            "github.com/metio/tree-sitter-ssh-client-config@git-4abd07d"
           ]
         },
         {
@@ -11643,6 +11675,7 @@
             "injections",
             "locals",
             "rainbows",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -11987,6 +12020,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "locals",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -12018,7 +12052,8 @@
         {
           "language": "vhdl",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "locals"
           ],
           "testedParserRefs": [
             "github.com/jpt13653903/tree-sitter-vhdl@git-b8e31d1"
@@ -12239,6 +12274,7 @@
             "highlights",
             "indents",
             "injections",
+            "tags",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -12293,7 +12329,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-20f784e",
+      "version": "git-ca63c88",
       "languages": [
         "bash",
         "c",
@@ -12617,7 +12653,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-20f784e",
+      "version": "git-ca63c88",
       "languages": [
         "glsl"
       ],
@@ -12660,7 +12696,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-20f784e",
+      "version": "git-ca63c88",
       "languages": [
         "html"
       ],
@@ -12715,7 +12751,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-20f784e",
+      "version": "git-ca63c88",
       "languages": [
         "proto"
       ],
@@ -17428,7 +17464,7 @@
       "summary": "highlights queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-nix",
+      "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
       "version": "git-69fbfb0",
@@ -17466,6 +17502,51 @@
         ]
       },
       "summary": "tags queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-numtide-nix-nix",
+      "name": "Nix Parser Bundle",
+      "package": "github.com/numtide/tree-sitter-nix",
+      "version": "git-70f34e9",
+      "languages": [
+        "nix"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "nix",
+          "queryKinds": [
+            "highlights",
+            "tags"
+          ]
+        }
+      ],
+      "owners": [
+        "numtide"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "tags"
+      ],
+      "queries": {
+        "tags": [
+          "queries/tags.scm"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/numtide/tree-sitter-nix@git-70f34e9"
+        ]
+      },
+      "summary": "highlights, tags queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-nlua",
@@ -17928,7 +18009,7 @@
       "id": "pack-parser-parser-pgn",
       "name": "Pgn Parser Bundle",
       "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-26122e7",
+      "version": "git-8e21f84",
       "languages": [
         "pgn"
       ],
@@ -17959,7 +18040,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rolandwalker/tree-sitter-pgn@git-26122e7"
+          "github.com/rolandwalker/tree-sitter-pgn@git-8e21f84"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18069,7 +18150,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-6ceea36",
+      "version": "git-99308a4",
       "languages": [
         "pkl"
       ],
@@ -18110,7 +18191,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-6ceea36"
+          "github.com/apple/tree-sitter-pkl@git-99308a4"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18239,7 +18320,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-e9adc46",
+      "version": "git-bcf2514",
       "languages": [
         "powershell"
       ],
@@ -18270,7 +18351,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-e9adc46"
+          "github.com/wharflab/tree-sitter-powershell@git-bcf2514"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

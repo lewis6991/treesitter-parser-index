@@ -105,6 +105,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -117,6 +118,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
@@ -226,6 +228,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "tags",
       "textobjects"
     ],
@@ -313,7 +316,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "clarity",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "locals"
     ],
     "testedParserRefs": [
       "github.com/xlittlerag/tree-sitter-clarity@git-1436da3"
@@ -326,10 +330,11 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/sogaiu/tree-sitter-clojure@git-e57c569"
+      "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
     ]
   },
   {
@@ -406,12 +411,13 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-cpp@git-56455f4"
+      "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
     ]
   },
   {
@@ -447,7 +453,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
-      "rainbows"
+      "rainbows",
+      "textobjects"
     ],
     "testedParserRefs": [
       "github.com/tree-sitter/tree-sitter-css@git-dda5cfc"
@@ -503,6 +510,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -517,6 +525,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections",
       "locals",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -750,6 +759,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "elisp",
     "queryKinds": [
       "highlights",
+      "locals",
       "tags"
     ],
     "testedParserRefs": [
@@ -762,6 +772,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
@@ -852,6 +863,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "fennel",
     "queryKinds": [
       "highlights",
+      "locals",
       "rainbows"
     ],
     "testedParserRefs": [
@@ -888,6 +900,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -1133,7 +1146,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gleam-lang/tree-sitter-gleam@git-dae1551"
+      "github.com/gleam-lang/tree-sitter-gleam@git-4e4643c"
     ]
   },
   {
@@ -1143,7 +1156,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/ember-tooling/tree-sitter-glimmer@git-5dc6d10"
+      "github.com/ember-tooling/tree-sitter-glimmer@git-88af855"
     ]
   },
   {
@@ -1312,7 +1325,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
-      "locals"
+      "locals",
+      "textobjects"
     ],
     "testedParserRefs": [
       "git.sr.ht/~ecs/tree-sitter-hare@git-07035a2"
@@ -1324,6 +1338,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "injections",
       "locals",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -1379,7 +1394,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "hdl",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "locals"
     ],
     "testedParserRefs": [
       "github.com/quantonganh/tree-sitter-hdl@git-2199fdf"
@@ -1555,6 +1571,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
@@ -1740,6 +1757,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -1972,7 +1990,9 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2228,14 +2248,17 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "nix",
     "queryKinds": [
+      "folds",
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-69fbfb0"
+      "github.com/numtide/tree-sitter-nix@git-70f34e9"
     ]
   },
   {
@@ -2268,7 +2291,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
-      "locals"
+      "locals",
+      "textobjects"
     ],
     "testedParserRefs": [
       "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
@@ -2324,7 +2348,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "openscad",
     "queryKinds": [
       "highlights",
-      "injections"
+      "injections",
+      "locals"
     ],
     "testedParserRefs": [
       "github.com/openscad/tree-sitter-openscad@git-4c36a4f"
@@ -2345,6 +2370,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2388,6 +2414,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2412,6 +2439,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
@@ -2425,6 +2453,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "tags"
     ],
     "testedParserRefs": [
@@ -2894,6 +2923,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2915,6 +2945,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
       "rainbows",
       "tags",
       "textobjects"
@@ -3032,7 +3063,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/JoranHonig/tree-sitter-solidity@git-f7f5251"
+      "github.com/JoranHonig/tree-sitter-solidity@git-048fe68"
     ]
   },
   {
@@ -3040,6 +3071,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -3075,16 +3107,16 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/DerekStride/tree-sitter-sql@git-86e3d03"
+      "github.com/DerekStride/tree-sitter-sql@git-851e9cb"
     ]
   },
   {
-    "language": "sshclientconfig",
+    "language": "ssh_client_config",
     "queryKinds": [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/metio/tree-sitter-ssh-client-config@git-e45c6d5"
+      "github.com/metio/tree-sitter-ssh-client-config@git-4abd07d"
     ]
   },
   {
@@ -3181,6 +3213,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections",
       "locals",
       "rainbows",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -3525,6 +3558,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "locals",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -3556,7 +3590,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "vhdl",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "locals"
     ],
     "testedParserRefs": [
       "github.com/jpt13653903/tree-sitter-vhdl@git-b8e31d1"
@@ -3777,6 +3812,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "tags",
       "textobjects"
     ],
     "testedParserRefs": [

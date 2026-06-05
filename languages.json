@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04",
+  "generatedAt": "2026-06-05",
   "kind": "prototype-languages",
-  "count": 512,
+  "count": 511,
   "items": [
     {
       "language": "_gjs",
@@ -353,6 +353,7 @@
       "queryKinds": [
         "highlights",
         "injections",
+        "locals",
         "textobjects"
       ],
       "queryRoots": [
@@ -1006,7 +1007,8 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "locals"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -2120,6 +2122,7 @@
       ],
       "queryKinds": [
         "highlights",
+        "locals",
         "tags"
       ],
       "queryRoots": [
@@ -3699,7 +3702,8 @@
         "highlights",
         "indents",
         "injections",
-        "locals"
+        "locals",
+        "textobjects"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -3723,6 +3727,7 @@
         "injections",
         "locals",
         "matchup",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -3826,7 +3831,8 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "locals"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -4806,6 +4812,7 @@
         "locals",
         "matchup",
         "outline",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -6054,8 +6061,8 @@
     },
     {
       "language": "nix",
-      "parserCount": 1,
-      "queryPackCount": 6,
+      "parserCount": 2,
+      "queryPackCount": 7,
       "editors": [
         "helix",
         "lapce",
@@ -6391,7 +6398,8 @@
       ],
       "queryKinds": [
         "highlights",
-        "injections"
+        "injections",
+        "locals"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -6515,6 +6523,7 @@
         "indents",
         "injections",
         "matchup",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -8082,6 +8091,7 @@
         "highlights",
         "indents",
         "injections",
+        "locals",
         "rainbows",
         "tags",
         "textobjects"
@@ -8571,13 +8581,17 @@
     {
       "language": "ssh_client_config",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
+      "queryPackCount": 2,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
       "queryKinds": [
         "highlights"
       ],
       "queryRoots": [
-        "queries"
+        "queries",
+        "runtime/queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -8602,23 +8616,6 @@
         "runtime/queries"
       ],
       "hasWasm": true,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "sshclientconfig",
-      "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [
-        "helix",
-        "lapce"
-      ],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
-      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -8891,6 +8888,7 @@
         "locals",
         "outline",
         "rainbows",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -9863,6 +9861,7 @@
         "folds",
         "highlights",
         "injections",
+        "locals",
         "textobjects"
       ],
       "queryRoots": [
@@ -9960,6 +9959,7 @@
         "folds",
         "highlights",
         "injections",
+        "locals",
         "outline"
       ],
       "queryRoots": [
@@ -10595,6 +10595,7 @@
         "locals",
         "matchup",
         "outline",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
