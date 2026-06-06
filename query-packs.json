@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05",
+  "generatedAt": "2026-06-06",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -12329,7 +12329,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-ca63c88",
+      "version": "git-6e9465a",
       "languages": [
         "bash",
         "c",
@@ -12653,7 +12653,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-ca63c88",
+      "version": "git-6e9465a",
       "languages": [
         "glsl"
       ],
@@ -12663,6 +12663,7 @@
           "queryKinds": [
             "brackets",
             "highlights",
+            "indents",
             "injections"
           ]
         }
@@ -12677,16 +12678,19 @@
       "targets": [
         "zed@>=0.180/core:brackets",
         "zed@>=0.180/core:highlights",
+        "zed@>=0.180/core:indents",
         "zed@>=0.180/core:injections"
       ],
       "queryKinds": [
         "brackets",
         "highlights",
+        "indents",
         "injections"
       ],
       "queries": {
         "brackets": "extensions/glsl/languages/glsl/brackets.scm",
         "highlights": "extensions/glsl/languages/glsl/highlights.scm",
+        "indents": "extensions/glsl/languages/glsl/indents.scm",
         "injections": "extensions/glsl/languages/glsl/injections.scm"
       },
       "parserCompatibility": {},
@@ -12696,7 +12700,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-ca63c88",
+      "version": "git-6e9465a",
       "languages": [
         "html"
       ],
@@ -12751,7 +12755,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-ca63c88",
+      "version": "git-6e9465a",
       "languages": [
         "proto"
       ],
@@ -17534,11 +17538,11 @@
         "tags"
       ],
       "queries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -18660,7 +18664,7 @@
       "id": "pack-parser-parser-query",
       "name": "Query Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-query",
-      "version": "git-fc5409c",
+      "version": "git-15e00db",
       "languages": [
         "query"
       ],
@@ -18698,7 +18702,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-query@git-fc5409c"
+          "github.com/tree-sitter-grammars/tree-sitter-query@git-15e00db"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."

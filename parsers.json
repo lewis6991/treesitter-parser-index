@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05",
+  "generatedAt": "2026-06-06",
   "kind": "prototype-parsers",
   "count": 512,
   "items": [
@@ -1713,34 +1713,34 @@
       "version": "git-1436da3"
     },
     {
-      "id": "parser-clojure",
-      "name": "Clojure",
-      "language": "clojure",
-      "package": "github.com/sogaiu/tree-sitter-clojure",
-      "version": "git-e43eff8",
-      "sourceCommit": "e43eff80d17cf34852dcd92ca5e6986d23a7040f",
-      "lastUpdated": "2025-08-26",
-      "upstreamSemver": null,
       "abi": 14,
-      "owners": [
-        "sogaiu"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
       ],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-clojure",
+      "language": "clojure",
+      "lastUpdated": "2025-08-26",
+      "name": "Clojure",
+      "owners": [
+        "sogaiu"
       ],
-      "bundledQueryKinds": [],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. No bundled query files detected."
+      "package": "github.com/sogaiu/tree-sitter-clojure",
+      "sourceCommit": "e43eff80d17cf34852dcd92ca5e6986d23a7040f",
+      "summary": "Pinned in Helix. No bundled query files detected.",
+      "upstreamSemver": null,
+      "version": "git-e43eff8"
     },
     {
       "abi": 14,
@@ -9926,17 +9926,25 @@
       "version": "git-69fbfb0"
     },
     {
-      "id": "parser-numtide-nix-nix",
-      "name": "Nix",
-      "language": "nix",
-      "package": "github.com/numtide/tree-sitter-nix",
-      "version": "git-70f34e9",
-      "sourceCommit": "70f34e95e30b7ebcc40815d4385d68576c4a15cd",
-      "lastUpdated": "2026-05-20",
-      "upstreamSemver": null,
       "abi": 15,
-      "owners": [
-        "numtide"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [
+        "highlights",
+        "tags"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -9944,26 +9952,18 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-numtide-nix-nix",
+      "language": "nix",
+      "lastUpdated": "2026-05-20",
+      "name": "Nix",
+      "owners": [
+        "numtide"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "tags"
-      ],
-      "bundledQueries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "summary": "Pinned in Helix. highlights, tags queries."
+      "package": "github.com/numtide/tree-sitter-nix",
+      "sourceCommit": "70f34e95e30b7ebcc40815d4385d68576c4a15cd",
+      "summary": "Pinned in Helix. highlights, tags queries.",
+      "upstreamSemver": null,
+      "version": "git-70f34e9"
     },
     {
       "abi": 14,
@@ -10884,32 +10884,12 @@
       "version": "git-c19629a"
     },
     {
-      "id": "parser-pgn",
-      "name": "Pgn",
-      "language": "pgn",
-      "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-8e21f84",
-      "sourceCommit": "8e21f844ee56694cfbb9c7fcf60daf0065d9ae45",
-      "lastUpdated": "2026-06-04",
-      "upstreamSemver": "1.4.3",
       "abi": 15,
-      "owners": [
-        "rolandwalker"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -10917,7 +10897,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.4.3."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-pgn",
+      "language": "pgn",
+      "lastUpdated": "2026-06-04",
+      "name": "Pgn",
+      "owners": [
+        "rolandwalker"
+      ],
+      "package": "github.com/rolandwalker/tree-sitter-pgn",
+      "sourceCommit": "8e21f844ee56694cfbb9c7fcf60daf0065d9ae45",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.4.3.",
+      "upstreamSemver": "1.4.3",
+      "version": "git-8e21f84"
     },
     {
       "abi": 15,
@@ -11119,34 +11119,12 @@
       "version": "git-afece58"
     },
     {
-      "id": "parser-pkl",
-      "name": "Pkl",
-      "language": "pkl",
-      "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-99308a4",
-      "sourceCommit": "99308a46db039c0903e57fc17750e2ae13979a7f",
-      "lastUpdated": "2026-06-04",
-      "upstreamSemver": "0.20.0",
       "abi": 15,
-      "owners": [
-        "apple"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -11160,7 +11138,29 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.20.0."
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-pkl",
+      "language": "pkl",
+      "lastUpdated": "2026-06-04",
+      "name": "Pkl",
+      "owners": [
+        "apple"
+      ],
+      "package": "github.com/apple/tree-sitter-pkl",
+      "sourceCommit": "99308a46db039c0903e57fc17750e2ae13979a7f",
+      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.20.0.",
+      "upstreamSemver": "0.20.0",
+      "version": "git-99308a4"
     },
     {
       "abi": 14,
@@ -11371,32 +11371,12 @@
       "version": "git-d398441"
     },
     {
-      "id": "parser-wharflab-powershell-powershell",
-      "name": "Powershell",
-      "language": "powershell",
-      "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-bcf2514",
-      "sourceCommit": "bcf2514c41cb51a3b105d389c2d6738717b7efd3",
-      "lastUpdated": "2026-06-04",
-      "upstreamSemver": "0.38.1",
       "abi": 14,
-      "owners": [
-        "wharflab"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -11404,7 +11384,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-wharflab-powershell-powershell",
+      "language": "powershell",
+      "lastUpdated": "2026-06-04",
+      "name": "Powershell",
+      "owners": [
+        "wharflab"
+      ],
+      "package": "github.com/wharflab/tree-sitter-powershell",
+      "sourceCommit": "bcf2514c41cb51a3b105d389c2d6738717b7efd3",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1.",
+      "upstreamSemver": "0.38.1",
+      "version": "git-bcf2514"
     },
     {
       "abi": 14,
@@ -12145,17 +12145,38 @@
       "version": "git-606a66b"
     },
     {
+      "id": "parser-query",
+      "name": "Query",
+      "language": "query",
+      "package": "github.com/tree-sitter-grammars/tree-sitter-query",
+      "version": "git-15e00db",
+      "sourceCommit": "15e00db655cf1708cf8e4b172b2f321d9b7b98c1",
+      "lastUpdated": "2026-06-05",
+      "upstreamSemver": "0.8.0",
       "abi": 15,
+      "owners": [
+        "tree-sitter-grammars"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": false,
+        "sourceArchive": true,
+        "wasm": true
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         },
         {
-          "format": "wasm",
           "kind": "release-asset",
+          "format": "wasm",
           "name": "tree-sitter-query.wasm"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "injections"
       ],
       "bundledQueries": {
         "highlights": [
@@ -12168,28 +12189,7 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": false,
-        "sourceArchive": true,
-        "wasm": true
-      },
-      "id": "parser-query",
-      "language": "query",
-      "lastUpdated": "2026-02-26",
-      "name": "Query",
-      "owners": [
-        "tree-sitter-grammars"
-      ],
-      "package": "github.com/tree-sitter-grammars/tree-sitter-query",
-      "sourceCommit": "fc5409c6820dd5e02b0b0a309d3da2bfcde2db17",
-      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.8.0. Maintained in tree-sitter-grammars.",
-      "upstreamSemver": "0.8.0",
-      "version": "git-fc5409c"
+      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.8.0. Maintained in tree-sitter-grammars."
     },
     {
       "abi": 14,

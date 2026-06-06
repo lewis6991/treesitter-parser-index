@@ -12,6 +12,7 @@ export const ZED_EXTENSION_PACKS: ZedExtensionPackData[] = [
     "queryKinds": [
       "brackets",
       "highlights",
+      "indents",
       "injections"
     ]
   },
