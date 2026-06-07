@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-07",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -12329,7 +12329,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6e9465a",
+      "version": "git-5c1f18b",
       "languages": [
         "bash",
         "c",
@@ -12653,7 +12653,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6e9465a",
+      "version": "git-5c1f18b",
       "languages": [
         "glsl"
       ],
@@ -12700,7 +12700,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6e9465a",
+      "version": "git-5c1f18b",
       "languages": [
         "html"
       ],
@@ -12755,7 +12755,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6e9465a",
+      "version": "git-5c1f18b",
       "languages": [
         "proto"
       ],
@@ -16899,7 +16899,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-1941d16",
+      "version": "git-724b0fe",
       "languages": [
         "lean"
       ],
@@ -16940,7 +16940,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-1941d16"
+          "github.com/Julian/tree-sitter-lean@git-724b0fe"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -17971,7 +17971,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-506287d",
+      "version": "git-403c69a",
       "languages": [
         "perl"
       ],
@@ -18004,7 +18004,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-506287d"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-403c69a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20833,7 +20833,7 @@
       "id": "pack-parser-parser-vhdl",
       "name": "Vhdl Parser Bundle",
       "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-b8e31d1",
+      "version": "git-e97406d",
       "languages": [
         "vhdl"
       ],
@@ -20864,7 +20864,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/jpt13653903/tree-sitter-vhdl@git-b8e31d1"
+          "github.com/jpt13653903/tree-sitter-vhdl@git-e97406d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

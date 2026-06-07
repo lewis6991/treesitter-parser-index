@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-07",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -4098,7 +4098,7 @@
     },
     {
       "language": "http",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "neovim"
