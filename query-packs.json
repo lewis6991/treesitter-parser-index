@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07",
+  "generatedAt": "2026-06-08",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-7eb1a28",
+      "version": "git-4c1f3ac",
       "languages": [
         "_gjs",
         "_javascript",
@@ -8689,8 +8689,10 @@
           "language": "c-sharp",
           "queryKinds": [
             "highlights",
+            "indents",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -8805,6 +8807,7 @@
             "highlights",
             "indents",
             "injections",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -8902,6 +8905,7 @@
             "indents",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -9249,6 +9253,7 @@
             "highlights",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -9302,6 +9307,7 @@
           "language": "erlang",
           "queryKinds": [
             "highlights",
+            "indents",
             "injections",
             "locals",
             "rainbows",
@@ -9417,7 +9423,8 @@
           "queryKinds": [
             "highlights",
             "injections",
-            "locals"
+            "locals",
+            "rainbows"
           ],
           "testedParserRefs": [
             "github.com/ionide/tree-sitter-fsharp@git-cfc1245"
@@ -9738,6 +9745,7 @@
           "queryKinds": [
             "highlights",
             "injections",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -9761,7 +9769,8 @@
             "folds",
             "highlights",
             "injections",
-            "locals"
+            "locals",
+            "rainbows"
           ],
           "testedParserRefs": [
             "github.com/murtaza64/tree-sitter-groovy@git-235009a"
@@ -9800,6 +9809,7 @@
             "highlights",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -9847,6 +9857,7 @@
             "highlights",
             "indents",
             "injections",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -9918,6 +9929,7 @@
           "language": "html",
           "queryKinds": [
             "highlights",
+            "indents",
             "injections",
             "rainbows",
             "textobjects"
@@ -10219,6 +10231,7 @@
             "indents",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -10305,6 +10318,7 @@
             "indents",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -10621,7 +10635,8 @@
         {
           "language": "move",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "indents"
           ],
           "testedParserRefs": [
             "github.com/tzakian/tree-sitter-move@git-8bc0d16"
@@ -10701,6 +10716,7 @@
             "highlights",
             "indents",
             "injections",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10754,6 +10770,7 @@
             "indents",
             "injections",
             "locals",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -10876,6 +10893,7 @@
             "highlights",
             "indents",
             "injections",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -11006,7 +11024,8 @@
           "language": "powershell",
           "queryKinds": [
             "highlights",
-            "injections"
+            "injections",
+            "rainbows"
           ],
           "testedParserRefs": [
             "github.com/airbus-cert/tree-sitter-powershell@git-c9316be"
@@ -11166,6 +11185,7 @@
           "language": "r",
           "queryKinds": [
             "highlights",
+            "indents",
             "injections",
             "locals",
             "rainbows",
@@ -11385,6 +11405,7 @@
             "indents",
             "injections",
             "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -11420,6 +11441,7 @@
           "language": "scss",
           "queryKinds": [
             "highlights",
+            "indents",
             "injections",
             "rainbows"
           ],
@@ -11522,6 +11544,7 @@
           "queryKinds": [
             "highlights",
             "locals",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -11566,6 +11589,7 @@
           "language": "sql",
           "queryKinds": [
             "highlights",
+            "rainbows",
             "textobjects"
           ],
           "testedParserRefs": [
@@ -12073,7 +12097,8 @@
           "queryKinds": [
             "folds",
             "highlights",
-            "injections"
+            "injections",
+            "rainbows"
           ],
           "testedParserRefs": [
             "github.com/tree-sitter-grammars/tree-sitter-vim@git-f3cd62d"
@@ -12083,7 +12108,9 @@
           "language": "vue",
           "queryKinds": [
             "highlights",
-            "injections"
+            "indents",
+            "injections",
+            "textobjects"
           ],
           "testedParserRefs": [
             "github.com/ikatyang/tree-sitter-vue@git-91fe275"
@@ -12274,6 +12301,8 @@
             "highlights",
             "indents",
             "injections",
+            "locals",
+            "rainbows",
             "tags",
             "textobjects"
           ],
@@ -12329,7 +12358,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5c1f18b",
+      "version": "git-f99fe5d",
       "languages": [
         "bash",
         "c",
@@ -12653,7 +12682,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5c1f18b",
+      "version": "git-f99fe5d",
       "languages": [
         "glsl"
       ],
@@ -12700,7 +12729,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5c1f18b",
+      "version": "git-f99fe5d",
       "languages": [
         "html"
       ],
@@ -12755,7 +12784,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5c1f18b",
+      "version": "git-f99fe5d",
       "languages": [
         "proto"
       ],
@@ -13844,7 +13873,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-a24d257",
+      "version": "git-b8051e9",
       "languages": [
         "containerfile"
       ],
@@ -13880,7 +13909,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-a24d257"
+          "github.com/wharflab/tree-sitter-containerfile@git-b8051e9"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -16318,7 +16347,7 @@
       "id": "pack-parser-parser-javadoc",
       "name": "Javadoc Parser Bundle",
       "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-0660f9c",
+      "version": "git-1547215",
       "languages": [
         "javadoc"
       ],
@@ -16354,7 +16383,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rmuir/tree-sitter-javadoc@git-0660f9c"
+          "github.com/rmuir/tree-sitter-javadoc@git-1547215"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -16899,7 +16928,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-724b0fe",
+      "version": "git-5255dc5",
       "languages": [
         "lean"
       ],
@@ -16940,7 +16969,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-724b0fe"
+          "github.com/Julian/tree-sitter-lean@git-5255dc5"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -17971,7 +18000,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-403c69a",
+      "version": "git-c8ffb81",
       "languages": [
         "perl"
       ],
@@ -18004,7 +18033,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-403c69a"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-c8ffb81"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18324,7 +18353,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-bcf2514",
+      "version": "git-6686764",
       "languages": [
         "powershell"
       ],
@@ -18355,7 +18384,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-bcf2514"
+          "github.com/wharflab/tree-sitter-powershell@git-6686764"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

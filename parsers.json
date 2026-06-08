@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07",
+  "generatedAt": "2026-06-08",
   "kind": "prototype-parsers",
   "count": 511,
   "items": [
@@ -1881,12 +1881,33 @@
       "version": "git-920ba23"
     },
     {
+      "id": "parser-containerfile",
+      "name": "Containerfile",
+      "language": "containerfile",
+      "package": "github.com/wharflab/tree-sitter-containerfile",
+      "version": "git-b8051e9",
+      "sourceCommit": "b8051e99ae5c2e56e59d958c4dc19bcfecd3495c",
+      "lastUpdated": "2026-06-07",
+      "upstreamSemver": "0.8.0",
       "abi": 14,
+      "owners": [
+        "wharflab"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "injections"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1897,28 +1918,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
-      "id": "parser-containerfile",
-      "language": "containerfile",
-      "lastUpdated": "2026-04-28",
-      "name": "Containerfile",
-      "owners": [
-        "wharflab"
-      ],
-      "package": "github.com/wharflab/tree-sitter-containerfile",
-      "sourceCommit": "a24d25782fa41ec95d29b8d2de0c56a662317847",
-      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.8.0.",
-      "upstreamSemver": "0.8.0",
-      "version": "git-a24d257"
+      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.8.0."
     },
     {
       "abi": 14,
@@ -7028,17 +7028,38 @@
       "version": "git-e10607b"
     },
     {
+      "id": "parser-javadoc",
+      "name": "Javadoc",
+      "language": "javadoc",
+      "package": "github.com/rmuir/tree-sitter-javadoc",
+      "version": "git-1547215",
+      "sourceCommit": "1547215c619cba23f52a2563d1e3ff5d0b41a98b",
+      "lastUpdated": "2026-06-07",
+      "upstreamSemver": "0.3.1",
       "abi": 15,
+      "owners": [
+        "rmuir"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         },
         {
-          "format": "wasm",
           "kind": "release-asset",
+          "format": "wasm",
           "name": "tree-sitter-javadoc.wasm"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "injections"
       ],
       "bundledQueries": {
         "highlights": [
@@ -7049,28 +7070,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
-      "id": "parser-javadoc",
-      "language": "javadoc",
-      "lastUpdated": "2026-06-03",
-      "name": "Javadoc",
-      "owners": [
-        "rmuir"
-      ],
-      "package": "github.com/rmuir/tree-sitter-javadoc",
-      "sourceCommit": "0660f9c8a4d545c25caa5d154fb49f8ab7ec127c",
-      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1.",
-      "upstreamSemver": "0.3.1",
-      "version": "git-0660f9c"
+      "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1."
     },
     {
       "abi": 15,
@@ -8337,9 +8337,9 @@
       "name": "Lean",
       "language": "lean",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-724b0fe",
-      "sourceCommit": "724b0fee7b056a873b1e04dc5e1b0da05d6d9b4f",
-      "lastUpdated": "2026-06-06",
+      "version": "git-5255dc5",
+      "sourceCommit": "5255dc53a4e4f423f1978018ab430b6f9100f645",
+      "lastUpdated": "2026-06-07",
       "upstreamSemver": "0.2.0",
       "abi": 15,
       "owners": [
@@ -10785,10 +10785,10 @@
       "name": "Perl",
       "language": "perl",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-403c69a",
-      "sourceCommit": "403c69a85793db4bfb63ae0fda2ace162f93a091",
-      "lastUpdated": "2026-06-06",
-      "upstreamSemver": "1.1.0",
+      "version": "git-c8ffb81",
+      "sourceCommit": "c8ffb813f26560c9115b29fdf433d295840ebac3",
+      "lastUpdated": "2026-06-07",
+      "upstreamSemver": "1.1.1",
       "abi": null,
       "owners": [
         "tree-sitter-perl"
@@ -10821,7 +10821,7 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.0."
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.1."
     },
     {
       "abi": 14,
@@ -11341,21 +11341,17 @@
       "version": "git-d398441"
     },
     {
+      "id": "parser-wharflab-powershell-powershell",
+      "name": "Powershell",
+      "language": "powershell",
+      "package": "github.com/wharflab/tree-sitter-powershell",
+      "version": "git-6686764",
+      "sourceCommit": "66867644900c94d38d8cd14570625b9c2bc14f63",
+      "lastUpdated": "2026-06-08",
+      "upstreamSemver": "0.38.1",
       "abi": 14,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "wharflab"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -11363,18 +11359,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-wharflab-powershell-powershell",
-      "language": "powershell",
-      "lastUpdated": "2026-06-04",
-      "name": "Powershell",
-      "owners": [
-        "wharflab"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/wharflab/tree-sitter-powershell",
-      "sourceCommit": "bcf2514c41cb51a3b105d389c2d6738717b7efd3",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1.",
-      "upstreamSemver": "0.38.1",
-      "version": "git-bcf2514"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.38.1."
     },
     {
       "abi": 14,
@@ -12991,34 +12991,34 @@
       "version": "git-89ae0f3"
     },
     {
+      "id": "parser-rst",
+      "name": "Rst",
+      "language": "rst",
+      "package": "github.com/stsewd/tree-sitter-rst",
+      "version": "git-4ad5fc5",
+      "sourceCommit": "4ad5fc52c42474249f29240f349829b3882cec62",
+      "lastUpdated": "2026-06-08",
+      "upstreamSemver": "0.1.0",
       "abi": 14,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
+      "owners": [
+        "stsewd"
       ],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-rst",
-      "language": "rst",
-      "lastUpdated": "2026-05-29",
-      "name": "Rst",
-      "owners": [
-        "stsewd"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/stsewd/tree-sitter-rst",
-      "sourceCommit": "6322f2629f29d8b442f4ca897904d407672ebb78",
-      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.1.0.",
-      "upstreamSemver": "0.1.0",
-      "version": "git-6322f26"
+      "bundledQueryKinds": [],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.1.0."
     },
     {
       "abi": 14,
@@ -16386,37 +16386,17 @@
       "version": "git-227d277"
     },
     {
-      "id": "parser-vhdl",
-      "name": "Vhdl",
-      "language": "vhdl",
-      "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-e97406d",
-      "sourceCommit": "e97406d6ddfbed73dd8cdfcc3cf4c7b200b4211d",
-      "lastUpdated": "2026-06-06",
-      "upstreamSemver": "1.5.0",
       "abi": 15,
-      "owners": [
-        "jpt13653903"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-vhdl.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -16424,7 +16404,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.5.0."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-vhdl",
+      "language": "vhdl",
+      "lastUpdated": "2026-06-06",
+      "name": "Vhdl",
+      "owners": [
+        "jpt13653903"
+      ],
+      "package": "github.com/jpt13653903/tree-sitter-vhdl",
+      "sourceCommit": "e97406d6ddfbed73dd8cdfcc3cf4c7b200b4211d",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.5.0.",
+      "upstreamSemver": "1.5.0",
+      "version": "git-e97406d"
     },
     {
       "abi": 14,

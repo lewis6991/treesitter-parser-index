@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07",
+  "generatedAt": "2026-06-08",
   "kind": "prototype-languages",
   "count": 511,
   "items": [
@@ -732,6 +732,7 @@
         "injections",
         "locals",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -1060,6 +1061,7 @@
         "highlights",
         "indents",
         "injections",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -1314,6 +1316,7 @@
         "indents",
         "injections",
         "locals",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -2179,6 +2182,7 @@
         "locals",
         "matchup",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -2345,6 +2349,7 @@
       "queryKinds": [
         "folds",
         "highlights",
+        "indents",
         "injections",
         "locals",
         "matchup",
@@ -2677,6 +2682,7 @@
         "highlights",
         "injections",
         "locals",
+        "rainbows",
         "tags"
       ],
       "queryRoots": [
@@ -3555,6 +3561,7 @@
         "highlights",
         "indents",
         "injections",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -3601,7 +3608,8 @@
         "indents",
         "injections",
         "locals",
-        "outline"
+        "outline",
+        "rainbows"
       ],
       "queryRoots": [
         "queries",
@@ -3727,6 +3735,7 @@
         "injections",
         "locals",
         "matchup",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -3813,6 +3822,7 @@
         "indents",
         "injections",
         "outline",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -4812,6 +4822,7 @@
         "locals",
         "matchup",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -5010,6 +5021,7 @@
         "indents",
         "injections",
         "locals",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -5849,7 +5861,8 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "indents"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -6013,6 +6026,7 @@
         "injections",
         "locals",
         "matchup",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -6251,6 +6265,7 @@
         "injections",
         "locals",
         "matchup",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -6523,6 +6538,7 @@
         "indents",
         "injections",
         "matchup",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -6861,7 +6877,8 @@
         "indents",
         "injections",
         "locals",
-        "matchup"
+        "matchup",
+        "rainbows"
       ],
       "queryRoots": [
         "after/queries",
@@ -8048,6 +8065,7 @@
         "injections",
         "locals",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],
@@ -8393,6 +8411,7 @@
         "injections",
         "locals",
         "outline",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -8549,6 +8568,7 @@
         "indents",
         "injections",
         "outline",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -10006,6 +10026,7 @@
         "locals",
         "matchup",
         "outline",
+        "rainbows",
         "textobjects"
       ],
       "queryRoots": [
@@ -10595,6 +10616,7 @@
         "locals",
         "matchup",
         "outline",
+        "rainbows",
         "tags",
         "textobjects"
       ],

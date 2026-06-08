@@ -227,8 +227,10 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "c-sharp",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -343,6 +345,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -440,6 +443,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -787,6 +791,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -840,6 +845,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "erlang",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "locals",
       "rainbows",
@@ -955,7 +961,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
-      "locals"
+      "locals",
+      "rainbows"
     ],
     "testedParserRefs": [
       "github.com/ionide/tree-sitter-fsharp@git-cfc1245"
@@ -1276,6 +1283,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "injections",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -1299,7 +1307,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "folds",
       "highlights",
       "injections",
-      "locals"
+      "locals",
+      "rainbows"
     ],
     "testedParserRefs": [
       "github.com/murtaza64/tree-sitter-groovy@git-235009a"
@@ -1338,6 +1347,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -1385,6 +1395,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -1456,6 +1467,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "html",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "rainbows",
       "textobjects"
@@ -1757,6 +1769,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -1843,6 +1856,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -2159,7 +2173,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "move",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "indents"
     ],
     "testedParserRefs": [
       "github.com/tzakian/tree-sitter-move@git-8bc0d16"
@@ -2239,6 +2254,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2292,6 +2308,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -2414,6 +2431,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -2544,7 +2562,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "powershell",
     "queryKinds": [
       "highlights",
-      "injections"
+      "injections",
+      "rainbows"
     ],
     "testedParserRefs": [
       "github.com/airbus-cert/tree-sitter-powershell@git-c9316be"
@@ -2704,6 +2723,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "r",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "locals",
       "rainbows",
@@ -2923,6 +2943,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents",
       "injections",
       "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
@@ -2958,6 +2979,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "scss",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "rainbows"
     ],
@@ -3060,6 +3082,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "highlights",
       "locals",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -3104,6 +3127,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "sql",
     "queryKinds": [
       "highlights",
+      "rainbows",
       "textobjects"
     ],
     "testedParserRefs": [
@@ -3611,7 +3635,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "folds",
       "highlights",
-      "injections"
+      "injections",
+      "rainbows"
     ],
     "testedParserRefs": [
       "github.com/tree-sitter-grammars/tree-sitter-vim@git-f3cd62d"
@@ -3621,7 +3646,9 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "vue",
     "queryKinds": [
       "highlights",
-      "injections"
+      "indents",
+      "injections",
+      "textobjects"
     ],
     "testedParserRefs": [
       "github.com/ikatyang/tree-sitter-vue@git-91fe275"
@@ -3812,6 +3839,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights",
       "indents",
       "injections",
+      "locals",
+      "rainbows",
       "tags",
       "textobjects"
     ],
