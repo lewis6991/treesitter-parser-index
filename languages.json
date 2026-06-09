@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-09",
   "kind": "prototype-languages",
-  "count": 511,
+  "count": 512,
   "items": [
     {
       "language": "_gjs",
@@ -9903,6 +9903,16 @@
         "queries"
       ],
       "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "vba",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {

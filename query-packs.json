@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-09",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-4c1f3ac",
+      "version": "git-659398d",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12358,7 +12358,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f99fe5d",
+      "version": "git-c680755",
       "languages": [
         "bash",
         "c",
@@ -12682,7 +12682,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f99fe5d",
+      "version": "git-c680755",
       "languages": [
         "glsl"
       ],
@@ -12729,7 +12729,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f99fe5d",
+      "version": "git-c680755",
       "languages": [
         "html"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f99fe5d",
+      "version": "git-c680755",
       "languages": [
         "proto"
       ],
@@ -13201,7 +13201,7 @@
       "id": "pack-parser-parser-batch",
       "name": "Batch Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-batch",
-      "version": "git-acc7df6",
+      "version": "git-afaafe6",
       "languages": [
         "batch"
       ],
@@ -13232,7 +13232,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-batch@git-acc7df6"
+          "github.com/wharflab/tree-sitter-batch@git-afaafe6"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13873,7 +13873,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-b8051e9",
+      "version": "git-18b3c7c",
       "languages": [
         "containerfile"
       ],
@@ -13909,7 +13909,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-b8051e9"
+          "github.com/wharflab/tree-sitter-containerfile@git-18b3c7c"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
