@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09",
+  "generatedAt": "2026-06-10",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-659398d",
+      "version": "git-bbdb509",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12358,7 +12358,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c680755",
+      "version": "git-d989c7c",
       "languages": [
         "bash",
         "c",
@@ -12682,7 +12682,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c680755",
+      "version": "git-d989c7c",
       "languages": [
         "glsl"
       ],
@@ -12729,7 +12729,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c680755",
+      "version": "git-d989c7c",
       "languages": [
         "html"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c680755",
+      "version": "git-d989c7c",
       "languages": [
         "proto"
       ],
@@ -18183,7 +18183,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-99308a4",
+      "version": "git-b764f01",
       "languages": [
         "pkl"
       ],
@@ -18224,7 +18224,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-99308a4"
+          "github.com/apple/tree-sitter-pkl@git-b764f01"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
