@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-06-14",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-14eda10",
+      "version": "git-43bf7c2",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12358,7 +12358,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8589cbb",
+      "version": "git-df9c9f0",
       "languages": [
         "bash",
         "c",
@@ -12682,7 +12682,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8589cbb",
+      "version": "git-df9c9f0",
       "languages": [
         "glsl"
       ],
@@ -12729,7 +12729,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8589cbb",
+      "version": "git-df9c9f0",
       "languages": [
         "html"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8589cbb",
+      "version": "git-df9c9f0",
       "languages": [
         "proto"
       ],
@@ -13505,11 +13505,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
