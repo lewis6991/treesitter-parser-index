@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-06-15",
   "kind": "prototype-parsers",
   "count": 512,
   "items": [
@@ -9023,21 +9023,17 @@
       "version": "git-cecd8ce"
     },
     {
+      "id": "parser-magik",
+      "name": "Magik",
+      "language": "magik",
+      "package": "github.com/krn-robin/tree-sitter-magik",
+      "version": "git-761db2e",
+      "sourceCommit": "761db2e28720b4f9fc8bf68ac10a5045357dd4df",
+      "lastUpdated": "2026-06-15",
+      "upstreamSemver": "0.0.1",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "krn-robin"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -9045,18 +9041,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-magik",
-      "language": "magik",
-      "lastUpdated": "2026-06-01",
-      "name": "Magik",
-      "owners": [
-        "krn-robin"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/krn-robin/tree-sitter-magik",
-      "sourceCommit": "3d9d50fb2297dae0a3bf91cb34a8bf36c7097215",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1.",
-      "upstreamSemver": "0.0.1",
-      "version": "git-3d9d50f"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1."
     },
     {
       "abi": null,
@@ -10781,17 +10781,37 @@
       "version": "git-5b97493"
     },
     {
+      "id": "parser-tree-sitter-perl-perl-perl",
+      "name": "Perl",
+      "language": "perl",
+      "package": "github.com/tree-sitter-perl/tree-sitter-perl",
+      "version": "git-b300950",
+      "sourceCommit": "b3009507158b92ad13247eba5252d0507b9367dd",
+      "lastUpdated": "2026-06-14",
+      "upstreamSemver": "1.1.2",
       "abi": null,
+      "owners": [
+        "tree-sitter-perl"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         },
         {
-          "format": "wasm",
           "kind": "release-asset",
+          "format": "wasm",
           "name": "tree-sitter-perl.wasm"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -10801,27 +10821,7 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
-      "id": "parser-tree-sitter-perl-perl-perl",
-      "language": "perl",
-      "lastUpdated": "2026-06-10",
-      "name": "Perl",
-      "owners": [
-        "tree-sitter-perl"
-      ],
-      "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "sourceCommit": "f96b7df3bf917a0df503c57c05a0b5649b8bd66b",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.2.",
-      "upstreamSemver": "1.1.2",
-      "version": "git-f96b7df"
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.2."
     },
     {
       "abi": 14,

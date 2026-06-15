@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-06-15",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -12358,7 +12358,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-df9c9f0",
+      "version": "git-18c98b0",
       "languages": [
         "bash",
         "c",
@@ -12682,7 +12682,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-df9c9f0",
+      "version": "git-18c98b0",
       "languages": [
         "glsl"
       ],
@@ -12729,7 +12729,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-df9c9f0",
+      "version": "git-18c98b0",
       "languages": [
         "html"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-df9c9f0",
+      "version": "git-18c98b0",
       "languages": [
         "proto"
       ],
@@ -17163,7 +17163,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-3d9d50f",
+      "version": "git-761db2e",
       "languages": [
         "magik"
       ],
@@ -17194,7 +17194,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-3d9d50f"
+          "github.com/krn-robin/tree-sitter-magik@git-761db2e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18000,7 +18000,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-f96b7df",
+      "version": "git-b300950",
       "languages": [
         "perl"
       ],
@@ -18033,7 +18033,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-f96b7df"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-b300950"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
