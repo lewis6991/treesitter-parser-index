@@ -8829,32 +8829,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e128454"
   },
   {
-    "id": "parser-magik",
-    "name": "Magik",
-    "language": "magik",
-    "package": "github.com/krn-robin/tree-sitter-magik",
-    "version": "git-761db2e",
-    "sourceCommit": "761db2e28720b4f9fc8bf68ac10a5045357dd4df",
-    "lastUpdated": "2026-06-15",
-    "upstreamSemver": "0.0.1",
     "abi": 15,
-    "owners": [
-      "krn-robin"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -8862,7 +8842,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-magik",
+    "language": "magik",
+    "lastUpdated": "2026-06-15",
+    "name": "Magik",
+    "owners": [
+      "krn-robin"
+    ],
+    "package": "github.com/krn-robin/tree-sitter-magik",
+    "sourceCommit": "761db2e28720b4f9fc8bf68ac10a5045357dd4df",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1.",
+    "upstreamSemver": "0.0.1",
+    "version": "git-761db2e"
   },
   {
     "abi": null,
@@ -10560,37 +10560,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5b97493"
   },
   {
-    "id": "parser-tree-sitter-perl-perl-perl",
-    "name": "Perl",
-    "language": "perl",
-    "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-    "version": "git-b300950",
-    "sourceCommit": "b3009507158b92ad13247eba5252d0507b9367dd",
-    "lastUpdated": "2026-06-14",
-    "upstreamSemver": "1.1.2",
     "abi": null,
-    "owners": [
-      "tree-sitter-perl"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-perl.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10600,7 +10580,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "bundledQueryEditors": [
       "neovim"
     ],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.2."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
+    "id": "parser-tree-sitter-perl-perl-perl",
+    "language": "perl",
+    "lastUpdated": "2026-06-14",
+    "name": "Perl",
+    "owners": [
+      "tree-sitter-perl"
+    ],
+    "package": "github.com/tree-sitter-perl/tree-sitter-perl",
+    "sourceCommit": "b3009507158b92ad13247eba5252d0507b9367dd",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.1.2.",
+    "upstreamSemver": "1.1.2",
+    "version": "git-b300950"
   },
   {
     "abi": 14,
@@ -15935,17 +15935,38 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-97e6db3"
   },
   {
+    "id": "parser-varlink",
+    "name": "Varlink",
+    "language": "varlink",
+    "package": "github.com/bachorp/tree-sitter-varlink",
+    "version": "git-a80ecff",
+    "sourceCommit": "a80ecffda60b28612cbda652e38d97c1d8b90568",
+    "lastUpdated": "2026-06-15",
+    "upstreamSemver": "0.6.1",
     "abi": 15,
+    "owners": [
+      "bachorp"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-varlink.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -15956,28 +15977,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-varlink",
-    "language": "varlink",
-    "lastUpdated": "2026-04-11",
-    "name": "Varlink",
-    "owners": [
-      "bachorp"
-    ],
-    "package": "github.com/bachorp/tree-sitter-varlink",
-    "sourceCommit": "52976e66d3f4529045a14201841e4dc289de8107",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.6.1.",
-    "upstreamSemver": "0.6.1",
-    "version": "git-52976e6"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.6.1."
   },
   {
     "abi": 15,
