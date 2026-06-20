@@ -3437,6 +3437,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "toml",
     "queryKinds": [
       "highlights",
+      "indents",
       "injections",
       "rainbows",
       "tags",
