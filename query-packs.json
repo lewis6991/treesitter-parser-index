@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20",
+  "generatedAt": "2026-06-21",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-29052de",
+      "version": "git-d2fdf3f",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-9f56a4d",
+      "version": "git-50e6411",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-9f56a4d",
+      "version": "git-50e6411",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-9f56a4d",
+      "version": "git-50e6411",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-9f56a4d",
+      "version": "git-50e6411",
       "languages": [
         "proto"
       ],
