@@ -4233,21 +4233,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-472c24f"
   },
   {
+    "id": "parser-forth",
+    "name": "Forth",
+    "language": "forth",
+    "package": "github.com/AlexanderBrevig/tree-sitter-forth",
+    "version": "git-7190f21",
+    "sourceCommit": "7190f2173060d19a2174c96bfb5b7c6f9745512b",
+    "lastUpdated": "2026-06-22",
+    "upstreamSemver": "0.2.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "AlexanderBrevig"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -4255,18 +4251,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-forth",
-    "language": "forth",
-    "lastUpdated": "2025-12-01",
-    "name": "Forth",
-    "owners": [
-      "AlexanderBrevig"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/AlexanderBrevig/tree-sitter-forth",
-    "sourceCommit": "360ef13f8c609ec6d2e80782af69958b84e36cd0",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.2.0.",
-    "upstreamSemver": "0.2.0",
-    "version": "git-360ef13"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.2.0."
   },
   {
     "abi": 15,
@@ -6633,21 +6633,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-cecd6b7"
   },
   {
+    "id": "parser-idl",
+    "name": "idl",
+    "language": "idl",
+    "package": "github.com/cathaysia/tree-sitter-idl",
+    "version": "git-f319b8b",
+    "sourceCommit": "f319b8b0b5cb218cf3f63aa821d2ab722524dbe9",
+    "lastUpdated": "2026-06-22",
+    "upstreamSemver": "3.18.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "cathaysia"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -6655,18 +6651,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-idl",
-    "language": "idl",
-    "lastUpdated": "2026-05-14",
-    "name": "idl",
-    "owners": [
-      "cathaysia"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/cathaysia/tree-sitter-idl",
-    "sourceCommit": "d9ac4b12fd2092fea27f6803defd14b2ae10b4f9",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.18.0.",
-    "upstreamSemver": "3.18.0",
-    "version": "git-d9ac4b1"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.18.0."
   },
   {
     "abi": 14,
@@ -8207,12 +8207,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0a91720"
   },
   {
+    "id": "parser-lean",
+    "name": "Lean",
+    "language": "lean",
+    "package": "github.com/Julian/tree-sitter-lean",
+    "version": "git-30f05c8",
+    "sourceCommit": "30f05c80eab5b7ec8de9e0c7dbc23db58e6123c8",
+    "lastUpdated": "2026-06-22",
+    "upstreamSemver": "0.2.0",
     "abi": 15,
+    "owners": [
+      "Julian"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections",
+      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -8226,29 +8248,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections",
-      "locals"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-lean",
-    "language": "lean",
-    "lastUpdated": "2026-06-10",
-    "name": "Lean",
-    "owners": [
-      "Julian"
-    ],
-    "package": "github.com/Julian/tree-sitter-lean",
-    "sourceCommit": "463a9d8a509c935f4e10854b5078bbe2839b274c",
-    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.2.0.",
-    "upstreamSemver": "0.2.0",
-    "version": "git-463a9d8"
+    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.2.0."
   },
   {
     "abi": 15,
@@ -12489,26 +12489,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1a74dc0"
   },
   {
+    "id": "parser-robot",
+    "name": "Robot",
+    "language": "robot",
+    "package": "github.com/Hubro/tree-sitter-robot",
+    "version": "git-3de13dc",
+    "sourceCommit": "3de13dcc7559223c97e6b703217bbf728e20e169",
+    "lastUpdated": "2026-06-21",
+    "upstreamSemver": "1.4.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-robot.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "Hubro"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -12516,18 +12507,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-robot",
-    "language": "robot",
-    "lastUpdated": "2026-04-07",
-    "name": "Robot",
-    "owners": [
-      "Hubro"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-robot.wasm"
+      }
     ],
-    "package": "github.com/Hubro/tree-sitter-robot",
-    "sourceCommit": "b317756ae0fb90ca945f900c77cdd3513d0c0eb4",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.3.0.",
-    "upstreamSemver": "1.3.0",
-    "version": "git-b317756"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 1.4.0."
   },
   {
     "abi": 15,

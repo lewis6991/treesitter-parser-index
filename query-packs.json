@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21",
+  "generatedAt": "2026-06-22",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-d2fdf3f",
+      "version": "git-9bcdf4d",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-50e6411",
+      "version": "git-c0945a8",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-50e6411",
+      "version": "git-c0945a8",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-50e6411",
+      "version": "git-c0945a8",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-50e6411",
+      "version": "git-c0945a8",
       "languages": [
         "proto"
       ],
@@ -15138,7 +15138,7 @@
       "id": "pack-parser-parser-forth",
       "name": "Forth Parser Bundle",
       "package": "github.com/AlexanderBrevig/tree-sitter-forth",
-      "version": "git-360ef13",
+      "version": "git-7190f21",
       "languages": [
         "forth"
       ],
@@ -15169,7 +15169,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/AlexanderBrevig/tree-sitter-forth@git-360ef13"
+          "github.com/AlexanderBrevig/tree-sitter-forth@git-7190f21"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -16263,7 +16263,7 @@
       "id": "pack-parser-parser-idl",
       "name": "idl Parser Bundle",
       "package": "github.com/cathaysia/tree-sitter-idl",
-      "version": "git-d9ac4b1",
+      "version": "git-f319b8b",
       "languages": [
         "idl"
       ],
@@ -16294,7 +16294,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cathaysia/tree-sitter-idl@git-d9ac4b1"
+          "github.com/cathaysia/tree-sitter-idl@git-f319b8b"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -16929,7 +16929,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-463a9d8",
+      "version": "git-30f05c8",
       "languages": [
         "lean"
       ],
@@ -16970,7 +16970,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-463a9d8"
+          "github.com/Julian/tree-sitter-lean@git-30f05c8"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -18996,7 +18996,7 @@
       "id": "pack-parser-parser-robot",
       "name": "Robot Parser Bundle",
       "package": "github.com/Hubro/tree-sitter-robot",
-      "version": "git-b317756",
+      "version": "git-3de13dc",
       "languages": [
         "robot"
       ],
@@ -19027,7 +19027,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Hubro/tree-sitter-robot@git-b317756"
+          "github.com/Hubro/tree-sitter-robot@git-3de13dc"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
