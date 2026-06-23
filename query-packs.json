@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-23",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-9bcdf4d",
+      "version": "git-d1b35c9",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c0945a8",
+      "version": "git-479bce0",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c0945a8",
+      "version": "git-479bce0",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c0945a8",
+      "version": "git-479bce0",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-c0945a8",
+      "version": "git-479bce0",
       "languages": [
         "proto"
       ],
@@ -13874,7 +13874,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-18b3c7c",
+      "version": "git-3043b21",
       "languages": [
         "containerfile"
       ],
@@ -13910,7 +13910,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-18b3c7c"
+          "github.com/wharflab/tree-sitter-containerfile@git-3043b21"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -17164,7 +17164,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-761db2e",
+      "version": "git-75a3dec",
       "languages": [
         "magik"
       ],
@@ -17195,7 +17195,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-761db2e"
+          "github.com/krn-robin/tree-sitter-magik@git-75a3dec"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17766,7 +17766,7 @@
       "id": "pack-parser-parser-ocaml",
       "name": "OCaml Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-59e2b9f",
+      "version": "git-527d62e",
       "languages": [
         "ocaml"
       ],
@@ -17807,7 +17807,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17816,7 +17816,7 @@
       "id": "pack-parser-parser-ocaml-interface",
       "name": "OCamlInterface Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-59e2b9f",
+      "version": "git-527d62e",
       "languages": [
         "ocaml_interface"
       ],
@@ -17857,7 +17857,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17911,7 +17911,7 @@
       "id": "pack-parser-parser-ocaml-type",
       "name": "OCamlType Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-59e2b9f",
+      "version": "git-527d62e",
       "languages": [
         "ocaml_type"
       ],
@@ -17952,7 +17952,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-59e2b9f"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18083,7 +18083,7 @@
       "id": "pack-parser-parser-php",
       "name": "PHP Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-php",
-      "version": "git-3f2465c",
+      "version": "git-3821698",
       "languages": [
         "php"
       ],
@@ -18125,7 +18125,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
+          "github.com/tree-sitter/tree-sitter-php@git-3821698"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -18134,7 +18134,7 @@
       "id": "pack-parser-parser-php-only",
       "name": "PHP_Only Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-php",
-      "version": "git-3f2465c",
+      "version": "git-3821698",
       "languages": [
         "php_only"
       ],
@@ -18175,7 +18175,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-php@git-3f2465c"
+          "github.com/tree-sitter/tree-sitter-php@git-3821698"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -18354,7 +18354,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-6686764",
+      "version": "git-12b0e9d",
       "languages": [
         "powershell"
       ],
@@ -18385,7 +18385,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-6686764"
+          "github.com/wharflab/tree-sitter-powershell@git-12b0e9d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18741,7 +18741,7 @@
       "id": "pack-parser-parser-r",
       "name": "R Parser Bundle",
       "package": "github.com/r-lib/tree-sitter-r",
-      "version": "git-09ed09d",
+      "version": "git-58a2279",
       "languages": [
         "r"
       ],
@@ -18777,7 +18777,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/r-lib/tree-sitter-r@git-09ed09d"
+          "github.com/r-lib/tree-sitter-r@git-58a2279"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -20213,7 +20213,7 @@
       "id": "pack-parser-parser-templ",
       "name": "Templ Parser Bundle",
       "package": "github.com/vrischmann/tree-sitter-templ",
-      "version": "git-68d6707",
+      "version": "git-04bae7c",
       "languages": [
         "templ"
       ],
@@ -20249,7 +20249,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/vrischmann/tree-sitter-templ@git-68d6707"
+          "github.com/vrischmann/tree-sitter-templ@git-04bae7c"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -20948,7 +20948,7 @@
       "id": "pack-parser-parser-vimdoc",
       "name": "Vimdoc Parser Bundle",
       "package": "github.com/neovim/tree-sitter-vimdoc",
-      "version": "git-f061895",
+      "version": "git-23daa41",
       "languages": [
         "vimdoc"
       ],
@@ -20984,7 +20984,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/neovim/tree-sitter-vimdoc@git-f061895"
+          "github.com/neovim/tree-sitter-vimdoc@git-23daa41"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
