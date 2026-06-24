@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23",
+  "generatedAt": "2026-06-24",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -8125,7 +8125,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-d1b35c9",
+      "version": "git-6b7c7c6",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-479bce0",
+      "version": "git-daf4656",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-479bce0",
+      "version": "git-daf4656",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-479bce0",
+      "version": "git-daf4656",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-479bce0",
+      "version": "git-daf4656",
       "languages": [
         "proto"
       ],
@@ -16929,7 +16929,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-30f05c8",
+      "version": "git-dc5997b",
       "languages": [
         "lean"
       ],
@@ -16970,7 +16970,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-30f05c8"
+          "github.com/Julian/tree-sitter-lean@git-dc5997b"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -17501,7 +17501,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-dd89f89",
+      "version": "git-642637a",
       "languages": [
         "nix"
       ],
@@ -17532,7 +17532,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-dd89f89"
+          "github.com/nix-community/tree-sitter-nix@git-642637a"
         ]
       },
       "summary": "tags queries ship with the parser repository."
@@ -18354,7 +18354,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-12b0e9d",
+      "version": "git-bdd8365",
       "languages": [
         "powershell"
       ],
@@ -18385,7 +18385,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-12b0e9d"
+          "github.com/wharflab/tree-sitter-powershell@git-bdd8365"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
