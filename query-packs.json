@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24",
+  "generatedAt": "2026-06-25",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-daf4656",
+      "version": "git-17c0ebb",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-daf4656",
+      "version": "git-17c0ebb",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-daf4656",
+      "version": "git-17c0ebb",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-daf4656",
+      "version": "git-17c0ebb",
       "languages": [
         "proto"
       ],
@@ -18043,7 +18043,7 @@
       "id": "pack-parser-parser-pgn",
       "name": "Pgn Parser Bundle",
       "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-8e21f84",
+      "version": "git-c8c218e",
       "languages": [
         "pgn"
       ],
@@ -18074,7 +18074,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rolandwalker/tree-sitter-pgn@git-8e21f84"
+          "github.com/rolandwalker/tree-sitter-pgn@git-c8c218e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
