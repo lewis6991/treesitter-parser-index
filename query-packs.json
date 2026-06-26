@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-06-26",
   "kind": "prototype-query-packs",
   "count": 234,
   "items": [
@@ -12188,7 +12188,7 @@
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/santhoshtr/tree-sitter-wikitext@git-444214b"
+            "github.com/wikimedia/tree-sitter-wikitext@git-444214b"
           ]
         },
         {
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-17c0ebb",
+      "version": "git-46ff888",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-17c0ebb",
+      "version": "git-46ff888",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-17c0ebb",
+      "version": "git-46ff888",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-17c0ebb",
+      "version": "git-46ff888",
       "languages": [
         "proto"
       ],
@@ -17294,7 +17294,7 @@
       "id": "pack-parser-parser-matlab",
       "name": "Matlab Parser Bundle",
       "package": "github.com/acristoffers/tree-sitter-matlab",
-      "version": "git-c2390a5",
+      "version": "git-c9ef947",
       "languages": [
         "matlab"
       ],
@@ -17327,7 +17327,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/acristoffers/tree-sitter-matlab@git-c2390a5"
+          "github.com/acristoffers/tree-sitter-matlab@git-c9ef947"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17501,7 +17501,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-642637a",
+      "version": "git-3d0173d",
       "languages": [
         "nix"
       ],
@@ -17532,7 +17532,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-642637a"
+          "github.com/nix-community/tree-sitter-nix@git-3d0173d"
         ]
       },
       "summary": "tags queries ship with the parser repository."
@@ -19748,7 +19748,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-3b94608",
+      "version": "git-28e33a4",
       "languages": [
         "ssh-client-config"
       ],
@@ -19779,7 +19779,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-3b94608"
+          "github.com/metio/tree-sitter-ssh-client-config@git-28e33a4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

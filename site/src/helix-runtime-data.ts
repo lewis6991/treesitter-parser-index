@@ -3726,7 +3726,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/santhoshtr/tree-sitter-wikitext@git-444214b"
+      "github.com/wikimedia/tree-sitter-wikitext@git-444214b"
     ]
   },
   {
