@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "kind": "prototype-query-packs",
-  "count": 234,
+  "count": 235,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12359,7 +12359,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-46ff888",
+      "version": "git-2c346f6",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12683,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-46ff888",
+      "version": "git-2c346f6",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12730,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-46ff888",
+      "version": "git-2c346f6",
       "languages": [
         "html"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-46ff888",
+      "version": "git-2c346f6",
       "languages": [
         "proto"
       ],
@@ -15603,7 +15603,7 @@
       "id": "pack-parser-parser-glimmer",
       "name": "Glimmer Parser Bundle",
       "package": "github.com/ember-tooling/tree-sitter-glimmer",
-      "version": "git-88af855",
+      "version": "git-437ac41",
       "languages": [
         "glimmer"
       ],
@@ -15636,25 +15636,25 @@
         "locals"
       ],
       "queries": {
-        "folds": [
-          "queries/glimmer/folds.scm"
-        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
+        ],
+        "folds": [
+          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ember-tooling/tree-sitter-glimmer@git-88af855"
+          "github.com/ember-tooling/tree-sitter-glimmer@git-437ac41"
         ]
       },
       "summary": "folds, highlights, indents, injections, locals queries ship with the parser repository."
@@ -17376,7 +17376,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-5bf289c",
+      "version": "git-701d7d2",
       "languages": [
         "mlir"
       ],
@@ -17412,7 +17412,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-5bf289c"
+          "github.com/artagnon/tree-sitter-mlir@git-701d7d2"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19036,7 +19036,7 @@
       "id": "pack-parser-parser-roc",
       "name": "Roc Parser Bundle",
       "package": "github.com/faldor20/tree-sitter-roc",
-      "version": "git-edc1805",
+      "version": "git-f1e1f3d",
       "languages": [
         "roc"
       ],
@@ -19077,7 +19077,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/faldor20/tree-sitter-roc@git-edc1805"
+          "github.com/faldor20/tree-sitter-roc@git-f1e1f3d"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20643,6 +20643,61 @@
         ]
       },
       "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-seniormars-typst-typst",
+      "name": "Typst Parser Bundle",
+      "package": "github.com/SeniorMars/tree-sitter-typst",
+      "version": "git-e3e836a",
+      "languages": [
+        "typst"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "typst",
+          "queryKinds": [
+            "highlights",
+            "injections",
+            "locals",
+            "tags"
+          ]
+        }
+      ],
+      "owners": [
+        "SeniorMars"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries/typst"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "locals",
+        "tags"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/typst/highlights.scm"
+        ],
+        "injections": [
+          "queries/typst/injections.scm"
+        ],
+        "locals": [
+          "queries/typst/locals.scm"
+        ],
+        "tags": [
+          "queries/typst/tags.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/SeniorMars/tree-sitter-typst@git-e3e836a"
+        ]
+      },
+      "summary": "highlights, injections, locals, tags queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-udev",

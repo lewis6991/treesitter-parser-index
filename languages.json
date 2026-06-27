@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "kind": "prototype-languages",
   "count": 512,
   "items": [
@@ -9694,8 +9694,8 @@
     },
     {
       "language": "typst",
-      "parserCount": 1,
-      "queryPackCount": 4,
+      "parserCount": 2,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
@@ -9707,12 +9707,14 @@
         "highlights",
         "indents",
         "injections",
+        "locals",
         "outline",
         "tags",
         "textobjects"
       ],
       "queryRoots": [
         "queries",
+        "queries/typst",
         "runtime/queries"
       ],
       "hasWasm": false,
