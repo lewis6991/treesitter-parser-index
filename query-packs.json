@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-28",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -6336,7 +6336,7 @@
       "id": "pack-neovim-matchup",
       "name": "vim-matchup",
       "package": "github.com/andymass/vim-matchup",
-      "version": "git-a2d6184",
+      "version": "git-0558816",
       "languages": [
         "astro",
         "bash",
@@ -6363,6 +6363,7 @@
         "nix",
         "ocaml",
         "perl",
+        "php",
         "powershell",
         "python",
         "quote",
@@ -6375,9 +6376,10 @@
         "typescript",
         "vim",
         "vue",
-        "zig"
+        "zig",
+        "zsh"
       ],
-      "languageCount": 38,
+      "languageCount": 40,
       "languageDetails": [
         {
           "language": "astro",
@@ -6530,6 +6532,12 @@
           ]
         },
         {
+          "language": "php",
+          "queryKinds": [
+            "matchup"
+          ]
+        },
+        {
           "language": "powershell",
           "queryKinds": [
             "matchup"
@@ -6606,6 +6614,12 @@
           "queryKinds": [
             "matchup"
           ]
+        },
+        {
+          "language": "zsh",
+          "queryKinds": [
+            "matchup"
+          ]
         }
       ],
       "owners": [
@@ -6625,7 +6639,7 @@
         "matchup": "after/queries/{language}/matchup.scm"
       },
       "parserCompatibility": {},
-      "summary": "Tree-sitter matchup queries live under after/queries/{language}/matchup.scm for 38 languages."
+      "summary": "Tree-sitter matchup queries live under after/queries/{language}/matchup.scm for 40 languages."
     },
     {
       "id": "pack-pulsar-language-c-c",
@@ -12359,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2c346f6",
+      "version": "git-5837e7e",
       "languages": [
         "bash",
         "c",
@@ -12683,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2c346f6",
+      "version": "git-5837e7e",
       "languages": [
         "glsl"
       ],
@@ -12730,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2c346f6",
+      "version": "git-5837e7e",
       "languages": [
         "html"
       ],
@@ -12785,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2c346f6",
+      "version": "git-5837e7e",
       "languages": [
         "proto"
       ],
@@ -12836,7 +12850,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-5b31862",
+      "version": "git-951eb8e",
       "languages": [
         "abl"
       ],
@@ -12867,7 +12881,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-5b31862"
+          "github.com/usagi-coffee/tree-sitter-abl@git-951eb8e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15636,20 +15650,20 @@
         "locals"
       ],
       "queries": {
+        "folds": [
+          "queries/glimmer/folds.scm"
+        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
-        ],
-        "folds": [
-          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
@@ -20648,7 +20662,7 @@
       "id": "pack-parser-parser-seniormars-typst-typst",
       "name": "Typst Parser Bundle",
       "package": "github.com/SeniorMars/tree-sitter-typst",
-      "version": "git-e3e836a",
+      "version": "git-0a74cb7",
       "languages": [
         "typst"
       ],
@@ -20694,7 +20708,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SeniorMars/tree-sitter-typst@git-e3e836a"
+          "github.com/SeniorMars/tree-sitter-typst@git-0a74cb7"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."

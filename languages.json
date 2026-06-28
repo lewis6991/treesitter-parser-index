@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-28",
   "kind": "prototype-languages",
   "count": 512,
   "items": [
@@ -6587,7 +6587,7 @@
     {
       "language": "php",
       "parserCount": 1,
-      "queryPackCount": 7,
+      "queryPackCount": 8,
       "editors": [
         "helix",
         "lapce",
@@ -6601,12 +6601,14 @@
         "indents",
         "injections",
         "locals",
+        "matchup",
         "outline",
         "rainbows",
         "tags",
         "textobjects"
       ],
       "queryRoots": [
+        "after/queries",
         "php/queries",
         "queries",
         "runtime/queries",
@@ -10677,7 +10679,7 @@
     {
       "language": "zsh",
       "parserCount": 1,
-      "queryPackCount": 2,
+      "queryPackCount": 3,
       "editors": [
         "neovim"
       ],
@@ -10686,9 +10688,11 @@
         "highlights",
         "injections",
         "locals",
+        "matchup",
         "textobjects"
       ],
       "queryRoots": [
+        "after/queries",
         "queries",
         "runtime/queries"
       ],

@@ -152,6 +152,12 @@ export const NVIM_MATCHUP_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "php",
+    "queryKinds": [
+      "matchup"
+    ]
+  },
+  {
     "language": "powershell",
     "queryKinds": [
       "matchup"
@@ -225,6 +231,12 @@ export const NVIM_MATCHUP_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   },
   {
     "language": "zig",
+    "queryKinds": [
+      "matchup"
+    ]
+  },
+  {
+    "language": "zsh",
     "queryKinds": [
       "matchup"
     ]

@@ -38,26 +38,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-cecd8ce"
   },
   {
+    "id": "parser-abl",
+    "name": "ABL",
+    "language": "abl",
+    "package": "github.com/usagi-coffee/tree-sitter-abl",
+    "version": "git-951eb8e",
+    "sourceCommit": "951eb8e77e761a599b499fadde70094723c50574",
+    "lastUpdated": "2026-06-28",
+    "upstreamSemver": "0.0.51",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-abl.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "usagi-coffee"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -65,18 +56,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-abl",
-    "language": "abl",
-    "lastUpdated": "2026-06-19",
-    "name": "ABL",
-    "owners": [
-      "usagi-coffee"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-abl.wasm"
+      }
     ],
-    "package": "github.com/usagi-coffee/tree-sitter-abl",
-    "sourceCommit": "5b31862c9b56cc0c79d37bf15670bec4a3bc9b86",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.51.",
-    "upstreamSemver": "0.0.51",
-    "version": "git-5b31862"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.51."
   },
   {
     "abi": 14,
@@ -5035,30 +5035,31 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c610c28"
   },
   {
-    "id": "parser-glimmer",
-    "name": "Glimmer",
-    "language": "glimmer",
-    "package": "github.com/ember-tooling/tree-sitter-glimmer",
-    "version": "git-437ac41",
-    "sourceCommit": "437ac41e78f3415118f1c3c9b532b5eef1e2615c",
-    "lastUpdated": "2026-06-26",
-    "upstreamSemver": "1.6.0-tree-sitter-glimmer",
     "abi": 15,
-    "owners": [
-      "ember-tooling"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
     ],
+    "bundledQueries": {
+      "folds": [
+        "queries/glimmer/folds.scm"
+      ],
+      "highlights": [
+        "queries/glimmer/highlights.scm"
+      ],
+      "indents": [
+        "queries/glimmer/indents.scm"
+      ],
+      "injections": [
+        "queries/glimmer/injections.scm"
+      ],
+      "locals": [
+        "queries/glimmer/locals.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
     "bundledQueryKinds": [
       "folds",
       "highlights",
@@ -5066,25 +5067,24 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "injections",
       "locals"
     ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/glimmer/highlights.scm"
-      ],
-      "injections": [
-        "queries/glimmer/injections.scm"
-      ],
-      "locals": [
-        "queries/glimmer/locals.scm"
-      ],
-      "indents": [
-        "queries/glimmer/indents.scm"
-      ],
-      "folds": [
-        "queries/glimmer/folds.scm"
-      ]
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
     },
-    "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. folds, highlights, indents, injections, locals queries. Latest release tag 1.6.0-tree-sitter-glimmer."
+    "id": "parser-glimmer",
+    "language": "glimmer",
+    "lastUpdated": "2026-06-26",
+    "name": "Glimmer",
+    "owners": [
+      "ember-tooling"
+    ],
+    "package": "github.com/ember-tooling/tree-sitter-glimmer",
+    "sourceCommit": "437ac41e78f3415118f1c3c9b532b5eef1e2615c",
+    "summary": "Real parser repo snapshot. folds, highlights, indents, injections, locals queries. Latest release tag 1.6.0-tree-sitter-glimmer.",
+    "upstreamSemver": "1.6.0-tree-sitter-glimmer",
+    "version": "git-437ac41"
   },
   {
     "abi": 15,
@@ -9289,33 +9289,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-c84f354"
   },
   {
-    "id": "parser-mlir",
-    "name": "Mlir",
-    "language": "mlir",
-    "package": "github.com/artagnon/tree-sitter-mlir",
-    "version": "git-701d7d2",
-    "sourceCommit": "701d7d25c5eff66ec539d0f839ab6ec5642a1b1d",
-    "lastUpdated": "2026-06-27",
-    "upstreamSemver": "0.0.1",
     "abi": 15,
-    "owners": [
-      "artagnon"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -9326,7 +9305,28 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1."
+    "bundledQueryKinds": [
+      "highlights",
+      "locals"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-mlir",
+    "language": "mlir",
+    "lastUpdated": "2026-06-27",
+    "name": "Mlir",
+    "owners": [
+      "artagnon"
+    ],
+    "package": "github.com/artagnon/tree-sitter-mlir",
+    "sourceCommit": "701d7d25c5eff66ec539d0f839ab6ec5642a1b1d",
+    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1.",
+    "upstreamSemver": "0.0.1",
+    "version": "git-701d7d2"
   },
   {
     "abi": 14,
@@ -12560,34 +12560,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0c06610"
   },
   {
-    "id": "parser-roc",
-    "name": "Roc",
-    "language": "roc",
-    "package": "github.com/faldor20/tree-sitter-roc",
-    "version": "git-f1e1f3d",
-    "sourceCommit": "f1e1f3d5da52e409b917acb937a7509a6c3a3864",
-    "lastUpdated": "2026-06-26",
-    "upstreamSemver": "1.0.0",
     "abi": 15,
-    "owners": [
-      "faldor20"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -12601,7 +12579,29 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 1.0.0."
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-roc",
+    "language": "roc",
+    "lastUpdated": "2026-06-26",
+    "name": "Roc",
+    "owners": [
+      "faldor20"
+    ],
+    "package": "github.com/faldor20/tree-sitter-roc",
+    "sourceCommit": "f1e1f3d5da52e409b917acb937a7509a6c3a3864",
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 1.0.0.",
+    "upstreamSemver": "1.0.0",
+    "version": "git-f1e1f3d"
   },
   {
     "abi": 14,
@@ -15613,9 +15613,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Typst",
     "language": "typst",
     "package": "github.com/SeniorMars/tree-sitter-typst",
-    "version": "git-e3e836a",
-    "sourceCommit": "e3e836a47ddcce26546e59e3d4de1366d06ade78",
-    "lastUpdated": "2026-06-27",
+    "version": "git-0a74cb7",
+    "sourceCommit": "0a74cb73dd311f362cabbbd6978572f233d7211f",
+    "lastUpdated": "2026-06-28",
     "upstreamSemver": "0.1.0",
     "abi": 15,
     "owners": [
