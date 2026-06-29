@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28",
+  "generatedAt": "2026-06-29",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -8139,7 +8139,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-6b7c7c6",
+      "version": "git-278b243",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12373,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5837e7e",
+      "version": "git-76e07d5",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5837e7e",
+      "version": "git-76e07d5",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5837e7e",
+      "version": "git-76e07d5",
       "languages": [
         "html"
       ],
@@ -12799,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5837e7e",
+      "version": "git-76e07d5",
       "languages": [
         "proto"
       ],
@@ -12850,7 +12850,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-951eb8e",
+      "version": "git-2e0cfa2",
       "languages": [
         "abl"
       ],
@@ -12881,7 +12881,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-951eb8e"
+          "github.com/usagi-coffee/tree-sitter-abl@git-2e0cfa2"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -12970,7 +12970,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-eeb2839",
+      "version": "git-f150581",
       "languages": [
         "al"
       ],
@@ -13002,16 +13002,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-eeb2839"
+          "github.com/SShadowS/tree-sitter-al@git-f150581"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -13801,7 +13801,7 @@
       "id": "pack-parser-parser-cmake",
       "name": "Cmake Parser Bundle",
       "package": "github.com/uyha/tree-sitter-cmake",
-      "version": "git-c7b2a71",
+      "version": "git-93fa0f1",
       "languages": [
         "cmake"
       ],
@@ -13834,7 +13834,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/uyha/tree-sitter-cmake@git-c7b2a71"
+          "github.com/uyha/tree-sitter-cmake@git-93fa0f1"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17178,7 +17178,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-75a3dec",
+      "version": "git-88d3c66",
       "languages": [
         "magik"
       ],
@@ -17209,7 +17209,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-75a3dec"
+          "github.com/krn-robin/tree-sitter-magik@git-88d3c66"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17390,7 +17390,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-701d7d2",
+      "version": "git-48cb6b8",
       "languages": [
         "mlir"
       ],
@@ -17426,7 +17426,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-701d7d2"
+          "github.com/artagnon/tree-sitter-mlir@git-48cb6b8"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -20042,7 +20042,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-fc5bf2e",
+      "version": "git-0c469cb",
       "languages": [
         "swift"
       ],
@@ -20083,7 +20083,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-fc5bf2e"
+          "github.com/alex-pinkus/tree-sitter-swift@git-0c469cb"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -20662,7 +20662,7 @@
       "id": "pack-parser-parser-seniormars-typst-typst",
       "name": "Typst Parser Bundle",
       "package": "github.com/SeniorMars/tree-sitter-typst",
-      "version": "git-0a74cb7",
+      "version": "git-39f6c67",
       "languages": [
         "typst"
       ],
@@ -20708,7 +20708,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SeniorMars/tree-sitter-typst@git-0a74cb7"
+          "github.com/SeniorMars/tree-sitter-typst@git-39f6c67"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."

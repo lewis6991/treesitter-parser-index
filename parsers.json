@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28",
+  "generatedAt": "2026-06-29",
   "kind": "prototype-parsers",
   "count": 513,
   "items": [
@@ -8,8 +8,8 @@
       "name": "ABL",
       "language": "abl",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-951eb8e",
-      "sourceCommit": "951eb8e77e761a599b499fadde70094723c50574",
+      "version": "git-2e0cfa2",
+      "sourceCommit": "2e0cfa2f085a5a9b25f5f9b55afd9e23df151b97",
       "lastUpdated": "2026-06-28",
       "upstreamSemver": "0.0.51",
       "abi": 15,
@@ -152,49 +152,17 @@
       "version": "git-e8d47a6"
     },
     {
+      "id": "parser-al",
+      "name": "AL",
+      "language": "al",
+      "package": "github.com/SShadowS/tree-sitter-al",
+      "version": "git-f150581",
+      "sourceCommit": "f150581de8dd4393b8774ead02098a20ecc1e527",
+      "lastUpdated": "2026-06-28",
+      "upstreamSemver": "3.0.1",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        },
-        {
-          "format": "dll",
-          "kind": "release-asset",
-          "name": "tree-sitter-al.dll"
-        },
-        {
-          "format": "dylib",
-          "kind": "release-asset",
-          "name": "tree-sitter-al.dylib"
-        },
-        {
-          "format": "so",
-          "kind": "release-asset",
-          "name": "tree-sitter-al.so"
-        },
-        {
-          "format": "wasm",
-          "kind": "release-asset",
-          "name": "tree-sitter-al.wasm"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
-        "locals": [
-          "queries/locals.scm"
-        ],
-        "tags": [
-          "queries/tags.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "locals",
-        "tags"
+      "owners": [
+        "SShadowS"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -202,18 +170,50 @@
         "sourceArchive": true,
         "wasm": true
       },
-      "id": "parser-al",
-      "language": "al",
-      "lastUpdated": "2026-06-17",
-      "name": "AL",
-      "owners": [
-        "SShadowS"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        },
+        {
+          "kind": "release-asset",
+          "format": "dll",
+          "name": "tree-sitter-al.dll"
+        },
+        {
+          "kind": "release-asset",
+          "format": "dylib",
+          "name": "tree-sitter-al.dylib"
+        },
+        {
+          "kind": "release-asset",
+          "format": "so",
+          "name": "tree-sitter-al.so"
+        },
+        {
+          "kind": "release-asset",
+          "format": "wasm",
+          "name": "tree-sitter-al.wasm"
+        }
       ],
-      "package": "github.com/SShadowS/tree-sitter-al",
-      "sourceCommit": "eeb2839070135e4b319e7a0aa0146e6a0c45086a",
-      "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 3.0.1.",
-      "upstreamSemver": "3.0.1",
-      "version": "git-eeb2839"
+      "bundledQueryKinds": [
+        "highlights",
+        "locals",
+        "tags"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 3.0.1."
     },
     {
       "abi": 15,
@@ -1748,12 +1748,32 @@
       "version": "git-e43eff8"
     },
     {
+      "id": "parser-cmake",
+      "name": "Cmake",
+      "language": "cmake",
+      "package": "github.com/uyha/tree-sitter-cmake",
+      "version": "git-93fa0f1",
+      "sourceCommit": "93fa0f15929d06f96eba6daeda7ea878b1010c71",
+      "lastUpdated": "2026-06-28",
+      "upstreamSemver": "0.7.2",
       "abi": 14,
+      "owners": [
+        "uyha"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": false
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1763,27 +1783,7 @@
       "bundledQueryEditors": [
         "neovim"
       ],
-      "bundledQueryKinds": [
-        "highlights"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": false
-      },
-      "id": "parser-cmake",
-      "language": "cmake",
-      "lastUpdated": "2025-10-17",
-      "name": "Cmake",
-      "owners": [
-        "uyha"
-      ],
-      "package": "github.com/uyha/tree-sitter-cmake",
-      "sourceCommit": "c7b2a71e7f8ecb167fad4c97227c838439280175",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.2.",
-      "upstreamSemver": "0.7.2",
-      "version": "git-c7b2a71"
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.2."
     },
     {
       "abi": 15,
@@ -9028,21 +9028,17 @@
       "version": "git-cecd8ce"
     },
     {
+      "id": "parser-magik",
+      "name": "Magik",
+      "language": "magik",
+      "package": "github.com/krn-robin/tree-sitter-magik",
+      "version": "git-88d3c66",
+      "sourceCommit": "88d3c661cfe22e1868698f0932e714f91b61a660",
+      "lastUpdated": "2026-06-29",
+      "upstreamSemver": "0.0.1",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "owners": [
+        "krn-robin"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -9050,18 +9046,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-magik",
-      "language": "magik",
-      "lastUpdated": "2026-06-22",
-      "name": "Magik",
-      "owners": [
-        "krn-robin"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/krn-robin/tree-sitter-magik",
-      "sourceCommit": "75a3dec65cd864210718a784c4069b24dadbc2bb",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1.",
-      "upstreamSemver": "0.0.1",
-      "version": "git-75a3dec"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.0.1."
     },
     {
       "abi": null,
@@ -9453,42 +9453,63 @@
       "version": "git-d787c66"
     },
     {
+      "id": "parser-meson",
+      "name": "Meson",
+      "language": "meson",
+      "package": "github.com/tree-sitter-grammars/tree-sitter-meson",
+      "version": "git-aa8d472",
+      "sourceCommit": "aa8d472034956f94f51f2ef2cbfec4cc07efbfde",
+      "lastUpdated": "2026-06-29",
+      "upstreamSemver": "1.3.0",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
+      "owners": [
+        "tree-sitter-grammars"
       ],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-meson",
-      "language": "meson",
-      "lastUpdated": "2026-01-22",
-      "name": "Meson",
-      "owners": [
-        "tree-sitter-grammars"
-      ],
-      "package": "github.com/tree-sitter-grammars/tree-sitter-meson",
-      "sourceCommit": "c84f3540624b81fc44067030afce2ff78d6ede05",
-      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 1.3.0. Maintained in tree-sitter-grammars.",
-      "upstreamSemver": "1.3.0",
-      "version": "git-c84f354"
-    },
-    {
-      "abi": 15,
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         }
+      ],
+      "bundledQueryKinds": [],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 1.3.0. Maintained in tree-sitter-grammars."
+    },
+    {
+      "id": "parser-mlir",
+      "name": "Mlir",
+      "language": "mlir",
+      "package": "github.com/artagnon/tree-sitter-mlir",
+      "version": "git-48cb6b8",
+      "sourceCommit": "48cb6b8b75b2cd0be1b6027e17da349da6711119",
+      "lastUpdated": "2026-06-29",
+      "upstreamSemver": "0.0.1",
+      "abi": 15,
+      "owners": [
+        "artagnon"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": false,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -9499,28 +9520,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "locals"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": false,
-        "sourceArchive": true,
-        "wasm": false
-      },
-      "id": "parser-mlir",
-      "language": "mlir",
-      "lastUpdated": "2026-06-27",
-      "name": "Mlir",
-      "owners": [
-        "artagnon"
-      ],
-      "package": "github.com/artagnon/tree-sitter-mlir",
-      "sourceCommit": "701d7d25c5eff66ec539d0f839ab6ec5642a1b1d",
-      "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1.",
-      "upstreamSemver": "0.0.1",
-      "version": "git-701d7d2"
+      "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1."
     },
     {
       "abi": 14,
@@ -14610,17 +14610,39 @@
       "version": "git-9b7845c"
     },
     {
+      "id": "parser-swift",
+      "name": "Swift",
+      "language": "swift",
+      "package": "github.com/alex-pinkus/tree-sitter-swift",
+      "version": "git-0c469cb",
+      "sourceCommit": "0c469cbb77457ebabe2702268bcf7f116b3fac8f",
+      "lastUpdated": "2026-06-28",
+      "upstreamSemver": "0.7.3",
       "abi": null,
+      "owners": [
+        "alex-pinkus"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         },
         {
-          "format": "wasm",
           "kind": "release-asset",
+          "format": "wasm",
           "name": "tree-sitter-swift.wasm"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -14634,29 +14656,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
-      "id": "parser-swift",
-      "language": "swift",
-      "lastUpdated": "2026-06-20",
-      "name": "Swift",
-      "owners": [
-        "alex-pinkus"
-      ],
-      "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "sourceCommit": "fc5bf2e693cfc021b7faa8b3cfd38e94104979da",
-      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3.",
-      "upstreamSemver": "0.7.3",
-      "version": "git-fc5bf2e"
+      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3."
     },
     {
       "abi": 13,
@@ -15888,8 +15888,8 @@
       "name": "Typst",
       "language": "typst",
       "package": "github.com/SeniorMars/tree-sitter-typst",
-      "version": "git-0a74cb7",
-      "sourceCommit": "0a74cb73dd311f362cabbbd6978572f233d7211f",
+      "version": "git-39f6c67",
+      "sourceCommit": "39f6c674e46ebbcd47673f19de5be25d424a2f91",
       "lastUpdated": "2026-06-28",
       "upstreamSemver": "0.1.0",
       "abi": 15,
