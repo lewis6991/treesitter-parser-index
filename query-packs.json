@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30",
+  "generatedAt": "2026-07-01",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12373,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-53e4d34",
+      "version": "git-03125da",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-53e4d34",
+      "version": "git-03125da",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-53e4d34",
+      "version": "git-03125da",
       "languages": [
         "html"
       ],
@@ -12799,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-53e4d34",
+      "version": "git-03125da",
       "languages": [
         "proto"
       ],
@@ -13520,11 +13520,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -14328,7 +14328,7 @@
       "id": "pack-parser-parser-dafny",
       "name": "Dafny Parser Bundle",
       "package": "github.com/hath995/tree-sitter-dafny",
-      "version": "git-47f97f8",
+      "version": "git-8085572",
       "languages": [
         "dafny"
       ],
@@ -14364,14 +14364,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "indents": [
-          "queries/indents.scm"
-        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "indents": [
+          "queries/indents.scm"
         ],
         "textobjects": [
           "queries/textobjects.scm"
@@ -14379,7 +14379,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/hath995/tree-sitter-dafny@git-47f97f8"
+          "github.com/hath995/tree-sitter-dafny@git-8085572"
         ]
       },
       "summary": "highlights, indents, locals, tags, textobjects queries ship with the parser repository."
@@ -15237,7 +15237,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-5480cb9",
+      "version": "git-ab86158",
       "languages": [
         "fsharp"
       ],
@@ -15278,7 +15278,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-5480cb9"
+          "github.com/ionide/tree-sitter-fsharp@git-ab86158"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15287,7 +15287,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-5480cb9",
+      "version": "git-ab86158",
       "languages": [
         "fsharp_signature"
       ],
@@ -15328,7 +15328,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-5480cb9"
+          "github.com/ionide/tree-sitter-fsharp@git-ab86158"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -18015,7 +18015,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-8a7cbc8",
+      "version": "git-c3e17b3",
       "languages": [
         "perl"
       ],
@@ -18048,7 +18048,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-8a7cbc8"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-c3e17b3"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
