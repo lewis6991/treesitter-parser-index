@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01",
+  "generatedAt": "2026-07-02",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12373,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-03125da",
+      "version": "git-995e56d",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-03125da",
+      "version": "git-995e56d",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-03125da",
+      "version": "git-995e56d",
       "languages": [
         "html"
       ],
@@ -12799,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-03125da",
+      "version": "git-995e56d",
       "languages": [
         "proto"
       ],
@@ -14364,14 +14364,14 @@
         "highlights": [
           "queries/highlights.scm"
         ],
+        "indents": [
+          "queries/indents.scm"
+        ],
         "locals": [
           "queries/locals.scm"
         ],
         "tags": [
           "queries/tags.scm"
-        ],
-        "indents": [
-          "queries/indents.scm"
         ],
         "textobjects": [
           "queries/textobjects.scm"
@@ -15237,7 +15237,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-ab86158",
+      "version": "git-9720575",
       "languages": [
         "fsharp"
       ],
@@ -15278,7 +15278,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-ab86158"
+          "github.com/ionide/tree-sitter-fsharp@git-9720575"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15287,7 +15287,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-ab86158",
+      "version": "git-9720575",
       "languages": [
         "fsharp_signature"
       ],
@@ -15328,7 +15328,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-ab86158"
+          "github.com/ionide/tree-sitter-fsharp@git-9720575"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -17640,7 +17640,7 @@
       "id": "pack-parser-parser-fdncred-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/fdncred/tree-sitter-nu",
-      "version": "git-696d257",
+      "version": "git-d694570",
       "languages": [
         "nu"
       ],
@@ -17676,7 +17676,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/fdncred/tree-sitter-nu@git-696d257"
+          "github.com/fdncred/tree-sitter-nu@git-d694570"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -17685,7 +17685,7 @@
       "id": "pack-parser-parser-nushell-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/nushell/tree-sitter-nu",
-      "version": "git-348b787",
+      "version": "git-d694570",
       "languages": [
         "nu"
       ],
@@ -17721,7 +17721,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nushell/tree-sitter-nu@git-348b787"
+          "github.com/nushell/tree-sitter-nu@git-d694570"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -20847,7 +20847,7 @@
       "id": "pack-parser-parser-varlink",
       "name": "Varlink Parser Bundle",
       "package": "github.com/bachorp/tree-sitter-varlink",
-      "version": "git-a80ecff",
+      "version": "git-95f420e",
       "languages": [
         "varlink"
       ],
@@ -20883,7 +20883,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/bachorp/tree-sitter-varlink@git-a80ecff"
+          "github.com/bachorp/tree-sitter-varlink@git-95f420e"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
