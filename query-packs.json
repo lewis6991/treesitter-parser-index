@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02",
+  "generatedAt": "2026-07-03",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -8139,7 +8139,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-278b243",
+      "version": "git-2868367",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12373,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-995e56d",
+      "version": "git-a91c8aa",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-995e56d",
+      "version": "git-a91c8aa",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-995e56d",
+      "version": "git-a91c8aa",
       "languages": [
         "html"
       ],
@@ -12799,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-995e56d",
+      "version": "git-a91c8aa",
       "languages": [
         "proto"
       ],
@@ -13216,7 +13216,7 @@
       "id": "pack-parser-parser-batch",
       "name": "Batch Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-batch",
-      "version": "git-afaafe6",
+      "version": "git-5c930c4",
       "languages": [
         "batch"
       ],
@@ -13247,7 +13247,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-batch@git-afaafe6"
+          "github.com/wharflab/tree-sitter-batch@git-5c930c4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13888,7 +13888,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-3043b21",
+      "version": "git-4ff2892",
       "languages": [
         "containerfile"
       ],
@@ -13924,7 +13924,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-3043b21"
+          "github.com/wharflab/tree-sitter-containerfile@git-4ff2892"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -14885,7 +14885,7 @@
       "id": "pack-parser-parser-elixir",
       "name": "Elixir Parser Bundle",
       "package": "github.com/elixir-lang/tree-sitter-elixir",
-      "version": "git-7937d3b",
+      "version": "git-c4f9f5a",
       "languages": [
         "elixir"
       ],
@@ -14921,7 +14921,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/elixir-lang/tree-sitter-elixir@git-7937d3b"
+          "github.com/elixir-lang/tree-sitter-elixir@git-c4f9f5a"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -15237,7 +15237,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-9720575",
+      "version": "git-7f8939e",
       "languages": [
         "fsharp"
       ],
@@ -15278,7 +15278,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-9720575"
+          "github.com/ionide/tree-sitter-fsharp@git-7f8939e"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15287,7 +15287,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-9720575",
+      "version": "git-7f8939e",
       "languages": [
         "fsharp_signature"
       ],
@@ -15328,7 +15328,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-9720575"
+          "github.com/ionide/tree-sitter-fsharp@git-7f8939e"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -17475,7 +17475,7 @@
       "id": "pack-parser-parser-nim",
       "name": "Nim Parser Bundle",
       "package": "github.com/alaviss/tree-sitter-nim",
-      "version": "git-3878440",
+      "version": "git-ac72ba3",
       "languages": [
         "nim"
       ],
@@ -17506,7 +17506,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alaviss/tree-sitter-nim@git-3878440"
+          "github.com/alaviss/tree-sitter-nim@git-ac72ba3"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18057,7 +18057,7 @@
       "id": "pack-parser-parser-pgn",
       "name": "Pgn Parser Bundle",
       "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-c8c218e",
+      "version": "git-be9cd4d",
       "languages": [
         "pgn"
       ],
@@ -18088,7 +18088,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rolandwalker/tree-sitter-pgn@git-c8c218e"
+          "github.com/rolandwalker/tree-sitter-pgn@git-be9cd4d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18368,7 +18368,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-bdd8365",
+      "version": "git-37cf050",
       "languages": [
         "powershell"
       ],
@@ -18399,7 +18399,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-bdd8365"
+          "github.com/wharflab/tree-sitter-powershell@git-37cf050"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19050,7 +19050,7 @@
       "id": "pack-parser-parser-roc",
       "name": "Roc Parser Bundle",
       "package": "github.com/faldor20/tree-sitter-roc",
-      "version": "git-f1e1f3d",
+      "version": "git-68f4054",
       "languages": [
         "roc"
       ],
@@ -19091,7 +19091,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/faldor20/tree-sitter-roc@git-f1e1f3d"
+          "github.com/faldor20/tree-sitter-roc@git-68f4054"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19847,7 +19847,7 @@
       "id": "pack-parser-parser-stan",
       "name": "Stan Parser Bundle",
       "package": "github.com/WardBrian/tree-sitter-stan",
-      "version": "git-a92d6a5",
+      "version": "git-8654450",
       "languages": [
         "stan"
       ],
@@ -19879,16 +19879,16 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "locals": [
-          "grammars/stan/queries/locals.scm"
-        ],
         "tags": [
           "grammars/stan/queries/tags.scm"
+        ],
+        "locals": [
+          "grammars/stan/queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/WardBrian/tree-sitter-stan@git-a92d6a5"
+          "github.com/WardBrian/tree-sitter-stan@git-8654450"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19897,7 +19897,7 @@
       "id": "pack-parser-parser-stanfunctions",
       "name": "StanFunctions Parser Bundle",
       "package": "github.com/WardBrian/tree-sitter-stan",
-      "version": "git-a92d6a5",
+      "version": "git-8654450",
       "languages": [
         "stanfunctions"
       ],
@@ -19929,16 +19929,16 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "locals": [
-          "grammars/stanfunctions/queries/sf-locals.scm"
-        ],
         "tags": [
           "grammars/stanfunctions/queries/sf-tags.scm"
+        ],
+        "locals": [
+          "grammars/stanfunctions/queries/sf-locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/WardBrian/tree-sitter-stan@git-a92d6a5"
+          "github.com/WardBrian/tree-sitter-stan@git-8654450"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
