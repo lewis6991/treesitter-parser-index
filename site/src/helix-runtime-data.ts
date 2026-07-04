@@ -3213,7 +3213,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/themixednuts/tree-sitter-htmlx@git-80c3e69"
+      "github.com/themixednuts/tree-sitter-htmlx@git-c9b9cc3"
     ]
   },
   {

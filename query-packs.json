@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03",
+  "generatedAt": "2026-07-04",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -8139,7 +8139,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-2868367",
+      "version": "git-a2c9f44",
       "languages": [
         "_gjs",
         "_javascript",
@@ -11689,7 +11689,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/themixednuts/tree-sitter-htmlx@git-80c3e69"
+            "github.com/themixednuts/tree-sitter-htmlx@git-c9b9cc3"
           ]
         },
         {
@@ -12373,7 +12373,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a91c8aa",
+      "version": "git-1a99eba",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12697,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a91c8aa",
+      "version": "git-1a99eba",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12744,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a91c8aa",
+      "version": "git-1a99eba",
       "languages": [
         "html"
       ],
@@ -12799,7 +12799,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a91c8aa",
+      "version": "git-1a99eba",
       "languages": [
         "proto"
       ],
@@ -13216,7 +13216,7 @@
       "id": "pack-parser-parser-batch",
       "name": "Batch Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-batch",
-      "version": "git-5c930c4",
+      "version": "git-c7ebe7a",
       "languages": [
         "batch"
       ],
@@ -13247,7 +13247,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-batch@git-5c930c4"
+          "github.com/wharflab/tree-sitter-batch@git-c7ebe7a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15617,7 +15617,7 @@
       "id": "pack-parser-parser-glimmer",
       "name": "Glimmer Parser Bundle",
       "package": "github.com/ember-tooling/tree-sitter-glimmer",
-      "version": "git-437ac41",
+      "version": "git-c67a736",
       "languages": [
         "glimmer"
       ],
@@ -15650,25 +15650,25 @@
         "locals"
       ],
       "queries": {
-        "folds": [
-          "queries/glimmer/folds.scm"
-        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
+        ],
+        "folds": [
+          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ember-tooling/tree-sitter-glimmer@git-437ac41"
+          "github.com/ember-tooling/tree-sitter-glimmer@git-c67a736"
         ]
       },
       "summary": "folds, highlights, indents, injections, locals queries ship with the parser repository."
@@ -19879,11 +19879,11 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "tags": [
-          "grammars/stan/queries/tags.scm"
-        ],
         "locals": [
           "grammars/stan/queries/locals.scm"
+        ],
+        "tags": [
+          "grammars/stan/queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19929,11 +19929,11 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "tags": [
-          "grammars/stanfunctions/queries/sf-tags.scm"
-        ],
         "locals": [
           "grammars/stanfunctions/queries/sf-locals.scm"
+        ],
+        "tags": [
+          "grammars/stanfunctions/queries/sf-tags.scm"
         ]
       },
       "parserCompatibility": {
