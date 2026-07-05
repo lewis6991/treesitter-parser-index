@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-04",
+  "generatedAt": "2026-07-05",
   "kind": "prototype-languages",
-  "count": 512,
+  "count": 517,
   "items": [
     {
       "language": "_gjs",
@@ -445,13 +445,22 @@
     {
       "language": "batch",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
+      "queryPackCount": 2,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "indents",
+        "injections",
+        "rainbows",
+        "tags",
+        "textobjects"
       ],
       "queryRoots": [
-        "queries"
+        "queries",
+        "runtime/queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -1009,7 +1018,11 @@
       ],
       "queryKinds": [
         "highlights",
-        "locals"
+        "indents",
+        "locals",
+        "rainbows",
+        "tags",
+        "textobjects"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -4292,7 +4305,10 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "indents",
+        "locals",
+        "textobjects"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -5792,6 +5808,25 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "metamath",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "locals",
+        "tags"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": false
+    },
+    {
       "language": "miseconfig",
       "parserLanguage": "toml",
       "parserCount": 1,
@@ -5844,6 +5879,28 @@
         "indents",
         "injections",
         "locals",
+        "textobjects"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "moonbit",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "locals",
+        "tags",
         "textobjects"
       ],
       "queryRoots": [
@@ -6433,6 +6490,23 @@
       "queryKinds": [
         "highlights",
         "injections"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "p",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights"
       ],
       "queryRoots": [
         "runtime/queries"
@@ -7133,8 +7207,10 @@
     {
       "language": "puppet",
       "parserCount": 1,
-      "queryPackCount": 2,
+      "queryPackCount": 3,
       "editors": [
+        "helix",
+        "lapce",
         "neovim"
       ],
       "queryKinds": [
@@ -8185,6 +8261,25 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "sgf",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "textobjects"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "shellcheckrc",
       "parserCount": 1,
       "queryPackCount": 1,
@@ -8286,7 +8381,7 @@
         "runtime/queries"
       ],
       "hasWasm": false,
-      "hasReleaseArtifacts": true
+      "hasReleaseArtifacts": false
     },
     {
       "language": "smali",
@@ -9153,7 +9248,10 @@
         "folds",
         "highlights",
         "injections",
-        "matchup"
+        "matchup",
+        "rainbows",
+        "tags",
+        "textobjects"
       ],
       "queryRoots": [
         "after/queries",
@@ -9897,14 +9995,18 @@
     {
       "language": "varlink",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
+      "queryPackCount": 2,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
       "queryKinds": [
         "highlights",
         "tags"
       ],
       "queryRoots": [
-        "queries"
+        "queries",
+        "runtime/queries"
       ],
       "hasWasm": true,
       "hasReleaseArtifacts": true
@@ -10472,6 +10574,24 @@
       ],
       "queryKinds": [
         "highlights"
+      ],
+      "queryRoots": [
+        "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "xwiki",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [
+        "helix",
+        "lapce"
+      ],
+      "queryKinds": [
+        "highlights",
+        "injections"
       ],
       "queryRoots": [
         "runtime/queries"

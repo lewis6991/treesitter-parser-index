@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04",
+  "generatedAt": "2026-07-05",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -6645,7 +6645,7 @@
       "id": "pack-pulsar-language-c-c",
       "name": "Pulsar C",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "c"
       ],
@@ -6696,7 +6696,7 @@
       "id": "pack-pulsar-language-csharp-csharp",
       "name": "Pulsar C#",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "c_sharp"
       ],
@@ -6746,7 +6746,7 @@
       "id": "pack-pulsar-language-c-cpp",
       "name": "Pulsar C++",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "cpp"
       ],
@@ -6797,7 +6797,7 @@
       "id": "pack-pulsar-language-clojure-clojure",
       "name": "Pulsar Clojure",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "clojure"
       ],
@@ -6844,7 +6844,7 @@
       "id": "pack-pulsar-language-clojure-edn",
       "name": "Pulsar Clojure EDN",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "clojure"
       ],
@@ -6887,7 +6887,7 @@
       "id": "pack-pulsar-language-css-css",
       "name": "Pulsar CSS",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "css"
       ],
@@ -6935,7 +6935,7 @@
       "id": "pack-pulsar-language-html-ejs",
       "name": "Pulsar EJS",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "embedded_template"
       ],
@@ -6979,7 +6979,7 @@
       "id": "pack-pulsar-language-html-erb",
       "name": "Pulsar ERB",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "embedded_template"
       ],
@@ -7023,7 +7023,7 @@
       "id": "pack-pulsar-language-gfm-gfm",
       "name": "Pulsar GitHub Markdown",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "markdown"
       ],
@@ -7067,7 +7067,7 @@
       "id": "pack-pulsar-language-go-go",
       "name": "Pulsar Go",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "go"
       ],
@@ -7111,7 +7111,7 @@
       "id": "pack-pulsar-language-html-html",
       "name": "Pulsar HTML",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "html"
       ],
@@ -7155,7 +7155,7 @@
       "id": "pack-pulsar-language-hyperlink-hyperlink",
       "name": "Pulsar Hyperlink",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "hyperlink"
       ],
@@ -7191,7 +7191,7 @@
       "id": "pack-pulsar-language-java-java",
       "name": "Pulsar Java",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "java"
       ],
@@ -7239,7 +7239,7 @@
       "id": "pack-pulsar-language-javascript-javascript",
       "name": "Pulsar JavaScript",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "javascript"
       ],
@@ -7291,7 +7291,7 @@
       "id": "pack-pulsar-language-javascript-regex",
       "name": "Pulsar JavaScript RegExp",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "regex"
       ],
@@ -7327,7 +7327,7 @@
       "id": "pack-pulsar-language-javascript-jsdoc",
       "name": "Pulsar JSDoc",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "jsdoc"
       ],
@@ -7371,7 +7371,7 @@
       "id": "pack-pulsar-language-json-json",
       "name": "Pulsar JSON",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "json"
       ],
@@ -7422,7 +7422,7 @@
       "id": "pack-pulsar-language-json-json-with-comments",
       "name": "Pulsar JSON with Comments",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "json"
       ],
@@ -7470,7 +7470,7 @@
       "id": "pack-pulsar-language-gfm-gfm-inline",
       "name": "Pulsar Markdown Inline",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "markdown_inline"
       ],
@@ -7506,7 +7506,7 @@
       "id": "pack-pulsar-language-php-php",
       "name": "Pulsar Php",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "php"
       ],
@@ -7554,7 +7554,7 @@
       "id": "pack-pulsar-language-php-phpdoc",
       "name": "Pulsar Phpdoc",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "phpdoc"
       ],
@@ -7590,7 +7590,7 @@
       "id": "pack-pulsar-language-python-python",
       "name": "Pulsar Python",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "python"
       ],
@@ -7638,7 +7638,7 @@
       "id": "pack-pulsar-language-ruby-regex",
       "name": "Pulsar Regex",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "regex"
       ],
@@ -7674,7 +7674,7 @@
       "id": "pack-pulsar-language-typescript-regex",
       "name": "Pulsar Regex",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "regex"
       ],
@@ -7710,7 +7710,7 @@
       "id": "pack-pulsar-language-ruby-ruby",
       "name": "Pulsar Ruby",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "ruby"
       ],
@@ -7762,7 +7762,7 @@
       "id": "pack-pulsar-language-rust-bundled-rust",
       "name": "Pulsar Rust",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "rust"
       ],
@@ -7810,7 +7810,7 @@
       "id": "pack-pulsar-language-sass-scss",
       "name": "Pulsar SCSS",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "scss"
       ],
@@ -7858,7 +7858,7 @@
       "id": "pack-pulsar-language-shellscript-bash",
       "name": "Pulsar Shell Script",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "bash"
       ],
@@ -7906,7 +7906,7 @@
       "id": "pack-pulsar-language-todo-todo",
       "name": "Pulsar TODO",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "todo"
       ],
@@ -7942,7 +7942,7 @@
       "id": "pack-pulsar-language-toml-toml",
       "name": "Pulsar TOML",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "toml"
       ],
@@ -7986,7 +7986,7 @@
       "id": "pack-pulsar-language-typescript-typescript",
       "name": "Pulsar TypeScript",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "typescript"
       ],
@@ -8034,7 +8034,7 @@
       "id": "pack-pulsar-language-typescript-tsx",
       "name": "Pulsar TypeScript (React)",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "tsx"
       ],
@@ -8091,7 +8091,7 @@
       "id": "pack-pulsar-language-yaml-yaml",
       "name": "Pulsar YAML",
       "package": "github.com/pulsar-edit/pulsar",
-      "version": "git-2ab1509",
+      "version": "git-4cf7b17",
       "languages": [
         "yaml"
       ],
@@ -8139,7 +8139,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-a2c9f44",
+      "version": "git-44c801d",
       "languages": [
         "_gjs",
         "_javascript",
@@ -8155,6 +8155,7 @@
         "bash",
         "basic",
         "bass",
+        "batch",
         "beancount",
         "bibtex",
         "bicep",
@@ -8328,8 +8329,10 @@
         "matlab",
         "mermaid",
         "meson",
+        "metamath",
         "miseconfig",
         "mojo",
+        "moonbit",
         "move",
         "msbuild",
         "nasm",
@@ -8348,6 +8351,7 @@
         "opencl",
         "openscad",
         "org",
+        "p",
         "pascal",
         "passwd",
         "pem",
@@ -8372,6 +8376,7 @@
         "prql",
         "ptx",
         "pug",
+        "puppet",
         "purescript",
         "python",
         "qml",
@@ -8399,6 +8404,7 @@
         "scfg",
         "scheme",
         "scss",
+        "sgf",
         "shellcheckrc",
         "slang",
         "slint",
@@ -8451,6 +8457,7 @@
         "uxntal",
         "v",
         "vala",
+        "varlink",
         "vento",
         "verilog",
         "vhdl",
@@ -8470,12 +8477,13 @@
         "xit",
         "xml",
         "xtc",
+        "xwiki",
         "yaml",
         "yara",
         "yuck",
         "zig"
       ],
-      "languageCount": 333,
+      "languageCount": 341,
       "languageDetails": [
         {
           "language": "_gjs",
@@ -8625,13 +8633,27 @@
           ]
         },
         {
+          "language": "batch",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "injections",
+            "rainbows",
+            "tags",
+            "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/wharflab/tree-sitter-batch@git-5fc5f54"
+          ]
+        },
+        {
           "language": "beancount",
           "queryKinds": [
             "folds",
             "highlights"
           ],
           "testedParserRefs": [
-            "github.com/polarmutex/tree-sitter-beancount@git-f3741a3"
+            "github.com/polarmutex/tree-sitter-beancount@git-429cff8"
           ]
         },
         {
@@ -8734,7 +8756,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/caddyserver/tree-sitter-caddyfile@git-683332a"
+            "github.com/caddyserver/tree-sitter-caddyfile@git-1543743"
           ]
         },
         {
@@ -8795,7 +8817,11 @@
           "language": "clarity",
           "queryKinds": [
             "highlights",
-            "locals"
+            "indents",
+            "locals",
+            "rainbows",
+            "tags",
+            "textobjects"
           ],
           "testedParserRefs": [
             "github.com/xlittlerag/tree-sitter-clarity@git-1436da3"
@@ -9452,7 +9478,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/sirius94/tree-sitter-gas@git-60f4436"
+            "github.com/sirius94/tree-sitter-gas@git-5d6c0a0"
           ]
         },
         {
@@ -10020,10 +10046,13 @@
         {
           "language": "ink",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "indents",
+            "locals",
+            "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/rhizoome/tree-sitter-ink2@git-8486e9b"
+            "github.com/wldmr/tree-sitter-ink@git-632072b"
           ]
         },
         {
@@ -10621,6 +10650,17 @@
           ]
         },
         {
+          "language": "metamath",
+          "queryKinds": [
+            "highlights",
+            "locals",
+            "tags"
+          ],
+          "testedParserRefs": [
+            "git.sr.ht/~m4dh0rs3/tree-sitter-metamath@git-d6a57b0"
+          ]
+        },
+        {
           "language": "miseconfig",
           "queryKinds": [
             "highlights",
@@ -10644,6 +10684,20 @@
           ],
           "testedParserRefs": [
             "github.com/lsh/tree-sitter-mojo@git-3d7c53b"
+          ]
+        },
+        {
+          "language": "moonbit",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "injections",
+            "locals",
+            "tags",
+            "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/moonbitlang/tree-sitter-moonbit@git-36191d7"
           ]
         },
         {
@@ -10856,6 +10910,15 @@
           ],
           "testedParserRefs": [
             "github.com/emiasims/tree-sitter-org@git-698bb1a"
+          ]
+        },
+        {
+          "language": "p",
+          "queryKinds": [
+            "highlights"
+          ],
+          "testedParserRefs": [
+            "github.com/battesonb/tree-sitter-p@git-701dcc1"
           ]
         },
         {
@@ -11134,6 +11197,18 @@
           ]
         },
         {
+          "language": "puppet",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "injections",
+            "locals"
+          ],
+          "testedParserRefs": [
+            "github.com/tree-sitter-grammars/tree-sitter-puppet@git-15f1929"
+          ]
+        },
+        {
           "language": "purescript",
           "queryKinds": [
             "highlights",
@@ -11287,7 +11362,7 @@
             "indents"
           ],
           "testedParserRefs": [
-            "github.com/Hubro/tree-sitter-robot@git-0f010f4"
+            "github.com/Hubro/tree-sitter-robot@git-93c48ca"
           ]
         },
         {
@@ -11333,7 +11408,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/rshtml/tree-sitter-rshtml@git-89ae0f3"
+            "github.com/rshtml/tree-sitter-rshtml@git-a1499c5"
           ]
         },
         {
@@ -11464,6 +11539,17 @@
           ]
         },
         {
+          "language": "sgf",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "textobjects"
+          ],
+          "testedParserRefs": [
+            "github.com/lykahb/tree-sitter-sgf@git-b7e0fb7"
+          ]
+        },
+        {
           "language": "shellcheckrc",
           "queryKinds": [
             "highlights",
@@ -11506,7 +11592,7 @@
             "tags"
           ],
           "testedParserRefs": [
-            "github.com/xenogenics/tree-sitter-slisp@git-29f9c67"
+            "git.sr.ht/~xguerin/tree-sitter-slisp@git-e14f621"
           ]
         },
         {
@@ -11585,7 +11671,7 @@
             "rainbows"
           ],
           "testedParserRefs": [
-            "codeberg.org/spade-lang/tree-sitter-spade@git-996aaab"
+            "codeberg.org/spade-lang/tree-sitter-spade@git-4eb2fc0"
           ]
         },
         {
@@ -11812,10 +11898,13 @@
           "language": "templ",
           "queryKinds": [
             "highlights",
-            "injections"
+            "injections",
+            "rainbows",
+            "tags",
+            "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/vrischmann/tree-sitter-templ@git-47594c5"
+            "github.com/vrischmann/tree-sitter-templ@git-68d6707"
           ]
         },
         {
@@ -12067,6 +12156,15 @@
           ]
         },
         {
+          "language": "varlink",
+          "queryKinds": [
+            "highlights"
+          ],
+          "testedParserRefs": [
+            "github.com/bachorp/tree-sitter-varlink@git-a80ecff"
+          ]
+        },
+        {
           "language": "vento",
           "queryKinds": [
             "highlights",
@@ -12275,6 +12373,16 @@
           ]
         },
         {
+          "language": "xwiki",
+          "queryKinds": [
+            "highlights",
+            "injections"
+          ],
+          "testedParserRefs": [
+            "github.com/battesonb/tree-sitter-xwiki@git-58010c6"
+          ]
+        },
+        {
           "language": "yaml",
           "queryKinds": [
             "highlights",
@@ -12367,13 +12475,13 @@
         "textobjects": "runtime/queries/{language}/textobjects.scm"
       },
       "parserCompatibility": {},
-      "summary": "Queries live under runtime/queries for 333 languages."
+      "summary": "Queries live under runtime/queries for 341 languages."
     },
     {
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1a99eba",
+      "version": "git-6e9ff7a",
       "languages": [
         "bash",
         "c",
@@ -12697,7 +12805,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1a99eba",
+      "version": "git-6e9ff7a",
       "languages": [
         "glsl"
       ],
@@ -12744,7 +12852,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1a99eba",
+      "version": "git-6e9ff7a",
       "languages": [
         "html"
       ],
@@ -12799,7 +12907,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1a99eba",
+      "version": "git-6e9ff7a",
       "languages": [
         "proto"
       ],
@@ -12970,7 +13078,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-f150581",
+      "version": "git-307dc39",
       "languages": [
         "al"
       ],
@@ -13002,16 +13110,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-f150581"
+          "github.com/SShadowS/tree-sitter-al@git-307dc39"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -13386,7 +13494,7 @@
       "id": "pack-parser-parser-caddyfile",
       "name": "Caddyfile Parser Bundle",
       "package": "github.com/caddyserver/tree-sitter-caddyfile",
-      "version": "git-683332a",
+      "version": "git-1543743",
       "languages": [
         "caddyfile"
       ],
@@ -13427,7 +13535,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/caddyserver/tree-sitter-caddyfile@git-683332a"
+          "github.com/caddyserver/tree-sitter-caddyfile@git-1543743"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -13888,7 +13996,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-4ff2892",
+      "version": "git-1df9124",
       "languages": [
         "containerfile"
       ],
@@ -13924,7 +14032,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-4ff2892"
+          "github.com/wharflab/tree-sitter-containerfile@git-1df9124"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -15650,20 +15758,20 @@
         "locals"
       ],
       "queries": {
+        "folds": [
+          "queries/glimmer/folds.scm"
+        ],
         "highlights": [
           "queries/glimmer/highlights.scm"
+        ],
+        "indents": [
+          "queries/glimmer/indents.scm"
         ],
         "injections": [
           "queries/glimmer/injections.scm"
         ],
         "locals": [
           "queries/glimmer/locals.scm"
-        ],
-        "indents": [
-          "queries/glimmer/indents.scm"
-        ],
-        "folds": [
-          "queries/glimmer/folds.scm"
         ]
       },
       "parserCompatibility": {
@@ -19150,7 +19258,7 @@
       "id": "pack-parser-parser-rshtml",
       "name": "Rshtml Parser Bundle",
       "package": "github.com/rshtml/tree-sitter-rshtml",
-      "version": "git-89ae0f3",
+      "version": "git-a1499c5",
       "languages": [
         "rshtml"
       ],
@@ -19186,7 +19294,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rshtml/tree-sitter-rshtml@git-89ae0f3"
+          "github.com/rshtml/tree-sitter-rshtml@git-a1499c5"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -20042,7 +20150,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-0c469cb",
+      "version": "git-28fe3a8",
       "languages": [
         "swift"
       ],
@@ -20083,7 +20191,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-0c469cb"
+          "github.com/alex-pinkus/tree-sitter-swift@git-28fe3a8"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

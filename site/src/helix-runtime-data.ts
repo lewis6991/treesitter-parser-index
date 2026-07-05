@@ -149,13 +149,27 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "batch",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "injections",
+      "rainbows",
+      "tags",
+      "textobjects"
+    ],
+    "testedParserRefs": [
+      "github.com/wharflab/tree-sitter-batch@git-5fc5f54"
+    ]
+  },
+  {
     "language": "beancount",
     "queryKinds": [
       "folds",
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/polarmutex/tree-sitter-beancount@git-f3741a3"
+      "github.com/polarmutex/tree-sitter-beancount@git-429cff8"
     ]
   },
   {
@@ -258,7 +272,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/caddyserver/tree-sitter-caddyfile@git-683332a"
+      "github.com/caddyserver/tree-sitter-caddyfile@git-1543743"
     ]
   },
   {
@@ -319,7 +333,11 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "clarity",
     "queryKinds": [
       "highlights",
-      "locals"
+      "indents",
+      "locals",
+      "rainbows",
+      "tags",
+      "textobjects"
     ],
     "testedParserRefs": [
       "github.com/xlittlerag/tree-sitter-clarity@git-1436da3"
@@ -976,7 +994,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/sirius94/tree-sitter-gas@git-60f4436"
+      "github.com/sirius94/tree-sitter-gas@git-5d6c0a0"
     ]
   },
   {
@@ -1544,10 +1562,13 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "ink",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "indents",
+      "locals",
+      "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/rhizoome/tree-sitter-ink2@git-8486e9b"
+      "github.com/wldmr/tree-sitter-ink@git-632072b"
     ]
   },
   {
@@ -2145,6 +2166,17 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "metamath",
+    "queryKinds": [
+      "highlights",
+      "locals",
+      "tags"
+    ],
+    "testedParserRefs": [
+      "git.sr.ht/~m4dh0rs3/tree-sitter-metamath@git-d6a57b0"
+    ]
+  },
+  {
     "language": "miseconfig",
     "queryKinds": [
       "highlights",
@@ -2168,6 +2200,20 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "testedParserRefs": [
       "github.com/lsh/tree-sitter-mojo@git-3d7c53b"
+    ]
+  },
+  {
+    "language": "moonbit",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "injections",
+      "locals",
+      "tags",
+      "textobjects"
+    ],
+    "testedParserRefs": [
+      "github.com/moonbitlang/tree-sitter-moonbit@git-36191d7"
     ]
   },
   {
@@ -2380,6 +2426,15 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "testedParserRefs": [
       "github.com/emiasims/tree-sitter-org@git-698bb1a"
+    ]
+  },
+  {
+    "language": "p",
+    "queryKinds": [
+      "highlights"
+    ],
+    "testedParserRefs": [
+      "github.com/battesonb/tree-sitter-p@git-701dcc1"
     ]
   },
   {
@@ -2658,6 +2713,18 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "puppet",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "injections",
+      "locals"
+    ],
+    "testedParserRefs": [
+      "github.com/tree-sitter-grammars/tree-sitter-puppet@git-15f1929"
+    ]
+  },
+  {
     "language": "purescript",
     "queryKinds": [
       "highlights",
@@ -2811,7 +2878,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "indents"
     ],
     "testedParserRefs": [
-      "github.com/Hubro/tree-sitter-robot@git-0f010f4"
+      "github.com/Hubro/tree-sitter-robot@git-93c48ca"
     ]
   },
   {
@@ -2857,7 +2924,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/rshtml/tree-sitter-rshtml@git-89ae0f3"
+      "github.com/rshtml/tree-sitter-rshtml@git-a1499c5"
     ]
   },
   {
@@ -2988,6 +3055,17 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "sgf",
+    "queryKinds": [
+      "highlights",
+      "indents",
+      "textobjects"
+    ],
+    "testedParserRefs": [
+      "github.com/lykahb/tree-sitter-sgf@git-b7e0fb7"
+    ]
+  },
+  {
     "language": "shellcheckrc",
     "queryKinds": [
       "highlights",
@@ -3030,7 +3108,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "tags"
     ],
     "testedParserRefs": [
-      "github.com/xenogenics/tree-sitter-slisp@git-29f9c67"
+      "git.sr.ht/~xguerin/tree-sitter-slisp@git-e14f621"
     ]
   },
   {
@@ -3109,7 +3187,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "rainbows"
     ],
     "testedParserRefs": [
-      "codeberg.org/spade-lang/tree-sitter-spade@git-996aaab"
+      "codeberg.org/spade-lang/tree-sitter-spade@git-4eb2fc0"
     ]
   },
   {
@@ -3336,10 +3414,13 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "templ",
     "queryKinds": [
       "highlights",
-      "injections"
+      "injections",
+      "rainbows",
+      "tags",
+      "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/vrischmann/tree-sitter-templ@git-47594c5"
+      "github.com/vrischmann/tree-sitter-templ@git-68d6707"
     ]
   },
   {
@@ -3591,6 +3672,15 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "varlink",
+    "queryKinds": [
+      "highlights"
+    ],
+    "testedParserRefs": [
+      "github.com/bachorp/tree-sitter-varlink@git-a80ecff"
+    ]
+  },
+  {
     "language": "vento",
     "queryKinds": [
       "highlights",
@@ -3796,6 +3886,16 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "testedParserRefs": [
       "github.com/Alexis-Lapierre/tree-sitter-xtc@git-7bc11b7"
+    ]
+  },
+  {
+    "language": "xwiki",
+    "queryKinds": [
+      "highlights",
+      "injections"
+    ],
+    "testedParserRefs": [
+      "github.com/battesonb/tree-sitter-xwiki@git-58010c6"
     ]
   },
   {
