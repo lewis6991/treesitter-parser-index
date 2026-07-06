@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05",
+  "generatedAt": "2026-07-06",
   "kind": "prototype-languages",
   "count": 517,
   "items": [
@@ -6506,7 +6506,8 @@
         "lapce"
       ],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "locals"
       ],
       "queryRoots": [
         "runtime/queries"

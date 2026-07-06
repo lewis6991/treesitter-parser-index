@@ -2431,7 +2431,8 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
   {
     "language": "p",
     "queryKinds": [
-      "highlights"
+      "highlights",
+      "locals"
     ],
     "testedParserRefs": [
       "github.com/battesonb/tree-sitter-p@git-701dcc1"
