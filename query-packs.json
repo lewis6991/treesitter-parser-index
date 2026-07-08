@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07",
+  "generatedAt": "2026-07-08",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12482,7 +12482,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-64c55b0",
+      "version": "git-f9c9947",
       "languages": [
         "bash",
         "c",
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-64c55b0",
+      "version": "git-f9c9947",
       "languages": [
         "glsl"
       ],
@@ -12853,7 +12853,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-64c55b0",
+      "version": "git-f9c9947",
       "languages": [
         "html"
       ],
@@ -12908,7 +12908,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-64c55b0",
+      "version": "git-f9c9947",
       "languages": [
         "proto"
       ],
@@ -13910,7 +13910,7 @@
       "id": "pack-parser-parser-cmake",
       "name": "Cmake Parser Bundle",
       "package": "github.com/uyha/tree-sitter-cmake",
-      "version": "git-93fa0f1",
+      "version": "git-ca627bb",
       "languages": [
         "cmake"
       ],
@@ -13943,7 +13943,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/uyha/tree-sitter-cmake@git-93fa0f1"
+          "github.com/uyha/tree-sitter-cmake@git-ca627bb"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15039,7 +15039,7 @@
       "id": "pack-parser-parser-elm",
       "name": "Elm Parser Bundle",
       "package": "github.com/elm-tooling/tree-sitter-elm",
-      "version": "git-6d9511c",
+      "version": "git-a6d7760",
       "languages": [
         "elm"
       ],
@@ -15049,6 +15049,7 @@
           "language": "elm",
           "queryKinds": [
             "highlights",
+            "injections",
             "tags"
           ]
         }
@@ -15063,6 +15064,7 @@
       "targets": [],
       "queryKinds": [
         "highlights",
+        "injections",
         "tags"
       ],
       "queries": {
@@ -15071,14 +15073,17 @@
         ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/elm-tooling/tree-sitter-elm@git-6d9511c"
+          "github.com/elm-tooling/tree-sitter-elm@git-a6d7760"
         ]
       },
-      "summary": "highlights, tags queries ship with the parser repository."
+      "summary": "highlights, injections, tags queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-embedded-template",
@@ -17544,7 +17549,7 @@
       "id": "pack-parser-parser-nickel",
       "name": "Nickel Parser Bundle",
       "package": "github.com/nickel-lang/tree-sitter-nickel",
-      "version": "git-3252ec6",
+      "version": "git-7780a16",
       "languages": [
         "nickel"
       ],
@@ -17575,7 +17580,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nickel-lang/tree-sitter-nickel@git-3252ec6"
+          "github.com/nickel-lang/tree-sitter-nickel@git-7780a16"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18307,7 +18312,7 @@
       "id": "pack-parser-parser-pkl",
       "name": "Pkl Parser Bundle",
       "package": "github.com/apple/tree-sitter-pkl",
-      "version": "git-99c5008",
+      "version": "git-5893fb5",
       "languages": [
         "pkl"
       ],
@@ -18348,7 +18353,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/apple/tree-sitter-pkl@git-99c5008"
+          "github.com/apple/tree-sitter-pkl@git-5893fb5"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -19911,7 +19916,7 @@
       "id": "pack-parser-parser-ssh-config",
       "name": "SSHConfig Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-ssh-config",
-      "version": "git-f6c7437",
+      "version": "git-b7db80e",
       "languages": [
         "ssh_config"
       ],
@@ -19947,7 +19952,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-ssh-config@git-f6c7437"
+          "github.com/tree-sitter-grammars/tree-sitter-ssh-config@git-b7db80e"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
