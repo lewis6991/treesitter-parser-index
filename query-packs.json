@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11",
+  "generatedAt": "2026-07-12",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12482,7 +12482,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5f8a741",
+      "version": "git-49ad06c",
       "languages": [
         "bash",
         "c",
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5f8a741",
+      "version": "git-49ad06c",
       "languages": [
         "glsl"
       ],
@@ -12853,7 +12853,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5f8a741",
+      "version": "git-49ad06c",
       "languages": [
         "html"
       ],
@@ -12908,7 +12908,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5f8a741",
+      "version": "git-49ad06c",
       "languages": [
         "proto"
       ],
@@ -13629,11 +13629,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -17504,7 +17504,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-ec226fc",
+      "version": "git-48cd551",
       "languages": [
         "mlir"
       ],
@@ -17540,7 +17540,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-ec226fc"
+          "github.com/artagnon/tree-sitter-mlir@git-48cd551"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -18469,11 +18469,11 @@
         "highlights"
       ],
       "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
         "folds": [
           "queries/folds.scm"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
         ]
       },
       "parserCompatibility": {
@@ -18782,7 +18782,7 @@
       "id": "pack-parser-parser-qmljs",
       "name": "Qmljs Parser Bundle",
       "package": "github.com/yuja/tree-sitter-qmljs",
-      "version": "git-565872b",
+      "version": "git-de96ed6",
       "languages": [
         "qmljs"
       ],
@@ -18818,7 +18818,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/yuja/tree-sitter-qmljs@git-565872b"
+          "github.com/yuja/tree-sitter-qmljs@git-de96ed6"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19079,7 +19079,7 @@
       "id": "pack-parser-parser-rescript",
       "name": "ReScript Parser Bundle",
       "package": "github.com/rescript-lang/tree-sitter-rescript",
-      "version": "git-77ea4c6",
+      "version": "git-64eded2",
       "languages": [
         "rescript"
       ],
@@ -19120,7 +19120,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rescript-lang/tree-sitter-rescript@git-77ea4c6"
+          "github.com/rescript-lang/tree-sitter-rescript@git-64eded2"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
