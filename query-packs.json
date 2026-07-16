@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15",
+  "generatedAt": "2026-07-16",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12482,7 +12482,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f181a2f",
+      "version": "git-bf14327",
       "languages": [
         "bash",
         "c",
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f181a2f",
+      "version": "git-bf14327",
       "languages": [
         "glsl"
       ],
@@ -12853,7 +12853,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f181a2f",
+      "version": "git-bf14327",
       "languages": [
         "html"
       ],
@@ -12908,7 +12908,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f181a2f",
+      "version": "git-bf14327",
       "languages": [
         "proto"
       ],
@@ -12959,7 +12959,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-e71c067",
+      "version": "git-91fa8c3",
       "languages": [
         "abl"
       ],
@@ -12990,7 +12990,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-e71c067"
+          "github.com/usagi-coffee/tree-sitter-abl@git-91fa8c3"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -14092,7 +14092,7 @@
       "id": "pack-parser-parser-c-sharp",
       "name": "CSharp Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-c-sharp",
-      "version": "git-af29416",
+      "version": "git-9150f7d",
       "languages": [
         "c-sharp"
       ],
@@ -14128,7 +14128,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-c-sharp@git-af29416"
+          "github.com/tree-sitter/tree-sitter-c-sharp@git-9150f7d"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -15071,11 +15071,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "injections": [
           "queries/injections.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -15676,7 +15676,7 @@
       "id": "pack-parser-parser-gleam",
       "name": "Gleam Parser Bundle",
       "package": "github.com/gleam-lang/tree-sitter-gleam",
-      "version": "git-c610c28",
+      "version": "git-cefbd68",
       "languages": [
         "gleam"
       ],
@@ -15722,7 +15722,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/gleam-lang/tree-sitter-gleam@git-c610c28"
+          "github.com/gleam-lang/tree-sitter-gleam@git-cefbd68"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -21226,7 +21226,7 @@
       "id": "pack-parser-parser-bytecodealliance-wit-wit",
       "name": "Wit Parser Bundle",
       "package": "github.com/bytecodealliance/tree-sitter-wit",
-      "version": "git-5137a7e",
+      "version": "git-da195e4",
       "languages": [
         "wit"
       ],
@@ -21267,7 +21267,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/bytecodealliance/tree-sitter-wit@git-5137a7e"
+          "github.com/bytecodealliance/tree-sitter-wit@git-da195e4"
         ]
       },
       "summary": "folds, highlights, injections queries ship with the parser repository."
