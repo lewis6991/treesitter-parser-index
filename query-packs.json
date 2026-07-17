@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16",
+  "generatedAt": "2026-07-17",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -8139,7 +8139,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-14d6bc0",
+      "version": "git-f6f3eb1",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12482,7 +12482,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bf14327",
+      "version": "git-aa42d3a",
       "languages": [
         "bash",
         "c",
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bf14327",
+      "version": "git-aa42d3a",
       "languages": [
         "glsl"
       ],
@@ -12853,7 +12853,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bf14327",
+      "version": "git-aa42d3a",
       "languages": [
         "html"
       ],
@@ -12908,7 +12908,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bf14327",
+      "version": "git-aa42d3a",
       "languages": [
         "proto"
       ],
@@ -14672,7 +14672,7 @@
       "id": "pack-parser-parser-diff",
       "name": "Diff Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-diff",
-      "version": "git-2520c3f",
+      "version": "git-13d75f9",
       "languages": [
         "diff"
       ],
@@ -14703,7 +14703,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-diff@git-2520c3f"
+          "github.com/tree-sitter-grammars/tree-sitter-diff@git-13d75f9"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -21255,14 +21255,14 @@
         "injections"
       ],
       "queries": {
+        "folds": [
+          "queries/folds.scm"
+        ],
         "highlights": [
           "queries/highlights.scm"
         ],
         "injections": [
           "queries/injections.scm"
-        ],
-        "folds": [
-          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
