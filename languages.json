@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17",
+  "generatedAt": "2026-07-19",
   "kind": "prototype-languages",
   "count": 517,
   "items": [
@@ -3317,6 +3317,7 @@
         "neovim"
       ],
       "queryKinds": [
+        "folds",
         "highlights",
         "injections"
       ],
@@ -3970,17 +3971,10 @@
     {
       "language": "hlsplaylist",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
-      "queryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -5950,17 +5944,10 @@
     {
       "language": "muttrc",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
-      "queryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -7006,32 +6993,12 @@
       "hasReleaseArtifacts": true
     },
     {
-      "language": "problog",
+      "language": "prolog",
       "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
-        "neovim"
-      ],
-      "queryKinds": [
-        "folds",
-        "highlights",
-        "indents",
-        "injections"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
-      "hasWasm": false,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "prolog",
-      "parserCount": 2,
-      "queryPackCount": 2,
-      "editors": [
         "helix",
-        "lapce",
-        "neovim"
+        "lapce"
       ],
       "queryKinds": [
         "folds",
@@ -7043,7 +7010,7 @@
         "runtime/queries"
       ],
       "hasWasm": false,
-      "hasReleaseArtifacts": true
+      "hasReleaseArtifacts": false
     },
     {
       "language": "promql",
@@ -8652,6 +8619,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "sqf",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "sql",
       "parserCount": 1,
       "queryPackCount": 4,
@@ -9454,17 +9431,10 @@
     {
       "language": "tmux",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
-      "queryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -10701,17 +10671,10 @@
     {
       "language": "zathurarc",
       "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [
-        "neovim"
-      ],
-      "queryKinds": [
-        "highlights",
-        "injections"
-      ],
-      "queryRoots": [
-        "runtime/queries"
-      ],
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
