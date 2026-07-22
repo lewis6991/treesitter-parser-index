@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21",
+  "generatedAt": "2026-07-22",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -8070,7 +8070,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-9fed2f0",
+      "version": "git-19c0a0e",
       "languages": [
         "_gjs",
         "_javascript",
@@ -11514,7 +11514,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/slint-ui/tree-sitter-slint@git-68b2524"
+            "github.com/slint-ui/tree-sitter-slint@git-f94f96c"
           ]
         },
         {
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e8bfce7",
+      "version": "git-cb8a017",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e8bfce7",
+      "version": "git-cb8a017",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e8bfce7",
+      "version": "git-cb8a017",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e8bfce7",
+      "version": "git-cb8a017",
       "languages": [
         "proto"
       ],
@@ -15002,11 +15002,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "injections": [
           "queries/injections.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -15282,7 +15282,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-148ea97",
+      "version": "git-e056202",
       "languages": [
         "fsharp"
       ],
@@ -15323,7 +15323,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-148ea97"
+          "github.com/ionide/tree-sitter-fsharp@git-e056202"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15332,7 +15332,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-148ea97",
+      "version": "git-e056202",
       "languages": [
         "fsharp_signature"
       ],
@@ -15373,7 +15373,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-148ea97"
+          "github.com/ionide/tree-sitter-fsharp@git-e056202"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -16407,7 +16407,7 @@
       "id": "pack-parser-parser-javadoc",
       "name": "Javadoc Parser Bundle",
       "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-51b55fb",
+      "version": "git-8af0d9f",
       "languages": [
         "javadoc"
       ],
@@ -16443,7 +16443,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rmuir/tree-sitter-javadoc@git-51b55fb"
+          "github.com/rmuir/tree-sitter-javadoc@git-8af0d9f"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -18102,7 +18102,7 @@
       "id": "pack-parser-parser-pgn",
       "name": "Pgn Parser Bundle",
       "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-be9cd4d",
+      "version": "git-a00f49e",
       "languages": [
         "pgn"
       ],
@@ -18133,7 +18133,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rolandwalker/tree-sitter-pgn@git-be9cd4d"
+          "github.com/rolandwalker/tree-sitter-pgn@git-a00f49e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19380,7 +19380,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-a642e1c",
+      "version": "git-3991ad1",
       "languages": [
         "scala"
       ],
@@ -19421,7 +19421,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-a642e1c"
+          "github.com/tree-sitter/tree-sitter-scala@git-3991ad1"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
