@@ -142,7 +142,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-diff@git-7d20331"
+      "github.com/tree-sitter-grammars/tree-sitter-diff@git-e7e845f"
     ]
   },
   {

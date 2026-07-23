@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22",
+  "generatedAt": "2026-07-23",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-7248fea",
+      "version": "git-a45a920",
       "languages": [
         "ada",
         "agda",
@@ -883,7 +883,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-diff@git-7d20331"
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-e7e845f"
           ]
         },
         {
@@ -5154,7 +5154,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-diff@git-7d20331"
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-e7e845f"
           ]
         },
         {
@@ -8070,7 +8070,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-19c0a0e",
+      "version": "git-a473894",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cb8a017",
+      "version": "git-4605a0f",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cb8a017",
+      "version": "git-4605a0f",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cb8a017",
+      "version": "git-4605a0f",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cb8a017",
+      "version": "git-4605a0f",
       "languages": [
         "proto"
       ],
@@ -13256,7 +13256,7 @@
       "id": "pack-parser-parser-batch",
       "name": "Batch Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-batch",
-      "version": "git-89417d4",
+      "version": "git-2aa22f0",
       "languages": [
         "batch"
       ],
@@ -13287,7 +13287,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-batch@git-89417d4"
+          "github.com/wharflab/tree-sitter-batch@git-2aa22f0"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13928,7 +13928,7 @@
       "id": "pack-parser-parser-containerfile",
       "name": "Containerfile Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-containerfile",
-      "version": "git-72f6ebe",
+      "version": "git-49ad7af",
       "languages": [
         "containerfile"
       ],
@@ -13964,7 +13964,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-containerfile@git-72f6ebe"
+          "github.com/wharflab/tree-sitter-containerfile@git-49ad7af"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -15282,7 +15282,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-e056202",
+      "version": "git-ac263e4",
       "languages": [
         "fsharp"
       ],
@@ -15323,7 +15323,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-e056202"
+          "github.com/ionide/tree-sitter-fsharp@git-ac263e4"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15332,7 +15332,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-e056202",
+      "version": "git-ac263e4",
       "languages": [
         "fsharp_signature"
       ],
@@ -15373,7 +15373,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-e056202"
+          "github.com/ionide/tree-sitter-fsharp@git-ac263e4"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -18102,7 +18102,7 @@
       "id": "pack-parser-parser-pgn",
       "name": "Pgn Parser Bundle",
       "package": "github.com/rolandwalker/tree-sitter-pgn",
-      "version": "git-a00f49e",
+      "version": "git-ea20c62",
       "languages": [
         "pgn"
       ],
@@ -18133,7 +18133,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rolandwalker/tree-sitter-pgn@git-a00f49e"
+          "github.com/rolandwalker/tree-sitter-pgn@git-ea20c62"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19380,7 +19380,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-3991ad1",
+      "version": "git-20f8b97",
       "languages": [
         "scala"
       ],
@@ -19421,7 +19421,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-3991ad1"
+          "github.com/tree-sitter/tree-sitter-scala@git-20f8b97"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
