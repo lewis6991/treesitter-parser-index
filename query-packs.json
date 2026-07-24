@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23",
+  "generatedAt": "2026-07-24",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-a45a920",
+      "version": "git-bd41519",
       "languages": [
         "ada",
         "agda",
@@ -1418,7 +1418,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/dpezto/tree-sitter-gnuplot@git-20a9829"
+            "github.com/dpezto/tree-sitter-gnuplot@git-c26c387"
           ]
         },
         {
@@ -8070,7 +8070,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-a473894",
+      "version": "git-079a789",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-4605a0f",
+      "version": "git-8276687",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-4605a0f",
+      "version": "git-8276687",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-4605a0f",
+      "version": "git-8276687",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-4605a0f",
+      "version": "git-8276687",
       "languages": [
         "proto"
       ],
@@ -18418,7 +18418,7 @@
       "id": "pack-parser-parser-wharflab-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/wharflab/tree-sitter-powershell",
-      "version": "git-afb492d",
+      "version": "git-2f22410",
       "languages": [
         "powershell"
       ],
@@ -18449,7 +18449,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/wharflab/tree-sitter-powershell@git-afb492d"
+          "github.com/wharflab/tree-sitter-powershell@git-2f22410"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19380,7 +19380,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-20f8b97",
+      "version": "git-67261e1",
       "languages": [
         "scala"
       ],
@@ -19421,7 +19421,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-20f8b97"
+          "github.com/tree-sitter/tree-sitter-scala@git-67261e1"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19852,7 +19852,7 @@
       "id": "pack-parser-parser-ssh-config",
       "name": "SSHConfig Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-ssh-config",
-      "version": "git-b7db80e",
+      "version": "git-0c35b24",
       "languages": [
         "ssh_config"
       ],
@@ -19888,7 +19888,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-ssh-config@git-b7db80e"
+          "github.com/tree-sitter-grammars/tree-sitter-ssh-config@git-0c35b24"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
