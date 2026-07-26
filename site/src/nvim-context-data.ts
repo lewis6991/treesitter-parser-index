@@ -142,7 +142,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-diff@git-e7e845f"
+      "github.com/tree-sitter-grammars/tree-sitter-diff@git-1a24d30"
     ]
   },
   {
@@ -151,7 +151,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/elixir-lang/tree-sitter-elixir@git-c4f9f5a"
+      "github.com/elixir-lang/tree-sitter-elixir@git-4b0c711"
     ]
   },
   {
@@ -160,7 +160,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/elm-tooling/tree-sitter-elm@git-6bf1558"
+      "github.com/elm-tooling/tree-sitter-elm@git-e1e8fea"
     ]
   },
   {
@@ -394,7 +394,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-c357072"
+      "github.com/tree-sitter-grammars/tree-sitter-markdown@git-a0a00f8"
     ]
   },
   {
@@ -475,7 +475,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-php@git-3821698"
+      "github.com/tree-sitter/tree-sitter-php@git-3fda2fb"
     ]
   },
   {
@@ -484,7 +484,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-php@git-3821698"
+      "github.com/tree-sitter/tree-sitter-php@git-3fda2fb"
     ]
   },
   {
@@ -547,7 +547,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-4d081d9"
+      "github.com/tree-sitter/tree-sitter-scala@git-72220b8"
     ]
   },
   {
@@ -610,7 +610,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-aa09b90"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-4e7525a"
     ]
   },
   {
