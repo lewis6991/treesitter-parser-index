@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28",
+  "generatedAt": "2026-07-29",
   "kind": "prototype-query-packs",
   "count": 235,
   "items": [
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8e4e5a3",
+      "version": "git-82aef44",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8e4e5a3",
+      "version": "git-82aef44",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8e4e5a3",
+      "version": "git-82aef44",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-8e4e5a3",
+      "version": "git-82aef44",
       "languages": [
         "proto"
       ],
@@ -14603,7 +14603,7 @@
       "id": "pack-parser-parser-diff",
       "name": "Diff Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-diff",
-      "version": "git-1a24d30",
+      "version": "git-0f8fe52",
       "languages": [
         "diff"
       ],
@@ -14634,7 +14634,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-diff@git-1a24d30"
+          "github.com/tree-sitter-grammars/tree-sitter-diff@git-0f8fe52"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -14885,7 +14885,7 @@
       "id": "pack-parser-parser-elisp",
       "name": "Elisp Parser Bundle",
       "package": "github.com/Wilfred/tree-sitter-elisp",
-      "version": "git-29b4e49",
+      "version": "git-a3957e4",
       "languages": [
         "elisp"
       ],
@@ -14916,7 +14916,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Wilfred/tree-sitter-elisp@git-29b4e49"
+          "github.com/Wilfred/tree-sitter-elisp@git-a3957e4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17435,7 +17435,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-4143424",
+      "version": "git-0250298",
       "languages": [
         "mlir"
       ],
@@ -17471,7 +17471,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-4143424"
+          "github.com/artagnon/tree-sitter-mlir@git-0250298"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -17730,7 +17730,7 @@
       "id": "pack-parser-parser-nushell-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/nushell/tree-sitter-nu",
-      "version": "git-d694570",
+      "version": "git-9467420",
       "languages": [
         "nu"
       ],
@@ -17766,7 +17766,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nushell/tree-sitter-nu@git-d694570"
+          "github.com/nushell/tree-sitter-nu@git-9467420"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -18850,7 +18850,7 @@
       "id": "pack-parser-parser-razor",
       "name": "Razor Parser Bundle",
       "package": "github.com/tris203/tree-sitter-razor",
-      "version": "git-900f53d",
+      "version": "git-d4664e4",
       "languages": [
         "razor"
       ],
@@ -18881,7 +18881,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tris203/tree-sitter-razor@git-900f53d"
+          "github.com/tris203/tree-sitter-razor@git-d4664e4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19812,7 +19812,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-e3aa2c8",
+      "version": "git-7099e2b",
       "languages": [
         "ssh-client-config"
       ],
@@ -19843,7 +19843,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-e3aa2c8"
+          "github.com/metio/tree-sitter-ssh-client-config@git-7099e2b"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20712,7 +20712,7 @@
       "id": "pack-parser-parser-seniormars-typst-typst",
       "name": "Typst Parser Bundle",
       "package": "github.com/SeniorMars/tree-sitter-typst",
-      "version": "git-39f6c67",
+      "version": "git-1acd48c",
       "languages": [
         "typst"
       ],
@@ -20758,7 +20758,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SeniorMars/tree-sitter-typst@git-39f6c67"
+          "github.com/SeniorMars/tree-sitter-typst@git-1acd48c"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
