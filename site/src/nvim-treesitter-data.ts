@@ -1084,7 +1084,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/dpezto/tree-sitter-gnuplot@git-v3.0.0"
+      "github.com/dpezto/tree-sitter-gnuplot@git-v4.0.1"
     ]
   },
   {

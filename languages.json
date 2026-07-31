@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30",
+  "generatedAt": "2026-07-31",
   "kind": "prototype-languages",
   "count": 517,
   "items": [
@@ -2353,7 +2353,7 @@
     {
       "language": "erlang",
       "parserCount": 2,
-      "queryPackCount": 3,
+      "queryPackCount": 4,
       "editors": [
         "helix",
         "lapce",
@@ -2372,6 +2372,7 @@
       ],
       "queryRoots": [
         "after/queries",
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,
