@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31",
+  "generatedAt": "2026-08-01",
   "kind": "prototype-query-packs",
   "count": 236,
   "items": [
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0b3621d",
+      "version": "git-5e1fd39",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0b3621d",
+      "version": "git-5e1fd39",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0b3621d",
+      "version": "git-5e1fd39",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0b3621d",
+      "version": "git-5e1fd39",
       "languages": [
         "proto"
       ],
@@ -12890,7 +12890,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-91fa8c3",
+      "version": "git-7fb48fd",
       "languages": [
         "abl"
       ],
@@ -12921,7 +12921,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-91fa8c3"
+          "github.com/usagi-coffee/tree-sitter-abl@git-7fb48fd"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -12930,7 +12930,7 @@
       "id": "pack-parser-parser-ada",
       "name": "Ada Parser Bundle",
       "package": "github.com/briot/tree-sitter-ada",
-      "version": "git-6b58259",
+      "version": "git-dd5fa4c",
       "languages": [
         "ada"
       ],
@@ -12961,7 +12961,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/briot/tree-sitter-ada@git-6b58259"
+          "github.com/briot/tree-sitter-ada@git-dd5fa4c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17475,7 +17475,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-0250298",
+      "version": "git-8ed481a",
       "languages": [
         "mlir"
       ],
@@ -17511,7 +17511,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-0250298"
+          "github.com/artagnon/tree-sitter-mlir@git-8ed481a"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19420,7 +19420,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-7241899",
+      "version": "git-5877eb9",
       "languages": [
         "scala"
       ],
@@ -19461,7 +19461,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-7241899"
+          "github.com/tree-sitter/tree-sitter-scala@git-5877eb9"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
