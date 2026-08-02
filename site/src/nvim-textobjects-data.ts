@@ -523,7 +523,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-72220b8"
+      "github.com/tree-sitter/tree-sitter-scala@git-5877eb9"
     ]
   },
   {
