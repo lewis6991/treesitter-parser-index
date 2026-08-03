@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-02",
+  "generatedAt": "2026-08-03",
   "kind": "prototype-query-packs",
-  "count": 236,
+  "count": 237,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -4922,7 +4922,7 @@
       "id": "pack-neovim-context",
       "name": "nvim-treesitter-context",
       "package": "github.com/nvim-treesitter/nvim-treesitter-context",
-      "version": "git-b311b30",
+      "version": "git-f306133",
       "languages": [
         "ada",
         "apex",
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-90d024b",
+      "version": "git-35cb755",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-90d024b",
+      "version": "git-35cb755",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-90d024b",
+      "version": "git-35cb755",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-90d024b",
+      "version": "git-35cb755",
       "languages": [
         "proto"
       ],
@@ -17865,7 +17865,7 @@
       "id": "pack-parser-parser-ocaml",
       "name": "OCaml Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-eb35e8a",
+      "version": "git-b400285",
       "languages": [
         "ocaml"
       ],
@@ -17906,7 +17906,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-eb35e8a"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -17915,7 +17915,7 @@
       "id": "pack-parser-parser-ocaml-interface",
       "name": "OCamlInterface Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-eb35e8a",
+      "version": "git-b400285",
       "languages": [
         "ocaml_interface"
       ],
@@ -17956,7 +17956,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-eb35e8a"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18010,7 +18010,7 @@
       "id": "pack-parser-parser-ocaml-type",
       "name": "OCamlType Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-eb35e8a",
+      "version": "git-b400285",
       "languages": [
         "ocaml_type"
       ],
@@ -18051,7 +18051,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-eb35e8a"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19420,7 +19420,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-de05916",
+      "version": "git-0e0ce52",
       "languages": [
         "scala"
       ],
@@ -19461,7 +19461,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-de05916"
+          "github.com/tree-sitter/tree-sitter-scala@git-0e0ce52"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20132,7 +20132,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-28fe3a8",
+      "version": "git-8d02b7f",
       "languages": [
         "swift"
       ],
@@ -20173,7 +20173,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-28fe3a8"
+          "github.com/alex-pinkus/tree-sitter-swift@git-8d02b7f"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -20317,7 +20317,7 @@
       "id": "pack-parser-parser-templ",
       "name": "Templ Parser Bundle",
       "package": "github.com/vrischmann/tree-sitter-templ",
-      "version": "git-2c7a44b",
+      "version": "git-5f9f84e",
       "languages": [
         "templ"
       ],
@@ -20353,7 +20353,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/vrischmann/tree-sitter-templ@git-2c7a44b"
+          "github.com/vrischmann/tree-sitter-templ@git-5f9f84e"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -20934,6 +20934,46 @@
       "summary": "highlights queries ship with the parser repository."
     },
     {
+      "id": "pack-parser-parser-usd",
+      "name": "Usd Parser Bundle",
+      "package": "github.com/ColinKennedy/tree-sitter-usd",
+      "version": "git-7bbe1e8",
+      "languages": [
+        "usd"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "usd",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "ColinKennedy"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/ColinKennedy/tree-sitter-usd@git-7bbe1e8"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
       "id": "pack-parser-parser-varlink",
       "name": "Varlink Parser Bundle",
       "package": "github.com/bachorp/tree-sitter-varlink",
@@ -21226,14 +21266,14 @@
         "injections"
       ],
       "queries": {
+        "folds": [
+          "queries/folds.scm"
+        ],
         "highlights": [
           "queries/highlights.scm"
         ],
         "injections": [
           "queries/injections.scm"
-        ],
-        "folds": [
-          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
