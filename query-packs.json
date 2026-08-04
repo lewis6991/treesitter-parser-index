@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-04",
   "kind": "prototype-query-packs",
   "count": 237,
   "items": [
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-35cb755",
+      "version": "git-e717010",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-35cb755",
+      "version": "git-e717010",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-35cb755",
+      "version": "git-e717010",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-35cb755",
+      "version": "git-e717010",
       "languages": [
         "proto"
       ],
@@ -19852,7 +19852,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-7099e2b",
+      "version": "git-5db1de8",
       "languages": [
         "ssh-client-config"
       ],
@@ -19883,7 +19883,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-7099e2b"
+          "github.com/metio/tree-sitter-ssh-client-config@git-5db1de8"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19937,7 +19937,7 @@
       "id": "pack-parser-parser-stan",
       "name": "Stan Parser Bundle",
       "package": "github.com/WardBrian/tree-sitter-stan",
-      "version": "git-8654450",
+      "version": "git-5cb0af2",
       "languages": [
         "stan"
       ],
@@ -19969,16 +19969,16 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "locals": [
-          "grammars/stan/queries/locals.scm"
-        ],
         "tags": [
           "grammars/stan/queries/tags.scm"
+        ],
+        "locals": [
+          "grammars/stan/queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/WardBrian/tree-sitter-stan@git-8654450"
+          "github.com/WardBrian/tree-sitter-stan@git-5cb0af2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19987,7 +19987,7 @@
       "id": "pack-parser-parser-stanfunctions",
       "name": "StanFunctions Parser Bundle",
       "package": "github.com/WardBrian/tree-sitter-stan",
-      "version": "git-8654450",
+      "version": "git-5cb0af2",
       "languages": [
         "stanfunctions"
       ],
@@ -20019,16 +20019,16 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "locals": [
-          "grammars/stanfunctions/queries/sf-locals.scm"
-        ],
         "tags": [
           "grammars/stanfunctions/queries/sf-tags.scm"
+        ],
+        "locals": [
+          "grammars/stanfunctions/queries/sf-locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/WardBrian/tree-sitter-stan@git-8654450"
+          "github.com/WardBrian/tree-sitter-stan@git-5cb0af2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
