@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04",
+  "generatedAt": "2026-08-05",
   "kind": "prototype-query-packs",
   "count": 237,
   "items": [
@@ -12413,7 +12413,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e717010",
+      "version": "git-8e18ab0",
       "languages": [
         "bash",
         "c",
@@ -12737,7 +12737,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e717010",
+      "version": "git-8e18ab0",
       "languages": [
         "glsl"
       ],
@@ -12784,7 +12784,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e717010",
+      "version": "git-8e18ab0",
       "languages": [
         "html"
       ],
@@ -12839,7 +12839,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e717010",
+      "version": "git-8e18ab0",
       "languages": [
         "proto"
       ],
@@ -19100,7 +19100,7 @@
       "id": "pack-parser-parser-robot",
       "name": "Robot Parser Bundle",
       "package": "github.com/Hubro/tree-sitter-robot",
-      "version": "git-6bacedb",
+      "version": "git-7bfdbcd",
       "languages": [
         "robot"
       ],
@@ -19131,7 +19131,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Hubro/tree-sitter-robot@git-6bacedb"
+          "github.com/Hubro/tree-sitter-robot@git-7bfdbcd"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19420,7 +19420,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-0e0ce52",
+      "version": "git-f0944e4",
       "languages": [
         "scala"
       ],
@@ -19461,7 +19461,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-0e0ce52"
+          "github.com/tree-sitter/tree-sitter-scala@git-f0944e4"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19969,11 +19969,11 @@
         "highlights": [
           "grammars/stan/queries/highlights.scm"
         ],
-        "tags": [
-          "grammars/stan/queries/tags.scm"
-        ],
         "locals": [
           "grammars/stan/queries/locals.scm"
+        ],
+        "tags": [
+          "grammars/stan/queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -20019,11 +20019,11 @@
         "highlights": [
           "grammars/stanfunctions/queries/sf-highlights.scm"
         ],
-        "tags": [
-          "grammars/stanfunctions/queries/sf-tags.scm"
-        ],
         "locals": [
           "grammars/stanfunctions/queries/sf-locals.scm"
+        ],
+        "tags": [
+          "grammars/stanfunctions/queries/sf-tags.scm"
         ]
       },
       "parserCompatibility": {
