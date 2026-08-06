@@ -2756,11 +2756,12 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "queryKinds": [
       "folds",
       "highlights",
+      "indents",
       "injections",
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-5877eb9"
+      "github.com/tree-sitter/tree-sitter-scala@git-bf9ac14"
     ]
   },
   {

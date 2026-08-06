@@ -547,7 +547,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-5877eb9"
+      "github.com/tree-sitter/tree-sitter-scala@git-bf9ac14"
     ]
   },
   {
