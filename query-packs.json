@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-06",
+  "generatedAt": "2026-08-07",
   "kind": "prototype-query-packs",
-  "count": 237,
+  "count": 238,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-d61e80b",
+      "version": "git-6b2aa1c",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-d61e80b",
+      "version": "git-6b2aa1c",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-d61e80b",
+      "version": "git-6b2aa1c",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-d61e80b",
+      "version": "git-6b2aa1c",
       "languages": [
         "proto"
       ],
@@ -13561,11 +13561,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -15323,7 +15323,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-789d8ea",
+      "version": "git-0d3ccbb",
       "languages": [
         "fsharp"
       ],
@@ -15364,7 +15364,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-789d8ea"
+          "github.com/ionide/tree-sitter-fsharp@git-0d3ccbb"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -15373,7 +15373,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-789d8ea",
+      "version": "git-0d3ccbb",
       "languages": [
         "fsharp_signature"
       ],
@@ -15414,7 +15414,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-789d8ea"
+          "github.com/ionide/tree-sitter-fsharp@git-0d3ccbb"
         ]
       },
       "summary": "highlights, injections, tags queries ship with the parser repository."
@@ -19421,7 +19421,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-9deabda",
+      "version": "git-3e0ffd2",
       "languages": [
         "scala"
       ],
@@ -19462,7 +19462,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-9deabda"
+          "github.com/tree-sitter/tree-sitter-scala@git-3e0ffd2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20658,6 +20658,51 @@
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-twig",
+      "name": "Twig Parser Bundle",
+      "package": "github.com/gbprod/tree-sitter-twig",
+      "version": "git-f9cb122",
+      "languages": [
+        "twig"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "twig",
+          "queryKinds": [
+            "highlights",
+            "injections"
+          ]
+        }
+      ],
+      "owners": [
+        "gbprod"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "injections"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/gbprod/tree-sitter-twig@git-f9cb122"
+        ]
+      },
+      "summary": "highlights, injections queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-typescript",

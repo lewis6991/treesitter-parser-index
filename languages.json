@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06",
+  "generatedAt": "2026-08-07",
   "kind": "prototype-languages",
   "count": 517,
   "items": [
@@ -9665,7 +9665,7 @@
     {
       "language": "twig",
       "parserCount": 1,
-      "queryPackCount": 3,
+      "queryPackCount": 4,
       "editors": [
         "helix",
         "lapce",
