@@ -349,7 +349,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-c8ac3d2"
+      "github.com/fwcd/tree-sitter-kotlin@git-1852ea1"
     ]
   },
   {
@@ -358,7 +358,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/latex-lsp/tree-sitter-latex@git-7e0ecdc"
+      "github.com/latex-lsp/tree-sitter-latex@git-fa8df44"
     ]
   },
   {
@@ -448,7 +448,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
     ]
   },
   {
@@ -457,7 +457,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
     ]
   },
   {
@@ -502,7 +502,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/coder3101/tree-sitter-proto@git-10653e6"
+      "github.com/coder3101/tree-sitter-proto@git-da7cbaa"
     ]
   },
   {
@@ -547,7 +547,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-bf9ac14"
+      "github.com/tree-sitter/tree-sitter-scala@git-157fd56"
     ]
   },
   {
@@ -601,7 +601,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-28fe3a8"
+      "github.com/alex-pinkus/tree-sitter-swift@git-8d02b7f"
     ]
   },
   {
@@ -628,7 +628,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-tcl@git-8f11ac7"
+      "github.com/tree-sitter-grammars/tree-sitter-tcl@git-850a72a"
     ]
   },
   {
@@ -646,7 +646,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/vrischmann/tree-sitter-templ@git-947404b"
+      "github.com/vrischmann/tree-sitter-templ@git-94d4086"
     ]
   },
   {
@@ -709,7 +709,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/ColinKennedy/tree-sitter-usd@git-4e0875f"
+      "github.com/ColinKennedy/tree-sitter-usd@git-7bbe1e8"
     ]
   },
   {

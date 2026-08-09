@@ -334,7 +334,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-c8ac3d2"
+      "github.com/fwcd/tree-sitter-kotlin@git-1852ea1"
     ]
   },
   {
@@ -343,7 +343,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/latex-lsp/tree-sitter-latex@git-7e0ecdc"
+      "github.com/latex-lsp/tree-sitter-latex@git-fa8df44"
     ]
   },
   {
@@ -406,7 +406,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-527d62e"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
     ]
   },
   {
@@ -523,7 +523,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-bf9ac14"
+      "github.com/tree-sitter/tree-sitter-scala@git-157fd56"
     ]
   },
   {
@@ -568,7 +568,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-28fe3a8"
+      "github.com/alex-pinkus/tree-sitter-swift@git-8d02b7f"
     ]
   },
   {
@@ -622,7 +622,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gbprod/tree-sitter-twig@git-0afd9a6"
+      "github.com/gbprod/tree-sitter-twig@git-f9cb122"
     ]
   },
   {
