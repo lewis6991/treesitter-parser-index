@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10",
+  "generatedAt": "2026-08-11",
   "kind": "prototype-query-packs",
   "count": 239,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-492acd6",
+      "version": "git-c6b01d8",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-492acd6",
+      "version": "git-c6b01d8",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-492acd6",
+      "version": "git-c6b01d8",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-492acd6",
+      "version": "git-c6b01d8",
       "languages": [
         "proto"
       ],
@@ -13043,11 +13043,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -13561,11 +13561,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13842,7 +13842,7 @@
       "id": "pack-parser-parser-clean",
       "name": "Clean Parser Bundle",
       "package": "github.com/ishaq2321/tree-sitter-clean",
-      "version": "git-2b0fe49",
+      "version": "git-58c554d",
       "languages": [
         "clean"
       ],
@@ -13878,7 +13878,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ishaq2321/tree-sitter-clean@git-2b0fe49"
+          "github.com/ishaq2321/tree-sitter-clean@git-58c554d"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -19466,7 +19466,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-cd589ed",
+      "version": "git-f6af4a3",
       "languages": [
         "scala"
       ],
@@ -19507,7 +19507,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-cd589ed"
+          "github.com/tree-sitter/tree-sitter-scala@git-f6af4a3"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -19898,7 +19898,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-1a38e79",
+      "version": "git-d8efbc9",
       "languages": [
         "ssh-client-config"
       ],
@@ -19929,7 +19929,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-1a38e79"
+          "github.com/metio/tree-sitter-ssh-client-config@git-d8efbc9"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20178,7 +20178,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-8d02b7f",
+      "version": "git-8e27304",
       "languages": [
         "swift"
       ],
@@ -20219,7 +20219,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-8d02b7f"
+          "github.com/alex-pinkus/tree-sitter-swift@git-8e27304"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
