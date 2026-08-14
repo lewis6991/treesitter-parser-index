@@ -549,7 +549,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-diff@git-0f8fe52"
+      "github.com/tree-sitter-grammars/tree-sitter-diff@git-0400db1"
     ]
   },
   {
@@ -3201,7 +3201,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/euclidianAce/tree-sitter-teal@git-05d276e"
+      "github.com/euclidianAce/tree-sitter-teal@git-ac6b42f"
     ]
   },
   {

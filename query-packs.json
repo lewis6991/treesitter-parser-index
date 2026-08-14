@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13",
+  "generatedAt": "2026-08-14",
   "kind": "prototype-query-packs",
   "count": 239,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-c9f9ed6",
+      "version": "git-a1bcffc",
       "languages": [
         "ada",
         "agda",
@@ -883,7 +883,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-diff@git-0f8fe52"
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-0400db1"
           ]
         },
         {
@@ -3535,7 +3535,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/euclidianAce/tree-sitter-teal@git-05d276e"
+            "github.com/euclidianAce/tree-sitter-teal@git-ac6b42f"
           ]
         },
         {
@@ -5155,7 +5155,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-diff@git-0f8fe52"
+            "github.com/tree-sitter-grammars/tree-sitter-diff@git-0400db1"
           ]
         },
         {
@@ -5650,7 +5650,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/euclidianAce/tree-sitter-teal@git-05d276e"
+            "github.com/euclidianAce/tree-sitter-teal@git-ac6b42f"
           ]
         },
         {
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a8fafdd",
+      "version": "git-0ad5441",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a8fafdd",
+      "version": "git-0ad5441",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a8fafdd",
+      "version": "git-0ad5441",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a8fafdd",
+      "version": "git-0ad5441",
       "languages": [
         "proto"
       ],
@@ -12891,7 +12891,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-70a6eae",
+      "version": "git-3fd688c",
       "languages": [
         "abl"
       ],
@@ -12922,7 +12922,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-70a6eae"
+          "github.com/usagi-coffee/tree-sitter-abl@git-3fd688c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13043,11 +13043,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -19466,7 +19466,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-818e8d1",
+      "version": "git-53eef4d",
       "languages": [
         "scala"
       ],
@@ -19507,7 +19507,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-818e8d1"
+          "github.com/tree-sitter/tree-sitter-scala@git-53eef4d"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
