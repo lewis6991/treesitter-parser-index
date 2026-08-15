@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14",
+  "generatedAt": "2026-08-15",
   "kind": "prototype-query-packs",
   "count": 239,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0ad5441",
+      "version": "git-9bde578",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0ad5441",
+      "version": "git-9bde578",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0ad5441",
+      "version": "git-9bde578",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-0ad5441",
+      "version": "git-9bde578",
       "languages": [
         "proto"
       ],
@@ -12891,7 +12891,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-3fd688c",
+      "version": "git-5844930",
       "languages": [
         "abl"
       ],
@@ -12922,7 +12922,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-3fd688c"
+          "github.com/usagi-coffee/tree-sitter-abl@git-5844930"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13527,7 +13527,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-396c05f",
+      "version": "git-3f6922b",
       "languages": [
         "cfml"
       ],
@@ -13561,11 +13561,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfml/queries/indents.scm"
-        ],
         "injections": [
           "cfml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfml/queries/indents.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13573,7 +13573,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-396c05f"
+          "github.com/cfmleditor/tree-sitter-cfml@git-3f6922b"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13582,7 +13582,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-396c05f",
+      "version": "git-3f6922b",
       "languages": [
         "cfquery"
       ],
@@ -13618,7 +13618,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-396c05f"
+          "github.com/cfmleditor/tree-sitter-cfml@git-3f6922b"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13627,7 +13627,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-396c05f",
+      "version": "git-3f6922b",
       "languages": [
         "cfscript"
       ],
@@ -13663,7 +13663,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-396c05f"
+          "github.com/cfmleditor/tree-sitter-cfml@git-3f6922b"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13842,7 +13842,7 @@
       "id": "pack-parser-parser-clean",
       "name": "Clean Parser Bundle",
       "package": "github.com/ishaq2321/tree-sitter-clean",
-      "version": "git-085b09c",
+      "version": "git-ee966aa",
       "languages": [
         "clean"
       ],
@@ -13878,7 +13878,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ishaq2321/tree-sitter-clean@git-085b09c"
+          "github.com/ishaq2321/tree-sitter-clean@git-ee966aa"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -14649,7 +14649,7 @@
       "id": "pack-parser-parser-diff",
       "name": "Diff Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-diff",
-      "version": "git-0400db1",
+      "version": "git-ada384a",
       "languages": [
         "diff"
       ],
@@ -14680,7 +14680,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-diff@git-0400db1"
+          "github.com/tree-sitter-grammars/tree-sitter-diff@git-ada384a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -14931,7 +14931,7 @@
       "id": "pack-parser-parser-elisp",
       "name": "Elisp Parser Bundle",
       "package": "github.com/Wilfred/tree-sitter-elisp",
-      "version": "git-d7f9ae2",
+      "version": "git-0f20c82",
       "languages": [
         "elisp"
       ],
@@ -14962,7 +14962,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Wilfred/tree-sitter-elisp@git-d7f9ae2"
+          "github.com/Wilfred/tree-sitter-elisp@git-0f20c82"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -16665,7 +16665,7 @@
       "id": "pack-parser-parser-tree-sitter-grammars-julia-julia",
       "name": "Julia Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-julia",
-      "version": "git-60fc237",
+      "version": "git-e04970e",
       "languages": [
         "julia"
       ],
@@ -16706,7 +16706,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-julia@git-60fc237"
+          "github.com/tree-sitter-grammars/tree-sitter-julia@git-e04970e"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -17309,7 +17309,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-ba20357",
+      "version": "git-dbd9258",
       "languages": [
         "magik"
       ],
@@ -17340,7 +17340,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-ba20357"
+          "github.com/krn-robin/tree-sitter-magik@git-dbd9258"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17521,7 +17521,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-aead512",
+      "version": "git-5085767",
       "languages": [
         "mlir"
       ],
@@ -17557,7 +17557,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-aead512"
+          "github.com/artagnon/tree-sitter-mlir@git-5085767"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19466,7 +19466,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-53eef4d",
+      "version": "git-4799cfc",
       "languages": [
         "scala"
       ],
@@ -19507,7 +19507,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-53eef4d"
+          "github.com/tree-sitter/tree-sitter-scala@git-4799cfc"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
