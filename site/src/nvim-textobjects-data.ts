@@ -325,7 +325,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-julia@git-60fc237"
+      "github.com/tree-sitter-grammars/tree-sitter-julia@git-e04970e"
     ]
   },
   {
@@ -523,7 +523,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-157fd56"
+      "github.com/tree-sitter/tree-sitter-scala@git-4799cfc"
     ]
   },
   {
@@ -568,7 +568,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-8d02b7f"
+      "github.com/alex-pinkus/tree-sitter-swift@git-85d1773"
     ]
   },
   {
