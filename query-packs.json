@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "2026-08-17",
   "kind": "prototype-query-packs",
   "count": 239,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bc538de",
+      "version": "git-91a6890",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bc538de",
+      "version": "git-91a6890",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bc538de",
+      "version": "git-91a6890",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-bc538de",
+      "version": "git-91a6890",
       "languages": [
         "proto"
       ],
@@ -13527,7 +13527,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-d04fc53",
+      "version": "git-61f2852",
       "languages": [
         "cfml"
       ],
@@ -13573,7 +13573,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-d04fc53"
+          "github.com/cfmleditor/tree-sitter-cfml@git-61f2852"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13582,7 +13582,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-d04fc53",
+      "version": "git-61f2852",
       "languages": [
         "cfquery"
       ],
@@ -13618,7 +13618,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-d04fc53"
+          "github.com/cfmleditor/tree-sitter-cfml@git-61f2852"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13627,7 +13627,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-d04fc53",
+      "version": "git-61f2852",
       "languages": [
         "cfscript"
       ],
@@ -13663,7 +13663,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-d04fc53"
+          "github.com/cfmleditor/tree-sitter-cfml@git-61f2852"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17309,7 +17309,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-dbd9258",
+      "version": "git-e2c8b8f",
       "languages": [
         "magik"
       ],
@@ -17340,7 +17340,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-dbd9258"
+          "github.com/krn-robin/tree-sitter-magik@git-e2c8b8f"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20178,7 +20178,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-85d1773",
+      "version": "git-172ada1",
       "languages": [
         "swift"
       ],
@@ -20219,7 +20219,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-85d1773"
+          "github.com/alex-pinkus/tree-sitter-swift@git-172ada1"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
