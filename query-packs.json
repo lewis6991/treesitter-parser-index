@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-18",
+  "generatedAt": "2026-08-19",
   "kind": "prototype-query-packs",
-  "count": 239,
+  "count": 240,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2893b86",
+      "version": "git-7a7c3e1",
       "languages": [
         "bash",
         "c",
@@ -12738,7 +12738,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2893b86",
+      "version": "git-7a7c3e1",
       "languages": [
         "glsl"
       ],
@@ -12785,7 +12785,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2893b86",
+      "version": "git-7a7c3e1",
       "languages": [
         "html"
       ],
@@ -12840,7 +12840,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-2893b86",
+      "version": "git-7a7c3e1",
       "languages": [
         "proto"
       ],
@@ -13474,6 +13474,46 @@
       "summary": "highlights, injections, locals queries ship with the parser repository."
     },
     {
+      "id": "pack-parser-parser-carve",
+      "name": "Carve Parser Bundle",
+      "package": "github.com/markup-carve/tree-sitter-carve",
+      "version": "git-10bf4c6",
+      "languages": [
+        "carve"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "carve",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "markup-carve"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/markup-carve/tree-sitter-carve@git-10bf4c6"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
       "id": "pack-parser-parser-cel",
       "name": "CEL Parser Bundle",
       "package": "github.com/bufbuild/tree-sitter-cel",
@@ -13561,11 +13601,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -14931,7 +14971,7 @@
       "id": "pack-parser-parser-elisp",
       "name": "Elisp Parser Bundle",
       "package": "github.com/Wilfred/tree-sitter-elisp",
-      "version": "git-0f20c82",
+      "version": "git-0cbf090",
       "languages": [
         "elisp"
       ],
@@ -14962,7 +15002,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Wilfred/tree-sitter-elisp@git-0f20c82"
+          "github.com/Wilfred/tree-sitter-elisp@git-0cbf090"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19146,7 +19186,7 @@
       "id": "pack-parser-parser-robot",
       "name": "Robot Parser Bundle",
       "package": "github.com/Hubro/tree-sitter-robot",
-      "version": "git-baecd7a",
+      "version": "git-8f1a8d8",
       "languages": [
         "robot"
       ],
@@ -19177,7 +19217,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Hubro/tree-sitter-robot@git-baecd7a"
+          "github.com/Hubro/tree-sitter-robot@git-8f1a8d8"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19466,7 +19506,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-b4c6409",
+      "version": "git-1b2f044",
       "languages": [
         "scala"
       ],
@@ -19507,7 +19547,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-b4c6409"
+          "github.com/tree-sitter/tree-sitter-scala@git-1b2f044"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
