@@ -18,6 +18,7 @@ export const ZED_CORE_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "c",
     "queryKinds": [
       "brackets",
+      "debugger",
       "highlights",
       "indents",
       "injections",
@@ -31,6 +32,7 @@ export const ZED_CORE_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     "language": "cpp",
     "queryKinds": [
       "brackets",
+      "debugger",
       "highlights",
       "indents",
       "injections",
