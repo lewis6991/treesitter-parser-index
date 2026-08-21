@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "kind": "prototype-query-packs",
   "count": 240,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cef06d3",
+      "version": "git-5255bd7",
       "languages": [
         "bash",
         "c",
@@ -12740,7 +12740,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cef06d3",
+      "version": "git-5255bd7",
       "languages": [
         "glsl"
       ],
@@ -12787,7 +12787,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cef06d3",
+      "version": "git-5255bd7",
       "languages": [
         "html"
       ],
@@ -12842,7 +12842,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-cef06d3",
+      "version": "git-5255bd7",
       "languages": [
         "proto"
       ],
@@ -13479,7 +13479,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-e97d448",
+      "version": "git-bc7df34",
       "languages": [
         "carve"
       ],
@@ -13510,7 +13510,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-e97d448"
+          "github.com/markup-carve/tree-sitter-carve@git-bc7df34"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13884,7 +13884,7 @@
       "id": "pack-parser-parser-clean",
       "name": "Clean Parser Bundle",
       "package": "github.com/ishaq2321/tree-sitter-clean",
-      "version": "git-7a0e31d",
+      "version": "git-bbcaa9f",
       "languages": [
         "clean"
       ],
@@ -13920,7 +13920,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ishaq2321/tree-sitter-clean@git-7a0e31d"
+          "github.com/ishaq2321/tree-sitter-clean@git-bbcaa9f"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
