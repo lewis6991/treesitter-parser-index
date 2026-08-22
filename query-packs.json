@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21",
+  "generatedAt": "2026-08-22",
   "kind": "prototype-query-packs",
   "count": 240,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5255bd7",
+      "version": "git-fd82517",
       "languages": [
         "bash",
         "c",
@@ -12740,7 +12740,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5255bd7",
+      "version": "git-fd82517",
       "languages": [
         "glsl"
       ],
@@ -12787,7 +12787,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5255bd7",
+      "version": "git-fd82517",
       "languages": [
         "html"
       ],
@@ -12842,7 +12842,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5255bd7",
+      "version": "git-fd82517",
       "languages": [
         "proto"
       ],
@@ -13344,7 +13344,7 @@
       "id": "pack-parser-parser-boogie",
       "name": "Boogie Parser Bundle",
       "package": "github.com/katrinafyi/tree-sitter-boogie",
-      "version": "git-b7fb601",
+      "version": "git-2582a67",
       "languages": [
         "boogie"
       ],
@@ -13375,7 +13375,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/katrinafyi/tree-sitter-boogie@git-b7fb601"
+          "github.com/katrinafyi/tree-sitter-boogie@git-2582a67"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13479,7 +13479,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-bc7df34",
+      "version": "git-863abfa",
       "languages": [
         "carve"
       ],
@@ -13510,7 +13510,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-bc7df34"
+          "github.com/markup-carve/tree-sitter-carve@git-863abfa"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17563,7 +17563,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-5085767",
+      "version": "git-e9f60f9",
       "languages": [
         "mlir"
       ],
@@ -17599,7 +17599,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-5085767"
+          "github.com/artagnon/tree-sitter-mlir@git-e9f60f9"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -19508,7 +19508,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-751f817",
+      "version": "git-d699806",
       "languages": [
         "scala"
       ],
@@ -19549,7 +19549,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-751f817"
+          "github.com/tree-sitter/tree-sitter-scala@git-d699806"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -21195,7 +21195,7 @@
       "id": "pack-parser-parser-vhdl",
       "name": "Vhdl Parser Bundle",
       "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-68dc07f",
+      "version": "git-f87f5e4",
       "languages": [
         "vhdl"
       ],
@@ -21226,7 +21226,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/jpt13653903/tree-sitter-vhdl@git-68dc07f"
+          "github.com/jpt13653903/tree-sitter-vhdl@git-f87f5e4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
