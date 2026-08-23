@@ -16,7 +16,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/aheber/tree-sitter-sfapex@git-27a3091"
+      "github.com/aheber/tree-sitter-sfapex@git-da568ee"
     ]
   },
   {
@@ -313,7 +313,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-json@git-001c28d"
+      "github.com/tree-sitter/tree-sitter-json@git-254c42a"
     ]
   },
   {
@@ -367,7 +367,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/savonet/tree-sitter-liquidsoap@git-0169d92"
+      "github.com/savonet/tree-sitter-liquidsoap@git-fa565a3"
     ]
   },
   {
@@ -547,7 +547,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-4799cfc"
+      "github.com/tree-sitter/tree-sitter-scala@git-d699806"
     ]
   },
   {
@@ -601,7 +601,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-85d1773"
+      "github.com/alex-pinkus/tree-sitter-swift@git-172ada1"
     ]
   },
   {
@@ -718,7 +718,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/jpt13653903/tree-sitter-vhdl@git-68dc07f"
+      "github.com/jpt13653903/tree-sitter-vhdl@git-f87f5e4"
     ]
   },
   {

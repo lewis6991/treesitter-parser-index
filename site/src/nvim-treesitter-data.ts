@@ -46,7 +46,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/aheber/tree-sitter-sfapex@git-27a3091"
+      "github.com/aheber/tree-sitter-sfapex@git-da568ee"
     ]
   },
   {
@@ -1598,7 +1598,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-json@git-001c28d"
+      "github.com/tree-sitter/tree-sitter-json@git-254c42a"
     ]
   },
   {
@@ -1830,7 +1830,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/savonet/tree-sitter-liquidsoap@git-0169d92"
+      "github.com/savonet/tree-sitter-liquidsoap@git-fa565a3"
     ]
   },
   {
@@ -1987,7 +1987,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/artagnon/tree-sitter-mlir@git-5085767"
+      "github.com/artagnon/tree-sitter-mlir@git-e9f60f9"
     ]
   },
   {
@@ -2263,7 +2263,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/apple/tree-sitter-pkl@git-3486521"
+      "github.com/apple/tree-sitter-pkl@git-65f4483"
     ]
   },
   {
@@ -2520,7 +2520,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/6cdh/tree-sitter-racket@git-e2b8064"
+      "github.com/6cdh/tree-sitter-racket@git-b3cbbde"
     ]
   },
   {
@@ -2610,7 +2610,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/FallenAngel97/tree-sitter-rego@git-7f8a431"
+      "github.com/FallenAngel97/tree-sitter-rego@git-da2a1f6"
     ]
   },
   {
@@ -2761,7 +2761,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-4799cfc"
+      "github.com/tree-sitter/tree-sitter-scala@git-d699806"
     ]
   },
   {
@@ -2803,7 +2803,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/aheber/tree-sitter-sfapex@git-27a3091"
+      "github.com/aheber/tree-sitter-sfapex@git-da568ee"
     ]
   },
   {
@@ -2911,7 +2911,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/aheber/tree-sitter-sfapex@git-27a3091"
+      "github.com/aheber/tree-sitter-sfapex@git-da568ee"
     ]
   },
   {
@@ -2920,7 +2920,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/aheber/tree-sitter-sfapex@git-27a3091"
+      "github.com/aheber/tree-sitter-sfapex@git-da568ee"
     ]
   },
   {
@@ -2931,7 +2931,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/nilshelmig/tree-sitter-sourcepawn@git-fdf3113"
+      "github.com/nilshelmig/tree-sitter-sourcepawn@git-d6c8a08"
     ]
   },
   {
@@ -3103,7 +3103,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/alex-pinkus/tree-sitter-swift@git-85d1773"
+      "github.com/alex-pinkus/tree-sitter-swift@git-172ada1"
     ]
   },
   {
@@ -3505,7 +3505,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/jpt13653903/tree-sitter-vhdl@git-68dc07f"
+      "github.com/jpt13653903/tree-sitter-vhdl@git-f87f5e4"
     ]
   },
   {
@@ -3620,7 +3620,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/BlockLune/tree-sitter-wxml@git-7b821c7"
+      "github.com/BlockLune/tree-sitter-wxml@git-1cc1761"
     ]
   },
   {
