@@ -42,9 +42,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "ABL",
     "language": "abl",
     "package": "github.com/usagi-coffee/tree-sitter-abl",
-    "version": "git-1e1c469",
-    "sourceCommit": "1e1c469d78fa02ac65d46f562b65fd0c9719bc21",
-    "lastUpdated": "2026-08-23",
+    "version": "git-4a2879e",
+    "sourceCommit": "4a2879e63d835dae46eaac5a855dd544a083ece6",
+    "lastUpdated": "2026-08-24",
     "upstreamSemver": "0.0.52",
     "abi": 15,
     "owners": [
@@ -1362,9 +1362,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Carve",
     "language": "carve",
     "package": "github.com/markup-carve/tree-sitter-carve",
-    "version": "git-9b8a2e1",
-    "sourceCommit": "9b8a2e16b1fafeede3222a6ae9255aa51b202e90",
-    "lastUpdated": "2026-08-22",
+    "version": "git-a10c8d8",
+    "sourceCommit": "a10c8d8a093740e120db650b3dd4c991610244ed",
+    "lastUpdated": "2026-08-24",
     "upstreamSemver": "0.1.3",
     "abi": 14,
     "owners": [
@@ -9400,12 +9400,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d6a57b0"
   },
   {
+    "id": "parser-mlir",
+    "name": "Mlir",
+    "language": "mlir",
+    "package": "github.com/artagnon/tree-sitter-mlir",
+    "version": "git-7b122fe",
+    "sourceCommit": "7b122fe9c346bd5826c8a53e344435bd2036de44",
+    "lastUpdated": "2026-08-23",
+    "upstreamSemver": "0.0.1",
     "abi": 15,
+    "owners": [
+      "artagnon"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -9416,28 +9437,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-mlir",
-    "language": "mlir",
-    "lastUpdated": "2026-08-21",
-    "name": "Mlir",
-    "owners": [
-      "artagnon"
-    ],
-    "package": "github.com/artagnon/tree-sitter-mlir",
-    "sourceCommit": "e9f60f952a8807f5769c51de14e44625c24a00f8",
-    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1.",
-    "upstreamSemver": "0.0.1",
-    "version": "git-e9f60f9"
+    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1."
   },
   {
     "abi": 14,
@@ -12675,34 +12675,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0c06610"
   },
   {
-    "id": "parser-roc",
-    "name": "Roc",
-    "language": "roc",
-    "package": "github.com/faldor20/tree-sitter-roc",
-    "version": "git-2760de9",
-    "sourceCommit": "2760de95b87004ed537151f2467377a6ddafdef0",
-    "lastUpdated": "2026-08-22",
-    "upstreamSemver": "1.0.0",
     "abi": 15,
-    "owners": [
-      "faldor20"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -12716,7 +12694,29 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 1.0.0."
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-roc",
+    "language": "roc",
+    "lastUpdated": "2026-08-22",
+    "name": "Roc",
+    "owners": [
+      "faldor20"
+    ],
+    "package": "github.com/faldor20/tree-sitter-roc",
+    "sourceCommit": "2760de95b87004ed537151f2467377a6ddafdef0",
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 1.0.0.",
+    "upstreamSemver": "1.0.0",
+    "version": "git-2760de9"
   },
   {
     "abi": 14,
@@ -13088,17 +13088,39 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-48728be"
   },
   {
+    "id": "parser-scala",
+    "name": "Scala",
+    "language": "scala",
+    "package": "github.com/tree-sitter/tree-sitter-scala",
+    "version": "git-f5cc941",
+    "sourceCommit": "f5cc9413b1796246c606790be8d30c3c407af712",
+    "lastUpdated": "2026-08-24",
+    "upstreamSemver": "0.26.2",
     "abi": 15,
+    "owners": [
+      "tree-sitter"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-scala.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -13112,29 +13134,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-scala",
-    "language": "scala",
-    "lastUpdated": "2026-08-22",
-    "name": "Scala",
-    "owners": [
-      "tree-sitter"
-    ],
-    "package": "github.com/tree-sitter/tree-sitter-scala",
-    "sourceCommit": "d69980656ee2be375596d9d013d64e1d29aa7d8f",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.26.2. Official tree-sitter repository.",
-    "upstreamSemver": "0.26.2",
-    "version": "git-d699806"
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.26.2. Official tree-sitter repository."
   },
   {
     "abi": 15,
@@ -16390,37 +16390,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-227d277"
   },
   {
-    "id": "parser-vhdl",
-    "name": "Vhdl",
-    "language": "vhdl",
-    "package": "github.com/jpt13653903/tree-sitter-vhdl",
-    "version": "git-645e856",
-    "sourceCommit": "645e85656bf3885311ba3b9b2498e50dee27886f",
-    "lastUpdated": "2026-08-23",
-    "upstreamSemver": "2.0.0",
     "abi": 15,
-    "owners": [
-      "jpt13653903"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-vhdl.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -16428,7 +16408,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.0."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
+    "id": "parser-vhdl",
+    "language": "vhdl",
+    "lastUpdated": "2026-08-23",
+    "name": "Vhdl",
+    "owners": [
+      "jpt13653903"
+    ],
+    "package": "github.com/jpt13653903/tree-sitter-vhdl",
+    "sourceCommit": "645e85656bf3885311ba3b9b2498e50dee27886f",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.0.",
+    "upstreamSemver": "2.0.0",
+    "version": "git-645e856"
   },
   {
     "abi": 14,
@@ -17050,34 +17050,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6748694"
   },
   {
-    "id": "parser-wxml",
-    "name": "Wxml",
-    "language": "wxml",
-    "package": "github.com/BlockLune/tree-sitter-wxml",
-    "version": "git-1cc1761",
-    "sourceCommit": "1cc1761c8c11cacab5516dbe64e20ee689aa4428",
-    "lastUpdated": "2026-08-21",
-    "upstreamSemver": null,
     "abi": 15,
-    "owners": [
-      "BlockLune"
+    "artifacts": [
+      {
+        "format": "tar.gz",
+        "kind": "source-archive"
+      }
     ],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "artifacts": [
-      {
-        "kind": "source-archive",
-        "format": "tar.gz"
-      }
+    "id": "parser-wxml",
+    "language": "wxml",
+    "lastUpdated": "2026-08-21",
+    "name": "Wxml",
+    "owners": [
+      "BlockLune"
     ],
-    "bundledQueryKinds": [],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected."
+    "package": "github.com/BlockLune/tree-sitter-wxml",
+    "sourceCommit": "1cc1761c8c11cacab5516dbe64e20ee689aa4428",
+    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
+    "upstreamSemver": null,
+    "version": "git-1cc1761"
   },
   {
     "abi": 15,
