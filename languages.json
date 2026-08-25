@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-24",
+  "generatedAt": "2026-08-25",
   "kind": "prototype-languages",
-  "count": 519,
+  "count": 520,
   "items": [
     {
       "language": "_gjs",
@@ -7518,6 +7518,20 @@
       ],
       "queryRoots": [
         "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "radvd",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "queries/radvd"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true

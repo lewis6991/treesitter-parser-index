@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-24",
+  "generatedAt": "2026-08-25",
   "kind": "prototype-index",
   "counts": {
-    "parsers": 519,
-    "queryPacks": 240,
+    "parsers": 520,
+    "queryPacks": 241,
     "targets": 31,
-    "languages": 519,
+    "languages": 520,
     "editors": 5,
-    "owners": 338,
+    "owners": 339,
     "queryKinds": 18
   },
   "files": {
