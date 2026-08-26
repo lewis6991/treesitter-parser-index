@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-25",
+  "generatedAt": "2026-08-26",
   "kind": "prototype-languages",
-  "count": 520,
+  "count": 522,
   "items": [
     {
       "language": "_gjs",
@@ -6955,6 +6955,26 @@
       "queryRoots": [
         "runtime/queries"
       ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "posix_sed_bre",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "posix_sed_ere",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
