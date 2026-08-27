@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26",
+  "generatedAt": "2026-08-27",
   "kind": "prototype-query-packs",
   "count": 241,
   "items": [
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e0f913b",
+      "version": "git-1e2e422",
       "languages": [
         "bash",
         "c",
@@ -12740,7 +12740,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e0f913b",
+      "version": "git-1e2e422",
       "languages": [
         "glsl"
       ],
@@ -12787,7 +12787,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e0f913b",
+      "version": "git-1e2e422",
       "languages": [
         "html"
       ],
@@ -12842,7 +12842,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-e0f913b",
+      "version": "git-1e2e422",
       "languages": [
         "proto"
       ],
@@ -12893,7 +12893,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-01dd79a",
+      "version": "git-085aefc",
       "languages": [
         "abl"
       ],
@@ -12924,7 +12924,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-01dd79a"
+          "github.com/usagi-coffee/tree-sitter-abl@git-085aefc"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13479,7 +13479,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-77de44b",
+      "version": "git-6be3db9",
       "languages": [
         "carve"
       ],
@@ -13510,7 +13510,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-77de44b"
+          "github.com/markup-carve/tree-sitter-carve@git-6be3db9"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19980,7 +19980,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-4e678be",
+      "version": "git-54e220c",
       "languages": [
         "ssh-client-config"
       ],
@@ -20011,7 +20011,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-4e678be"
+          "github.com/metio/tree-sitter-ssh-client-config@git-54e220c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

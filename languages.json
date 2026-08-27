@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-26",
+  "generatedAt": "2026-08-27",
   "kind": "prototype-languages",
-  "count": 522,
+  "count": 523,
   "items": [
     {
       "language": "_gjs",
@@ -6959,26 +6959,6 @@
       "hasReleaseArtifacts": true
     },
     {
-      "language": "posix_sed_bre",
-      "parserCount": 1,
-      "queryPackCount": 0,
-      "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
-      "hasWasm": false,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "posix_sed_ere",
-      "parserCount": 1,
-      "queryPackCount": 0,
-      "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
-      "hasWasm": false,
-      "hasReleaseArtifacts": true
-    },
-    {
       "language": "powershell",
       "parserCount": 2,
       "queryPackCount": 5,
@@ -8278,6 +8258,26 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "sed",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "sed_ere",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "sflog",
       "parserCount": 1,
       "queryPackCount": 2,
@@ -8310,6 +8310,16 @@
       "queryRoots": [
         "runtime/queries"
       ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "sh",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
