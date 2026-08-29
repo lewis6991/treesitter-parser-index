@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28",
+  "generatedAt": "2026-08-29",
   "kind": "prototype-languages",
   "count": 523,
   "items": [
@@ -8260,20 +8260,28 @@
     {
       "language": "sed",
       "parserCount": 1,
-      "queryPackCount": 0,
+      "queryPackCount": 1,
       "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "queries"
+      ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
       "language": "sed_ere",
       "parserCount": 1,
-      "queryPackCount": 0,
+      "queryPackCount": 1,
       "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "sed_ere/queries"
+      ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -8316,10 +8324,14 @@
     {
       "language": "sh",
       "parserCount": 1,
-      "queryPackCount": 0,
+      "queryPackCount": 1,
       "editors": [],
-      "queryKinds": [],
-      "queryRoots": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "queries"
+      ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },

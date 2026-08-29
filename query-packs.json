@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-28",
+  "generatedAt": "2026-08-29",
   "kind": "prototype-query-packs",
-  "count": 241,
+  "count": 244,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a61e260",
+      "version": "git-1662f5f",
       "languages": [
         "bash",
         "c",
@@ -12740,7 +12740,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a61e260",
+      "version": "git-1662f5f",
       "languages": [
         "glsl"
       ],
@@ -12787,7 +12787,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a61e260",
+      "version": "git-1662f5f",
       "languages": [
         "html"
       ],
@@ -12842,7 +12842,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a61e260",
+      "version": "git-1662f5f",
       "languages": [
         "proto"
       ],
@@ -19650,6 +19650,86 @@
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
     },
     {
+      "id": "pack-parser-parser-sed-ere",
+      "name": "Sed Ere Parser Bundle",
+      "package": "github.com/konomanoasa/tree-sitter-sed",
+      "version": "git-cee1517",
+      "languages": [
+        "sed_ere"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "sed_ere",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "konomanoasa"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "sed_ere/queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "sed_ere/queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/konomanoasa/tree-sitter-sed@git-cee1517"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-sed",
+      "name": "Sed Parser Bundle",
+      "package": "github.com/konomanoasa/tree-sitter-sed",
+      "version": "git-cee1517",
+      "languages": [
+        "sed"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "sed",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "konomanoasa"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/konomanoasa/tree-sitter-sed@git-cee1517"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
       "id": "pack-parser-parser-sflog",
       "name": "sfLog Parser Bundle",
       "package": "github.com/aheber/tree-sitter-sfapex",
@@ -19685,6 +19765,46 @@
       "parserCompatibility": {
         "tested": [
           "github.com/aheber/tree-sitter-sfapex@git-da568ee"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-sh",
+      "name": "Sh Parser Bundle",
+      "package": "github.com/konomanoasa/tree-sitter-sh",
+      "version": "git-8cfd36e",
+      "languages": [
+        "sh"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "sh",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "konomanoasa"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/konomanoasa/tree-sitter-sh@git-8cfd36e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
