@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31",
+  "generatedAt": "2026-09-01",
   "kind": "prototype-query-packs",
   "count": 244,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-1907129",
+      "version": "git-427e922",
       "languages": [
         "ada",
         "agda",
@@ -2708,7 +2708,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-5a256fe"
+            "github.com/coder3101/tree-sitter-proto@git-176563b"
           ]
         },
         {
@@ -5515,7 +5515,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-5a256fe"
+            "github.com/coder3101/tree-sitter-proto@git-176563b"
           ]
         },
         {
@@ -12414,7 +12414,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-98c6c14",
+      "version": "git-ce48461",
       "languages": [
         "bash",
         "c",
@@ -12740,7 +12740,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-98c6c14",
+      "version": "git-ce48461",
       "languages": [
         "glsl"
       ],
@@ -12787,7 +12787,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-98c6c14",
+      "version": "git-ce48461",
       "languages": [
         "html"
       ],
@@ -12842,7 +12842,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-98c6c14",
+      "version": "git-ce48461",
       "languages": [
         "proto"
       ],
@@ -13299,7 +13299,7 @@
       "id": "pack-parser-parser-blade",
       "name": "Blade Parser Bundle",
       "package": "github.com/EmranMR/tree-sitter-blade",
-      "version": "git-5dbdcb0",
+      "version": "git-b5291d1",
       "languages": [
         "blade"
       ],
@@ -13335,7 +13335,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/EmranMR/tree-sitter-blade@git-5dbdcb0"
+          "github.com/EmranMR/tree-sitter-blade@git-b5291d1"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -13569,7 +13569,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-79d6b6c",
+      "version": "git-b4954b0",
       "languages": [
         "cfml"
       ],
@@ -13615,7 +13615,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-79d6b6c"
+          "github.com/cfmleditor/tree-sitter-cfml@git-b4954b0"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13624,7 +13624,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-79d6b6c",
+      "version": "git-b4954b0",
       "languages": [
         "cfquery"
       ],
@@ -13660,7 +13660,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-79d6b6c"
+          "github.com/cfmleditor/tree-sitter-cfml@git-b4954b0"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13669,7 +13669,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-79d6b6c",
+      "version": "git-b4954b0",
       "languages": [
         "cfscript"
       ],
@@ -13705,7 +13705,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-79d6b6c"
+          "github.com/cfmleditor/tree-sitter-cfml@git-b4954b0"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -16857,7 +16857,7 @@
       "id": "pack-parser-parser-kcl-lang-kcl-kcl",
       "name": "KCL Parser Bundle",
       "package": "github.com/kcl-lang/tree-sitter-kcl",
-      "version": "git-026f40f",
+      "version": "git-6a5cc92",
       "languages": [
         "kcl"
       ],
@@ -16888,7 +16888,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/kcl-lang/tree-sitter-kcl@git-026f40f"
+          "github.com/kcl-lang/tree-sitter-kcl@git-6a5cc92"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19773,7 +19773,7 @@
       "id": "pack-parser-parser-sh",
       "name": "Sh Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sh",
-      "version": "git-11ddaf5",
+      "version": "git-374c4b8",
       "languages": [
         "sh"
       ],
@@ -19804,7 +19804,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sh@git-11ddaf5"
+          "github.com/konomanoasa/tree-sitter-sh@git-374c4b8"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20380,7 +20380,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-45e8dcd",
+      "version": "git-81d9720",
       "languages": [
         "swift"
       ],
@@ -20421,7 +20421,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-45e8dcd"
+          "github.com/alex-pinkus/tree-sitter-swift@git-81d9720"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

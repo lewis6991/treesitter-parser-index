@@ -2374,7 +2374,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/coder3101/tree-sitter-proto@git-5a256fe"
+      "github.com/coder3101/tree-sitter-proto@git-176563b"
     ]
   },
   {
