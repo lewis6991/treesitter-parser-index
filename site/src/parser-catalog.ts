@@ -873,33 +873,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-10bacac"
   },
   {
-    "id": "parser-blade",
-    "name": "Blade",
-    "language": "blade",
-    "package": "github.com/EmranMR/tree-sitter-blade",
-    "version": "git-b5291d1",
-    "sourceCommit": "b5291d1ba207a8ebb8383b2ecb8a8a6535210a50",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.12.3",
     "abi": 15,
-    "owners": [
-      "EmranMR"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -910,7 +889,28 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.12.3."
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-blade",
+    "language": "blade",
+    "lastUpdated": "2026-08-31",
+    "name": "Blade",
+    "owners": [
+      "EmranMR"
+    ],
+    "package": "github.com/EmranMR/tree-sitter-blade",
+    "sourceCommit": "b5291d1ba207a8ebb8383b2ecb8a8a6535210a50",
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.12.3.",
+    "upstreamSemver": "0.12.3",
+    "version": "git-b5291d1"
   },
   {
     "abi": null,
@@ -1473,65 +1473,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3944069"
   },
   {
-    "id": "parser-cfml",
-    "name": "Cfml",
-    "language": "cfml",
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "version": "git-b4954b0",
-    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.26.33",
     "abi": 15,
-    "owners": [
-      "cfmleditor"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "indents",
-      "injections",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
         "cfml/queries/highlights.scm"
       ],
-      "injections": [
-        "cfml/queries/injections.scm"
-      ],
       "indents": [
         "cfml/queries/indents.scm"
+      ],
+      "injections": [
+        "cfml/queries/injections.scm"
       ],
       "tags": [
         "cfml/queries/tags.scm"
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.33. Grammar path cfml."
-  },
-  {
-    "id": "parser-cfquery",
-    "name": "Cfquery",
-    "language": "cfquery",
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "version": "git-b4954b0",
-    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.26.33",
-    "abi": 15,
-    "owners": [
-      "cfmleditor"
+    "bundledQueryKinds": [
+      "highlights",
+      "indents",
+      "injections",
+      "tags"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -1539,15 +1507,26 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
+    "id": "parser-cfml",
+    "language": "cfml",
+    "lastUpdated": "2026-08-31",
+    "name": "Cfml",
+    "owners": [
+      "cfmleditor"
+    ],
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
+    "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.33. Grammar path cfml.",
+    "upstreamSemver": "0.26.33",
+    "version": "git-b4954b0"
+  },
+  {
+    "abi": 15,
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1558,20 +1537,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.33. Grammar path cfquery."
-  },
-  {
-    "id": "parser-cfscript",
-    "name": "Cfscript",
-    "language": "cfscript",
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "version": "git-b4954b0",
-    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.26.33",
-    "abi": 15,
-    "owners": [
-      "cfmleditor"
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -1579,15 +1547,26 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
+    "id": "parser-cfquery",
+    "language": "cfquery",
+    "lastUpdated": "2026-08-31",
+    "name": "Cfquery",
+    "owners": [
+      "cfmleditor"
+    ],
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.33. Grammar path cfquery.",
+    "upstreamSemver": "0.26.33",
+    "version": "git-b4954b0"
+  },
+  {
+    "abi": 15,
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1598,7 +1577,28 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.33. Grammar path cfscript."
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-cfscript",
+    "language": "cfscript",
+    "lastUpdated": "2026-08-31",
+    "name": "Cfscript",
+    "owners": [
+      "cfmleditor"
+    ],
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "sourceCommit": "b4954b0cdcee7c0f2a3505e37fdd05601927736f",
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.33. Grammar path cfscript.",
+    "upstreamSemver": "0.26.33",
+    "version": "git-b4954b0"
   },
   {
     "abi": null,
@@ -7045,17 +7045,38 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e10607b"
   },
   {
+    "id": "parser-javadoc",
+    "name": "Javadoc",
+    "language": "javadoc",
+    "package": "github.com/rmuir/tree-sitter-javadoc",
+    "version": "git-2ba54a7",
+    "sourceCommit": "2ba54a791a31a8c1ed60045a755a86eb10c602e2",
+    "lastUpdated": "2026-09-01",
+    "upstreamSemver": "0.3.1",
     "abi": 15,
+    "owners": [
+      "rmuir"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-javadoc.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -7066,28 +7087,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-javadoc",
-    "language": "javadoc",
-    "lastUpdated": "2026-08-01",
-    "name": "Javadoc",
-    "owners": [
-      "rmuir"
-    ],
-    "package": "github.com/rmuir/tree-sitter-javadoc",
-    "sourceCommit": "db5792cf5371c48ae3fd99476e3f429270434ee7",
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1.",
-    "upstreamSemver": "0.3.1",
-    "version": "git-db5792c"
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.3.1."
   },
   {
     "abi": 15,
@@ -7746,32 +7746,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8905e0b"
   },
   {
-    "id": "parser-kcl-lang-kcl-kcl",
-    "name": "KCL",
-    "language": "kcl",
-    "package": "github.com/kcl-lang/tree-sitter-kcl",
-    "version": "git-6a5cc92",
-    "sourceCommit": "6a5cc921928660cd6756cd6e0d636d9e24ea348e",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.1.0",
     "abi": 15,
-    "owners": [
-      "kcl-lang"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -7779,7 +7759,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-kcl-lang-kcl-kcl",
+    "language": "kcl",
+    "lastUpdated": "2026-08-31",
+    "name": "KCL",
+    "owners": [
+      "kcl-lang"
+    ],
+    "package": "github.com/kcl-lang/tree-sitter-kcl",
+    "sourceCommit": "6a5cc921928660cd6756cd6e0d636d9e24ea348e",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0.",
+    "upstreamSemver": "0.1.0",
+    "version": "git-6a5cc92"
   },
   {
     "abi": 14,
@@ -11260,6 +11260,42 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ef66b15"
   },
   {
+    "id": "parser-posix-awk",
+    "name": "Posix Awk",
+    "language": "posix_awk",
+    "package": "github.com/konomanoasa/tree-sitter-posix-awk",
+    "version": "git-f314969",
+    "sourceCommit": "f314969b71a03f6ce42eb773912ed8ba52de0263",
+    "lastUpdated": "2026-09-02",
+    "upstreamSemver": "0.7.0",
+    "abi": 15,
+    "owners": [
+      "konomanoasa"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.0."
+  },
+  {
     "abi": 15,
     "artifacts": [
       {
@@ -11513,34 +11549,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-6310671"
   },
   {
-    "id": "parser-coder3101-proto-proto",
-    "name": "Proto",
-    "language": "proto",
-    "package": "github.com/coder3101/tree-sitter-proto",
-    "version": "git-176563b",
-    "sourceCommit": "176563b253d83c4d64ae900fe0d34dfbeb735772",
-    "lastUpdated": "2026-09-01",
-    "upstreamSemver": null,
     "abi": 15,
-    "owners": [
-      "coder3101"
+    "artifacts": [
+      {
+        "format": "tar.gz",
+        "kind": "source-archive"
+      }
     ],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": false,
       "sourceArchive": true,
       "wasm": false
     },
-    "artifacts": [
-      {
-        "kind": "source-archive",
-        "format": "tar.gz"
-      }
+    "id": "parser-coder3101-proto-proto",
+    "language": "proto",
+    "lastUpdated": "2026-09-01",
+    "name": "Proto",
+    "owners": [
+      "coder3101"
     ],
-    "bundledQueryKinds": [],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected."
+    "package": "github.com/coder3101/tree-sitter-proto",
+    "sourceCommit": "176563b253d83c4d64ae900fe0d34dfbeb735772",
+    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
+    "upstreamSemver": null,
+    "version": "git-176563b"
   },
   {
     "abi": 14,
@@ -13089,39 +13125,39 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-84ffe55"
   },
   {
+    "id": "parser-sas",
+    "name": "TreeSitterSas",
+    "language": "sas",
+    "package": "github.com/ix-infrastructure/tree-sitter-sas",
+    "version": "git-e7bc165",
+    "sourceCommit": "e7bc165683188d6deaf664ac86dd0d4532f282ef",
+    "lastUpdated": "2026-09-01",
+    "upstreamSemver": "0.4.2",
     "abi": 14,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-sas.wasm"
-      }
+    "owners": [
+      "ix-infrastructure"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-sas",
-    "language": "sas",
-    "lastUpdated": "2026-08-15",
-    "name": "TreeSitterSas",
-    "owners": [
-      "ix-infrastructure"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-sas.wasm"
+      }
     ],
-    "package": "github.com/ix-infrastructure/tree-sitter-sas",
-    "sourceCommit": "48728be2d495cd0fba9bdd7a1a360eecaff0f918",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.2.",
-    "upstreamSemver": "0.4.2",
-    "version": "git-48728be"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.2."
   },
   {
     "abi": 15,
@@ -13311,12 +13347,32 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1b9cebf"
   },
   {
+    "id": "parser-sed",
+    "name": "Sed",
+    "language": "sed",
+    "package": "github.com/konomanoasa/tree-sitter-sed",
+    "version": "git-b572ad8",
+    "sourceCommit": "b572ad801253ca0c649b56c29a80fb991c7428ce",
+    "lastUpdated": "2026-09-02",
+    "upstreamSemver": "0.7.0",
     "abi": 15,
+    "owners": [
+      "konomanoasa"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -13324,8 +13380,20 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.0."
+  },
+  {
+    "id": "parser-sed-ere",
+    "name": "Sed Ere",
+    "language": "sed_ere",
+    "package": "github.com/konomanoasa/tree-sitter-sed",
+    "version": "git-b572ad8",
+    "sourceCommit": "b572ad801253ca0c649b56c29a80fb991c7428ce",
+    "lastUpdated": "2026-09-02",
+    "upstreamSemver": "0.7.0",
+    "abi": 15,
+    "owners": [
+      "konomanoasa"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -13333,26 +13401,14 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-sed",
-    "language": "sed",
-    "lastUpdated": "2026-08-31",
-    "name": "Sed",
-    "owners": [
-      "konomanoasa"
-    ],
-    "package": "github.com/konomanoasa/tree-sitter-sed",
-    "sourceCommit": "e0ce883778ba0183c452cb5c9338e66829f04049",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.5.0.",
-    "upstreamSemver": "0.5.0",
-    "version": "git-e0ce883"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -13360,27 +13416,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-sed-ere",
-    "language": "sed_ere",
-    "lastUpdated": "2026-08-31",
-    "name": "Sed Ere",
-    "owners": [
-      "konomanoasa"
-    ],
-    "package": "github.com/konomanoasa/tree-sitter-sed",
-    "sourceCommit": "e0ce883778ba0183c452cb5c9338e66829f04049",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.5.0. Grammar path sed_ere.",
-    "upstreamSemver": "0.5.0",
-    "version": "git-e0ce883"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.0. Grammar path sed_ere."
   },
   {
     "abi": 15,
@@ -13453,10 +13489,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Sh",
     "language": "sh",
     "package": "github.com/konomanoasa/tree-sitter-sh",
-    "version": "git-374c4b8",
-    "sourceCommit": "374c4b8ae27d81e13fc5ccf22495f77c6b1471cf",
-    "lastUpdated": "2026-08-31",
-    "upstreamSemver": "0.5.0",
+    "version": "git-dd8b3e3",
+    "sourceCommit": "dd8b3e36c204da64aa5dc09876aed2507c689795",
+    "lastUpdated": "2026-09-02",
+    "upstreamSemver": "0.7.0",
     "abi": 15,
     "owners": [
       "konomanoasa"
@@ -13482,7 +13518,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.5.0."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.0."
   },
   {
     "abi": null,
@@ -14725,8 +14761,8 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Swift",
     "language": "swift",
     "package": "github.com/alex-pinkus/tree-sitter-swift",
-    "version": "git-81d9720",
-    "sourceCommit": "81d9720d30fb23c0efd6a802789bba2fe61b7438",
+    "version": "git-73c7923",
+    "sourceCommit": "73c7923ac17ba6b9ebc0a2688bbddd0b75b725d6",
     "lastUpdated": "2026-09-01",
     "upstreamSemver": "0.7.3",
     "abi": null,

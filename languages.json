@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-01",
+  "generatedAt": "2026-09-02",
   "kind": "prototype-languages",
-  "count": 523,
+  "count": 524,
   "items": [
     {
       "language": "_gjs",
@@ -6954,6 +6954,20 @@
       ],
       "queryRoots": [
         "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "posix_awk",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
