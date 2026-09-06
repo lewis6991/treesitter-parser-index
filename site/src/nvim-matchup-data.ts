@@ -230,6 +230,12 @@ export const NVIM_MATCHUP_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "xml",
+    "queryKinds": [
+      "matchup"
+    ]
+  },
+  {
     "language": "zig",
     "queryKinds": [
       "matchup"

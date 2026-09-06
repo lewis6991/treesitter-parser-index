@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05",
+  "generatedAt": "2026-09-06",
   "kind": "prototype-languages",
   "count": 524,
   "items": [
@@ -10592,7 +10592,7 @@
     {
       "language": "xml",
       "parserCount": 3,
-      "queryPackCount": 5,
+      "queryPackCount": 6,
       "editors": [
         "helix",
         "lapce",
@@ -10605,11 +10605,13 @@
         "indents",
         "injections",
         "locals",
+        "matchup",
         "outline",
         "rainbows",
         "textobjects"
       ],
       "queryRoots": [
+        "after/queries",
         "queries",
         "runtime/queries",
         "xml/queries/xml"

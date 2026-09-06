@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05",
+  "generatedAt": "2026-09-06",
   "kind": "prototype-query-packs",
   "count": 245,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-427e922",
+      "version": "git-41416e8",
       "languages": [
         "ada",
         "agda",
@@ -523,7 +523,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/EmranMR/tree-sitter-blade@git-5dbdcb0"
+            "github.com/EmranMR/tree-sitter-blade@git-b5291d1"
           ]
         },
         {
@@ -583,7 +583,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/c3lang/tree-sitter-c3@git-1c6a952"
+            "github.com/c3lang/tree-sitter-c3@git-56d7388"
           ]
         },
         {
@@ -786,7 +786,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-48b066f"
+            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-1ebcedd"
           ]
         },
         {
@@ -1177,7 +1177,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/FoamScience/tree-sitter-foam@git-472c24f"
+            "github.com/FoamScience/tree-sitter-foam@git-f72e493"
           ]
         },
         {
@@ -1856,7 +1856,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/rmuir/tree-sitter-javadoc@git-db5792c"
+            "github.com/rmuir/tree-sitter-javadoc@git-2ba54a7"
           ]
         },
         {
@@ -2000,7 +2000,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/kcl-lang/tree-sitter-kcl@git-026f40f"
+            "github.com/kcl-lang/tree-sitter-kcl@git-6a5cc92"
           ]
         },
         {
@@ -2321,7 +2321,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/artagnon/tree-sitter-mlir@git-7b122fe"
+            "github.com/artagnon/tree-sitter-mlir@git-08c51d8"
           ]
         },
         {
@@ -2342,7 +2342,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/opa-oz/tree-sitter-nginx@git-fff03e9"
+            "github.com/opa-oz/tree-sitter-nginx@git-7cdf006"
           ]
         },
         {
@@ -2461,7 +2461,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
+            "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
           ]
         },
         {
@@ -2474,7 +2474,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
+            "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
           ]
         },
         {
@@ -2708,7 +2708,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-176563b"
+            "github.com/coder3101/tree-sitter-proto@git-6c878d1"
           ]
         },
         {
@@ -3302,7 +3302,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/DerekStride/tree-sitter-sql@git-851e9cb"
+            "github.com/DerekStride/tree-sitter-sql@git-b2bd686"
           ]
         },
         {
@@ -3437,7 +3437,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-45e8dcd"
+            "github.com/alex-pinkus/tree-sitter-swift@git-73c7923"
           ]
         },
         {
@@ -3685,7 +3685,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/gbprod/tree-sitter-twig@git-123604a"
+            "github.com/gbprod/tree-sitter-twig@git-2208d2a"
           ]
         },
         {
@@ -3839,7 +3839,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/jpt13653903/tree-sitter-vhdl@git-645e856"
+            "github.com/jpt13653903/tree-sitter-vhdl@git-3fd99cd"
           ]
         },
         {
@@ -4281,7 +4281,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-48b066f"
+            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-1ebcedd"
           ]
         },
         {
@@ -4359,7 +4359,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/FoamScience/tree-sitter-foam@git-472c24f"
+            "github.com/FoamScience/tree-sitter-foam@git-f72e493"
           ]
         },
         {
@@ -4599,7 +4599,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
+            "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
           ]
         },
         {
@@ -4761,7 +4761,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-45e8dcd"
+            "github.com/alex-pinkus/tree-sitter-swift@git-73c7923"
           ]
         },
         {
@@ -4815,7 +4815,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/gbprod/tree-sitter-twig@git-123604a"
+            "github.com/gbprod/tree-sitter-twig@git-2208d2a"
           ]
         },
         {
@@ -5110,7 +5110,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-48b066f"
+            "github.com/tree-sitter-grammars/tree-sitter-cuda@git-1ebcedd"
           ]
         },
         {
@@ -5461,7 +5461,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
+            "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
           ]
         },
         {
@@ -5470,7 +5470,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ocaml@git-b400285"
+            "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
           ]
         },
         {
@@ -5515,7 +5515,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-176563b"
+            "github.com/coder3101/tree-sitter-proto@git-6c878d1"
           ]
         },
         {
@@ -5614,7 +5614,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-45e8dcd"
+            "github.com/alex-pinkus/tree-sitter-swift@git-73c7923"
           ]
         },
         {
@@ -5731,7 +5731,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/jpt13653903/tree-sitter-vhdl@git-645e856"
+            "github.com/jpt13653903/tree-sitter-vhdl@git-3fd99cd"
           ]
         },
         {
@@ -6268,7 +6268,7 @@
       "id": "pack-neovim-matchup",
       "name": "vim-matchup",
       "package": "github.com/andymass/vim-matchup",
-      "version": "git-5e3c4a3",
+      "version": "git-0106b1a",
       "languages": [
         "astro",
         "bash",
@@ -6308,10 +6308,11 @@
         "typescript",
         "vim",
         "vue",
+        "xml",
         "zig",
         "zsh"
       ],
-      "languageCount": 40,
+      "languageCount": 41,
       "languageDetails": [
         {
           "language": "astro",
@@ -6542,6 +6543,12 @@
           ]
         },
         {
+          "language": "xml",
+          "queryKinds": [
+            "matchup"
+          ]
+        },
+        {
           "language": "zig",
           "queryKinds": [
             "matchup"
@@ -6571,7 +6578,7 @@
         "matchup": "after/queries/{language}/matchup.scm"
       },
       "parserCompatibility": {},
-      "summary": "Tree-sitter matchup queries live under after/queries/{language}/matchup.scm for 40 languages."
+      "summary": "Tree-sitter matchup queries live under after/queries/{language}/matchup.scm for 41 languages."
     },
     {
       "id": "pack-pulsar-language-c-c",
@@ -12893,7 +12900,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-ecf5a13",
+      "version": "git-adc3bef",
       "languages": [
         "abl"
       ],
@@ -12924,7 +12931,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-ecf5a13"
+          "github.com/usagi-coffee/tree-sitter-abl@git-adc3bef"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13569,7 +13576,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-f4ecebf",
+      "version": "git-cb12d18",
       "languages": [
         "cfml"
       ],
@@ -13615,7 +13622,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-f4ecebf"
+          "github.com/cfmleditor/tree-sitter-cfml@git-cb12d18"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13624,7 +13631,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-f4ecebf",
+      "version": "git-cb12d18",
       "languages": [
         "cfquery"
       ],
@@ -13660,7 +13667,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-f4ecebf"
+          "github.com/cfmleditor/tree-sitter-cfml@git-cb12d18"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13669,7 +13676,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-f4ecebf",
+      "version": "git-cb12d18",
       "languages": [
         "cfscript"
       ],
@@ -13705,7 +13712,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-f4ecebf"
+          "github.com/cfmleditor/tree-sitter-cfml@git-cb12d18"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -16535,7 +16542,7 @@
       "id": "pack-parser-parser-javadoc",
       "name": "Javadoc Parser Bundle",
       "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-2ba54a7",
+      "version": "git-4e9e1db",
       "languages": [
         "javadoc"
       ],
@@ -16571,7 +16578,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rmuir/tree-sitter-javadoc@git-2ba54a7"
+          "github.com/rmuir/tree-sitter-javadoc@git-4e9e1db"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -17351,7 +17358,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-e2c8b8f",
+      "version": "git-c7b4048",
       "languages": [
         "magik"
       ],
@@ -17382,7 +17389,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-e2c8b8f"
+          "github.com/krn-robin/tree-sitter-magik@git-c7b4048"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18501,7 +18508,7 @@
       "id": "pack-parser-parser-posix-awk",
       "name": "Posix Awk Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-posix-awk",
-      "version": "git-87459df",
+      "version": "git-55b305f",
       "languages": [
         "posix_awk"
       ],
@@ -18532,7 +18539,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-posix-awk@git-87459df"
+          "github.com/konomanoasa/tree-sitter-posix-awk@git-55b305f"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19693,7 +19700,7 @@
       "id": "pack-parser-parser-sed-ere",
       "name": "Sed Ere Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-b572ad8",
+      "version": "git-e98da7a",
       "languages": [
         "sed_ere"
       ],
@@ -19724,7 +19731,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-b572ad8"
+          "github.com/konomanoasa/tree-sitter-sed@git-e98da7a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19733,7 +19740,7 @@
       "id": "pack-parser-parser-sed",
       "name": "Sed Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-b572ad8",
+      "version": "git-e98da7a",
       "languages": [
         "sed"
       ],
@@ -19764,7 +19771,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-b572ad8"
+          "github.com/konomanoasa/tree-sitter-sed@git-e98da7a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
