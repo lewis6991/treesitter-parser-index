@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07",
+  "generatedAt": "2026-09-08",
   "kind": "prototype-query-packs",
   "count": 245,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-32dbd2e",
+      "version": "git-5cb0114",
       "languages": [
         "ada",
         "agda",
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1d25e83",
+      "version": "git-3384317",
       "languages": [
         "bash",
         "c",
@@ -12747,7 +12747,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1d25e83",
+      "version": "git-3384317",
       "languages": [
         "glsl"
       ],
@@ -12794,7 +12794,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1d25e83",
+      "version": "git-3384317",
       "languages": [
         "html"
       ],
@@ -12849,7 +12849,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-1d25e83",
+      "version": "git-3384317",
       "languages": [
         "proto"
       ],
@@ -13610,11 +13610,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "injections": [
-          "cfml/queries/injections.scm"
-        ],
         "indents": [
           "cfml/queries/indents.scm"
+        ],
+        "injections": [
+          "cfml/queries/injections.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -18195,7 +18195,7 @@
       "id": "pack-parser-parser-tree-sitter-perl-perl-perl",
       "name": "Perl Parser Bundle",
       "package": "github.com/tree-sitter-perl/tree-sitter-perl",
-      "version": "git-5090496",
+      "version": "git-f678e35",
       "languages": [
         "perl"
       ],
@@ -18228,7 +18228,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-perl/tree-sitter-perl@git-5090496"
+          "github.com/tree-sitter-perl/tree-sitter-perl@git-f678e35"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20147,7 +20147,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-4e0e625",
+      "version": "git-1bb76c0",
       "languages": [
         "ssh-client-config"
       ],
@@ -20178,7 +20178,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-4e0e625"
+          "github.com/metio/tree-sitter-ssh-client-config@git-1bb76c0"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
