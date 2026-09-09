@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08",
+  "generatedAt": "2026-09-09",
   "kind": "prototype-query-packs",
-  "count": 245,
+  "count": 246,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-3384317",
+      "version": "git-5896274",
       "languages": [
         "bash",
         "c",
@@ -12747,7 +12747,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-3384317",
+      "version": "git-5896274",
       "languages": [
         "glsl"
       ],
@@ -12794,7 +12794,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-3384317",
+      "version": "git-5896274",
       "languages": [
         "html"
       ],
@@ -12849,7 +12849,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-3384317",
+      "version": "git-5896274",
       "languages": [
         "proto"
       ],
@@ -13020,7 +13020,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-58c236f",
+      "version": "git-f7af22a",
       "languages": [
         "al"
       ],
@@ -13052,16 +13052,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-58c236f"
+          "github.com/SShadowS/tree-sitter-al@git-f7af22a"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -13486,7 +13486,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-ee21eff",
+      "version": "git-361bc06",
       "languages": [
         "carve"
       ],
@@ -13517,7 +13517,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-ee21eff"
+          "github.com/markup-carve/tree-sitter-carve@git-361bc06"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -16948,6 +16948,56 @@
       "parserCompatibility": {
         "tested": [
           "github.com/tree-sitter-grammars/tree-sitter-kconfig@git-9ac99fe"
+        ]
+      },
+      "summary": "highlights, injections, locals queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-kdl",
+      "name": "KDL Parser Bundle",
+      "package": "github.com/tree-sitter-grammars/tree-sitter-kdl",
+      "version": "git-e8ff98a",
+      "languages": [
+        "kdl"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "kdl",
+          "queryKinds": [
+            "highlights",
+            "injections",
+            "locals"
+          ]
+        }
+      ],
+      "owners": [
+        "tree-sitter-grammars"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/tree-sitter-grammars/tree-sitter-kdl@git-e8ff98a"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
