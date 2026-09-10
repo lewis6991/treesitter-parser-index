@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09",
+  "generatedAt": "2026-09-10",
   "kind": "prototype-query-packs",
   "count": 246,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-5cb0114",
+      "version": "git-d4d59cb",
       "languages": [
         "ada",
         "agda",
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5896274",
+      "version": "git-9e63604",
       "languages": [
         "bash",
         "c",
@@ -12747,7 +12747,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5896274",
+      "version": "git-9e63604",
       "languages": [
         "glsl"
       ],
@@ -12794,7 +12794,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5896274",
+      "version": "git-9e63604",
       "languages": [
         "html"
       ],
@@ -12849,7 +12849,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-5896274",
+      "version": "git-9e63604",
       "languages": [
         "proto"
       ],
@@ -13052,11 +13052,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -21452,7 +21452,7 @@
       "id": "pack-parser-parser-vhdl",
       "name": "Vhdl Parser Bundle",
       "package": "github.com/jpt13653903/tree-sitter-vhdl",
-      "version": "git-3fd99cd",
+      "version": "git-a88fb78",
       "languages": [
         "vhdl"
       ],
@@ -21483,7 +21483,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/jpt13653903/tree-sitter-vhdl@git-3fd99cd"
+          "github.com/jpt13653903/tree-sitter-vhdl@git-a88fb78"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
