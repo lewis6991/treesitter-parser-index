@@ -6760,34 +6760,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-b5ecf51"
   },
   {
+    "id": "parser-idris",
+    "name": "Idris",
+    "language": "idris",
+    "package": "github.com/kayhide/tree-sitter-idris",
+    "version": "git-9fe334f",
+    "sourceCommit": "9fe334fb603fdce0e84349ed78f41ae3d2f7036b",
+    "lastUpdated": "2026-09-11",
+    "upstreamSemver": "0.0.1",
     "abi": 14,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "owners": [
+      "kayhide"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-idris",
-    "language": "idris",
-    "lastUpdated": "2024-11-05",
-    "name": "Idris",
-    "owners": [
-      "kayhide"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/kayhide/tree-sitter-idris",
-    "sourceCommit": "c56a25cf57c68ff929356db25505c1cc4c7820f6",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.0.1.",
-    "upstreamSemver": "0.0.1",
-    "version": "git-c56a25c"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.0.1."
   },
   {
     "abi": 13,
@@ -8541,34 +8541,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e45dbac"
   },
   {
+    "id": "parser-liquidsoap",
+    "name": "Liquidsoap",
+    "language": "liquidsoap",
+    "package": "github.com/savonet/tree-sitter-liquidsoap",
+    "version": "git-301f669",
+    "sourceCommit": "301f66950622949f630fef9fa758ba69f66cf97a",
+    "lastUpdated": "2026-09-11",
+    "upstreamSemver": "1.1.4",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "owners": [
+      "savonet"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-liquidsoap",
-    "language": "liquidsoap",
-    "lastUpdated": "2026-08-17",
-    "name": "Liquidsoap",
-    "owners": [
-      "savonet"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/savonet/tree-sitter-liquidsoap",
-    "sourceCommit": "fa565a337b673050ba4f1131d21a1d259153140b",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 1.1.4.",
-    "upstreamSemver": "1.1.4",
-    "version": "git-fa565a3"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 1.1.4."
   },
   {
     "abi": 15,
@@ -9836,21 +9836,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0a95cfd"
   },
   {
-    "abi": 13,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "tags": [
-        "queries/tags.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "tags"
+    "id": "parser-nix-community-nix-nix",
+    "name": "Nix",
+    "language": "nix",
+    "package": "github.com/nix-community/tree-sitter-nix",
+    "version": "git-5a64e75",
+    "sourceCommit": "5a64e75fc1ee54f9e14e3a23918e057d43b2de2b",
+    "lastUpdated": "2026-09-11",
+    "upstreamSemver": "0.3.0",
+    "abi": 15,
+    "owners": [
+      "nix-community"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -9858,18 +9854,26 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-nix-community-nix-nix",
-    "language": "nix",
-    "lastUpdated": "2026-06-25",
-    "name": "Nix",
-    "owners": [
-      "nix-community"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/nix-community/tree-sitter-nix",
-    "sourceCommit": "3d0173d903e630b6e14d17f1cf79488791379ded",
-    "summary": "Real parser repo snapshot. tags queries. Latest release tag 0.3.0.",
-    "upstreamSemver": "0.3.0",
-    "version": "git-3d0173d"
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
+    ],
+    "bundledQueries": {
+      "tags": [
+        "queries/tags.scm"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.3.0."
   },
   {
     "abi": 15,
@@ -11284,21 +11288,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-ef66b15"
   },
   {
+    "id": "parser-posix-awk",
+    "name": "Posix Awk",
+    "language": "posix_awk",
+    "package": "github.com/konomanoasa/tree-sitter-posix-awk",
+    "version": "git-2e097b3",
+    "sourceCommit": "2e097b3194f7f0b2976b8b4d69f3c8582240b8e9",
+    "lastUpdated": "2026-09-10",
+    "upstreamSemver": "0.9.1",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "konomanoasa"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -11306,18 +11306,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-posix-awk",
-    "language": "posix_awk",
-    "lastUpdated": "2026-09-06",
-    "name": "Posix Awk",
-    "owners": [
-      "konomanoasa"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/konomanoasa/tree-sitter-posix-awk",
-    "sourceCommit": "55b305fcd3e1c2d5bd1799b23097ab7c534f1f03",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.9.0.",
-    "upstreamSemver": "0.9.0",
-    "version": "git-55b305f"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.9.1."
   },
   {
     "abi": 15,
@@ -14187,21 +14191,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-0f66ff5"
   },
   {
+    "id": "parser-sql",
+    "name": "SQL",
+    "language": "sql",
+    "package": "github.com/DerekStride/tree-sitter-sql",
+    "version": "git-b7057b7",
+    "sourceCommit": "b7057b7d4ca94bb45403435f12cc01cee821daa8",
+    "lastUpdated": "2026-09-10",
+    "upstreamSemver": "0.3.11",
     "abi": null,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "DerekStride"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -14209,18 +14209,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-sql",
-    "language": "sql",
-    "lastUpdated": "2026-09-03",
-    "name": "SQL",
-    "owners": [
-      "DerekStride"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/DerekStride/tree-sitter-sql",
-    "sourceCommit": "5c7215f3502400d6065fcfa6d69e958e2bc6abc8",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.3.11.",
-    "upstreamSemver": "0.3.11",
-    "version": "git-5c7215f"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.3.11."
   },
   {
     "abi": 14,
@@ -14257,9 +14261,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "SshClientConfig",
     "language": "ssh-client-config",
     "package": "github.com/metio/tree-sitter-ssh-client-config",
-    "version": "git-1bb76c0",
-    "sourceCommit": "1bb76c01e7f3b636dfc3c4b22971220825c03964",
-    "lastUpdated": "2026-09-07",
+    "version": "git-60a1473",
+    "sourceCommit": "60a1473ffae6a7f4a26743c728ed2fbc0a987c9c",
+    "lastUpdated": "2026-09-10",
     "upstreamSemver": "2026.9.10",
     "abi": 14,
     "owners": [
@@ -14781,17 +14785,39 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-9b7845c"
   },
   {
+    "id": "parser-swift",
+    "name": "Swift",
+    "language": "swift",
+    "package": "github.com/alex-pinkus/tree-sitter-swift",
+    "version": "git-00bbb0a",
+    "sourceCommit": "00bbb0a2550f8bc0023a2a4992922d51ae045626",
+    "lastUpdated": "2026-09-10",
+    "upstreamSemver": "0.7.3",
     "abi": null,
+    "owners": [
+      "alex-pinkus"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-swift.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections",
+      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -14805,29 +14831,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections",
-      "locals"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-swift",
-    "language": "swift",
-    "lastUpdated": "2026-09-07",
-    "name": "Swift",
-    "owners": [
-      "alex-pinkus"
-    ],
-    "package": "github.com/alex-pinkus/tree-sitter-swift",
-    "sourceCommit": "f02fc0a30805fefe283db238bce2d699a5e49c3d",
-    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3.",
-    "upstreamSemver": "0.7.3",
-    "version": "git-f02fc0a"
+    "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3."
   },
   {
     "abi": 13,
@@ -16493,34 +16497,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8c07771"
   },
   {
+    "id": "parser-vcl",
+    "name": "VCL",
+    "language": "vcl",
+    "package": "github.com/ntsk/tree-sitter-vcl",
+    "version": "git-ab45e32",
+    "sourceCommit": "ab45e32a82481594c77864eada6dcd1a2dabb4a0",
+    "lastUpdated": "2026-09-10",
+    "upstreamSemver": "0.4.1",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "owners": [
+      "ntsk"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": false,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-vcl",
-    "language": "vcl",
-    "lastUpdated": "2026-08-28",
-    "name": "VCL",
-    "owners": [
-      "ntsk"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/ntsk/tree-sitter-vcl",
-    "sourceCommit": "b199cf67eff907e3b343cc56d6847e888120d550",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.0.",
-    "upstreamSemver": "0.4.0",
-    "version": "git-b199cf6"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.1."
   },
   {
     "abi": 15,
@@ -16594,37 +16598,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-227d277"
   },
   {
-    "id": "parser-vhdl",
-    "name": "Vhdl",
-    "language": "vhdl",
-    "package": "github.com/jpt13653903/tree-sitter-vhdl",
-    "version": "git-a88fb78",
-    "sourceCommit": "a88fb782d4ec5ffe9303c32d6e86009e7e94a04a",
-    "lastUpdated": "2026-09-09",
-    "upstreamSemver": "2.0.2",
     "abi": 15,
-    "owners": [
-      "jpt13653903"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-vhdl.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -16632,7 +16616,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.2."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
+    "id": "parser-vhdl",
+    "language": "vhdl",
+    "lastUpdated": "2026-09-09",
+    "name": "Vhdl",
+    "owners": [
+      "jpt13653903"
+    ],
+    "package": "github.com/jpt13653903/tree-sitter-vhdl",
+    "sourceCommit": "a88fb782d4ec5ffe9303c32d6e86009e7e94a04a",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.2.",
+    "upstreamSemver": "2.0.2",
+    "version": "git-a88fb78"
   },
   {
     "abi": 14,
