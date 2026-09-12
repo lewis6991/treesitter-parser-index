@@ -1692,7 +1692,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-kdl@git-b37e3d5"
+      "github.com/tree-sitter-grammars/tree-sitter-kdl@git-v2.0.0"
     ]
   },
   {
