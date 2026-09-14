@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-13",
+  "generatedAt": "2026-09-14",
   "kind": "prototype-languages",
-  "count": 524,
+  "count": 525,
   "items": [
     {
       "language": "_gjs",
@@ -10618,6 +10618,16 @@
         "xml/queries/xml"
       ],
       "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "xml_django",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {

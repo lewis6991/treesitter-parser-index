@@ -42,9 +42,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "ABL",
     "language": "abl",
     "package": "github.com/usagi-coffee/tree-sitter-abl",
-    "version": "git-f85dafc",
-    "sourceCommit": "f85dafc02be2b41938e41d664a30668781cb0e99",
-    "lastUpdated": "2026-09-12",
+    "version": "git-12a39c1",
+    "sourceCommit": "12a39c1af3467660436ea21c86bfded73a1fa2e9",
+    "lastUpdated": "2026-09-14",
     "upstreamSemver": "0.0.53",
     "abi": 15,
     "owners": [
@@ -191,49 +191,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e8d47a6"
   },
   {
+    "id": "parser-al",
+    "name": "AL",
+    "language": "al",
+    "package": "github.com/SShadowS/tree-sitter-al",
+    "version": "git-70f4239",
+    "sourceCommit": "70f42395c60a7afd0eede9a20101718d3110fd0e",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "4.4.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "dll",
-        "kind": "release-asset",
-        "name": "tree-sitter-al.dll"
-      },
-      {
-        "format": "dylib",
-        "kind": "release-asset",
-        "name": "tree-sitter-al.dylib"
-      },
-      {
-        "format": "so",
-        "kind": "release-asset",
-        "name": "tree-sitter-al.so"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-al.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ],
-      "locals": [
-        "queries/locals.scm"
-      ],
-      "tags": [
-        "queries/tags.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
+    "owners": [
+      "SShadowS"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -241,18 +209,50 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-al",
-    "language": "al",
-    "lastUpdated": "2026-09-09",
-    "name": "AL",
-    "owners": [
-      "SShadowS"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "dll",
+        "name": "tree-sitter-al.dll"
+      },
+      {
+        "kind": "release-asset",
+        "format": "dylib",
+        "name": "tree-sitter-al.dylib"
+      },
+      {
+        "kind": "release-asset",
+        "format": "so",
+        "name": "tree-sitter-al.so"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-al.wasm"
+      }
     ],
-    "package": "github.com/SShadowS/tree-sitter-al",
-    "sourceCommit": "f7af22a25c63a20223a2e1d0e1701f6eaf2bea16",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 4.3.0.",
-    "upstreamSemver": "4.3.0",
-    "version": "git-f7af22a"
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ],
+      "tags": [
+        "queries/tags.scm"
+      ],
+      "locals": [
+        "queries/locals.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 4.4.0."
   },
   {
     "abi": 15,
@@ -1478,33 +1478,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-3944069"
   },
   {
+    "id": "parser-cfml",
+    "name": "Cfml",
+    "language": "cfml",
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "version": "git-91e5483",
+    "sourceCommit": "91e5483f34fc9b097c89c53022b046d1e39cf541",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.26.35",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "cfml/queries/highlights.scm"
-      ],
-      "indents": [
-        "cfml/queries/indents.scm"
-      ],
-      "injections": [
-        "cfml/queries/injections.scm"
-      ],
-      "tags": [
-        "cfml/queries/tags.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "indents",
-      "injections",
-      "tags"
+    "owners": [
+      "cfmleditor"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -1512,26 +1496,63 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-cfml",
-    "language": "cfml",
-    "lastUpdated": "2026-09-07",
-    "name": "Cfml",
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "indents",
+      "injections",
+      "tags"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "cfml/queries/highlights.scm"
+      ],
+      "injections": [
+        "cfml/queries/injections.scm"
+      ],
+      "indents": [
+        "cfml/queries/indents.scm"
+      ],
+      "tags": [
+        "cfml/queries/tags.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.35. Grammar path cfml."
+  },
+  {
+    "id": "parser-cfquery",
+    "name": "Cfquery",
+    "language": "cfquery",
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "version": "git-91e5483",
+    "sourceCommit": "91e5483f34fc9b097c89c53022b046d1e39cf541",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.26.35",
+    "abi": 15,
     "owners": [
       "cfmleditor"
     ],
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "sourceCommit": "a4b5b72881e7bfdba2165fcb479ba46c79a87e69",
-    "summary": "Real parser repo snapshot. highlights, indents, injections, tags queries. Latest release tag 0.26.35. Grammar path cfml.",
-    "upstreamSemver": "0.26.35",
-    "version": "git-a4b5b72"
-  },
-  {
-    "abi": 15,
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1542,9 +1563,20 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.35. Grammar path cfquery."
+  },
+  {
+    "id": "parser-cfscript",
+    "name": "Cfscript",
+    "language": "cfscript",
+    "package": "github.com/cfmleditor/tree-sitter-cfml",
+    "version": "git-91e5483",
+    "sourceCommit": "91e5483f34fc9b097c89c53022b046d1e39cf541",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.26.35",
+    "abi": 15,
+    "owners": [
+      "cfmleditor"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -1552,26 +1584,15 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-cfquery",
-    "language": "cfquery",
-    "lastUpdated": "2026-09-07",
-    "name": "Cfquery",
-    "owners": [
-      "cfmleditor"
-    ],
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "sourceCommit": "a4b5b72881e7bfdba2165fcb479ba46c79a87e69",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.35. Grammar path cfquery.",
-    "upstreamSemver": "0.26.35",
-    "version": "git-a4b5b72"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1582,28 +1603,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-cfscript",
-    "language": "cfscript",
-    "lastUpdated": "2026-09-07",
-    "name": "Cfscript",
-    "owners": [
-      "cfmleditor"
-    ],
-    "package": "github.com/cfmleditor/tree-sitter-cfml",
-    "sourceCommit": "a4b5b72881e7bfdba2165fcb479ba46c79a87e69",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.35. Grammar path cfscript.",
-    "upstreamSemver": "0.26.35",
-    "version": "git-a4b5b72"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.26.35. Grammar path cfscript."
   },
   {
     "abi": null,
@@ -1908,12 +1908,32 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-e43eff8"
   },
   {
+    "id": "parser-cmake",
+    "name": "Cmake",
+    "language": "cmake",
+    "package": "github.com/uyha/tree-sitter-cmake",
+    "version": "git-58993af",
+    "sourceCommit": "58993af75218bc99a1f5a04c832a5937e7c422cb",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.7.5",
     "abi": 14,
+    "owners": [
+      "uyha"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1923,27 +1943,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "bundledQueryEditors": [
       "neovim"
     ],
-    "bundledQueryKinds": [
-      "highlights"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-cmake",
-    "language": "cmake",
-    "lastUpdated": "2026-07-08",
-    "name": "Cmake",
-    "owners": [
-      "uyha"
-    ],
-    "package": "github.com/uyha/tree-sitter-cmake",
-    "sourceCommit": "ca627bb5828616b6246aafdc3c3222789e728e37",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.4.",
-    "upstreamSemver": "0.7.4",
-    "version": "git-ca627bb"
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.5."
   },
   {
     "abi": 15,
@@ -4360,12 +4360,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-7190f21"
   },
   {
+    "id": "parser-fortran",
+    "name": "Fortran",
+    "language": "fortran",
+    "package": "github.com/stadelmanma/tree-sitter-fortran",
+    "version": "git-2bc0220",
+    "sourceCommit": "2bc0220f34ca660ec9571c54ea57ed5363338de1",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.5.1",
     "abi": 15,
+    "owners": [
+      "stadelmanma"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -4376,28 +4397,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-fortran",
-    "language": "fortran",
-    "lastUpdated": "2026-04-24",
-    "name": "Fortran",
-    "owners": [
-      "stadelmanma"
-    ],
-    "package": "github.com/stadelmanma/tree-sitter-fortran",
-    "sourceCommit": "7edacd2b21aa80057d9725384a1304a1c758e0f8",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.5.1.",
-    "upstreamSemver": "0.5.1",
-    "version": "git-7edacd2"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.5.1."
   },
   {
     "abi": 15,
@@ -4460,75 +4460,43 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-fad2e17"
   },
   {
-    "id": "parser-fsharp",
-    "name": "FSharp",
-    "language": "fsharp",
-    "package": "github.com/ionide/tree-sitter-fsharp",
-    "version": "git-aefd0c8",
-    "sourceCommit": "aefd0c8741bdf3aeb827a228aa4a996a6536697e",
-    "lastUpdated": "2026-09-12",
-    "upstreamSemver": "0.3.12",
     "abi": 15,
-    "owners": [
-      "ionide"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-fsharp.wasm"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-fsharp_signature.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections",
-      "locals",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
         "fsharp/queries/highlights.scm"
       ],
-      "locals": [
-        "fsharp/queries/locals.scm"
-      ],
       "injections": [
         "fsharp/queries/injections.scm"
+      ],
+      "locals": [
+        "fsharp/queries/locals.scm"
       ],
       "tags": [
         "fsharp/queries/tags.scm"
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, injections, locals, tags queries. Latest release tag 0.3.12. Grammar path fsharp."
-  },
-  {
-    "id": "parser-fsharp-signature",
-    "name": "FSharpSignature",
-    "language": "fsharp_signature",
-    "package": "github.com/ionide/tree-sitter-fsharp",
-    "version": "git-aefd0c8",
-    "sourceCommit": "aefd0c8741bdf3aeb827a228aa4a996a6536697e",
-    "lastUpdated": "2026-09-12",
-    "upstreamSemver": "0.3.12",
-    "abi": 15,
-    "owners": [
-      "ionide"
+    "bundledQueryKinds": [
+      "highlights",
+      "injections",
+      "locals",
+      "tags"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -4536,44 +4504,76 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
+    "id": "parser-fsharp",
+    "language": "fsharp",
+    "lastUpdated": "2026-09-12",
+    "name": "FSharp",
+    "owners": [
+      "ionide"
+    ],
+    "package": "github.com/ionide/tree-sitter-fsharp",
+    "sourceCommit": "aefd0c8741bdf3aeb827a228aa4a996a6536697e",
+    "summary": "Real parser repo snapshot. highlights, injections, locals, tags queries. Latest release tag 0.3.12. Grammar path fsharp.",
+    "upstreamSemver": "0.3.12",
+    "version": "git-aefd0c8"
+  },
+  {
+    "abi": 15,
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-fsharp.wasm"
       },
       {
-        "kind": "release-asset",
         "format": "wasm",
+        "kind": "release-asset",
         "name": "tree-sitter-fsharp_signature.wasm"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections",
-      "locals",
-      "tags"
     ],
     "bundledQueries": {
       "highlights": [
         "fsharp_signature/queries/highlights.scm"
       ],
-      "locals": [
-        "fsharp_signature/queries/locals.scm"
-      ],
       "injections": [
         "fsharp_signature/queries/injections.scm"
+      ],
+      "locals": [
+        "fsharp_signature/queries/locals.scm"
       ],
       "tags": [
         "fsharp_signature/queries/tags.scm"
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights, injections, locals, tags queries. Latest release tag 0.3.12. Grammar path fsharp_signature."
+    "bundledQueryKinds": [
+      "highlights",
+      "injections",
+      "locals",
+      "tags"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
+    "id": "parser-fsharp-signature",
+    "language": "fsharp_signature",
+    "lastUpdated": "2026-09-12",
+    "name": "FSharpSignature",
+    "owners": [
+      "ionide"
+    ],
+    "package": "github.com/ionide/tree-sitter-fsharp",
+    "sourceCommit": "aefd0c8741bdf3aeb827a228aa4a996a6536697e",
+    "summary": "Real parser repo snapshot. highlights, injections, locals, tags queries. Latest release tag 0.3.12. Grammar path fsharp_signature.",
+    "upstreamSemver": "0.3.12",
+    "version": "git-aefd0c8"
   },
   {
     "abi": 14,
@@ -9432,12 +9432,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d6a57b0"
   },
   {
+    "id": "parser-mlir",
+    "name": "Mlir",
+    "language": "mlir",
+    "package": "github.com/artagnon/tree-sitter-mlir",
+    "version": "git-8d35cb4",
+    "sourceCommit": "8d35cb426d5253dac471517593d13edb7b77f907",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.0.1",
     "abi": 15,
+    "owners": [
+      "artagnon"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals"
     ],
     "bundledQueries": {
       "highlights": [
@@ -9448,28 +9469,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-mlir",
-    "language": "mlir",
-    "lastUpdated": "2026-09-04",
-    "name": "Mlir",
-    "owners": [
-      "artagnon"
-    ],
-    "package": "github.com/artagnon/tree-sitter-mlir",
-    "sourceCommit": "08c51d88284ada36a5c2847ebeb94297f032adec",
-    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1.",
-    "upstreamSemver": "0.0.1",
-    "version": "git-08c51d8"
+    "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1."
   },
   {
     "abi": 14,
@@ -9848,9 +9848,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Nix",
     "language": "nix",
     "package": "github.com/nix-community/tree-sitter-nix",
-    "version": "git-c688ab2",
-    "sourceCommit": "c688ab22826442c8c489dafac5e912002dd9a8a2",
-    "lastUpdated": "2026-09-13",
+    "version": "git-842b172",
+    "sourceCommit": "842b17212f27b6ec013da0250384103309dbfde2",
+    "lastUpdated": "2026-09-14",
     "upstreamSemver": "0.3.0",
     "abi": 15,
     "owners": [
@@ -10060,12 +10060,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d694570"
   },
   {
+    "id": "parser-nushell-nu-nu",
+    "name": "Nu",
+    "language": "nu",
+    "package": "github.com/nushell/tree-sitter-nu",
+    "version": "git-4f577aa",
+    "sourceCommit": "4f577aaa735154f934594b598a69ed7b1b707cf6",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.0.1",
     "abi": 15,
+    "owners": [
+      "nushell"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "injections"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10076,28 +10097,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "injections"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-nushell-nu-nu",
-    "language": "nu",
-    "lastUpdated": "2026-08-13",
-    "name": "Nu",
-    "owners": [
-      "nushell"
-    ],
-    "package": "github.com/nushell/tree-sitter-nu",
-    "sourceCommit": "64613ef22f4116862d7997939c8d1794ceb1f856",
-    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.0.1.",
-    "upstreamSemver": "0.0.1",
-    "version": "git-64613ef"
+    "summary": "Real parser repo snapshot. highlights, injections queries. Latest release tag 0.0.1."
   },
   {
     "abi": 14,
@@ -10179,27 +10179,49 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-28d3b2e"
   },
   {
+    "id": "parser-ocaml",
+    "name": "OCaml",
+    "language": "ocaml",
+    "package": "github.com/tree-sitter/tree-sitter-ocaml",
+    "version": "git-e3c9cf3",
+    "sourceCommit": "e3c9cf368f68bffd2f81188229aefa7b434eda65",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.26.0",
     "abi": 15,
+    "owners": [
+      "tree-sitter"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": true
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_interface.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_type.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10213,10 +10235,20 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.26.0. Official tree-sitter repository. Grammar path grammars/ocaml."
+  },
+  {
+    "id": "parser-ocaml-interface",
+    "name": "OCamlInterface",
+    "language": "ocaml_interface",
+    "package": "github.com/tree-sitter/tree-sitter-ocaml",
+    "version": "git-e3c9cf3",
+    "sourceCommit": "e3c9cf368f68bffd2f81188229aefa7b434eda65",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.26.0",
+    "abi": 15,
+    "owners": [
+      "tree-sitter"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -10224,41 +10256,31 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-ocaml",
-    "language": "ocaml",
-    "lastUpdated": "2026-08-30",
-    "name": "OCaml",
-    "owners": [
-      "tree-sitter"
-    ],
-    "package": "github.com/tree-sitter/tree-sitter-ocaml",
-    "sourceCommit": "a4ce49a6c17e88e7ca8350cfb666749d9a5c6630",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.25.0. Official tree-sitter repository. Grammar path grammars/ocaml.",
-    "upstreamSemver": "0.25.0",
-    "version": "git-a4ce49a"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_interface.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_type.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10272,10 +10294,20 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.26.0. Official tree-sitter repository. Grammar path grammars/interface."
+  },
+  {
+    "id": "parser-ocaml-type",
+    "name": "OCamlType",
+    "language": "ocaml_type",
+    "package": "github.com/tree-sitter/tree-sitter-ocaml",
+    "version": "git-e3c9cf3",
+    "sourceCommit": "e3c9cf368f68bffd2f81188229aefa7b434eda65",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.26.0",
+    "abi": 15,
+    "owners": [
+      "tree-sitter"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -10283,41 +10315,31 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-ocaml-interface",
-    "language": "ocaml_interface",
-    "lastUpdated": "2026-08-30",
-    "name": "OCamlInterface",
-    "owners": [
-      "tree-sitter"
-    ],
-    "package": "github.com/tree-sitter/tree-sitter-ocaml",
-    "sourceCommit": "a4ce49a6c17e88e7ca8350cfb666749d9a5c6630",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.25.0. Official tree-sitter repository. Grammar path grammars/interface.",
-    "upstreamSemver": "0.25.0",
-    "version": "git-a4ce49a"
-  },
-  {
-    "abi": 15,
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_interface.wasm"
       },
       {
-        "format": "wasm",
         "kind": "release-asset",
+        "format": "wasm",
         "name": "tree-sitter-ocaml_type.wasm"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "locals",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -10331,29 +10353,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "locals",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": true
-    },
-    "id": "parser-ocaml-type",
-    "language": "ocaml_type",
-    "lastUpdated": "2026-08-30",
-    "name": "OCamlType",
-    "owners": [
-      "tree-sitter"
-    ],
-    "package": "github.com/tree-sitter/tree-sitter-ocaml",
-    "sourceCommit": "a4ce49a6c17e88e7ca8350cfb666749d9a5c6630",
-    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.25.0. Official tree-sitter repository. Grammar path grammars/type.",
-    "upstreamSemver": "0.25.0",
-    "version": "git-a4ce49a"
+    "summary": "Real parser repo snapshot. highlights, locals, tags queries. Latest release tag 0.26.0. Official tree-sitter repository. Grammar path grammars/type."
   },
   {
     "abi": 15,
@@ -11300,10 +11300,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Posix Awk",
     "language": "posix_awk",
     "package": "github.com/konomanoasa/tree-sitter-posix-awk",
-    "version": "git-2385607",
-    "sourceCommit": "2385607a87d8fcc33824237194f3e59cd831f4d5",
-    "lastUpdated": "2026-09-13",
-    "upstreamSemver": "0.13.0",
+    "version": "git-b17e0d9",
+    "sourceCommit": "b17e0d9cb98d99e98c2abeb722f43acb29c591dd",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.14.0",
     "abi": 15,
     "owners": [
       "konomanoasa"
@@ -11329,7 +11329,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.13.0."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.14.0."
   },
   {
     "abi": 15,
@@ -13387,10 +13387,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Sed",
     "language": "sed",
     "package": "github.com/konomanoasa/tree-sitter-sed",
-    "version": "git-2f36bb4",
-    "sourceCommit": "2f36bb455cec643431e964e8b80f640ee3310ca7",
+    "version": "git-f081130",
+    "sourceCommit": "f0811308ab848f673e9c5f01b42d915d593613e7",
     "lastUpdated": "2026-09-13",
-    "upstreamSemver": "0.13.0",
+    "upstreamSemver": "0.14.0",
     "abi": 15,
     "owners": [
       "konomanoasa"
@@ -13416,17 +13416,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.13.0."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.14.0."
   },
   {
     "id": "parser-sed-ere",
     "name": "Sed Ere",
     "language": "sed_ere",
     "package": "github.com/konomanoasa/tree-sitter-sed",
-    "version": "git-2f36bb4",
-    "sourceCommit": "2f36bb455cec643431e964e8b80f640ee3310ca7",
+    "version": "git-f081130",
+    "sourceCommit": "f0811308ab848f673e9c5f01b42d915d593613e7",
     "lastUpdated": "2026-09-13",
-    "upstreamSemver": "0.13.0",
+    "upstreamSemver": "0.14.0",
     "abi": 15,
     "owners": [
       "konomanoasa"
@@ -13452,7 +13452,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.13.0. Grammar path sed_ere."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.14.0. Grammar path sed_ere."
   },
   {
     "abi": 15,
@@ -13525,10 +13525,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Sh",
     "language": "sh",
     "package": "github.com/konomanoasa/tree-sitter-sh",
-    "version": "git-6e8f1d2",
-    "sourceCommit": "6e8f1d264e003f3f65cdf62d669bc431aae24ca9",
-    "lastUpdated": "2026-09-13",
-    "upstreamSemver": "0.13.0",
+    "version": "git-68c4733",
+    "sourceCommit": "68c4733a1c551385b9def7a7976ca1d373964957",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.14.0",
     "abi": 15,
     "owners": [
       "konomanoasa"
@@ -13554,7 +13554,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.13.0."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.14.0."
   },
   {
     "abi": null,
@@ -14902,26 +14902,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-f2b378a"
   },
   {
+    "id": "parser-systemverilog",
+    "name": "SystemVerilog",
+    "language": "systemverilog",
+    "package": "github.com/gmlarumbe/tree-sitter-systemverilog",
+    "version": "git-40077a0",
+    "sourceCommit": "40077a0a56d9f90c05de57539c3b8bca4de7eae0",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.4.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-systemverilog.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "gmlarumbe"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -14929,48 +14920,57 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-systemverilog",
-    "language": "systemverilog",
-    "lastUpdated": "2026-07-20",
-    "name": "SystemVerilog",
-    "owners": [
-      "gmlarumbe"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-systemverilog.wasm"
+      }
     ],
-    "package": "github.com/gmlarumbe/tree-sitter-systemverilog",
-    "sourceCommit": "4e7525a777290e341b8a5ad880bd20bb4f291845",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.4.0.",
-    "upstreamSemver": "0.4.0",
-    "version": "git-4e7525a"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.4.0."
   },
   {
-    "id": "parser-xasc-t32-t32",
-    "name": "T32",
-    "language": "t32",
-    "package": "github.com/xasc/tree-sitter-t32",
-    "version": "git-11947ac",
-    "sourceCommit": "11947ac01ba681fb6f62667cb1447354833f4a5b",
-    "lastUpdated": "2026-09-06",
-    "upstreamSemver": null,
     "abi": 15,
-    "owners": [
-      "xasc"
+    "artifacts": [
+      {
+        "format": "tar.gz",
+        "kind": "source-archive"
+      }
     ],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "artifacts": [
-      {
-        "kind": "source-archive",
-        "format": "tar.gz"
-      }
+    "id": "parser-xasc-t32-t32",
+    "language": "t32",
+    "lastUpdated": "2026-09-06",
+    "name": "T32",
+    "owners": [
+      "xasc"
     ],
-    "bundledQueryKinds": [],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "summary": "Pinned in nvim-treesitter. No bundled query files detected."
+    "package": "github.com/xasc/tree-sitter-t32",
+    "sourceCommit": "11947ac01ba681fb6f62667cb1447354833f4a5b",
+    "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
+    "upstreamSemver": null,
+    "version": "git-11947ac"
   },
   {
     "abi": null,
@@ -16505,34 +16505,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-8c07771"
   },
   {
+    "id": "parser-vcl",
+    "name": "VCL",
+    "language": "vcl",
+    "package": "github.com/ntsk/tree-sitter-vcl",
+    "version": "git-645cdeb",
+    "sourceCommit": "645cdebe6e38fd1b1427aa72385afad29505c597",
+    "lastUpdated": "2026-09-13",
+    "upstreamSemver": "0.4.1",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
+    "owners": [
+      "ntsk"
     ],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": false,
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-vcl",
-    "language": "vcl",
-    "lastUpdated": "2026-09-10",
-    "name": "VCL",
-    "owners": [
-      "ntsk"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/ntsk/tree-sitter-vcl",
-    "sourceCommit": "ab45e32a82481594c77864eada6dcd1a2dabb4a0",
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.1.",
-    "upstreamSemver": "0.4.1",
-    "version": "git-ab45e32"
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.4.1."
   },
   {
     "abi": 15,
@@ -16606,26 +16606,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-227d277"
   },
   {
+    "id": "parser-vhdl",
+    "name": "Vhdl",
+    "language": "vhdl",
+    "package": "github.com/jpt13653903/tree-sitter-vhdl",
+    "version": "git-9be8e45",
+    "sourceCommit": "9be8e45c3ae7e7a4373a943a5c81ff92ce3656f8",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "2.0.3",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      },
-      {
-        "format": "wasm",
-        "kind": "release-asset",
-        "name": "tree-sitter-vhdl.wasm"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/Neovim/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "jpt13653903"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -16633,18 +16624,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": true
     },
-    "id": "parser-vhdl",
-    "language": "vhdl",
-    "lastUpdated": "2026-09-09",
-    "name": "Vhdl",
-    "owners": [
-      "jpt13653903"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-vhdl.wasm"
+      }
     ],
-    "package": "github.com/jpt13653903/tree-sitter-vhdl",
-    "sourceCommit": "a88fb782d4ec5ffe9303c32d6e86009e7e94a04a",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.2.",
-    "upstreamSemver": "2.0.2",
-    "version": "git-a88fb78"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/Neovim/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2.0.3."
   },
   {
     "abi": 14,
@@ -17471,6 +17471,36 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.7.0. Maintained in tree-sitter-grammars. Grammar path xml.",
     "upstreamSemver": "0.7.0",
     "version": "git-5000ae8"
+  },
+  {
+    "id": "parser-xml-django",
+    "name": "XmlDjango",
+    "language": "xml_django",
+    "package": "github.com/kraken-tech/tree-sitter-xml-django",
+    "version": "git-ac43f8b",
+    "sourceCommit": "ac43f8b4ea3331734e92666bd5b04300c4146a0a",
+    "lastUpdated": "2026-09-14",
+    "upstreamSemver": "0.3.0",
+    "abi": 15,
+    "owners": [
+      "kraken-tech"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
+    ],
+    "bundledQueryKinds": [],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.3.0."
   },
   {
     "abi": 15,
