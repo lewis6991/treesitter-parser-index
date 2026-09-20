@@ -212,7 +212,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/sgruszka/tree-sitter-bpftrace@git-ce507ff"
+      "github.com/sgruszka/tree-sitter-bpftrace@git-8269e49"
     ]
   },
   {
@@ -249,7 +249,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/c3lang/tree-sitter-c3@git-56d7388"
+      "github.com/c3lang/tree-sitter-c3@git-e4d3418"
     ]
   },
   {
@@ -348,7 +348,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/uyha/tree-sitter-cmake@git-ca627bb"
+      "github.com/uyha/tree-sitter-cmake@git-58993af"
     ]
   },
   {
@@ -418,7 +418,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
+      "github.com/tree-sitter/tree-sitter-cpp@git-c009222"
     ]
   },
   {
@@ -452,7 +452,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-cuda@git-fbafd28"
+      "github.com/tree-sitter-grammars/tree-sitter-cuda@git-d58080a"
     ]
   },
   {
@@ -748,7 +748,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/simonvic/tree-sitter-enforce@git-d222ea5"
+      "github.com/simonvic/tree-sitter-enforce@git-f6daecc"
     ]
   },
   {
@@ -868,7 +868,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/stadelmanma/tree-sitter-fortran@git-7edacd2"
+      "github.com/stadelmanma/tree-sitter-fortran@git-2bc0220"
     ]
   },
   {
@@ -888,7 +888,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/ionide/tree-sitter-fsharp@git-0d3ccbb"
+      "github.com/ionide/tree-sitter-fsharp@git-aefd0c8"
     ]
   },
   {
@@ -1009,7 +1009,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/gleam-lang/tree-sitter-gleam@git-cefbd68"
+      "github.com/gleam-lang/tree-sitter-gleam@git-fa6d0d9"
     ]
   },
   {
@@ -1987,7 +1987,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/artagnon/tree-sitter-mlir@git-08c51d8"
+      "github.com/artagnon/tree-sitter-mlir@git-eb0541b"
     ]
   },
   {
@@ -2066,7 +2066,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-5a64e75"
+      "github.com/nix-community/tree-sitter-nix@git-17f290c"
     ]
   },
   {
@@ -2091,7 +2091,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/nushell/tree-sitter-nu@git-64613ef"
+      "github.com/nushell/tree-sitter-nu@git-4f577aa"
     ]
   },
   {
@@ -2127,7 +2127,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-e3c9cf3"
     ]
   },
   {
@@ -2140,7 +2140,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-e3c9cf3"
     ]
   },
   {
@@ -2263,7 +2263,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/apple/tree-sitter-pkl@git-65f4483"
+      "github.com/apple/tree-sitter-pkl@git-9eaf196"
     ]
   },
   {
@@ -2968,7 +2968,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/DerekStride/tree-sitter-sql@git-593a5ec"
+      "github.com/DerekStride/tree-sitter-sql@git-39fdb00"
     ]
   },
   {
@@ -3137,7 +3137,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-4e7525a"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-3390da8"
     ]
   },
   {
@@ -3505,7 +3505,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/jpt13653903/tree-sitter-vhdl@git-a88fb78"
+      "github.com/jpt13653903/tree-sitter-vhdl@git-9be8e45"
     ]
   },
   {

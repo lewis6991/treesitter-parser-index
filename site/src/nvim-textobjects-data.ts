@@ -61,7 +61,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/uyha/tree-sitter-cmake@git-ca627bb"
+      "github.com/uyha/tree-sitter-cmake@git-58993af"
     ]
   },
   {
@@ -70,7 +70,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-cpp@git-8b5b49e"
+      "github.com/tree-sitter/tree-sitter-cpp@git-c009222"
     ]
   },
   {
@@ -88,7 +88,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-cuda@git-fbafd28"
+      "github.com/tree-sitter-grammars/tree-sitter-cuda@git-d58080a"
     ]
   },
   {
@@ -139,7 +139,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/simonvic/tree-sitter-enforce@git-d222ea5"
+      "github.com/simonvic/tree-sitter-enforce@git-f6daecc"
     ]
   },
   {
@@ -193,7 +193,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gleam-lang/tree-sitter-gleam@git-cefbd68"
+      "github.com/gleam-lang/tree-sitter-gleam@git-fa6d0d9"
     ]
   },
   {
@@ -397,7 +397,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-5a64e75"
+      "github.com/nix-community/tree-sitter-nix@git-17f290c"
     ]
   },
   {
@@ -406,7 +406,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ocaml@git-a4ce49a"
+      "github.com/tree-sitter/tree-sitter-ocaml@git-e3c9cf3"
     ]
   },
   {
@@ -577,7 +577,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-4e7525a"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-3390da8"
     ]
   },
   {
