@@ -1367,10 +1367,10 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Carve",
     "language": "carve",
     "package": "github.com/markup-carve/tree-sitter-carve",
-    "version": "git-3724d7c",
-    "sourceCommit": "3724d7c87bf5b3e7bde3dd5b64297b65f1677ea3",
-    "lastUpdated": "2026-09-22",
-    "upstreamSemver": "0.1.5",
+    "version": "git-dac542e",
+    "sourceCommit": "dac542ed84e6df169c17eec68a61508fbdab8505",
+    "lastUpdated": "2026-09-23",
+    "upstreamSemver": "0.1.6",
     "abi": 14,
     "owners": [
       "markup-carve"
@@ -1379,12 +1379,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
-      "wasm": false
+      "wasm": true
     },
     "artifacts": [
       {
         "kind": "source-archive",
         "format": "tar.gz"
+      },
+      {
+        "kind": "release-asset",
+        "format": "wasm",
+        "name": "tree-sitter-carve.wasm"
       }
     ],
     "bundledQueryKinds": [
@@ -1396,7 +1401,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.5."
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.6."
   },
   {
     "abi": 15,
@@ -1838,12 +1843,33 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-1436da3"
   },
   {
+    "id": "parser-clean",
+    "name": "Clean",
+    "language": "clean",
+    "package": "github.com/ishaq2321/tree-sitter-clean",
+    "version": "git-99c04da",
+    "sourceCommit": "99c04da73a85432e222ddc9f8500744604be2c01",
+    "lastUpdated": "2026-09-22",
+    "upstreamSemver": "1.2.6",
     "abi": 14,
+    "owners": [
+      "ishaq2321"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": true,
+      "sourceArchive": true,
+      "wasm": false
+    },
     "artifacts": [
       {
-        "format": "tar.gz",
-        "kind": "source-archive"
+        "kind": "source-archive",
+        "format": "tar.gz"
       }
+    ],
+    "bundledQueryKinds": [
+      "highlights",
+      "tags"
     ],
     "bundledQueries": {
       "highlights": [
@@ -1854,28 +1880,7 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights",
-      "tags"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": true,
-      "sourceArchive": true,
-      "wasm": false
-    },
-    "id": "parser-clean",
-    "language": "clean",
-    "lastUpdated": "2026-08-20",
-    "name": "Clean",
-    "owners": [
-      "ishaq2321"
-    ],
-    "package": "github.com/ishaq2321/tree-sitter-clean",
-    "sourceCommit": "bbcaa9fcec3ee94822332ce66eeab7c7ac9541bc",
-    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 1.2.5.",
-    "upstreamSemver": "1.2.5",
-    "version": "git-bbcaa9f"
+    "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 1.2.6."
   },
   {
     "abi": 14,
@@ -14270,32 +14275,12 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-072c969"
   },
   {
-    "id": "parser-ssh-client-config",
-    "name": "SshClientConfig",
-    "language": "ssh-client-config",
-    "package": "github.com/metio/tree-sitter-ssh-client-config",
-    "version": "git-354d8f9",
-    "sourceCommit": "354d8f9e52151d8ae6d1e386f7131e1b4b1077cc",
-    "lastUpdated": "2026-09-21",
-    "upstreamSemver": "2026.9.17",
     "abi": 14,
-    "owners": [
-      "metio"
-    ],
-    "capabilities": {
-      "buildFromSource": true,
-      "customScanner": false,
-      "sourceArchive": true,
-      "wasm": false
-    },
     "artifacts": [
       {
-        "kind": "source-archive",
-        "format": "tar.gz"
+        "format": "tar.gz",
+        "kind": "source-archive"
       }
-    ],
-    "bundledQueryKinds": [
-      "highlights"
     ],
     "bundledQueries": {
       "highlights": [
@@ -14303,7 +14288,27 @@ export const PARSER_RELEASES: ParserRelease[] = [
       ]
     },
     "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2026.9.17."
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "capabilities": {
+      "buildFromSource": true,
+      "customScanner": false,
+      "sourceArchive": true,
+      "wasm": false
+    },
+    "id": "parser-ssh-client-config",
+    "language": "ssh-client-config",
+    "lastUpdated": "2026-09-21",
+    "name": "SshClientConfig",
+    "owners": [
+      "metio"
+    ],
+    "package": "github.com/metio/tree-sitter-ssh-client-config",
+    "sourceCommit": "354d8f9e52151d8ae6d1e386f7131e1b4b1077cc",
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 2026.9.17.",
+    "upstreamSemver": "2026.9.17",
+    "version": "git-354d8f9"
   },
   {
     "abi": 15,
