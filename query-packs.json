@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23",
+  "generatedAt": "2026-09-24",
   "kind": "prototype-query-packs",
   "count": 246,
   "items": [
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b7be0f1",
+      "version": "git-baee1ca",
       "languages": [
         "bash",
         "c",
@@ -12747,7 +12747,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b7be0f1",
+      "version": "git-baee1ca",
       "languages": [
         "glsl"
       ],
@@ -12794,7 +12794,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b7be0f1",
+      "version": "git-baee1ca",
       "languages": [
         "html"
       ],
@@ -12849,7 +12849,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b7be0f1",
+      "version": "git-baee1ca",
       "languages": [
         "proto"
       ],
@@ -12900,7 +12900,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-7430ffc",
+      "version": "git-df4b8de",
       "languages": [
         "abl"
       ],
@@ -12931,7 +12931,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-7430ffc"
+          "github.com/usagi-coffee/tree-sitter-abl@git-df4b8de"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13891,7 +13891,7 @@
       "id": "pack-parser-parser-clean",
       "name": "Clean Parser Bundle",
       "package": "github.com/ishaq2321/tree-sitter-clean",
-      "version": "git-99c04da",
+      "version": "git-302fb5d",
       "languages": [
         "clean"
       ],
@@ -13927,7 +13927,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ishaq2321/tree-sitter-clean@git-99c04da"
+          "github.com/ishaq2321/tree-sitter-clean@git-302fb5d"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -20492,7 +20492,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-00bbb0a",
+      "version": "git-4a0e502",
       "languages": [
         "swift"
       ],
@@ -20533,7 +20533,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-00bbb0a"
+          "github.com/alex-pinkus/tree-sitter-swift@git-4a0e502"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
