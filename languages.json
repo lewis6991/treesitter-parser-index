@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24",
+  "generatedAt": "2026-09-25",
   "kind": "prototype-languages",
   "count": 525,
   "items": [
@@ -2511,7 +2511,7 @@
     {
       "language": "fidl",
       "parserCount": 1,
-      "queryPackCount": 2,
+      "queryPackCount": 3,
       "editors": [
         "helix",
         "lapce",
@@ -2523,6 +2523,7 @@
         "injections"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,
@@ -6709,7 +6710,7 @@
         "runtime/queries",
         "tree-sitter/queries"
       ],
-      "hasWasm": true,
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -6736,7 +6737,7 @@
         "queries",
         "runtime/queries"
       ],
-      "hasWasm": true,
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
