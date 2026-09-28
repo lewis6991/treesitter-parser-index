@@ -465,7 +465,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/eonpatapon/tree-sitter-cue@git-dd7b90e"
+      "github.com/cue-lang/tree-sitter-cue@git-dd7b90e"
     ]
   },
   {

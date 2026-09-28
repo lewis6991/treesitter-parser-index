@@ -106,7 +106,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/eonpatapon/tree-sitter-cue@git-dd7b90e"
+      "github.com/cue-lang/tree-sitter-cue@git-dd7b90e"
     ]
   },
   {

@@ -497,7 +497,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "highlights"
     ],
     "testedParserRefs": [
-      "github.com/eonpatapon/tree-sitter-cue@git-8a5f273"
+      "github.com/cue-lang/tree-sitter-cue@git-8a5f273"
     ]
   },
   {
