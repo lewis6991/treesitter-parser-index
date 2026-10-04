@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03",
+  "generatedAt": "2026-10-04",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-910fdf6",
+      "version": "git-e289100",
       "languages": [
         "ada",
         "agda",
@@ -1486,7 +1486,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/ngalaiko/tree-sitter-go-template@git-aa71f63"
+            "github.com/ngalaiko/tree-sitter-go-template@git-06b2fd2"
           ]
         },
         {
@@ -1643,7 +1643,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/ngalaiko/tree-sitter-go-template@git-aa71f63"
+            "github.com/ngalaiko/tree-sitter-go-template@git-06b2fd2"
           ]
         },
         {
@@ -2321,7 +2321,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/artagnon/tree-sitter-mlir@git-d93ac1b"
+            "github.com/artagnon/tree-sitter-mlir@git-15c6e3f"
           ]
         },
         {
@@ -2400,7 +2400,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-929f535"
+            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
           ]
         },
         {
@@ -2597,7 +2597,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/apple/tree-sitter-pkl@git-c95d828"
+            "github.com/apple/tree-sitter-pkl@git-c837eff"
           ]
         },
         {
@@ -2797,7 +2797,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ql@git-5b8ee9a"
+            "github.com/tree-sitter/tree-sitter-ql@git-d9d6c85"
           ]
         },
         {
@@ -2900,7 +2900,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/joker1007/tree-sitter-rbs@git-5282e2f"
+            "github.com/joker1007/tree-sitter-rbs@git-ff2d917"
           ]
         },
         {
@@ -4590,7 +4590,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-929f535"
+            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
           ]
         },
         {
@@ -4653,7 +4653,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-ql@git-5b8ee9a"
+            "github.com/tree-sitter/tree-sitter-ql@git-d9d6c85"
           ]
         },
         {
@@ -5434,7 +5434,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-929f535"
+            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
           ]
         },
         {
@@ -16597,7 +16597,7 @@
       "id": "pack-parser-parser-javadoc",
       "name": "Javadoc Parser Bundle",
       "package": "github.com/rmuir/tree-sitter-javadoc",
-      "version": "git-4e9e1db",
+      "version": "git-c760949",
       "languages": [
         "javadoc"
       ],
@@ -16633,7 +16633,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/rmuir/tree-sitter-javadoc@git-4e9e1db"
+          "github.com/rmuir/tree-sitter-javadoc@git-c760949"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -17827,11 +17827,11 @@
         "tags"
       ],
       "queries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -20537,7 +20537,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-35245fb",
+      "version": "git-171fa3b",
       "languages": [
         "swift"
       ],
@@ -20578,7 +20578,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-35245fb"
+          "github.com/alex-pinkus/tree-sitter-swift@git-171fa3b"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."

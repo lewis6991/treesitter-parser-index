@@ -397,7 +397,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-929f535"
+      "github.com/nix-community/tree-sitter-nix@git-f5b1119"
     ]
   },
   {
@@ -460,7 +460,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-ql@git-5b8ee9a"
+      "github.com/tree-sitter/tree-sitter-ql@git-d9d6c85"
     ]
   },
   {
