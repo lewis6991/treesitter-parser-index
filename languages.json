@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04",
+  "generatedAt": "2026-10-05",
   "kind": "prototype-languages",
   "count": 525,
   "items": [
@@ -2347,16 +2347,22 @@
       "language": "env",
       "parserLanguage": "bash",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "helix",
-        "lapce"
+        "lapce",
+        "zed"
       ],
       "queryKinds": [
+        "brackets",
         "highlights",
+        "injections",
+        "overrides",
+        "redactions",
         "textobjects"
       ],
       "queryRoots": [
+        "crates/grammars/src",
         "runtime/queries"
       ],
       "hasWasm": true,
@@ -8230,7 +8236,7 @@
     },
     {
       "language": "scss",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 5,
       "editors": [
         "helix",

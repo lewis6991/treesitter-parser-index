@@ -62,6 +62,17 @@ export const ZED_CORE_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "env",
+    "queryKinds": [
+      "brackets",
+      "highlights",
+      "injections",
+      "overrides",
+      "redactions"
+    ],
+    "parserLanguage": "bash"
+  },
+  {
     "language": "gitcommit",
     "queryKinds": [
       "highlights",
