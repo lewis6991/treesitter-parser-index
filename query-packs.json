@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05",
+  "generatedAt": "2026-10-06",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a6169ca",
+      "version": "git-0418cb5",
       "languages": [
         "bash",
         "c",
@@ -12759,7 +12759,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a6169ca",
+      "version": "git-0418cb5",
       "languages": [
         "glsl"
       ],
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a6169ca",
+      "version": "git-0418cb5",
       "languages": [
         "html"
       ],
@@ -12861,7 +12861,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-a6169ca",
+      "version": "git-0418cb5",
       "languages": [
         "proto"
       ],
@@ -13032,7 +13032,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-bf72a2d",
+      "version": "git-48d04e2",
       "languages": [
         "al"
       ],
@@ -13073,7 +13073,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-bf72a2d"
+          "github.com/SShadowS/tree-sitter-al@git-48d04e2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -13498,7 +13498,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-10df879",
+      "version": "git-03445e4",
       "languages": [
         "carve"
       ],
@@ -13529,7 +13529,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-10df879"
+          "github.com/markup-carve/tree-sitter-carve@git-03445e4"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17839,11 +17839,11 @@
         "tags"
       ],
       "queries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -21699,7 +21699,7 @@
       "id": "pack-parser-parser-bytecodealliance-wit-wit",
       "name": "Wit Parser Bundle",
       "package": "github.com/bytecodealliance/tree-sitter-wit",
-      "version": "git-cdf0726",
+      "version": "git-f777cdb",
       "languages": [
         "wit"
       ],
@@ -21728,19 +21728,19 @@
         "injections"
       ],
       "queries": {
-        "folds": [
-          "queries/folds.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
         ],
         "injections": [
           "queries/injections.scm"
+        ],
+        "folds": [
+          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/bytecodealliance/tree-sitter-wit@git-cdf0726"
+          "github.com/bytecodealliance/tree-sitter-wit@git-f777cdb"
         ]
       },
       "summary": "folds, highlights, injections queries ship with the parser repository."
