@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -12421,7 +12421,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-eb46634",
+      "version": "git-b0048cd",
       "languages": [
         "bash",
         "c",
@@ -12759,7 +12759,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-eb46634",
+      "version": "git-b0048cd",
       "languages": [
         "glsl"
       ],
@@ -12806,7 +12806,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-eb46634",
+      "version": "git-b0048cd",
       "languages": [
         "html"
       ],
@@ -12861,7 +12861,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-eb46634",
+      "version": "git-b0048cd",
       "languages": [
         "proto"
       ],
@@ -13032,7 +13032,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-250898c",
+      "version": "git-8682cb5",
       "languages": [
         "al"
       ],
@@ -13073,7 +13073,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-250898c"
+          "github.com/SShadowS/tree-sitter-al@git-8682cb5"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -13498,7 +13498,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-03445e4",
+      "version": "git-3d68321",
       "languages": [
         "carve"
       ],
@@ -13529,7 +13529,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-03445e4"
+          "github.com/markup-carve/tree-sitter-carve@git-3d68321"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
