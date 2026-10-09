@@ -209,6 +209,15 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
+    "language": "gleam",
+    "queryKinds": [
+      "context"
+    ],
+    "testedParserRefs": [
+      "github.com/gleam-lang/tree-sitter-gleam@git-fa6d0d9"
+    ]
+  },
+  {
     "language": "glimmer",
     "queryKinds": [
       "context"
@@ -260,6 +269,15 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "testedParserRefs": [
       "github.com/tree-sitter-grammars/tree-sitter-haskell@git-98aedbd"
+    ]
+  },
+  {
+    "language": "hcl",
+    "queryKinds": [
+      "context"
+    ],
+    "testedParserRefs": [
+      "github.com/tree-sitter-grammars/tree-sitter-hcl@git-64ad627"
     ]
   },
   {

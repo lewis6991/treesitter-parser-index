@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08",
+  "generatedAt": "2026-10-09",
   "kind": "prototype-languages",
   "count": 525,
   "items": [
@@ -3200,13 +3200,14 @@
     {
       "language": "gleam",
       "parserCount": 1,
-      "queryPackCount": 4,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
         "neovim"
       ],
       "queryKinds": [
+        "context",
         "folds",
         "highlights",
         "indents",
@@ -3864,13 +3865,14 @@
     {
       "language": "hcl",
       "parserCount": 1,
-      "queryPackCount": 4,
+      "queryPackCount": 5,
       "editors": [
         "helix",
         "lapce",
         "neovim"
       ],
       "queryKinds": [
+        "context",
         "folds",
         "highlights",
         "indents",
