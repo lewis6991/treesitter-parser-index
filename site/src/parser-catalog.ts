@@ -1367,8 +1367,8 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Carve",
     "language": "carve",
     "package": "github.com/markup-carve/tree-sitter-carve",
-    "version": "git-56bb78f",
-    "sourceCommit": "56bb78f68c2d6714358b9432b4fd653fb5993e75",
+    "version": "git-a9248bb",
+    "sourceCommit": "a9248bb0c6eb76984c7ac5ed587bce8531282a1a",
     "lastUpdated": "2026-10-09",
     "upstreamSemver": "0.1.8",
     "abi": 14,
@@ -4750,34 +4750,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-5d6c0a0"
   },
   {
-    "id": "parser-gdscript",
-    "name": "GDScript",
-    "language": "gdscript",
-    "package": "github.com/PrestonKnopp/tree-sitter-gdscript",
-    "version": "git-f337a5f",
-    "sourceCommit": "f337a5f4deec29c9ed56cfc022d8d9a6e1bcd467",
-    "lastUpdated": "2026-10-09",
-    "upstreamSemver": "6.1.0",
     "abi": 14,
-    "owners": [
-      "PrestonKnopp"
+    "artifacts": [
+      {
+        "format": "tar.gz",
+        "kind": "source-archive"
+      }
     ],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "artifacts": [
-      {
-        "kind": "source-archive",
-        "format": "tar.gz"
-      }
+    "id": "parser-gdscript",
+    "language": "gdscript",
+    "lastUpdated": "2026-10-09",
+    "name": "GDScript",
+    "owners": [
+      "PrestonKnopp"
     ],
-    "bundledQueryKinds": [],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 6.1.0."
+    "package": "github.com/PrestonKnopp/tree-sitter-gdscript",
+    "sourceCommit": "f337a5f4deec29c9ed56cfc022d8d9a6e1bcd467",
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 6.1.0.",
+    "upstreamSemver": "6.1.0",
+    "version": "git-f337a5f"
   },
   {
     "abi": 15,
@@ -6752,21 +6752,17 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-cecd6b7"
   },
   {
+    "id": "parser-idl",
+    "name": "idl",
+    "language": "idl",
+    "package": "github.com/cathaysia/tree-sitter-idl",
+    "version": "git-bba2a7b",
+    "sourceCommit": "bba2a7b82ee5a6619463da9871adf4bdc7ff08c6",
+    "lastUpdated": "2026-10-10",
+    "upstreamSemver": "3.19.0",
     "abi": 15,
-    "artifacts": [
-      {
-        "format": "tar.gz",
-        "kind": "source-archive"
-      }
-    ],
-    "bundledQueries": {
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    },
-    "bundledQueryEditors": [],
-    "bundledQueryKinds": [
-      "highlights"
+    "owners": [
+      "cathaysia"
     ],
     "capabilities": {
       "buildFromSource": true,
@@ -6774,18 +6770,22 @@ export const PARSER_RELEASES: ParserRelease[] = [
       "sourceArchive": true,
       "wasm": false
     },
-    "id": "parser-idl",
-    "language": "idl",
-    "lastUpdated": "2026-07-20",
-    "name": "idl",
-    "owners": [
-      "cathaysia"
+    "artifacts": [
+      {
+        "kind": "source-archive",
+        "format": "tar.gz"
+      }
     ],
-    "package": "github.com/cathaysia/tree-sitter-idl",
-    "sourceCommit": "b5ecf511e542e43313ba4602bdb206a08cb06232",
-    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.18.0.",
-    "upstreamSemver": "3.18.0",
-    "version": "git-b5ecf51"
+    "bundledQueryKinds": [
+      "highlights"
+    ],
+    "bundledQueries": {
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    },
+    "bundledQueryEditors": [],
+    "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.19.0."
   },
   {
     "abi": 14,
@@ -9456,9 +9456,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Mlir",
     "language": "mlir",
     "package": "github.com/artagnon/tree-sitter-mlir",
-    "version": "git-0c6800f",
-    "sourceCommit": "0c6800f05e13de91ccb0e378f82cda13536e0ea2",
-    "lastUpdated": "2026-10-09",
+    "version": "git-af7b4c1",
+    "sourceCommit": "af7b4c17d4c6b5b94b8f46920af707189582c608",
+    "lastUpdated": "2026-10-10",
     "upstreamSemver": "0.0.1",
     "abi": 15,
     "owners": [
@@ -9868,9 +9868,9 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "name": "Nix",
     "language": "nix",
     "package": "github.com/nix-community/tree-sitter-nix",
-    "version": "git-ed711d8",
-    "sourceCommit": "ed711d8499e17398e2c84f2a779f2c2b5ac54264",
-    "lastUpdated": "2026-10-08",
+    "version": "git-f9765b7",
+    "sourceCommit": "f9765b709987418e7526cca8b9dcf73429ddf169",
+    "lastUpdated": "2026-10-10",
     "upstreamSemver": "0.3.0",
     "abi": 15,
     "owners": [
@@ -13692,34 +13692,34 @@ export const PARSER_RELEASES: ParserRelease[] = [
     "version": "git-d4ff7e3"
   },
   {
-    "id": "parser-slint",
-    "name": "Slint",
-    "language": "slint",
-    "package": "github.com/slint-ui/tree-sitter-slint",
-    "version": "git-b494447",
-    "sourceCommit": "b494447aeb10e540b9f0fbde08748c052859e42d",
-    "lastUpdated": "2026-10-09",
-    "upstreamSemver": "0.0.1",
     "abi": 15,
-    "owners": [
-      "slint-ui"
+    "artifacts": [
+      {
+        "format": "tar.gz",
+        "kind": "source-archive"
+      }
     ],
+    "bundledQueries": {},
+    "bundledQueryEditors": [],
+    "bundledQueryKinds": [],
     "capabilities": {
       "buildFromSource": true,
       "customScanner": true,
       "sourceArchive": true,
       "wasm": false
     },
-    "artifacts": [
-      {
-        "kind": "source-archive",
-        "format": "tar.gz"
-      }
+    "id": "parser-slint",
+    "language": "slint",
+    "lastUpdated": "2026-10-09",
+    "name": "Slint",
+    "owners": [
+      "slint-ui"
     ],
-    "bundledQueryKinds": [],
-    "bundledQueries": {},
-    "bundledQueryEditors": [],
-    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.0.1."
+    "package": "github.com/slint-ui/tree-sitter-slint",
+    "sourceCommit": "b494447aeb10e540b9f0fbde08748c052859e42d",
+    "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 0.0.1.",
+    "upstreamSemver": "0.0.1",
+    "version": "git-b494447"
   },
   {
     "abi": null,

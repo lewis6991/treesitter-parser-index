@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09",
+  "generatedAt": "2026-10-10",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -4923,7 +4923,7 @@
       "id": "pack-neovim-context",
       "name": "nvim-treesitter-context",
       "package": "github.com/nvim-treesitter/nvim-treesitter-context",
-      "version": "git-b3c8fab",
+      "version": "git-8decd73",
       "languages": [
         "ada",
         "apex",
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-017c139",
+      "version": "git-f16f965",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-017c139",
+      "version": "git-f16f965",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-017c139",
+      "version": "git-f16f965",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-017c139",
+      "version": "git-f16f965",
       "languages": [
         "proto"
       ],
@@ -13518,7 +13518,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-56bb78f",
+      "version": "git-a9248bb",
       "languages": [
         "carve"
       ],
@@ -13549,7 +13549,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-56bb78f"
+          "github.com/markup-carve/tree-sitter-carve@git-a9248bb"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -16544,7 +16544,7 @@
       "id": "pack-parser-parser-idl",
       "name": "idl Parser Bundle",
       "package": "github.com/cathaysia/tree-sitter-idl",
-      "version": "git-b5ecf51",
+      "version": "git-bba2a7b",
       "languages": [
         "idl"
       ],
@@ -16575,7 +16575,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cathaysia/tree-sitter-idl@git-b5ecf51"
+          "github.com/cathaysia/tree-sitter-idl@git-bba2a7b"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17707,7 +17707,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-0c6800f",
+      "version": "git-af7b4c1",
       "languages": [
         "mlir"
       ],
@@ -17743,7 +17743,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-0c6800f"
+          "github.com/artagnon/tree-sitter-mlir@git-af7b4c1"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -17832,7 +17832,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-ed711d8",
+      "version": "git-f9765b7",
       "languages": [
         "nix"
       ],
@@ -17868,7 +17868,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-ed711d8"
+          "github.com/nix-community/tree-sitter-nix@git-f9765b7"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
