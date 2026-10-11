@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10",
+  "generatedAt": "2026-10-11",
   "kind": "prototype-parsers",
   "count": 526,
   "items": [
@@ -50,21 +50,17 @@
       "version": "git-2670456"
     },
     {
-      "abi": 14,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
-      ],
-      "bundledQueries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights"
+      "id": "parser-ada",
+      "name": "Ada",
+      "language": "ada",
+      "package": "github.com/briot/tree-sitter-ada",
+      "version": "git-a45fd9c",
+      "sourceCommit": "a45fd9c65a791cbe7d146e85a53fbe43a6d52a61",
+      "lastUpdated": "2026-10-10",
+      "upstreamSemver": "0.1.0",
+      "abi": 15,
+      "owners": [
+        "briot"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -72,18 +68,22 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-ada",
-      "language": "ada",
-      "lastUpdated": "2026-07-31",
-      "name": "Ada",
-      "owners": [
-        "briot"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/briot/tree-sitter-ada",
-      "sourceCommit": "dd5fa4cdb3aba91abc687aa68fb1431396fce6a6",
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0.",
-      "upstreamSemver": "0.1.0",
-      "version": "git-dd5fa4c"
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.0."
     },
     {
       "abi": 14,
@@ -1284,37 +1284,17 @@
       "version": "git-7b0883c"
     },
     {
-      "id": "parser-carve",
-      "name": "Carve",
-      "language": "carve",
-      "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-a9248bb",
-      "sourceCommit": "a9248bb0c6eb76984c7ac5ed587bce8531282a1a",
-      "lastUpdated": "2026-10-09",
-      "upstreamSemver": "0.1.8",
       "abi": 14,
-      "owners": [
-        "markup-carve"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         },
         {
-          "kind": "release-asset",
           "format": "wasm",
+          "kind": "release-asset",
           "name": "tree-sitter-carve.wasm"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -1322,7 +1302,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.8."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
+      "id": "parser-carve",
+      "language": "carve",
+      "lastUpdated": "2026-10-09",
+      "name": "Carve",
+      "owners": [
+        "markup-carve"
+      ],
+      "package": "github.com/markup-carve/tree-sitter-carve",
+      "sourceCommit": "a9248bb0c6eb76984c7ac5ed587bce8531282a1a",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 0.1.8.",
+      "upstreamSemver": "0.1.8",
+      "version": "git-a9248bb"
     },
     {
       "abi": 15,
@@ -6826,32 +6826,12 @@
       "version": "git-cecd6b7"
     },
     {
-      "id": "parser-idl",
-      "name": "idl",
-      "language": "idl",
-      "package": "github.com/cathaysia/tree-sitter-idl",
-      "version": "git-bba2a7b",
-      "sourceCommit": "bba2a7b82ee5a6619463da9871adf4bdc7ff08c6",
-      "lastUpdated": "2026-10-10",
-      "upstreamSemver": "3.19.0",
       "abi": 15,
-      "owners": [
-        "cathaysia"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": false,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights"
       ],
       "bundledQueries": {
         "highlights": [
@@ -6859,7 +6839,27 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.19.0."
+      "bundledQueryKinds": [
+        "highlights"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": false,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-idl",
+      "language": "idl",
+      "lastUpdated": "2026-10-10",
+      "name": "idl",
+      "owners": [
+        "cathaysia"
+      ],
+      "package": "github.com/cathaysia/tree-sitter-idl",
+      "sourceCommit": "bba2a7b82ee5a6619463da9871adf4bdc7ff08c6",
+      "summary": "Real parser repo snapshot. highlights queries. Latest release tag 3.19.0.",
+      "upstreamSemver": "3.19.0",
+      "version": "git-bba2a7b"
     },
     {
       "abi": 14,
@@ -9646,33 +9646,12 @@
       "version": "git-d6a57b0"
     },
     {
-      "id": "parser-mlir",
-      "name": "Mlir",
-      "language": "mlir",
-      "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-af7b4c1",
-      "sourceCommit": "af7b4c17d4c6b5b94b8f46920af707189582c608",
-      "lastUpdated": "2026-10-10",
-      "upstreamSemver": "0.0.1",
       "abi": 15,
-      "owners": [
-        "artagnon"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": false,
-        "sourceArchive": true,
-        "wasm": false
-      },
       "artifacts": [
         {
-          "kind": "source-archive",
-          "format": "tar.gz"
+          "format": "tar.gz",
+          "kind": "source-archive"
         }
-      ],
-      "bundledQueryKinds": [
-        "highlights",
-        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -9683,7 +9662,28 @@
         ]
       },
       "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1."
+      "bundledQueryKinds": [
+        "highlights",
+        "locals"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": false,
+        "sourceArchive": true,
+        "wasm": false
+      },
+      "id": "parser-mlir",
+      "language": "mlir",
+      "lastUpdated": "2026-10-10",
+      "name": "Mlir",
+      "owners": [
+        "artagnon"
+      ],
+      "package": "github.com/artagnon/tree-sitter-mlir",
+      "sourceCommit": "af7b4c17d4c6b5b94b8f46920af707189582c608",
+      "summary": "Real parser repo snapshot. highlights, locals queries. Latest release tag 0.0.1.",
+      "upstreamSemver": "0.0.1",
+      "version": "git-af7b4c1"
     },
     {
       "abi": 14,
@@ -10058,17 +10058,25 @@
       "version": "git-0a95cfd"
     },
     {
-      "id": "parser-nix-community-nix-nix",
-      "name": "Nix",
-      "language": "nix",
-      "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-f9765b7",
-      "sourceCommit": "f9765b709987418e7526cca8b9dcf73429ddf169",
-      "lastUpdated": "2026-10-10",
-      "upstreamSemver": "0.3.0",
       "abi": 15,
-      "owners": [
-        "nix-community"
+      "artifacts": [
+        {
+          "format": "tar.gz",
+          "kind": "source-archive"
+        }
+      ],
+      "bundledQueries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
+        ]
+      },
+      "bundledQueryEditors": [],
+      "bundledQueryKinds": [
+        "highlights",
+        "tags"
       ],
       "capabilities": {
         "buildFromSource": true,
@@ -10076,26 +10084,18 @@
         "sourceArchive": true,
         "wasm": false
       },
-      "artifacts": [
-        {
-          "kind": "source-archive",
-          "format": "tar.gz"
-        }
+      "id": "parser-nix-community-nix-nix",
+      "language": "nix",
+      "lastUpdated": "2026-10-10",
+      "name": "Nix",
+      "owners": [
+        "nix-community"
       ],
-      "bundledQueryKinds": [
-        "highlights",
-        "tags"
-      ],
-      "bundledQueries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "bundledQueryEditors": [],
-      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.3.0."
+      "package": "github.com/nix-community/tree-sitter-nix",
+      "sourceCommit": "f9765b709987418e7526cca8b9dcf73429ddf169",
+      "summary": "Real parser repo snapshot. highlights, tags queries. Latest release tag 0.3.0.",
+      "upstreamSemver": "0.3.0",
+      "version": "git-f9765b7"
     },
     {
       "abi": 15,
@@ -11826,34 +11826,34 @@
       "version": "git-6310671"
     },
     {
+      "id": "parser-coder3101-proto-proto",
+      "name": "Proto",
+      "language": "proto",
+      "package": "github.com/coder3101/tree-sitter-proto",
+      "version": "git-d7d1542",
+      "sourceCommit": "d7d15427321da271cb1c25c12735e180ef981473",
+      "lastUpdated": "2026-10-07",
+      "upstreamSemver": null,
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
+      "owners": [
+        "coder3101"
       ],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": false,
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-coder3101-proto-proto",
-      "language": "proto",
-      "lastUpdated": "2026-09-24",
-      "name": "Proto",
-      "owners": [
-        "coder3101"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/coder3101/tree-sitter-proto",
-      "sourceCommit": "be5691cf82ca284f83e68b9c8cdc4cac5d7fa208",
-      "summary": "Pinned in nvim-treesitter. No bundled query files detected.",
-      "upstreamSemver": null,
-      "version": "git-be5691c"
+      "bundledQueryKinds": [],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "summary": "Pinned in nvim-treesitter. No bundled query files detected."
     },
     {
       "abi": 14,
@@ -15056,17 +15056,39 @@
       "version": "git-9b7845c"
     },
     {
+      "id": "parser-swift",
+      "name": "Swift",
+      "language": "swift",
+      "package": "github.com/alex-pinkus/tree-sitter-swift",
+      "version": "git-d36d452",
+      "sourceCommit": "d36d45270eae98b197cb6d8f133ae43e3586b83c",
+      "lastUpdated": "2026-10-10",
+      "upstreamSemver": "0.7.3",
       "abi": null,
+      "owners": [
+        "alex-pinkus"
+      ],
+      "capabilities": {
+        "buildFromSource": true,
+        "customScanner": true,
+        "sourceArchive": true,
+        "wasm": true
+      },
       "artifacts": [
         {
-          "format": "tar.gz",
-          "kind": "source-archive"
+          "kind": "source-archive",
+          "format": "tar.gz"
         },
         {
-          "format": "wasm",
           "kind": "release-asset",
+          "format": "wasm",
           "name": "tree-sitter-swift.wasm"
         }
+      ],
+      "bundledQueryKinds": [
+        "highlights",
+        "injections",
+        "locals"
       ],
       "bundledQueries": {
         "highlights": [
@@ -15080,29 +15102,7 @@
         ]
       },
       "bundledQueryEditors": [],
-      "bundledQueryKinds": [
-        "highlights",
-        "injections",
-        "locals"
-      ],
-      "capabilities": {
-        "buildFromSource": true,
-        "customScanner": true,
-        "sourceArchive": true,
-        "wasm": true
-      },
-      "id": "parser-swift",
-      "language": "swift",
-      "lastUpdated": "2026-10-04",
-      "name": "Swift",
-      "owners": [
-        "alex-pinkus"
-      ],
-      "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "sourceCommit": "171fa3bc343233fe07f5e17205aaada33d778825",
-      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3.",
-      "upstreamSemver": "0.7.3",
-      "version": "git-171fa3b"
+      "summary": "Real parser repo snapshot. highlights, injections, locals queries. Latest release tag 0.7.3."
     },
     {
       "abi": 13,
@@ -18064,34 +18064,34 @@
       "version": "git-eb3ede2"
     },
     {
+      "id": "parser-dpezto-gnuplot-gnuplot",
+      "name": "yes",
+      "language": "gnuplot",
+      "package": "github.com/dpezto/tree-sitter-gnuplot",
+      "version": "git-49082c8",
+      "sourceCommit": "49082c8a328812290c813b500ec82abe058efb6c",
+      "lastUpdated": "2026-10-10",
+      "upstreamSemver": "4.2.0",
       "abi": 15,
-      "artifacts": [
-        {
-          "format": "tar.gz",
-          "kind": "source-archive"
-        }
+      "owners": [
+        "dpezto"
       ],
-      "bundledQueries": {},
-      "bundledQueryEditors": [],
-      "bundledQueryKinds": [],
       "capabilities": {
         "buildFromSource": true,
         "customScanner": true,
         "sourceArchive": true,
         "wasm": false
       },
-      "id": "parser-dpezto-gnuplot-gnuplot",
-      "language": "gnuplot",
-      "lastUpdated": "2026-08-01",
-      "name": "yes",
-      "owners": [
-        "dpezto"
+      "artifacts": [
+        {
+          "kind": "source-archive",
+          "format": "tar.gz"
+        }
       ],
-      "package": "github.com/dpezto/tree-sitter-gnuplot",
-      "sourceCommit": "ac4b9db9257c3675e981878315776387998f9016",
-      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 4.1.0.",
-      "upstreamSemver": "4.1.0",
-      "version": "git-ac4b9db"
+      "bundledQueryKinds": [],
+      "bundledQueries": {},
+      "bundledQueryEditors": [],
+      "summary": "Real parser repo snapshot. No bundled query files detected. Latest release tag 4.2.0."
     },
     {
       "abi": 15,

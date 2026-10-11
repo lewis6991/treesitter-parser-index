@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10",
+  "generatedAt": "2026-10-11",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-e289100",
+      "version": "git-1a4f47b",
       "languages": [
         "ada",
         "agda",
@@ -1093,7 +1093,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/WhatsApp/tree-sitter-erlang@git-6ba4c76"
+            "github.com/WhatsApp/tree-sitter-erlang@git-0386a11"
           ]
         },
         {
@@ -1127,7 +1127,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
+            "github.com/alexmozaidze/tree-sitter-fennel@git-8c0d338"
           ]
         },
         {
@@ -1771,7 +1771,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/cathaysia/tree-sitter-idl@git-b5ecf51"
+            "github.com/cathaysia/tree-sitter-idl@git-bba2a7b"
           ]
         },
         {
@@ -1856,7 +1856,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/rmuir/tree-sitter-javadoc@git-4e9e1db"
+            "github.com/rmuir/tree-sitter-javadoc@git-c760949"
           ]
         },
         {
@@ -2321,7 +2321,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/artagnon/tree-sitter-mlir@git-15c6e3f"
+            "github.com/artagnon/tree-sitter-mlir@git-af7b4c1"
           ]
         },
         {
@@ -2400,7 +2400,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
+            "github.com/nix-community/tree-sitter-nix@git-f9765b7"
           ]
         },
         {
@@ -2541,7 +2541,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-perl/tree-sitter-perl@git-f678e35"
+            "github.com/tree-sitter-perl/tree-sitter-perl@git-83361c9"
           ]
         },
         {
@@ -2554,7 +2554,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -2567,7 +2567,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -2708,7 +2708,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-be5691c"
+            "github.com/coder3101/tree-sitter-proto@git-d7d1542"
           ]
         },
         {
@@ -3437,7 +3437,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-35245fb"
+            "github.com/alex-pinkus/tree-sitter-swift@git-171fa3b"
           ]
         },
         {
@@ -3546,7 +3546,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/vrischmann/tree-sitter-templ@git-94d4086"
+            "github.com/vrischmann/tree-sitter-templ@git-2c0a72e"
           ]
         },
         {
@@ -4341,7 +4341,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
+            "github.com/alexmozaidze/tree-sitter-fennel@git-8c0d338"
           ]
         },
         {
@@ -4590,7 +4590,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
+            "github.com/nix-community/tree-sitter-nix@git-f9765b7"
           ]
         },
         {
@@ -4617,7 +4617,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-perl/tree-sitter-perl@git-f678e35"
+            "github.com/tree-sitter-perl/tree-sitter-perl@git-83361c9"
           ]
         },
         {
@@ -4626,7 +4626,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -4635,7 +4635,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -4761,7 +4761,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-35245fb"
+            "github.com/alex-pinkus/tree-sitter-swift@git-171fa3b"
           ]
         },
         {
@@ -5193,7 +5193,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/alexmozaidze/tree-sitter-fennel@git-3f0f6b2"
+            "github.com/alexmozaidze/tree-sitter-fennel@git-8c0d338"
           ]
         },
         {
@@ -5454,7 +5454,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-f5b1119"
+            "github.com/nix-community/tree-sitter-nix@git-f9765b7"
           ]
         },
         {
@@ -5508,7 +5508,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -5517,7 +5517,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-php@git-92b5271"
+            "github.com/tree-sitter/tree-sitter-php@git-58d5643"
           ]
         },
         {
@@ -5535,7 +5535,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/coder3101/tree-sitter-proto@git-be5691c"
+            "github.com/coder3101/tree-sitter-proto@git-d7d1542"
           ]
         },
         {
@@ -5634,7 +5634,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/alex-pinkus/tree-sitter-swift@git-35245fb"
+            "github.com/alex-pinkus/tree-sitter-swift@git-171fa3b"
           ]
         },
         {
@@ -5679,7 +5679,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/vrischmann/tree-sitter-templ@git-94d4086"
+            "github.com/vrischmann/tree-sitter-templ@git-2c0a72e"
           ]
         },
         {
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f16f965",
+      "version": "git-93d7456",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f16f965",
+      "version": "git-93d7456",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f16f965",
+      "version": "git-93d7456",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f16f965",
+      "version": "git-93d7456",
       "languages": [
         "proto"
       ],
@@ -12972,7 +12972,7 @@
       "id": "pack-parser-parser-ada",
       "name": "Ada Parser Bundle",
       "package": "github.com/briot/tree-sitter-ada",
-      "version": "git-dd5fa4c",
+      "version": "git-a45fd9c",
       "languages": [
         "ada"
       ],
@@ -13003,7 +13003,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/briot/tree-sitter-ada@git-dd5fa4c"
+          "github.com/briot/tree-sitter-ada@git-a45fd9c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17859,11 +17859,11 @@
         "tags"
       ],
       "queries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -20569,7 +20569,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-171fa3b",
+      "version": "git-d36d452",
       "languages": [
         "swift"
       ],
@@ -20610,7 +20610,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-171fa3b"
+          "github.com/alex-pinkus/tree-sitter-swift@git-d36d452"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
