@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11",
+  "generatedAt": "2026-10-12",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-93d7456",
+      "version": "git-4905e67",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-93d7456",
+      "version": "git-4905e67",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-93d7456",
+      "version": "git-4905e67",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-93d7456",
+      "version": "git-4905e67",
       "languages": [
         "proto"
       ],
@@ -12932,7 +12932,7 @@
       "id": "pack-parser-parser-abl",
       "name": "ABL Parser Bundle",
       "package": "github.com/usagi-coffee/tree-sitter-abl",
-      "version": "git-2670456",
+      "version": "git-7e7582d",
       "languages": [
         "abl"
       ],
@@ -12941,7 +12941,8 @@
         {
           "language": "abl",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "tags"
           ]
         }
       ],
@@ -12954,19 +12955,23 @@
       },
       "targets": [],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "tags"
       ],
       "queries": {
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/usagi-coffee/tree-sitter-abl@git-2670456"
+          "github.com/usagi-coffee/tree-sitter-abl@git-7e7582d"
         ]
       },
-      "summary": "highlights queries ship with the parser repository."
+      "summary": "highlights, tags queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-ada",
@@ -17707,7 +17712,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-af7b4c1",
+      "version": "git-103d1d8",
       "languages": [
         "mlir"
       ],
@@ -17743,7 +17748,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-af7b4c1"
+          "github.com/artagnon/tree-sitter-mlir@git-103d1d8"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -17832,7 +17837,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-f9765b7",
+      "version": "git-32c3ce9",
       "languages": [
         "nix"
       ],
@@ -17859,16 +17864,16 @@
         "tags"
       ],
       "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-f9765b7"
+          "github.com/nix-community/tree-sitter-nix@git-32c3ce9"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -18650,7 +18655,7 @@
       "id": "pack-parser-parser-posix-awk",
       "name": "Posix Awk Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-posix-awk",
-      "version": "git-e7b9cb7",
+      "version": "git-7eb3092",
       "languages": [
         "posix_awk"
       ],
@@ -18681,7 +18686,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-posix-awk@git-e7b9cb7"
+          "github.com/konomanoasa/tree-sitter-posix-awk@git-7eb3092"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19842,7 +19847,7 @@
       "id": "pack-parser-parser-sed-ere",
       "name": "Sed Ere Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-cdbfa5e",
+      "version": "git-f41afb3",
       "languages": [
         "sed_ere"
       ],
@@ -19873,7 +19878,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-cdbfa5e"
+          "github.com/konomanoasa/tree-sitter-sed@git-f41afb3"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19882,7 +19887,7 @@
       "id": "pack-parser-parser-sed",
       "name": "Sed Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-cdbfa5e",
+      "version": "git-f41afb3",
       "languages": [
         "sed"
       ],
@@ -19913,7 +19918,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-cdbfa5e"
+          "github.com/konomanoasa/tree-sitter-sed@git-f41afb3"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19962,7 +19967,7 @@
       "id": "pack-parser-parser-sh",
       "name": "Sh Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sh",
-      "version": "git-825eda6",
+      "version": "git-1a7351a",
       "languages": [
         "sh"
       ],
@@ -19993,7 +19998,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sh@git-825eda6"
+          "github.com/konomanoasa/tree-sitter-sh@git-1a7351a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
