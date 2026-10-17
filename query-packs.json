@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16",
+  "generatedAt": "2026-10-17",
   "kind": "prototype-query-packs",
   "count": 247,
   "items": [
@@ -670,7 +670,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
+            "github.com/clj-commons/tree-sitter-clojure@git-e43eff8"
           ]
         },
         {
@@ -5076,7 +5076,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
+            "github.com/clj-commons/tree-sitter-clojure@git-e43eff8"
           ]
         },
         {
@@ -8797,7 +8797,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
+            "github.com/clj-commons/tree-sitter-clojure@git-e43eff8"
           ]
         },
         {
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-32b16ce",
+      "version": "git-56934ec",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-32b16ce",
+      "version": "git-56934ec",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-32b16ce",
+      "version": "git-56934ec",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-32b16ce",
+      "version": "git-56934ec",
       "languages": [
         "proto"
       ],
@@ -19742,7 +19742,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-db390f3",
+      "version": "git-8ba1d41",
       "languages": [
         "scala"
       ],
@@ -19783,7 +19783,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-db390f3"
+          "github.com/tree-sitter/tree-sitter-scala@git-8ba1d41"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -21634,7 +21634,7 @@
       "id": "pack-parser-parser-vimdoc",
       "name": "Vimdoc Parser Bundle",
       "package": "github.com/neovim/tree-sitter-vimdoc",
-      "version": "git-f5042f2",
+      "version": "git-13add92",
       "languages": [
         "vimdoc"
       ],
@@ -21672,7 +21672,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/neovim/tree-sitter-vimdoc@git-f5042f2"
+          "github.com/neovim/tree-sitter-vimdoc@git-13add92"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."

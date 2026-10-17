@@ -61,7 +61,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/sogaiu/tree-sitter-clojure@git-e43eff8"
+      "github.com/clj-commons/tree-sitter-clojure@git-e43eff8"
     ]
   },
   {

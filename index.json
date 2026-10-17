@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16",
+  "generatedAt": "2026-10-17",
   "kind": "prototype-index",
   "counts": {
     "parsers": 526,
@@ -7,7 +7,7 @@
     "targets": 31,
     "languages": 525,
     "editors": 5,
-    "owners": 341,
+    "owners": 342,
     "queryKinds": 18
   },
   "files": {
