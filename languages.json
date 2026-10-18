@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17",
+  "generatedAt": "2026-10-18",
   "kind": "prototype-languages",
   "count": 525,
   "items": [
@@ -4177,7 +4177,7 @@
     {
       "language": "hurl",
       "parserCount": 1,
-      "queryPackCount": 2,
+      "queryPackCount": 3,
       "editors": [
         "helix",
         "lapce",
@@ -4191,9 +4191,10 @@
         "textobjects"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
