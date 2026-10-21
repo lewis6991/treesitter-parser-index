@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20",
+  "generatedAt": "2026-10-21",
   "kind": "prototype-query-packs",
   "count": 248,
   "items": [
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b0f1e1c",
+      "version": "git-d38a754",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b0f1e1c",
+      "version": "git-d38a754",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b0f1e1c",
+      "version": "git-d38a754",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b0f1e1c",
+      "version": "git-d38a754",
       "languages": [
         "proto"
       ],
@@ -13089,11 +13089,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -13523,7 +13523,7 @@
       "id": "pack-parser-parser-carve",
       "name": "Carve Parser Bundle",
       "package": "github.com/markup-carve/tree-sitter-carve",
-      "version": "git-24dad08",
+      "version": "git-b9a3690",
       "languages": [
         "carve"
       ],
@@ -13554,7 +13554,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/markup-carve/tree-sitter-carve@git-24dad08"
+          "github.com/markup-carve/tree-sitter-carve@git-b9a3690"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15454,7 +15454,7 @@
       "id": "pack-parser-parser-fortran",
       "name": "Fortran Parser Bundle",
       "package": "github.com/stadelmanma/tree-sitter-fortran",
-      "version": "git-58a77a3",
+      "version": "git-c5ddc47",
       "languages": [
         "fortran"
       ],
@@ -15490,7 +15490,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/stadelmanma/tree-sitter-fortran@git-58a77a3"
+          "github.com/stadelmanma/tree-sitter-fortran@git-c5ddc47"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17757,7 +17757,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-103d1d8",
+      "version": "git-0954bc6",
       "languages": [
         "mlir"
       ],
@@ -17793,7 +17793,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-103d1d8"
+          "github.com/artagnon/tree-sitter-mlir@git-0954bc6"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -20669,7 +20669,7 @@
       "id": "pack-parser-parser-systemverilog",
       "name": "SystemVerilog Parser Bundle",
       "package": "github.com/gmlarumbe/tree-sitter-systemverilog",
-      "version": "git-40b66bf",
+      "version": "git-327b694",
       "languages": [
         "systemverilog"
       ],
@@ -20700,7 +20700,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/gmlarumbe/tree-sitter-systemverilog@git-40b66bf"
+          "github.com/gmlarumbe/tree-sitter-systemverilog@git-327b694"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
