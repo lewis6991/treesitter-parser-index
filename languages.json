@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21",
+  "generatedAt": "2026-10-22",
   "kind": "prototype-languages",
   "count": 525,
   "items": [
@@ -644,7 +644,7 @@
       "queryRoots": [
         "runtime/queries"
       ],
-      "hasWasm": false,
+      "hasWasm": true,
       "hasReleaseArtifacts": true
     },
     {
