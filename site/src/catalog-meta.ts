@@ -1,10 +1,10 @@
-export const CATALOG_GENERATED_AT = '2026-10-25';
+export const CATALOG_GENERATED_AT = '2026-10-26';
 export const NVIM_TREESITTER_VERSION = 'git-a2f6944';
 export const NVIM_CONTEXT_VERSION = 'git-8decd73';
 export const NVIM_AERIAL_VERSION = 'git-28fe6e8';
 export const NVIM_MATCHUP_VERSION = 'git-0106b1a';
 export const HELIX_RUNTIME_VERSION = 'git-ba40e54';
 export const NVIM_TEXTOBJECTS_VERSION = 'git-5c7b026';
-export const ZED_CORE_VERSION = 'git-a5c4ca8';
+export const ZED_CORE_VERSION = 'git-23973bd';
 export const PULSAR_VERSION = 'git-e88d8d9';
-export const ZED_VERSION = 'git-a5c4ca8';
+export const ZED_VERSION = 'git-23973bd';
