@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-26",
+  "generatedAt": "2026-10-27",
   "kind": "prototype-languages",
-  "count": 528,
+  "count": 529,
   "items": [
     {
       "language": "_gjs",
@@ -365,8 +365,8 @@
     },
     {
       "language": "bash",
-      "parserCount": 2,
-      "queryPackCount": 9,
+      "parserCount": 1,
+      "queryPackCount": 8,
       "editors": [
         "helix",
         "lapce",
@@ -410,7 +410,21 @@
         "highlights"
       ],
       "queryRoots": [
-        "bash_default/queries"
+        "queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "bash_extglob",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "bash_extglob/queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -2375,7 +2389,7 @@
     {
       "language": "env",
       "parserLanguage": "bash",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -6857,7 +6871,7 @@
     {
       "language": "pkgbuild",
       "parserLanguage": "bash",
-      "parserCount": 2,
+      "parserCount": 1,
       "queryPackCount": 1,
       "editors": [
         "helix",
