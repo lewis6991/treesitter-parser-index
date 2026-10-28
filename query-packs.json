@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27",
+  "generatedAt": "2026-10-28",
   "kind": "prototype-query-packs",
-  "count": 253,
+  "count": 254,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f2a60bb",
+      "version": "git-37faef8",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f2a60bb",
+      "version": "git-37faef8",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f2a60bb",
+      "version": "git-37faef8",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-f2a60bb",
+      "version": "git-37faef8",
       "languages": [
         "proto"
       ],
@@ -12977,7 +12977,7 @@
       "id": "pack-parser-parser-ada",
       "name": "Ada Parser Bundle",
       "package": "github.com/briot/tree-sitter-ada",
-      "version": "git-4774216",
+      "version": "git-b1d2035",
       "languages": [
         "ada"
       ],
@@ -13008,7 +13008,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/briot/tree-sitter-ada@git-4774216"
+          "github.com/briot/tree-sitter-ada@git-b1d2035"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -13300,50 +13300,10 @@
       "summary": "highlights, injections queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-bash-default",
-      "name": "Bash Default Parser Bundle",
-      "package": "github.com/konomanoasa/tree-sitter-bash",
-      "version": "git-272b712",
-      "languages": [
-        "bash_default"
-      ],
-      "languageCount": 1,
-      "languageDetails": [
-        {
-          "language": "bash_default",
-          "queryKinds": [
-            "highlights"
-          ]
-        }
-      ],
-      "owners": [
-        "konomanoasa"
-      ],
-      "layout": {
-        "installRoot": ".",
-        "queryRoot": "queries"
-      },
-      "targets": [],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ]
-      },
-      "parserCompatibility": {
-        "tested": [
-          "github.com/konomanoasa/tree-sitter-bash@git-272b712"
-        ]
-      },
-      "summary": "highlights queries ship with the parser repository."
-    },
-    {
       "id": "pack-parser-parser-bash-extglob",
       "name": "Bash Extglob Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-bash",
-      "version": "git-272b712",
+      "version": "git-3de8299",
       "languages": [
         "bash_extglob"
       ],
@@ -13374,7 +13334,47 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-bash@git-272b712"
+          "github.com/konomanoasa/tree-sitter-bash@git-3de8299"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-konomanoasa-bash-bash",
+      "name": "Bash Parser Bundle",
+      "package": "github.com/konomanoasa/tree-sitter-bash",
+      "version": "git-3de8299",
+      "languages": [
+        "bash"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "bash",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "konomanoasa"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/konomanoasa/tree-sitter-bash@git-3de8299"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -14685,7 +14685,7 @@
       "id": "pack-parser-parser-dash",
       "name": "Dash Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-dash",
-      "version": "git-2be4191",
+      "version": "git-abe076d",
       "languages": [
         "dash"
       ],
@@ -14716,7 +14716,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-dash@git-2be4191"
+          "github.com/konomanoasa/tree-sitter-dash@git-abe076d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17877,7 +17877,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-ef2bc7a",
+      "version": "git-6b031ff",
       "languages": [
         "mlir"
       ],
@@ -17913,7 +17913,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-ef2bc7a"
+          "github.com/artagnon/tree-sitter-mlir@git-6b031ff"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -18860,7 +18860,7 @@
       "id": "pack-parser-parser-airbus-cert-powershell-powershell",
       "name": "Powershell Parser Bundle",
       "package": "github.com/airbus-cert/tree-sitter-powershell",
-      "version": "git-c96b28e",
+      "version": "git-65ea691",
       "languages": [
         "powershell"
       ],
@@ -18887,16 +18887,16 @@
         "highlights"
       ],
       "queries": {
-        "folds": [
-          "queries/folds.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "folds": [
+          "queries/folds.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/airbus-cert/tree-sitter-powershell@git-c96b28e"
+          "github.com/airbus-cert/tree-sitter-powershell@git-65ea691"
         ]
       },
       "summary": "folds, highlights queries ship with the parser repository."
@@ -19587,7 +19587,7 @@
       "id": "pack-parser-parser-robot",
       "name": "Robot Parser Bundle",
       "package": "github.com/Hubro/tree-sitter-robot",
-      "version": "git-8f1a8d8",
+      "version": "git-85c0bf6",
       "languages": [
         "robot"
       ],
@@ -19618,7 +19618,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Hubro/tree-sitter-robot@git-8f1a8d8"
+          "github.com/Hubro/tree-sitter-robot@git-85c0bf6"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20132,7 +20132,7 @@
       "id": "pack-parser-parser-sh",
       "name": "Sh Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sh",
-      "version": "git-c58c68b",
+      "version": "git-fc9df35",
       "languages": [
         "sh"
       ],
@@ -20163,7 +20163,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sh@git-c58c68b"
+          "github.com/konomanoasa/tree-sitter-sh@git-fc9df35"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -21843,6 +21843,56 @@
       "summary": "highlights, injections queries ship with the parser repository."
     },
     {
+      "id": "pack-parser-parser-vrl",
+      "name": "Vrl Parser Bundle",
+      "package": "github.com/belltoy/tree-sitter-vrl",
+      "version": "git-6f0055a",
+      "languages": [
+        "vrl"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "vrl",
+          "queryKinds": [
+            "highlights",
+            "injections",
+            "locals"
+          ]
+        }
+      ],
+      "owners": [
+        "belltoy"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "locals"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/belltoy/tree-sitter-vrl@git-6f0055a"
+        ]
+      },
+      "summary": "highlights, injections, locals queries ship with the parser repository."
+    },
+    {
       "id": "pack-parser-parser-g-plane-wat-wat",
       "name": "Wat Parser Bundle",
       "package": "github.com/g-plane/tree-sitter-wat",
@@ -22150,17 +22200,17 @@
       "summary": "highlights, injections queries ship with the parser repository."
     },
     {
-      "id": "pack-parser-parser-zsh-default",
-      "name": "Zsh Default Parser Bundle",
+      "id": "pack-parser-parser-zsh-extended-glob",
+      "name": "Zsh Extended Glob Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-zsh",
-      "version": "git-e769bfc",
+      "version": "git-998501f",
       "languages": [
-        "zsh_default"
+        "zsh_extended_glob"
       ],
       "languageCount": 1,
       "languageDetails": [
         {
-          "language": "zsh_default",
+          "language": "zsh_extended_glob",
           "queryKinds": [
             "highlights"
           ]
@@ -22171,7 +22221,7 @@
       ],
       "layout": {
         "installRoot": ".",
-        "queryRoot": "zsh_default/queries"
+        "queryRoot": "zsh_extended_glob/queries"
       },
       "targets": [],
       "queryKinds": [
@@ -22179,12 +22229,12 @@
       ],
       "queries": {
         "highlights": [
-          "zsh_default/queries/highlights.scm"
+          "zsh_extended_glob/queries/highlights.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-zsh@git-e769bfc"
+          "github.com/konomanoasa/tree-sitter-zsh@git-998501f"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -22193,7 +22243,7 @@
       "id": "pack-parser-parser-konomanoasa-zsh-zsh",
       "name": "Zsh Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-zsh",
-      "version": "git-e769bfc",
+      "version": "git-998501f",
       "languages": [
         "zsh"
       ],
@@ -22224,7 +22274,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-zsh@git-e769bfc"
+          "github.com/konomanoasa/tree-sitter-zsh@git-998501f"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

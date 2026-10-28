@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27",
+  "generatedAt": "2026-10-28",
   "kind": "prototype-languages",
-  "count": 529,
+  "count": 528,
   "items": [
     {
       "language": "_gjs",
@@ -365,8 +365,8 @@
     },
     {
       "language": "bash",
-      "parserCount": 1,
-      "queryPackCount": 8,
+      "parserCount": 2,
+      "queryPackCount": 9,
       "editors": [
         "helix",
         "lapce",
@@ -399,20 +399,6 @@
         "tree-sitter"
       ],
       "hasWasm": true,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "bash_default",
-      "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queryRoots": [
-        "queries"
-      ],
-      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -2389,7 +2375,7 @@
     {
       "language": "env",
       "parserLanguage": "bash",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 2,
       "editors": [
         "helix",
@@ -6871,7 +6857,7 @@
     {
       "language": "pkgbuild",
       "parserLanguage": "bash",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 1,
       "editors": [
         "helix",
@@ -10304,7 +10290,7 @@
     {
       "language": "vrl",
       "parserCount": 1,
-      "queryPackCount": 1,
+      "queryPackCount": 2,
       "editors": [
         "neovim"
       ],
@@ -10316,6 +10302,7 @@
         "locals"
       ],
       "queryRoots": [
+        "queries",
         "runtime/queries"
       ],
       "hasWasm": false,
@@ -10952,7 +10939,7 @@
       "hasReleaseArtifacts": true
     },
     {
-      "language": "zsh_default",
+      "language": "zsh_extended_glob",
       "parserCount": 1,
       "queryPackCount": 1,
       "editors": [],
@@ -10960,7 +10947,7 @@
         "highlights"
       ],
       "queryRoots": [
-        "zsh_default/queries"
+        "zsh_extended_glob/queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
