@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28",
+  "generatedAt": "2026-10-29",
   "kind": "prototype-query-packs",
   "count": 254,
   "items": [
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-37faef8",
+      "version": "git-3524cb2",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-37faef8",
+      "version": "git-3524cb2",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-37faef8",
+      "version": "git-3524cb2",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-37faef8",
+      "version": "git-3524cb2",
       "languages": [
         "proto"
       ],
@@ -14445,7 +14445,7 @@
       "id": "pack-parser-parser-cue",
       "name": "cue Parser Bundle",
       "package": "github.com/cue-lang/tree-sitter-cue",
-      "version": "git-ba43567",
+      "version": "git-eefee1c",
       "languages": [
         "cue"
       ],
@@ -14476,7 +14476,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cue-lang/tree-sitter-cue@git-ba43567"
+          "github.com/cue-lang/tree-sitter-cue@git-eefee1c"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17303,7 +17303,7 @@
       "id": "pack-parser-parser-fwcd-kotlin-kotlin",
       "name": "Kotlin Parser Bundle",
       "package": "github.com/fwcd/tree-sitter-kotlin",
-      "version": "git-1852ea1",
+      "version": "git-e01caa2",
       "languages": [
         "kotlin"
       ],
@@ -17341,7 +17341,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/fwcd/tree-sitter-kotlin@git-1852ea1"
+          "github.com/fwcd/tree-sitter-kotlin@git-e01caa2"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17877,7 +17877,7 @@
       "id": "pack-parser-parser-mlir",
       "name": "Mlir Parser Bundle",
       "package": "github.com/artagnon/tree-sitter-mlir",
-      "version": "git-6b031ff",
+      "version": "git-a07be11",
       "languages": [
         "mlir"
       ],
@@ -17913,7 +17913,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/artagnon/tree-sitter-mlir@git-6b031ff"
+          "github.com/artagnon/tree-sitter-mlir@git-a07be11"
         ]
       },
       "summary": "highlights, locals queries ship with the parser repository."
@@ -18887,11 +18887,11 @@
         "highlights"
       ],
       "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
         "folds": [
           "queries/folds.scm"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
         ]
       },
       "parserCompatibility": {
