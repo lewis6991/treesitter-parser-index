@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-30",
+  "generatedAt": "2026-10-31",
   "kind": "prototype-languages",
-  "count": 528,
+  "count": 540,
   "items": [
     {
       "language": "_gjs",
@@ -1105,6 +1105,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "clojure_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "cmake",
       "parserCount": 1,
       "queryPackCount": 5,
@@ -1419,6 +1429,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "css_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "cst",
       "parserCount": 1,
       "queryPackCount": 1,
@@ -1627,6 +1647,16 @@
         "queries",
         "runtime/queries"
       ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "dart_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -3538,6 +3568,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "gomod_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "gosum",
       "parserCount": 1,
       "queryPackCount": 2,
@@ -3551,6 +3591,16 @@
         "queries",
         "runtime/queries"
       ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "gosum_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -4500,6 +4550,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "java_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "javadoc",
       "parserCount": 1,
       "queryPackCount": 2,
@@ -4781,6 +4841,16 @@
       "queryRoots": [
         "runtime/queries"
       ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "json5_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
       "hasWasm": false,
       "hasReleaseArtifacts": true
     },
@@ -5382,6 +5452,23 @@
       "queryRoots": [
         "queries",
         "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "lispex",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "locals"
+      ],
+      "queryRoots": [
+        "queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -6920,6 +7007,16 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "po_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "pod",
       "parserCount": 1,
       "queryPackCount": 3,
@@ -7357,6 +7454,16 @@
         "ts"
       ],
       "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "python_orchard",
+      "parserCount": 1,
+      "queryPackCount": 0,
+      "editors": [],
+      "queryKinds": [],
+      "queryRoots": [],
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -8162,6 +8269,22 @@
         "runtime/queries"
       ],
       "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "rust_orchard",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "tags"
+      ],
+      "queryRoots": [
+        "queries"
+      ],
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {
@@ -9661,6 +9784,23 @@
         "tree-sitter-toml"
       ],
       "hasWasm": true,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "topaz",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "locals"
+      ],
+      "queryRoots": [
+        "queries"
+      ],
+      "hasWasm": false,
       "hasReleaseArtifacts": true
     },
     {

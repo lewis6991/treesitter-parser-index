@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-30",
+  "generatedAt": "2026-10-31",
   "kind": "prototype-query-packs",
-  "count": 254,
+  "count": 257,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
@@ -12441,7 +12441,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-70b1b91",
+      "version": "git-ba63a02",
       "languages": [
         "bash",
         "c",
@@ -12779,7 +12779,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-70b1b91",
+      "version": "git-ba63a02",
       "languages": [
         "glsl"
       ],
@@ -12826,7 +12826,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-70b1b91",
+      "version": "git-ba63a02",
       "languages": [
         "html"
       ],
@@ -12881,7 +12881,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-70b1b91",
+      "version": "git-ba63a02",
       "languages": [
         "proto"
       ],
@@ -13693,7 +13693,7 @@
       "id": "pack-parser-parser-cfml",
       "name": "Cfml Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-ffdd4d7",
+      "version": "git-24051c0",
       "languages": [
         "cfml"
       ],
@@ -13727,11 +13727,11 @@
         "highlights": [
           "cfml/queries/highlights.scm"
         ],
-        "indents": [
-          "cfml/queries/indents.scm"
-        ],
         "injections": [
           "cfml/queries/injections.scm"
+        ],
+        "indents": [
+          "cfml/queries/indents.scm"
         ],
         "tags": [
           "cfml/queries/tags.scm"
@@ -13739,7 +13739,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-ffdd4d7"
+          "github.com/cfmleditor/tree-sitter-cfml@git-24051c0"
         ]
       },
       "summary": "highlights, indents, injections, tags queries ship with the parser repository."
@@ -13748,7 +13748,7 @@
       "id": "pack-parser-parser-cfquery",
       "name": "Cfquery Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-ffdd4d7",
+      "version": "git-24051c0",
       "languages": [
         "cfquery"
       ],
@@ -13784,7 +13784,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-ffdd4d7"
+          "github.com/cfmleditor/tree-sitter-cfml@git-24051c0"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -13793,7 +13793,7 @@
       "id": "pack-parser-parser-cfscript",
       "name": "Cfscript Parser Bundle",
       "package": "github.com/cfmleditor/tree-sitter-cfml",
-      "version": "git-ffdd4d7",
+      "version": "git-24051c0",
       "languages": [
         "cfscript"
       ],
@@ -13829,7 +13829,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/cfmleditor/tree-sitter-cfml@git-ffdd4d7"
+          "github.com/cfmleditor/tree-sitter-cfml@git-24051c0"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -14053,7 +14053,7 @@
       "id": "pack-parser-parser-cmake",
       "name": "Cmake Parser Bundle",
       "package": "github.com/uyha/tree-sitter-cmake",
-      "version": "git-58993af",
+      "version": "git-a3ec2b2",
       "languages": [
         "cmake"
       ],
@@ -14086,7 +14086,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/uyha/tree-sitter-cmake@git-58993af"
+          "github.com/uyha/tree-sitter-cmake@git-a3ec2b2"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17303,7 +17303,7 @@
       "id": "pack-parser-parser-fwcd-kotlin-kotlin",
       "name": "Kotlin Parser Bundle",
       "package": "github.com/fwcd/tree-sitter-kotlin",
-      "version": "git-60b1b07",
+      "version": "git-7719bd3",
       "languages": [
         "kotlin"
       ],
@@ -17341,7 +17341,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/fwcd/tree-sitter-kotlin@git-60b1b07"
+          "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -17475,6 +17475,61 @@
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-lispex",
+      "name": "Lispex Parser Bundle",
+      "package": "github.com/studiohaze/tree-sitter-lispex",
+      "version": "git-af2148b",
+      "languages": [
+        "lispex"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "lispex",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "injections",
+            "locals"
+          ]
+        }
+      ],
+      "owners": [
+        "studiohaze"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "locals"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ],
+        "indents": [
+          "queries/indents.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/studiohaze/tree-sitter-lispex@git-af2148b"
+        ]
+      },
+      "summary": "highlights, indents, injections, locals queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-llvm",
@@ -18820,7 +18875,7 @@
       "id": "pack-parser-parser-posix-awk",
       "name": "Posix Awk Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-posix-awk",
-      "version": "git-5dac484",
+      "version": "git-06264cc",
       "languages": [
         "posix_awk"
       ],
@@ -18851,7 +18906,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-posix-awk@git-5dac484"
+          "github.com/konomanoasa/tree-sitter-posix-awk@git-06264cc"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -19904,6 +19959,56 @@
       "summary": "highlights, injections, tags queries ship with the parser repository."
     },
     {
+      "id": "pack-parser-parser-rust-orchard",
+      "name": "RustOrchard Parser Bundle",
+      "package": "github.com/grammar-orchard/tree-sitter-rust-orchard",
+      "version": "git-7d8120b",
+      "languages": [
+        "rust_orchard"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "rust_orchard",
+          "queryKinds": [
+            "highlights",
+            "injections",
+            "tags"
+          ]
+        }
+      ],
+      "owners": [
+        "grammar-orchard"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "tags"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/grammar-orchard/tree-sitter-rust-orchard@git-7d8120b"
+        ]
+      },
+      "summary": "highlights, injections, tags queries ship with the parser repository."
+    },
+    {
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
@@ -20012,7 +20117,7 @@
       "id": "pack-parser-parser-sed-ere",
       "name": "Sed Ere Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-0bfb1e4",
+      "version": "git-c1f6020",
       "languages": [
         "sed_ere"
       ],
@@ -20043,7 +20148,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-0bfb1e4"
+          "github.com/konomanoasa/tree-sitter-sed@git-c1f6020"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20052,7 +20157,7 @@
       "id": "pack-parser-parser-sed",
       "name": "Sed Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-sed",
-      "version": "git-0bfb1e4",
+      "version": "git-c1f6020",
       "languages": [
         "sed"
       ],
@@ -20083,7 +20188,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-sed@git-0bfb1e4"
+          "github.com/konomanoasa/tree-sitter-sed@git-c1f6020"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20419,7 +20524,7 @@
       "id": "pack-parser-parser-sql",
       "name": "SQL Parser Bundle",
       "package": "github.com/DerekStride/tree-sitter-sql",
-      "version": "git-987a64a",
+      "version": "git-49a4357",
       "languages": [
         "sql"
       ],
@@ -20450,7 +20555,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/DerekStride/tree-sitter-sql@git-987a64a"
+          "github.com/DerekStride/tree-sitter-sql@git-49a4357"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20459,7 +20564,7 @@
       "id": "pack-parser-parser-ssh-client-config",
       "name": "SshClientConfig Parser Bundle",
       "package": "github.com/metio/tree-sitter-ssh-client-config",
-      "version": "git-be7a0a1",
+      "version": "git-3707c6a",
       "languages": [
         "ssh-client-config"
       ],
@@ -20490,7 +20595,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/metio/tree-sitter-ssh-client-config@git-be7a0a1"
+          "github.com/metio/tree-sitter-ssh-client-config@git-3707c6a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -21134,6 +21239,61 @@
         ]
       },
       "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-topaz",
+      "name": "Topaz Parser Bundle",
+      "package": "github.com/studiohaze/tree-sitter-topaz",
+      "version": "git-8589aae",
+      "languages": [
+        "topaz"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "topaz",
+          "queryKinds": [
+            "highlights",
+            "indents",
+            "injections",
+            "locals"
+          ]
+        }
+      ],
+      "owners": [
+        "studiohaze"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "indents",
+        "injections",
+        "locals"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ],
+        "indents": [
+          "queries/indents.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/studiohaze/tree-sitter-topaz@git-8589aae"
+        ]
+      },
+      "summary": "highlights, indents, injections, locals queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-treesitter-gularen",
@@ -21846,7 +22006,7 @@
       "id": "pack-parser-parser-vrl",
       "name": "Vrl Parser Bundle",
       "package": "github.com/belltoy/tree-sitter-vrl",
-      "version": "git-b0de6a4",
+      "version": "git-8cf3be3",
       "languages": [
         "vrl"
       ],
@@ -21887,7 +22047,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/belltoy/tree-sitter-vrl@git-b0de6a4"
+          "github.com/belltoy/tree-sitter-vrl@git-8cf3be3"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -22203,7 +22363,7 @@
       "id": "pack-parser-parser-zsh-extended-glob",
       "name": "Zsh Extended Glob Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-zsh",
-      "version": "git-998501f",
+      "version": "git-e90eaf1",
       "languages": [
         "zsh_extended_glob"
       ],
@@ -22234,7 +22394,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-zsh@git-998501f"
+          "github.com/konomanoasa/tree-sitter-zsh@git-e90eaf1"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -22243,7 +22403,7 @@
       "id": "pack-parser-parser-konomanoasa-zsh-zsh",
       "name": "Zsh Parser Bundle",
       "package": "github.com/konomanoasa/tree-sitter-zsh",
-      "version": "git-998501f",
+      "version": "git-e90eaf1",
       "languages": [
         "zsh"
       ],
@@ -22274,7 +22434,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/konomanoasa/tree-sitter-zsh@git-998501f"
+          "github.com/konomanoasa/tree-sitter-zsh@git-e90eaf1"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
