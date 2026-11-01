@@ -7,7 +7,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/briot/tree-sitter-ada@git-732287d"
+      "github.com/briot/tree-sitter-ada@git-b1d2035"
     ]
   },
   {
@@ -70,7 +70,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/uyha/tree-sitter-cmake@git-58993af"
+      "github.com/uyha/tree-sitter-cmake@git-a3ec2b2"
     ]
   },
   {
@@ -106,7 +106,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/cue-lang/tree-sitter-cue@git-ba43567"
+      "github.com/cue-lang/tree-sitter-cue@git-eefee1c"
     ]
   },
   {
@@ -196,7 +196,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/stadelmanma/tree-sitter-fortran@git-c2f1032"
+      "github.com/stadelmanma/tree-sitter-fortran@git-72f8759"
     ]
   },
   {
@@ -367,7 +367,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-1852ea1"
+      "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
     ]
   },
   {
@@ -385,7 +385,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/savonet/tree-sitter-liquidsoap@git-a094345"
+      "github.com/savonet/tree-sitter-liquidsoap@git-087fc44"
     ]
   },
   {
@@ -439,7 +439,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-6e3b9cb"
+      "github.com/nix-community/tree-sitter-nix@git-37500eb"
     ]
   },
   {
@@ -664,7 +664,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/vrischmann/tree-sitter-templ@git-2c0a72e"
+      "github.com/vrischmann/tree-sitter-templ@git-a9f0190"
     ]
   },
   {

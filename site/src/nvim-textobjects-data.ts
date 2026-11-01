@@ -61,7 +61,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/uyha/tree-sitter-cmake@git-58993af"
+      "github.com/uyha/tree-sitter-cmake@git-a3ec2b2"
     ]
   },
   {
@@ -334,7 +334,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-1852ea1"
+      "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
     ]
   },
   {
@@ -397,7 +397,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-6e3b9cb"
+      "github.com/nix-community/tree-sitter-nix@git-37500eb"
     ]
   },
   {
@@ -424,7 +424,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-perl/tree-sitter-perl@git-775e75a"
+      "github.com/tree-sitter-perl/tree-sitter-perl@git-d0a9590"
     ]
   },
   {
