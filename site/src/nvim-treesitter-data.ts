@@ -1545,7 +1545,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/cathaysia/tree-sitter-jinja@git-c213d37"
+      "github.com/cathaysia/tree-sitter-jinja@git-v0.13.1"
     ]
   },
   {
@@ -1555,7 +1555,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/cathaysia/tree-sitter-jinja@git-c213d37"
+      "github.com/cathaysia/tree-sitter-jinja@git-v0.13.1"
     ]
   },
   {
