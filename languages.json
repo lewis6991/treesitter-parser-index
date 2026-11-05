@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-05",
   "kind": "prototype-languages",
   "count": 540,
   "items": [
@@ -1537,14 +1537,12 @@
     {
       "language": "cylc",
       "parserCount": 1,
-      "queryPackCount": 2,
+      "queryPackCount": 1,
       "editors": [
         "helix",
-        "lapce",
-        "neovim"
+        "lapce"
       ],
       "queryKinds": [
-        "folds",
         "highlights",
         "indents",
         "injections",

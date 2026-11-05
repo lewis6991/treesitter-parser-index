@@ -469,18 +469,6 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ]
   },
   {
-    "language": "cylc",
-    "queryKinds": [
-      "folds",
-      "highlights",
-      "indents",
-      "injections"
-    ],
-    "testedParserRefs": [
-      "github.com/elliotfontaine/tree-sitter-cylc@git-6d1d811"
-    ]
-  },
-  {
     "language": "d",
     "queryKinds": [
       "folds",
