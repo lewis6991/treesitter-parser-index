@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05",
+  "generatedAt": "2026-11-06",
   "kind": "prototype-languages",
   "count": 540,
   "items": [
@@ -682,8 +682,8 @@
     },
     {
       "language": "c",
-      "parserCount": 1,
-      "queryPackCount": 9,
+      "parserCount": 2,
+      "queryPackCount": 10,
       "editors": [
         "helix",
         "lapce",
