@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06",
+  "generatedAt": "2026-11-07",
   "kind": "prototype-query-packs",
   "count": 258,
   "items": [
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-db43f05",
+      "version": "git-b5cd310",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-db43f05",
+      "version": "git-b5cd310",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-db43f05",
+      "version": "git-b5cd310",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-db43f05",
+      "version": "git-b5cd310",
       "languages": [
         "proto"
       ],
@@ -13495,7 +13495,7 @@
       "id": "pack-parser-parser-tree-sitter-grammars-c-c",
       "name": "C Parser Bundle",
       "package": "github.com/tree-sitter-grammars/tree-sitter-c",
-      "version": "git-b1564d8",
+      "version": "git-f3202ac",
       "languages": [
         "c"
       ],
@@ -13528,7 +13528,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter-grammars/tree-sitter-c@git-b1564d8"
+          "github.com/tree-sitter-grammars/tree-sitter-c@git-f3202ac"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -17879,7 +17879,7 @@
       "id": "pack-parser-parser-matlab",
       "name": "Matlab Parser Bundle",
       "package": "github.com/acristoffers/tree-sitter-matlab",
-      "version": "git-546c89a",
+      "version": "git-ff2f83d",
       "languages": [
         "matlab"
       ],
@@ -17912,7 +17912,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/acristoffers/tree-sitter-matlab@git-546c89a"
+          "github.com/acristoffers/tree-sitter-matlab@git-ff2f83d"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -18086,7 +18086,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-e49c2f3",
+      "version": "git-e9f1506",
       "languages": [
         "nix"
       ],
@@ -18113,16 +18113,16 @@
         "tags"
       ],
       "queries": {
-        "highlights": [
-          "queries/highlights.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "highlights": [
+          "queries/highlights.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-e49c2f3"
+          "github.com/nix-community/tree-sitter-nix@git-e9f1506"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -20041,7 +20041,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-d86ab76",
+      "version": "git-5de5a82",
       "languages": [
         "scala"
       ],
@@ -20082,7 +20082,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-d86ab76"
+          "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
