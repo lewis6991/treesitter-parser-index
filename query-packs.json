@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-07",
+  "generatedAt": "2026-11-08",
   "kind": "prototype-query-packs",
-  "count": 258,
+  "count": 259,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-915f2bd",
+      "version": "git-19bdfc0",
       "languages": [
         "ada",
         "agda",
@@ -535,7 +535,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/ambroisie/tree-sitter-bp@git-ee641d1"
+            "github.com/ambroisie/tree-sitter-bp@git-7fcdf70"
           ]
         },
         {
@@ -570,7 +570,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-c@git-b1564d8"
+            "github.com/tree-sitter-grammars/tree-sitter-c@git-f3202ac"
           ]
         },
         {
@@ -582,7 +582,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/c3lang/tree-sitter-c3@git-e4d3418"
+            "github.com/c3lang/tree-sitter-c3@git-3d673a3"
           ]
         },
         {
@@ -1843,7 +1843,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/rmuir/tree-sitter-javadoc@git-c760949"
+            "github.com/rmuir/tree-sitter-javadoc@git-d2b4d37"
           ]
         },
         {
@@ -2047,7 +2047,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
+            "github.com/fwcd/tree-sitter-kotlin@git-d6af96d"
           ]
         },
         {
@@ -2263,7 +2263,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/acristoffers/tree-sitter-matlab@git-f03d034"
+            "github.com/acristoffers/tree-sitter-matlab@git-ff2f83d"
           ]
         },
         {
@@ -2387,7 +2387,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-37500eb"
+            "github.com/nix-community/tree-sitter-nix@git-e9f1506"
           ]
         },
         {
@@ -2528,7 +2528,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-perl/tree-sitter-perl@git-d0a9590"
+            "github.com/tree-sitter-perl/tree-sitter-perl@git-80781e3"
           ]
         },
         {
@@ -2584,7 +2584,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/apple/tree-sitter-pkl@git-c837eff"
+            "github.com/apple/tree-sitter-pkl@git-438dc0d"
           ]
         },
         {
@@ -2954,7 +2954,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/rescript-lang/tree-sitter-rescript@git-90643a6"
+            "github.com/rescript-lang/tree-sitter-rescript@git-cc6a15e"
           ]
         },
         {
@@ -3082,7 +3082,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-scala@git-c76bab0"
+            "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
           ]
         },
         {
@@ -3543,7 +3543,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/uncenter/tree-sitter-tera@git-54b3f8b"
+            "github.com/uncenter/tree-sitter-tera@git-5fff136"
           ]
         },
         {
@@ -3794,7 +3794,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/vlang/v-analyzer@git-925d457"
+            "github.com/vlang/v-analyzer@git-7801a67"
           ]
         },
         {
@@ -4223,7 +4223,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-c@git-b1564d8"
+            "github.com/tree-sitter-grammars/tree-sitter-c@git-f3202ac"
           ]
         },
         {
@@ -4514,7 +4514,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
+            "github.com/fwcd/tree-sitter-kotlin@git-d6af96d"
           ]
         },
         {
@@ -4550,7 +4550,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/acristoffers/tree-sitter-matlab@git-f03d034"
+            "github.com/acristoffers/tree-sitter-matlab@git-ff2f83d"
           ]
         },
         {
@@ -4577,7 +4577,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-37500eb"
+            "github.com/nix-community/tree-sitter-nix@git-e9f1506"
           ]
         },
         {
@@ -4604,7 +4604,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-perl/tree-sitter-perl@git-d0a9590"
+            "github.com/tree-sitter-perl/tree-sitter-perl@git-80781e3"
           ]
         },
         {
@@ -4703,7 +4703,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-scala@git-c76bab0"
+            "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
           ]
         },
         {
@@ -4820,7 +4820,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/vlang/v-analyzer@git-925d457"
+            "github.com/vlang/v-analyzer@git-7801a67"
           ]
         },
         {
@@ -5036,7 +5036,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter-grammars/tree-sitter-c@git-b1564d8"
+            "github.com/tree-sitter-grammars/tree-sitter-c@git-f3202ac"
           ]
         },
         {
@@ -5369,7 +5369,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
+            "github.com/fwcd/tree-sitter-kotlin@git-d6af96d"
           ]
         },
         {
@@ -5423,7 +5423,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/acristoffers/tree-sitter-matlab@git-f03d034"
+            "github.com/acristoffers/tree-sitter-matlab@git-ff2f83d"
           ]
         },
         {
@@ -5441,7 +5441,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/nix-community/tree-sitter-nix@git-37500eb"
+            "github.com/nix-community/tree-sitter-nix@git-e9f1506"
           ]
         },
         {
@@ -5567,7 +5567,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/tree-sitter/tree-sitter-scala@git-c76bab0"
+            "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
           ]
         },
         {
@@ -13044,7 +13044,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-91a5db6",
+      "version": "git-9638ef8",
       "languages": [
         "al"
       ],
@@ -13076,16 +13076,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-91a5db6"
+          "github.com/SShadowS/tree-sitter-al@git-9638ef8"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -14164,6 +14164,46 @@
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-confetti",
+      "name": "Confetti Parser Bundle",
+      "package": "github.com/unclechu/tree-sitter-confetti",
+      "version": "git-ef8618c",
+      "languages": [
+        "confetti"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "confetti",
+          "queryKinds": [
+            "highlights"
+          ]
+        }
+      ],
+      "owners": [
+        "unclechu"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/unclechu/tree-sitter-confetti@git-ef8618c"
+        ]
+      },
+      "summary": "highlights queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-containerfile",
@@ -18086,7 +18126,7 @@
       "id": "pack-parser-parser-nix-community-nix-nix",
       "name": "Nix Parser Bundle",
       "package": "github.com/nix-community/tree-sitter-nix",
-      "version": "git-e9f1506",
+      "version": "git-21daff7",
       "languages": [
         "nix"
       ],
@@ -18122,7 +18162,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nix-community/tree-sitter-nix@git-e9f1506"
+          "github.com/nix-community/tree-sitter-nix@git-21daff7"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -18356,7 +18396,7 @@
       "id": "pack-parser-parser-ocaml",
       "name": "OCaml Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-3b2e14e",
+      "version": "git-a1c562e",
       "languages": [
         "ocaml"
       ],
@@ -18397,7 +18437,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-3b2e14e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-a1c562e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18406,7 +18446,7 @@
       "id": "pack-parser-parser-ocaml-interface",
       "name": "OCamlInterface Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-3b2e14e",
+      "version": "git-a1c562e",
       "languages": [
         "ocaml_interface"
       ],
@@ -18447,7 +18487,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-3b2e14e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-a1c562e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18501,7 +18541,7 @@
       "id": "pack-parser-parser-ocaml-type",
       "name": "OCamlType Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-ocaml",
-      "version": "git-3b2e14e",
+      "version": "git-a1c562e",
       "languages": [
         "ocaml_type"
       ],
@@ -18542,7 +18582,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-ocaml@git-3b2e14e"
+          "github.com/tree-sitter/tree-sitter-ocaml@git-a1c562e"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20041,7 +20081,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-5de5a82",
+      "version": "git-ce959c6",
       "languages": [
         "scala"
       ],
@@ -20082,7 +20122,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
+          "github.com/tree-sitter/tree-sitter-scala@git-ce959c6"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."

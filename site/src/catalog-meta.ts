@@ -1,5 +1,5 @@
-export const CATALOG_GENERATED_AT = '2026-11-07';
-export const NVIM_TREESITTER_VERSION = 'git-915f2bd';
+export const CATALOG_GENERATED_AT = '2026-11-08';
+export const NVIM_TREESITTER_VERSION = 'git-19bdfc0';
 export const NVIM_CONTEXT_VERSION = 'git-8decd73';
 export const NVIM_AERIAL_VERSION = 'git-28fe6e8';
 export const NVIM_MATCHUP_VERSION = 'git-0106b1a';

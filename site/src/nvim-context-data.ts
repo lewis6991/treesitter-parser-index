@@ -34,7 +34,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter-grammars/tree-sitter-c@git-b1564d8"
+      "github.com/tree-sitter-grammars/tree-sitter-c@git-f3202ac"
     ]
   },
   {
@@ -367,7 +367,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/fwcd/tree-sitter-kotlin@git-7719bd3"
+      "github.com/fwcd/tree-sitter-kotlin@git-d6af96d"
     ]
   },
   {
@@ -421,7 +421,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/acristoffers/tree-sitter-matlab@git-f03d034"
+      "github.com/acristoffers/tree-sitter-matlab@git-ff2f83d"
     ]
   },
   {
@@ -439,7 +439,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/nix-community/tree-sitter-nix@git-37500eb"
+      "github.com/nix-community/tree-sitter-nix@git-e9f1506"
     ]
   },
   {
@@ -565,7 +565,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-scala@git-c76bab0"
+      "github.com/tree-sitter/tree-sitter-scala@git-5de5a82"
     ]
   },
   {

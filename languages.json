@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-07",
+  "generatedAt": "2026-11-08",
   "kind": "prototype-languages",
-  "count": 540,
+  "count": 541,
   "items": [
     {
       "language": "_gjs",
@@ -1235,6 +1235,20 @@
       ],
       "queryRoots": [
         "runtime/queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
+      "language": "confetti",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights"
+      ],
+      "queryRoots": [
+        "queries"
       ],
       "hasWasm": false,
       "hasReleaseArtifacts": true
@@ -3726,7 +3740,7 @@
     },
     {
       "language": "groovy",
-      "parserCount": 1,
+      "parserCount": 2,
       "queryPackCount": 4,
       "editors": [
         "helix",
