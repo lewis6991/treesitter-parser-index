@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10",
+  "generatedAt": "2026-11-11",
   "kind": "prototype-query-packs",
   "count": 260,
   "items": [
@@ -8085,7 +8085,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-4b7d101",
+      "version": "git-57d8641",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b1962f7",
+      "version": "git-82f2558",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b1962f7",
+      "version": "git-82f2558",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b1962f7",
+      "version": "git-82f2558",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b1962f7",
+      "version": "git-82f2558",
       "languages": [
         "proto"
       ],
@@ -13044,7 +13044,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-18c988e",
+      "version": "git-abc77b2",
       "languages": [
         "al"
       ],
@@ -13085,7 +13085,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-18c988e"
+          "github.com/SShadowS/tree-sitter-al@git-abc77b2"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -18256,7 +18256,7 @@
       "id": "pack-parser-parser-fdncred-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/fdncred/tree-sitter-nu",
-      "version": "git-d694570",
+      "version": "git-4f577aa",
       "languages": [
         "nu"
       ],
@@ -18292,7 +18292,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/fdncred/tree-sitter-nu@git-d694570"
+          "github.com/fdncred/tree-sitter-nu@git-4f577aa"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
@@ -20081,7 +20081,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-fa97dba",
+      "version": "git-363a726",
       "languages": [
         "scala"
       ],
@@ -20122,7 +20122,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-fa97dba"
+          "github.com/tree-sitter/tree-sitter-scala@git-363a726"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20593,7 +20593,7 @@
       "id": "pack-parser-parser-sql",
       "name": "SQL Parser Bundle",
       "package": "github.com/DerekStride/tree-sitter-sql",
-      "version": "git-301cdc6",
+      "version": "git-4cd7224",
       "languages": [
         "sql"
       ],
@@ -20624,7 +20624,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/DerekStride/tree-sitter-sql@git-301cdc6"
+          "github.com/DerekStride/tree-sitter-sql@git-4cd7224"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
