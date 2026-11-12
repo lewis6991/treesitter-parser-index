@@ -2762,7 +2762,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
     ],
     "parserLanguage": "qmljs",
     "testedParserRefs": [
-      "github.com/yuja/tree-sitter-qmljs@git-0b2b25b"
+      "github.com/yuja/tree-sitter-qmljs@git-de96ed6"
     ]
   },
   {
