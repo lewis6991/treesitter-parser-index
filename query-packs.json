@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13",
+  "generatedAt": "2026-11-14",
   "kind": "prototype-query-packs",
   "count": 260,
   "items": [
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-faf97b0",
+      "version": "git-0cfc4a4",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-faf97b0",
+      "version": "git-0cfc4a4",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-faf97b0",
+      "version": "git-0cfc4a4",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-faf97b0",
+      "version": "git-0cfc4a4",
       "languages": [
         "proto"
       ],
@@ -18153,11 +18153,11 @@
         "tags"
       ],
       "queries": {
-        "tags": [
-          "queries/tags.scm"
-        ],
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -20081,7 +20081,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-e8728b1",
+      "version": "git-c1e2b1a",
       "languages": [
         "scala"
       ],
@@ -20122,7 +20122,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-e8728b1"
+          "github.com/tree-sitter/tree-sitter-scala@git-c1e2b1a"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -20131,7 +20131,7 @@
       "id": "pack-parser-parser-sdml",
       "name": "Sdml Parser Bundle",
       "package": "github.com/sdm-lang/tree-sitter-sdml",
-      "version": "git-1b9cebf",
+      "version": "git-7dae983",
       "languages": [
         "sdml"
       ],
@@ -20177,7 +20177,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/sdm-lang/tree-sitter-sdml@git-1b9cebf"
+          "github.com/sdm-lang/tree-sitter-sdml@git-7dae983"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -20913,7 +20913,7 @@
       "id": "pack-parser-parser-swift",
       "name": "Swift Parser Bundle",
       "package": "github.com/alex-pinkus/tree-sitter-swift",
-      "version": "git-3697c2b",
+      "version": "git-a1d4a7b",
       "languages": [
         "swift"
       ],
@@ -20954,7 +20954,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/alex-pinkus/tree-sitter-swift@git-3697c2b"
+          "github.com/alex-pinkus/tree-sitter-swift@git-a1d4a7b"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
