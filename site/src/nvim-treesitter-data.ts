@@ -3125,7 +3125,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "injections"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-73d7620"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
     ]
   },
   {

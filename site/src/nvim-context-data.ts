@@ -628,7 +628,7 @@ export const NVIM_CONTEXT_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "context"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-73d7620"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
     ]
   },
   {

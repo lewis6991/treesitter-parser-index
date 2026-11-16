@@ -1370,7 +1370,7 @@ export const HELIX_RUNTIME_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-haskell@git-0975ef7"
+      "github.com/tree-sitter/tree-sitter-haskell@git-97288e5"
     ]
   },
   {
