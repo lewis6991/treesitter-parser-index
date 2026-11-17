@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-17",
   "kind": "prototype-query-packs",
   "count": 260,
   "items": [
@@ -7,7 +7,7 @@
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-0bf28a3",
+      "version": "git-b706d64",
       "languages": [
         "ada",
         "agda",
@@ -3458,7 +3458,7 @@
             "injections"
           ],
           "testedParserRefs": [
-            "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
+            "github.com/gmlarumbe/tree-sitter-systemverilog@git-140d0a1"
           ]
         },
         {
@@ -4757,7 +4757,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
+            "github.com/gmlarumbe/tree-sitter-systemverilog@git-140d0a1"
           ]
         },
         {
@@ -5630,7 +5630,7 @@
             "context"
           ],
           "testedParserRefs": [
-            "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
+            "github.com/gmlarumbe/tree-sitter-systemverilog@git-140d0a1"
           ]
         },
         {
@@ -8085,7 +8085,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-49986e6",
+      "version": "git-872b240",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-917559d",
+      "version": "git-b525067",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-917559d",
+      "version": "git-b525067",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-917559d",
+      "version": "git-b525067",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-917559d",
+      "version": "git-b525067",
       "languages": [
         "proto"
       ],
@@ -13076,11 +13076,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -17789,7 +17789,7 @@
       "id": "pack-parser-parser-magik",
       "name": "Magik Parser Bundle",
       "package": "github.com/krn-robin/tree-sitter-magik",
-      "version": "git-2ccff24",
+      "version": "git-ed72470",
       "languages": [
         "magik"
       ],
@@ -17820,7 +17820,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/krn-robin/tree-sitter-magik@git-2ccff24"
+          "github.com/krn-robin/tree-sitter-magik@git-ed72470"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -20963,7 +20963,7 @@
       "id": "pack-parser-parser-systemverilog",
       "name": "SystemVerilog Parser Bundle",
       "package": "github.com/gmlarumbe/tree-sitter-systemverilog",
-      "version": "git-dd638a1",
+      "version": "git-5dc414f",
       "languages": [
         "systemverilog"
       ],
@@ -20994,7 +20994,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
+          "github.com/gmlarumbe/tree-sitter-systemverilog@git-5dc414f"
         ]
       },
       "summary": "highlights queries ship with the parser repository."

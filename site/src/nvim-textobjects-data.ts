@@ -577,7 +577,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/gmlarumbe/tree-sitter-systemverilog@git-dd638a1"
+      "github.com/gmlarumbe/tree-sitter-systemverilog@git-140d0a1"
     ]
   },
   {
