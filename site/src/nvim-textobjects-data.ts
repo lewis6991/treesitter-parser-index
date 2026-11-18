@@ -703,7 +703,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/georgeharker/tree-sitter-zsh@git-7a59340"
+      "github.com/georgeharker/tree-sitter-zsh@git-77eee01"
     ]
   }
 ];

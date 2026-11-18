@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-17",
+  "generatedAt": "2026-11-18",
   "kind": "prototype-query-packs",
-  "count": 260,
+  "count": 261,
   "items": [
     {
       "id": "pack-neovim-treesitter-runtime",
       "name": "nvim-treesitter",
       "package": "github.com/nvim-treesitter/nvim-treesitter",
-      "version": "git-b706d64",
+      "version": "git-cedae6b",
       "languages": [
         "ada",
         "agda",
@@ -4060,7 +4060,7 @@
             "locals"
           ],
           "testedParserRefs": [
-            "github.com/georgeharker/tree-sitter-zsh@git-7a59340"
+            "github.com/georgeharker/tree-sitter-zsh@git-77eee01"
           ]
         }
       ],
@@ -4883,7 +4883,7 @@
             "textobjects"
           ],
           "testedParserRefs": [
-            "github.com/georgeharker/tree-sitter-zsh@git-7a59340"
+            "github.com/georgeharker/tree-sitter-zsh@git-77eee01"
           ]
         }
       ],
@@ -8085,7 +8085,7 @@
       "id": "pack-helix-runtime",
       "name": "Helix",
       "package": "github.com/helix-editor/helix",
-      "version": "git-872b240",
+      "version": "git-92ba4c0",
       "languages": [
         "_gjs",
         "_javascript",
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b525067",
+      "version": "git-621a6ad",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b525067",
+      "version": "git-621a6ad",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b525067",
+      "version": "git-621a6ad",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-b525067",
+      "version": "git-621a6ad",
       "languages": [
         "proto"
       ],
@@ -13044,7 +13044,7 @@
       "id": "pack-parser-parser-al",
       "name": "AL Parser Bundle",
       "package": "github.com/SShadowS/tree-sitter-al",
-      "version": "git-8db8593",
+      "version": "git-88bb687",
       "languages": [
         "al"
       ],
@@ -13076,16 +13076,16 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "locals": [
-          "queries/locals.scm"
-        ],
         "tags": [
           "queries/tags.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/SShadowS/tree-sitter-al@git-8db8593"
+          "github.com/SShadowS/tree-sitter-al@git-88bb687"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
@@ -14304,7 +14304,7 @@
       "id": "pack-parser-parser-c-sharp",
       "name": "CSharp Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-c-sharp",
-      "version": "git-8c0abe0",
+      "version": "git-d4bbe18",
       "languages": [
         "c-sharp"
       ],
@@ -14340,7 +14340,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-c-sharp@git-8c0abe0"
+          "github.com/tree-sitter/tree-sitter-c-sharp@git-d4bbe18"
         ]
       },
       "summary": "highlights, tags queries ship with the parser repository."
@@ -15428,7 +15428,7 @@
       "id": "pack-parser-parser-whatsapp-erlang-erlang",
       "name": "Erlang Parser Bundle",
       "package": "github.com/WhatsApp/tree-sitter-erlang",
-      "version": "git-62c82e6",
+      "version": "git-d40106a",
       "languages": [
         "erlang"
       ],
@@ -15459,7 +15459,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/WhatsApp/tree-sitter-erlang@git-62c82e6"
+          "github.com/WhatsApp/tree-sitter-erlang@git-d40106a"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -15688,7 +15688,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-aefd0c8",
+      "version": "git-e29d659",
       "languages": [
         "fsharp"
       ],
@@ -15722,11 +15722,11 @@
         "highlights": [
           "fsharp/queries/highlights.scm"
         ],
-        "injections": [
-          "fsharp/queries/injections.scm"
-        ],
         "locals": [
           "fsharp/queries/locals.scm"
+        ],
+        "injections": [
+          "fsharp/queries/injections.scm"
         ],
         "tags": [
           "fsharp/queries/tags.scm"
@@ -15734,7 +15734,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-aefd0c8"
+          "github.com/ionide/tree-sitter-fsharp@git-e29d659"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -15743,7 +15743,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-aefd0c8",
+      "version": "git-e29d659",
       "languages": [
         "fsharp_signature"
       ],
@@ -15777,11 +15777,11 @@
         "highlights": [
           "fsharp_signature/queries/highlights.scm"
         ],
-        "injections": [
-          "fsharp_signature/queries/injections.scm"
-        ],
         "locals": [
           "fsharp_signature/queries/locals.scm"
+        ],
+        "injections": [
+          "fsharp_signature/queries/injections.scm"
         ],
         "tags": [
           "fsharp_signature/queries/tags.scm"
@@ -15789,7 +15789,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-aefd0c8"
+          "github.com/ionide/tree-sitter-fsharp@git-e29d659"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -20963,7 +20963,7 @@
       "id": "pack-parser-parser-systemverilog",
       "name": "SystemVerilog Parser Bundle",
       "package": "github.com/gmlarumbe/tree-sitter-systemverilog",
-      "version": "git-5dc414f",
+      "version": "git-1d5d83e",
       "languages": [
         "systemverilog"
       ],
@@ -20994,7 +20994,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/gmlarumbe/tree-sitter-systemverilog@git-5dc414f"
+          "github.com/gmlarumbe/tree-sitter-systemverilog@git-1d5d83e"
         ]
       },
       "summary": "highlights queries ship with the parser repository."
@@ -21863,6 +21863,51 @@
         ]
       },
       "summary": "highlights queries ship with the parser repository."
+    },
+    {
+      "id": "pack-parser-parser-vala",
+      "name": "Vala Parser Bundle",
+      "package": "github.com/vala-lang/tree-sitter-vala",
+      "version": "git-dff1b1c",
+      "languages": [
+        "vala"
+      ],
+      "languageCount": 1,
+      "languageDetails": [
+        {
+          "language": "vala",
+          "queryKinds": [
+            "highlights",
+            "locals"
+          ]
+        }
+      ],
+      "owners": [
+        "vala-lang"
+      ],
+      "layout": {
+        "installRoot": ".",
+        "queryRoot": "queries"
+      },
+      "targets": [],
+      "queryKinds": [
+        "highlights",
+        "locals"
+      ],
+      "queries": {
+        "highlights": [
+          "queries/highlights.scm"
+        ],
+        "locals": [
+          "queries/locals.scm"
+        ]
+      },
+      "parserCompatibility": {
+        "tested": [
+          "github.com/vala-lang/tree-sitter-vala@git-dff1b1c"
+        ]
+      },
+      "summary": "highlights, locals queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-varlink",

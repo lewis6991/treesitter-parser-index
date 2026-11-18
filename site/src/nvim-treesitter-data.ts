@@ -3727,7 +3727,7 @@ export const NVIM_TREESITTER_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "locals"
     ],
     "testedParserRefs": [
-      "github.com/georgeharker/tree-sitter-zsh@git-7a59340"
+      "github.com/georgeharker/tree-sitter-zsh@git-77eee01"
     ]
   }
 ];
