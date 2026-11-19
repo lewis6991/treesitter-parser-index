@@ -52,7 +52,7 @@ export const NVIM_TEXTOBJECTS_LANGUAGE_DETAILS: QueryPackLanguage[] = [
       "textobjects"
     ],
     "testedParserRefs": [
-      "github.com/tree-sitter/tree-sitter-c-sharp@git-v0.23.5"
+      "github.com/tree-sitter/tree-sitter-c-sharp@git-v0.24.0"
     ]
   },
   {
