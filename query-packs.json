@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23",
+  "generatedAt": "2026-11-24",
   "kind": "prototype-query-packs",
   "count": 261,
   "items": [
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6501df1",
+      "version": "git-05c9390",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6501df1",
+      "version": "git-05c9390",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6501df1",
+      "version": "git-05c9390",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-6501df1",
+      "version": "git-05c9390",
       "languages": [
         "proto"
       ],
@@ -13076,11 +13076,11 @@
         "highlights": [
           "queries/highlights.scm"
         ],
-        "tags": [
-          "queries/tags.scm"
-        ],
         "locals": [
           "queries/locals.scm"
+        ],
+        "tags": [
+          "queries/tags.scm"
         ]
       },
       "parserCompatibility": {
@@ -15688,7 +15688,7 @@
       "id": "pack-parser-parser-fsharp",
       "name": "FSharp Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-a194128",
+      "version": "git-4cf8d03",
       "languages": [
         "fsharp"
       ],
@@ -15722,11 +15722,11 @@
         "highlights": [
           "fsharp/queries/highlights.scm"
         ],
-        "injections": [
-          "fsharp/queries/injections.scm"
-        ],
         "locals": [
           "fsharp/queries/locals.scm"
+        ],
+        "injections": [
+          "fsharp/queries/injections.scm"
         ],
         "tags": [
           "fsharp/queries/tags.scm"
@@ -15734,7 +15734,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-a194128"
+          "github.com/ionide/tree-sitter-fsharp@git-4cf8d03"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -15743,7 +15743,7 @@
       "id": "pack-parser-parser-fsharp-signature",
       "name": "FSharpSignature Parser Bundle",
       "package": "github.com/ionide/tree-sitter-fsharp",
-      "version": "git-a194128",
+      "version": "git-4cf8d03",
       "languages": [
         "fsharp_signature"
       ],
@@ -15777,11 +15777,11 @@
         "highlights": [
           "fsharp_signature/queries/highlights.scm"
         ],
-        "injections": [
-          "fsharp_signature/queries/injections.scm"
-        ],
         "locals": [
           "fsharp_signature/queries/locals.scm"
+        ],
+        "injections": [
+          "fsharp_signature/queries/injections.scm"
         ],
         "tags": [
           "fsharp_signature/queries/tags.scm"
@@ -15789,7 +15789,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/ionide/tree-sitter-fsharp@git-a194128"
+          "github.com/ionide/tree-sitter-fsharp@git-4cf8d03"
         ]
       },
       "summary": "highlights, injections, locals, tags queries ship with the parser repository."
@@ -17499,7 +17499,7 @@
       "id": "pack-parser-parser-lean",
       "name": "Lean Parser Bundle",
       "package": "github.com/Julian/tree-sitter-lean",
-      "version": "git-fefc2ef",
+      "version": "git-f35fa9b",
       "languages": [
         "lean"
       ],
@@ -17540,7 +17540,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/Julian/tree-sitter-lean@git-fefc2ef"
+          "github.com/Julian/tree-sitter-lean@git-f35fa9b"
         ]
       },
       "summary": "highlights, injections, locals queries ship with the parser repository."
@@ -20081,7 +20081,7 @@
       "id": "pack-parser-parser-scala",
       "name": "Scala Parser Bundle",
       "package": "github.com/tree-sitter/tree-sitter-scala",
-      "version": "git-0ffd19a",
+      "version": "git-3f18a9b",
       "languages": [
         "scala"
       ],
@@ -20122,7 +20122,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/tree-sitter/tree-sitter-scala@git-0ffd19a"
+          "github.com/tree-sitter/tree-sitter-scala@git-3f18a9b"
         ]
       },
       "summary": "highlights, locals, tags queries ship with the parser repository."
