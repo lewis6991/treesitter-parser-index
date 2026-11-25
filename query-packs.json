@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24",
+  "generatedAt": "2026-11-25",
   "kind": "prototype-query-packs",
   "count": 261,
   "items": [
@@ -12428,7 +12428,7 @@
       "id": "pack-zed-core-runtime",
       "name": "Zed Core Grammars",
       "package": "github.com/zed-industries/zed",
-      "version": "git-05c9390",
+      "version": "git-5526444",
       "languages": [
         "bash",
         "c",
@@ -12766,7 +12766,7 @@
       "id": "pack-zed-glsl-glsl",
       "name": "Zed Glsl Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-05c9390",
+      "version": "git-5526444",
       "languages": [
         "glsl"
       ],
@@ -12813,7 +12813,7 @@
       "id": "pack-zed-html-html",
       "name": "Zed Html Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-05c9390",
+      "version": "git-5526444",
       "languages": [
         "html"
       ],
@@ -12868,7 +12868,7 @@
       "id": "pack-zed-proto-proto",
       "name": "Zed Proto Extension",
       "package": "github.com/zed-industries/zed",
-      "version": "git-05c9390",
+      "version": "git-5526444",
       "languages": [
         "proto"
       ],
@@ -15722,11 +15722,11 @@
         "highlights": [
           "fsharp/queries/highlights.scm"
         ],
-        "locals": [
-          "fsharp/queries/locals.scm"
-        ],
         "injections": [
           "fsharp/queries/injections.scm"
+        ],
+        "locals": [
+          "fsharp/queries/locals.scm"
         ],
         "tags": [
           "fsharp/queries/tags.scm"
@@ -15777,11 +15777,11 @@
         "highlights": [
           "fsharp_signature/queries/highlights.scm"
         ],
-        "locals": [
-          "fsharp_signature/queries/locals.scm"
-        ],
         "injections": [
           "fsharp_signature/queries/injections.scm"
+        ],
+        "locals": [
+          "fsharp_signature/queries/locals.scm"
         ],
         "tags": [
           "fsharp_signature/queries/tags.scm"
@@ -17190,7 +17190,7 @@
       "id": "pack-parser-parser-kcl-lang-kcl-kcl",
       "name": "KCL Parser Bundle",
       "package": "github.com/kcl-lang/tree-sitter-kcl",
-      "version": "git-6a5cc92",
+      "version": "git-9d104d1",
       "languages": [
         "kcl"
       ],
@@ -17199,7 +17199,8 @@
         {
           "language": "kcl",
           "queryKinds": [
-            "highlights"
+            "highlights",
+            "injections"
           ]
         }
       ],
@@ -17212,19 +17213,23 @@
       },
       "targets": [],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "injections"
       ],
       "queries": {
         "highlights": [
           "queries/highlights.scm"
+        ],
+        "injections": [
+          "queries/injections.scm"
         ]
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/kcl-lang/tree-sitter-kcl@git-6a5cc92"
+          "github.com/kcl-lang/tree-sitter-kcl@git-9d104d1"
         ]
       },
-      "summary": "highlights queries ship with the parser repository."
+      "summary": "highlights, injections queries ship with the parser repository."
     },
     {
       "id": "pack-parser-parser-kconfig",
@@ -18301,7 +18306,7 @@
       "id": "pack-parser-parser-nushell-nu-nu",
       "name": "Nu Parser Bundle",
       "package": "github.com/nushell/tree-sitter-nu",
-      "version": "git-0c3f6df",
+      "version": "git-5a5f9c2",
       "languages": [
         "nu"
       ],
@@ -18337,7 +18342,7 @@
       },
       "parserCompatibility": {
         "tested": [
-          "github.com/nushell/tree-sitter-nu@git-0c3f6df"
+          "github.com/nushell/tree-sitter-nu@git-5a5f9c2"
         ]
       },
       "summary": "highlights, injections queries ship with the parser repository."
