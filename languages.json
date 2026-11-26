@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25",
+  "generatedAt": "2026-11-26",
   "kind": "prototype-languages",
   "count": 542,
   "items": [
@@ -6998,6 +6998,23 @@
       "hasReleaseArtifacts": true
     },
     {
+      "language": "plum",
+      "parserCount": 1,
+      "queryPackCount": 1,
+      "editors": [],
+      "queryKinds": [
+        "highlights",
+        "injections",
+        "locals",
+        "tags"
+      ],
+      "queryRoots": [
+        "queries"
+      ],
+      "hasWasm": false,
+      "hasReleaseArtifacts": true
+    },
+    {
       "language": "po",
       "parserCount": 1,
       "queryPackCount": 2,
@@ -11105,20 +11122,6 @@
         "runtime/queries"
       ],
       "hasWasm": true,
-      "hasReleaseArtifacts": true
-    },
-    {
-      "language": "zsh_extended_glob",
-      "parserCount": 1,
-      "queryPackCount": 1,
-      "editors": [],
-      "queryKinds": [
-        "highlights"
-      ],
-      "queryRoots": [
-        "zsh_extended_glob/queries"
-      ],
-      "hasWasm": false,
       "hasReleaseArtifacts": true
     }
   ]
