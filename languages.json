@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26",
+  "generatedAt": "2026-11-27",
   "kind": "prototype-languages",
   "count": 542,
   "items": [
@@ -863,7 +863,8 @@
       "queryPackCount": 1,
       "editors": [],
       "queryKinds": [
-        "highlights"
+        "highlights",
+        "tags"
       ],
       "queryRoots": [
         "queries"
